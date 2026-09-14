@@ -1,0 +1,4 @@
+interface:
+  display_name: "Moneyfesting Localization"
+  short_description: "Natural iOS copy with independent language review"
+  default_prompt: "Use $moneyfesting-localization to localize Moneyfesting's requested screens with full context, blind back-translation, and final language review."

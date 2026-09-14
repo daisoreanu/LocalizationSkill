@@ -1,0 +1,49 @@
+{
+  "skill_name": "moneyfesting-localization",
+  "evaluation_scope": "Preparation and review decisions only. No app translations, resource edits, publishing, or claims of native-human validation. These cases do not measure linguistic quality or conversion.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "currency-and-surface-preparation",
+      "prompt": "Prepare a Moneyfesting localization handoff for the languages implied by its currency selector plus Hebrew. Earlier preferences also included Italian, Norwegian and Russian. This is preparation only: do not translate any app text, edit the checkout, or build it. Read the live currency/language implementation and give candidate locale decisions, the surfaces a translator must inspect, and concrete readiness checks for Arabic, Hebrew, Brazilian/European Portuguese and Traditional Chinese. Distinguish facts from proposals. Return a concise handoff in JSON.",
+      "expected_output": "A repository-grounded handoff that separates currency, region and language; inventories non-catalog content; preserves current scope; and exposes regional/script and RTL readiness work.",
+      "files": [],
+      "expectations": [
+        "Derives candidates from live currency/region code evidence while treating Hebrew as an explicit addition and retaining prior Italian, Norwegian and Russian preferences as candidates.",
+        "Distinguishes language, formatting region and selected currency; does not propose automatic currency conversion or infer one language per currency.",
+        "Inventories Screen Time shield strings outside xcstrings and differentiates quotation content from UI resources.",
+        "Identifies current en/ro support and the need to verify regional/script locale handling before enabling pt-BR, pt-PT or Traditional Chinese.",
+        "Respects preparation-only scope and does not claim translated resources, app tests or release readiness."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "money-and-quote-context",
+      "prompt": "Prepare translation instructions for this synthetic future Moneyfesting screen; do not translate it or edit the app. Heading: 'You earned %@ today'. CTA: 'Keep going'. Context: %@ is the estimated value of focused time at the user's hourly rate; tapping the CTA opens a new focus-session setup. The screen also has an attributed quotation, an app-authored affirmation, a freeze-covered streak label, and subscription terms with price, billing period, trial eligibility and renewal. We want friendly Arabic and Hebrew marketing that feels local. Describe what can change, what needs clarification or a policy decision, and how you would independently check the result. No target-language output or app builds. Return JSON.",
+      "expected_output": "Detects the misleading source claim; distinguishes creative copy from precise functional, commercial and attributed content; specifies a genuinely blind independent review plus local editorial and final review.",
+      "files": [],
+      "expectations": [
+        "Flags earned as a misleading source claim because the amount represents estimated focused-time value rather than income.",
+        "Preserves placeholder meaning and distinguishes the actual CTA destination, freeze coverage, and billing/trial/renewal conditions.",
+        "Identifies source/provenance and translation-policy decisions for attributed quotations, distinguishing them from app-authored affirmations and ordinary marketing transcreation.",
+        "Specifies a fresh source-blind backtranslation with no English or rationale, separate target-only editorial review, and an independent final review.",
+        "Uses locale-specific Arabic/Hebrew register or gender/RTL decisions without claiming actual native-human validation; produces no target-language translations."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "stale-review-rejection",
+      "prompt": "Audit this localization review packet and decide if the Arabic/Hebrew release can be called ready. Do not translate anything or edit/build the app. Evidence: translator A also did the back-translation in the same conversation with the English visible; the reverse wording matched English 100%. Editor B saw the bilingual glossary and translator rationale and said 'native certified'. Afterwards A shortened the CTA and removed a billing condition to fit one line. Reviews refer to the older candidate. JSON parses, placeholders look similar, and English-only screenshots exist; no target-language run, extension check, Dynamic Type, RTL or VoiceOver check happened. The team proposes shipping because the combined quality score is 96%. State verdicts, affected rechecks and the final reviewer setup in JSON, without inventing new evidence.",
+      "expected_output": "Rejects the readiness claim, identifies source contamination and stale evidence, rejects score averaging and native certification, and requires scoped fresh review and actual UI/runtime evidence.",
+      "files": [],
+      "expectations": [
+        "Rejects release readiness despite roundtrip agreement and aggregate score; no material billing condition may be dropped for fit.",
+        "Identifies both same-agent/source-visible backtranslation and source-exposed editorial review as invalid evidence for independent target-only review.",
+        "Invalidates reviews after changed CTA and billing copy, requiring affected fresh linguistic checks and final adjudication of the actual final version.",
+        "Distinguishes JSON parsing from structural/runtime correctness and requires missing target-screen, extension, Dynamic Type, RTL and VoiceOver evidence within scope.",
+        "Specifies a fresh final adjudicator at the strongest available model and highest supported effort, with actual settings/fallback disclosed, and rejects native-certified claims.",
+        "Does not infer whether imported reviewers A/B are AI or human or infer actual review settings from labels alone; rejects unsupported certification while preserving unknown provenance."
+      ]
+    }
+  ]
+}
