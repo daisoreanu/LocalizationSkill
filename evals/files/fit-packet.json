@@ -1,0 +1,104 @@
+{
+  "snapshot": "2026-09-15",
+  "catalog_commit": "c8a49dd",
+  "synthetic": true,
+  "note": "Synthetic fit rows for the widget-fit-verdict eval. control, lineLimit and minimumScaleFactor are read from the tiles under Manifesting/Foundation/WidgetSupport at snapshot 2026-09-15; widthPt and fontPt are approximations of the slot at the smallest supported size, not measurements. A verdict derived from them is approximate until a render in Romanian at the smallest widget size and the largest relevant accessibility size confirms it. expected_verdict is the grading key: fits | shrinks | truncates | refuse. Row f04 is a shortening candidate, not catalog copy.",
+  "entries": [
+    {
+      "id": "f01",
+      "key": "widgets.startFocus.openApp",
+      "text": "Deschide aplicația",
+      "control": "capsule button under the duration picker; opens the app when session data could not be read (StartFocusWidgetTile action Link, allowsTightening)",
+      "family": "systemSmall",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.6,
+      "widthPt": 110,
+      "fontPt": 14,
+      "expected_verdict": "shrinks"
+    },
+    {
+      "id": "f02",
+      "key": "widgets.startFocus.start",
+      "text": "Pornește Moneyfesting",
+      "control": "capsule button, main action; opens the app to start the selected duration or finish setup (same slot as f01)",
+      "family": "systemSmall",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.6,
+      "widthPt": 110,
+      "fontPt": 14,
+      "expected_verdict": "shrinks"
+    },
+    {
+      "id": "f03",
+      "key": "paywall.plan.annual.billedShort",
+      "text": "Facturat anual",
+      "control": "billing cadence caption under the yearly plan price on the plan card, next to the price and the trial line",
+      "family": "app.compactWidth",
+      "lineLimit": 1,
+      "minimumScaleFactor": 1.0,
+      "widthPt": 72,
+      "fontPt": 13,
+      "expected_verdict": "truncates"
+    },
+    {
+      "id": "f04",
+      "key": "paywall.plan.annual.billedShort",
+      "text": "Facturat",
+      "control": "same caption as f03; shortening candidate proposed to make f03 fit on one line",
+      "family": "app.compactWidth",
+      "lineLimit": 1,
+      "minimumScaleFactor": 1.0,
+      "widthPt": 72,
+      "fontPt": 13,
+      "expected_verdict": "refuse"
+    },
+    {
+      "id": "f05",
+      "key": "widgets.focusRing.firstRun",
+      "text": "Începe prima sesiune",
+      "control": "status caption centred under the ring for a user with a goal and no session yet (FocusRingStateCaption)",
+      "family": "systemSmall",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.6,
+      "widthPt": 134,
+      "fontPt": 12,
+      "expected_verdict": "fits"
+    },
+    {
+      "id": "f06",
+      "key": "widgets.streak.copy.atRisk.small",
+      "text": "25 de minute o mențin.",
+      "control": "evening copy line under the header row on the small tile (StreakTiles, headlineSize 14 semibold, minimumScaleFactor 11/14); plural category other with the partitive de, sample 25, the longest form",
+      "family": "systemSmall",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.786,
+      "widthPt": 130,
+      "fontPt": 14,
+      "expected_verdict": "shrinks"
+    },
+    {
+      "id": "f07",
+      "key": "widgets.streak.copy.frozen.medium",
+      "text": "Ieri a fost acoperită.",
+      "control": "copy line under the streak headline on the medium tile (StreakTiles, 14pt medium, minimumScaleFactor 12/14)",
+      "family": "systemMedium",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.857,
+      "widthPt": 180,
+      "fontPt": 14,
+      "expected_verdict": "fits"
+    },
+    {
+      "id": "f08",
+      "key": "widgets.focusRing.title",
+      "text": "CONCENTRAREA DE AZI",
+      "control": "uppercase caption above the minutes value in the medium tile's focus column (FocusRingMetricRow label, rowLabelSize 9)",
+      "family": "systemMedium",
+      "lineLimit": 1,
+      "minimumScaleFactor": 0.55,
+      "widthPt": 84,
+      "fontPt": 9,
+      "expected_verdict": "shrinks"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "locale": "ro",
+  "snapshot": "2026-09-15",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "serie",
+      "forms": ["serie", "serii", "seria", "seriei", "seriile", "seriilor"],
+      "forbidden": ["streak"],
+      "decided_by": "catalog-majority",
+      "note": "48 keys use serie, 0 keep streak; the archived guide left this to review and the catalog settled it. The widget display name is 'Serie de focus' (widgets.streak.displayName); the how-to pick step must not name it (OnboardingWidgetsStepTests)."
+    },
+    "streak_freeze": {
+      "preferred": "îngheț de serie",
+      "forms": ["îngheț de serie", "înghețuri de serie", "înghețul de serie", "înghețurile de serie", "îngheț", "înghețuri"],
+      "forbidden": ["înghețare"],
+      "decided_by": "catalog-majority",
+      "note": "6 keys; the one hit is paywall.benefit.streak.detail 'O înghețare câștigată', whose comment also says a freeze covers one day, not two."
+    },
+    "task": {
+      "preferred": "sarcină",
+      "forms": ["sarcină", "sarcini", "sarcina", "sarcinii", "sarcinile", "sarcinilor"],
+      "forbidden": ["activitate", "activitatea", "activității"],
+      "decided_by": "catalog-majority",
+      "note": "31 keys say sarcină, 19 under focusTask.* and plan.* say activitate for the same thing (focusTask.alert.deleteTask.title vs .message is one alert with both). Hits in onboarding.screenTimePermission.* and screenTimeReport.noDataExplanation mean 'activity data' and are correct; alignment of the 19 is its own follow-up batch."
+    },
+    "restricted_list": {
+      "preferred": "listă de aplicații blocate",
+      "forms": ["listă de aplicații blocate", "lista de aplicații blocate", "liste de aplicații blocate", "listei de aplicații blocate", "listele de aplicații blocate"],
+      "forbidden": ["listă de restricții", "lista de restricții", "listă restricționată", "lista restricționată", "listei restricționate", "liste de aplicații restricționate", "lista de aplicații restricționate", "listele de aplicații restricționate"],
+      "decided_by": "skill-seed-2026-09-15",
+      "note": "Four shipped forms: blocate 1 (plan.createToDo.removeRestrictedApps), de restricții 2, restricționată 4, de aplicații restricționate 2. Chosen for plain wording: 'blocate' is what happens and 'Blocare aplicații' is already the welcome eyebrow. Alignment of the other 8 keys is a follow-up batch; the owner may flip this before the first ro batch."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Nu sunt bani câștigați.",
+      "forms": ["Nu sunt bani câștigați."],
+      "forbidden": ["Nu reprezintă bani câștigați"],
+      "decided_by": "catalog-majority",
+      "note": "10 keys vs 1 (widgets.monthlyTimeValue.description). The four sibling source sentences keep their own single ro form, listed in references/voice-card.md '## Money frame'."
+    },
+    "hourly_rate": {
+      "preferred": "tarif orar",
+      "forms": ["tarif orar", "tariful orar", "tariful tău orar", "tarif", "tariful"],
+      "forbidden": ["salariu orar", "salariul orar", "câștig pe oră", "câștigul pe oră"],
+      "decided_by": "catalog-majority",
+      "note": "8 keys say tarif orar, 19 use tarif. One hit: screenTimeReport.missingWage 'câștigul pe oră', which is also a money-outcome word. The badge name 'Salariat' (achievements.badge.salaried.name) is a metaphor, not the rate."
+    },
+    "goal": {
+      "preferred": "obiectiv",
+      "forms": ["obiectiv", "obiectivul", "obiective", "obiectivele", "obiectivului"],
+      "forbidden": ["țel", "țelul"],
+      "decided_by": "catalog-majority",
+      "note": "35 keys, 0 hits; forbidden list is preventive."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "catalog-majority",
+      "note": "common.durationMinuteUnit is 'min'; spaced '%lld min' in 9 keys (14 units), tight '%lldmin' in 4 width-limited widget and report lines (screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat). Exception: share.duration.minutesShort keeps the bare '%lldm' pending a share-card render. A bare 'm' anywhere else is a finding."
+    },
+    "screen_time": {
+      "preferred": "Timp de utilizare",
+      "forms": ["Timp de utilizare", "timpul de utilizare", "timpului de utilizare"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "catalog-majority",
+      "note": "Apple's ro name for the feature; 19 keys, 0 keep the English. Generic 'timp de ecran' (4 keys, e.g. insights.savings.estimateExplanation) means hours on screen and stays."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Anulează", "roles": {"discard": "Renunță", "quit": "Renunță", "dismiss": "Renunță"}},
+    "Done": {"preferred": "Gata", "roles": {"completed_count_header": "Încheiate", "ios_mirror_pill": "OK"}},
+    "Continue": {"preferred": "Continuă", "roles": {"resume": "Continuă"}},
+    "Save": {"preferred": "Salvează", "roles": {"save_money": "Economisești"}, "note": "second person as shipped on paywall.onboardingSubscription.annualPlanBadge (Economisești 56%); the guide's imperative Economisește lost to the catalog"},
+    "Edit": {"preferred": "Editează", "roles": {"ios_mirror_pill": "Editați"}},
+    "Delete": {"preferred": "Șterge", "roles": {}},
+    "Skip": {"preferred": "Sari peste", "roles": {"skip_for_now": "Sari peste deocamdată"}},
+    "Allow": {"preferred": "Permite", "roles": {}},
+    "Don't allow": {"preferred": "Nu permite", "roles": {}},
+    "Got it": {"preferred": "Am înțeles", "roles": {}},
+    "Retry": {"preferred": "Reîncearcă", "roles": {"in_sentence": "Încearcă din nou"}},
+    "Settings": {"preferred": "Setări", "roles": {"open_button": "Deschide Setările", "setup_noun": "configurare"}}
+  },
+  "open": [
+    {
+      "id": "focus_session",
+      "options": ["sesiune de focus", "sesiune de concentrare"],
+      "recommended": "sesiune de concentrare",
+      "recommended_reason": "Plain Romanian that a reader without English understands at first read, and the catalog majority (concentr* in 72 keys against focus* in 30). Prefer 'sesiune de focus' only if the platform-term harvest shows iOS ro names the system Focus mode 'Concentrare' and the two would be confused.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Archived guide section 7 prefers 'sesiune de focus'; the catalog has 3 keys with 'sesiune de focus' and 2 with 'sesiune de concentrare' (term_audit, snapshot 2026-09-15); across all ro copy the stem 'concentr*' appears in 72 keys against 'focus*' in 30 (whole-word 'focus' in 29); the same-source group 'Focus' renders as Focus (insights.focus.title, profile.sessionDetails.splitFocus) and Concentrare (profile.home.focusSection). Decide before the first ro batch; a flip is a global term change with its own follow-up batch, never a per-string choice."
+    },
+    {
+      "id": "forecast",
+      "options": ["Prognoză", "Estimare", "Proiecție"],
+      "recommended": "Prognoză",
+      "recommended_reason": "The forecast line and the month-end figure are heard one after the other (VoiceOver names each dashed chart point, then the month-end label), so they need two different words; 'Prognoză' is the everyday word for a forecast and leaves 'Estimare' for the month-end figure ('Estimare la final de lună').",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Shipped split 3/3: 'Estimare' in insights.savings.forecast, monthEnd and focusHistoryEstimateExplanation; 'Proiecție' in estimateExplanation, measuredEstimateExplanation and insights.appUsage.permissionDescription. Whatever is chosen, the forecast line and the month-end figure stay distinct; reconcile the two 'Proiecție:' prefixes in the same follow-up batch."
+    }
+  ]
+}

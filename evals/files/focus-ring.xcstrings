@@ -1,0 +1,342 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "component.daySelection.daysCount" : {
+      "comment" : "Weekday selection summary: number of selected days for a custom selection, e.g. '3 days'",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld day"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld days"
+                }
+              }
+            }
+          }
+        },
+        "ro" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld zile"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld zi"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld de zile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "paywall.hero.reclaimFormat" : {
+      "comment" : "Paywall hero headline. Placeholder is a duration like '3h a day'. Keep 'up to' — this is a target, not a promise",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take back up to %@."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recuperează până la %@."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.firstRun" : {
+      "comment" : "Focus Goal widget: VoiceOver label for a user who has never run a session; %lld is the goal in minutes",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No focus sessions yet. Your daily goal is %lld minutes."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Încă nicio sesiune de concentrare. Obiectivul tău zilnic este %lld min."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.goalMet" : {
+      "comment" : "Focus Goal widget: VoiceOver label once the goal is reached; %1 focused minutes, %2 goal minutes",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld of %2$lld minutes focused today. Daily goal met."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld din %2$lld min de concentrare azi. Obiectiv zilnic atins."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.money" : {
+      "comment" : "Focus Goal widget (medium): VoiceOver sentence for the moneyfesting row; %@ is the formatted amount",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estimated time value over the last 30 days: %@. Not money earned."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valoarea estimată a timpului în ultimele 30 de zile: %@. Nu sunt bani câștigați."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.progress" : {
+      "comment" : "Focus Goal widget: VoiceOver label; %1 focused minutes, %2 goal minutes, %3 a formatted percentage",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld of %2$lld minutes focused today. %3$@ of your daily goal."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld din %2$lld min de concentrare azi. %3$@ din obiectivul zilnic."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.setUp" : {
+      "comment" : "Focus Goal widget: VoiceOver label when no user row exists yet",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No daily focus goal set yet. Open the app to set one."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Niciun obiectiv zilnic de concentrare setat. Deschide aplicația ca să setezi unul."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.streak" : {
+      "comment" : "Focus Goal widget (medium): VoiceOver sentence for the day-streak row; %@ is the formatted number of days",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day streak: %@."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Zile în serie: %@."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.a11y.unavailable" : {
+      "comment" : "Focus Goal widget: VoiceOver label when the store could not be read",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Focus progress unavailable. We'll try again soon."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Progresul concentrării nu este disponibil. Reîncercăm în curând."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.description" : {
+      "comment" : "Widget gallery: description of the daily focus completion-ring widget",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's focused minutes toward your daily goal."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cât ai lucrat azi din obiectivul zilnic de focus."
+          }
+        }
+      }
+    },
+    "widgets.focusRing.displayName" : {
+      "comment" : "Widget gallery: display name of the daily focus completion-ring widget",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Focus Goal"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obiectiv de focus"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.firstRun" : {
+      "comment" : "Focus Goal widget: status line for a user with a goal who has never run a session",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start your first session"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Începe prima sesiune"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.goalSuffix" : {
+      "comment" : "Focus Goal widget: the daily goal shown after the focused minutes, e.g. '/60 MIN'; %lld is the goal in minutes",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/%lld MIN"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/%lld MIN"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.row.money" : {
+      "comment" : "Focus Goal widget (medium): caption under the money figure, naming the trailing 30-day window",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TIME VALUE, 30 DAYS"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VALOAREA TIMPULUI, 30 DE ZILE"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.row.streak" : {
+      "comment" : "Focus Goal widget (medium): caption under the consecutive-day focus streak",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAY STREAK"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ZILE ÎN SERIE"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.setUp" : {
+      "comment" : "Focus Goal widget: status line when no user row exists yet, i.e. the goal has never been set",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set your daily goal"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Setează-ți obiectivul zilnic"
+          }
+        }
+      }
+    },
+    "widgets.focusRing.title" : {
+      "comment" : "Focus Goal widget (medium): uppercase caption above the minutes value",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TODAY'S FOCUS"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "CONCENTRAREA DE AZI"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

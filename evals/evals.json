@@ -1,48 +1,152 @@
 {
   "skill_name": "moneyfesting-localization",
-  "evaluation_scope": "Preparation and review decisions only. No app translations, resource edits, publishing, or claims of native-human validation. These cases do not measure linguistic quality or conversion.",
+  "evaluation_scope": "Preparation and review decisions plus fixture-only translation. Fixtures under evals/files may be translated and rewritten; the app checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only for every case: never edited, built or tested, and run dirs go to scratch space outside it. No case may claim native-human validation, owner acceptance (state translated) or release readiness. Grade expectations from observable outputs so a run without the skill's scripts still grades. Grade through skill-creator's executor and grader agents (agents/grader.md). Trigger checks with its scripts/run_eval.py need a separate [{\"query\", \"should_trigger\"}] set, not this file. Regenerate fixtures with scripts/catalog_slice.py --emit-xcstrings and update fixtures.catalog_commit below.",
+  "fixtures": {
+    "catalog_commit": "c8a49dd",
+    "sliced": "2026-09-15",
+    "files": {
+      "evals/files/focus-ring.xcstrings": "valid Localizable.xcstrings subset: the 15 widgets.focusRing.* keys (9 ro units needs_review) plus paywall.hero.reclaimFormat and component.daySelection.daysCount as reference rows; regenerate with scripts/catalog_slice.py --catalog <checkout>/Manifesting/Foundation/Localization/Localizable.xcstrings --keys <those 17 keys> --locale ro --emit-xcstrings --out evals/files/focus-ring.xcstrings",
+      "evals/files/fit-packet.json": "synthetic fit rows with layout facts read from the widget tiles; widthPt and fontPt are approximations, expected_verdict is the grading key"
+    }
+  },
   "evals": [
     {
       "id": 1,
       "name": "currency-and-surface-preparation",
-      "prompt": "Prepare a Moneyfesting localization handoff for the languages implied by its currency selector plus Hebrew. Earlier preferences also included Italian, Norwegian and Russian. This is preparation only: do not translate any app text, edit the checkout, or build it. Read the live currency/language implementation and give candidate locale decisions, the surfaces a translator must inspect, and concrete readiness checks for Arabic, Hebrew, Brazilian/European Portuguese and Traditional Chinese. Distinguish facts from proposals. Return a concise handoff in JSON.",
-      "expected_output": "A repository-grounded handoff that separates currency, region and language; inventories non-catalog content; preserves current scope; and exposes regional/script and RTL readiness work.",
+      "prompt": "I want to plan the next Moneyfesting locales. Checkout is /Users/daisoreanulaurentiu/Documents/github/Moneyfesting, read-only, don't build it. Start from what the currency selector implies (Manifesting/Foundation/Localization/CurrencyOption.swift) plus Hebrew, which I want regardless. Earlier I'd also said Italian, Norwegian and Russian. Prepare only: no translating, no edits. Read the live currency and language code, give me candidate locale decisions, the surfaces a translator has to look at (not just the xcstrings), and concrete readiness checks for Arabic, Hebrew, Brazilian vs European Portuguese and Traditional Chinese. Keep facts and proposals apart. Concise handoff, JSON.",
+      "expected_output": "A repository-grounded handoff that reads CurrencyOption.swift and AppLanguage, separates currency, region and language, inventories non-catalog content, preserves the current en/ro scope, and exposes the regional, script and RTL readiness work.",
       "files": [],
       "expectations": [
-        "Derives candidates from live currency/region code evidence while treating Hebrew as an explicit addition and retaining prior Italian, Norwegian and Russian preferences as candidates.",
+        "Treats Hebrew as both an explicit addition and currency-implied via ILS/IL, derives Italian from EUR/IT and Norwegian from NOK, and keeps Russian as a stated preference without currency evidence.",
+        "Reports the live count of 32 currencies in CurrencyCatalog.options (EUR alone spanning 21 regions) from the file, not a remembered figure, and dates it as a snapshot.",
         "Distinguishes language, formatting region and selected currency; does not propose automatic currency conversion or infer one language per currency.",
-        "Inventories Screen Time shield strings outside xcstrings and differentiates quotation content from UI resources.",
-        "Identifies current en/ro support and the need to verify regional/script locale handling before enabling pt-BR, pt-PT or Traditional Chinese.",
+        "Inventories Screen Time shield strings outside xcstrings (ShieldMessageCatalog.swift with English/Romanian pairs and a languageCode == \"ro\" branch) and differentiates quotation content under Data/quotes from UI resources.",
+        "Identifies current en/ro support in AppLanguage.supportedLanguageCodes and the need to verify regional and script locale handling (the in-app override cannot select a regional variant) before enabling pt-BR, pt-PT or Traditional Chinese.",
         "Respects preparation-only scope and does not claim translated resources, app tests or release readiness."
       ]
     },
     {
       "id": 2,
       "name": "money-and-quote-context",
-      "prompt": "Prepare translation instructions for this synthetic future Moneyfesting screen; do not translate it or edit the app. Heading: 'You earned %@ today'. CTA: 'Keep going'. Context: %@ is the estimated value of focused time at the user's hourly rate; tapping the CTA opens a new focus-session setup. The screen also has an attributed quotation, an app-authored affirmation, a freeze-covered streak label, and subscription terms with price, billing period, trial eligibility and renewal. We want friendly Arabic and Hebrew marketing that feels local. Describe what can change, what needs clarification or a policy decision, and how you would independently check the result. No target-language output or app builds. Return JSON.",
-      "expected_output": "Detects the misleading source claim; distinguishes creative copy from precise functional, commercial and attributed content; specifies a genuinely blind independent review plus local editorial and final review.",
+      "prompt": "Write me translation instructions for a screen we're adding to Moneyfesting; don't translate it and don't touch the app. Heading: 'You earned %@ today'. CTA: 'Keep going'. %@ is the estimated value of focused time at the user's hourly rate; tapping the CTA opens a new focus-session setup. Same screen also has an attributed quotation, an app-authored affirmation, a streak label that a freeze covered, and subscription terms with price, billing period, trial eligibility and renewal. I want Arabic and Hebrew marketing that feels local, not translated. Tell me what may change, what needs a clarification or a policy decision, and how you'd independently check the result. No target-language output, no builds. JSON.",
+      "expected_output": "Detects the misleading source claim; distinguishes creative copy from precise functional, commercial and attributed content; specifies a target-only editorial read, a genuinely blind back-translation of the claim-bearing strings, and an independent final review.",
       "files": [],
       "expectations": [
-        "Flags earned as a misleading source claim because the amount represents estimated focused-time value rather than income.",
-        "Preserves placeholder meaning and distinguishes the actual CTA destination, freeze coverage, and billing/trial/renewal conditions.",
-        "Identifies source/provenance and translation-policy decisions for attributed quotations, distinguishing them from app-authored affirmations and ordinary marketing transcreation.",
-        "Specifies a fresh source-blind backtranslation with no English or rationale, separate target-only editorial review, and an independent final review.",
-        "Uses locale-specific Arabic/Hebrew register or gender/RTL decisions without claiming actual native-human validation; produces no target-language translations."
+        "Flags 'earned' as a misleading source claim because the amount is the estimated value of focused time, not income, and asks for a claim ledger row or a source fix before translation.",
+        "Preserves placeholder meaning and distinguishes the actual CTA destination (a new session setup, not resuming), freeze coverage (one earned freeze covers one missed day), and billing, trial and renewal conditions as claim-bearing content with one approved form.",
+        "Identifies source and provenance and translation-policy decisions for attributed quotations (Data/quotes/SCHEMA.md: sourced quotations stay in their language), distinguishing them from app-authored affirmations and from marketing transcreation within the voice card's limits.",
+        "Specifies a fresh source-blind back-translation of the claim-bearing strings with no English or rationale in the packet, a separate target-only editorial review that reads the screen in flow order before it, and an independent final adjudication; notes that the editor wins on style and the back-translation on claims.",
+        "Uses locale-specific Arabic and Hebrew register, gender-of-address and RTL decisions, keeps 'Moneyfesting' in Latin script, and produces no target-language translations or claims of native-human validation."
       ]
     },
     {
       "id": 3,
       "name": "stale-review-rejection",
-      "prompt": "Audit this localization review packet and decide if the Arabic/Hebrew release can be called ready. Do not translate anything or edit/build the app. Evidence: translator A also did the back-translation in the same conversation with the English visible; the reverse wording matched English 100%. Editor B saw the bilingual glossary and translator rationale and said 'native certified'. Afterwards A shortened the CTA and removed a billing condition to fit one line. Reviews refer to the older candidate. JSON parses, placeholders look similar, and English-only screenshots exist; no target-language run, extension check, Dynamic Type, RTL or VoiceOver check happened. The team proposes shipping because the combined quality score is 96%. State verdicts, affected rechecks and the final reviewer setup in JSON, without inventing new evidence.",
-      "expected_output": "Rejects the readiness claim, identifies source contamination and stale evidence, rejects score averaging and native certification, and requires scoped fresh review and actual UI/runtime evidence.",
+      "prompt": "Audit this review packet and tell me if I can call the Arabic/Hebrew release ready. Don't translate, don't edit or build the app. What happened: translator A also did the back-translation, in the same conversation, with the English visible; the reverse wording matched English 100%. Editor B saw the bilingual glossary and A's rationale and wrote 'native certified'. After that, A shortened the CTA and dropped a billing condition to fit one line. Both reviews refer to the older candidate. JSON parses, placeholders look similar, screenshots are English-only; no target-language run, no extension check, no Dynamic Type, RTL or VoiceOver pass. The team wants to ship because the combined quality score is 96%. Give me verdicts, what has to be rechecked, and how the final review should be set up, in JSON, without inventing evidence.",
+      "expected_output": "Rejects the readiness claim, identifies source contamination and stale evidence, rejects score averaging and native certification, requires scoped fresh review and actual UI and runtime evidence, and recommends rather than reports a human read.",
       "files": [],
       "expectations": [
-        "Rejects release readiness despite roundtrip agreement and aggregate score; no material billing condition may be dropped for fit.",
-        "Identifies both same-agent/source-visible backtranslation and source-exposed editorial review as invalid evidence for independent target-only review.",
-        "Invalidates reviews after changed CTA and billing copy, requiring affected fresh linguistic checks and final adjudication of the actual final version.",
-        "Distinguishes JSON parsing from structural/runtime correctness and requires missing target-screen, extension, Dynamic Type, RTL and VoiceOver evidence within scope.",
-        "Specifies a fresh final adjudicator at the strongest available model and highest supported effort, with actual settings/fallback disclosed, and rejects native-certified claims.",
-        "Does not infer whether imported reviewers A/B are AI or human or infer actual review settings from labels alone; rejects unsupported certification while preserving unknown provenance."
+        "Rejects release readiness despite round-trip agreement and the aggregate score; no billing condition may be dropped for fit, and the dropped condition is routed to a design decision.",
+        "Identifies both same-agent, source-visible back-translation and source-exposed editorial review as invalid evidence for independent target-only review.",
+        "Invalidates the reviews after the CTA and billing copy changed, requiring a fresh editor on the changed ids plus neighbours, a fresh blind back-translation of the claim-bearing strings, and final adjudication of the actual final version.",
+        "Distinguishes JSON parsing from structural and runtime correctness and requires the missing target-language screen, extension, Dynamic Type, RTL and VoiceOver evidence within scope.",
+        "Specifies a fresh final adjudicator that has seen none of the earlier packets, records the model alias used or 'unknown' rather than promising a strongest-model setting, and rejects the 'native certified' claim.",
+        "Recommends a human read of the hero and CTA copy in the report's human-review line and does not report one as done.",
+        "Does not infer whether reviewers A and B are AI or human or infer actual review settings from labels alone; rejects unsupported certification while preserving unknown provenance."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "focus-ring-needs-review-ro",
+      "prompt": "The Focus Goal widget still has 9 Romanian strings sitting in needs_review (widgets.focusRing.*). I sliced them into evals/files/focus-ring.xcstrings at catalog commit c8a49dd, with paywall.hero.reclaimFormat and component.daySelection.daysCount in there as reference rows. Run the translate protocol on that fixture only: it's the one file you may write. The checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only (read the tiles and tests all you like, but no edits, no build). Put the run dir somewhere in your scratch space, not inside the checkout. Rev the needs_review units that need it, leave the ones I already accepted alone, and end with the report.",
+      "expected_output": "Only the fixture changes. The nine needs_review ro units are revised or confirmed with reasons and written back still as needs_review; owner-accepted units and en are untouched; placeholders, plural rules, diacritics, the a11y minute form pinned by FocusRingCopyTests and the focus/concentrare term decision are handled explicitly; the pinned report block closes the run.",
+      "files": [
+        "evals/files/focus-ring.xcstrings"
+      ],
+      "expectations": [
+        "Writes only evals/files/focus-ring.xcstrings; git status --porcelain in the checkout is unchanged from the start of the run, and no build or test is run (report says build not_run).",
+        "The six ro units already in state translated (a11y.money, description, displayName, goalSuffix, row.money, row.streak) and all seventeen en units are byte-identical to the input; every one of the nine needs_review units is either revised or confirmed with a one-line reason.",
+        "Every unit the run writes keeps state needs_review, so the report's needs_review left reads 9; the report never calls a unit translated or owner-accepted.",
+        "Placeholder multisets per key equal en: %lld in a11y.firstRun; %1$lld and %2$lld in a11y.goalMet; %1$lld, %2$lld and %3$@ in a11y.progress; %@ in a11y.streak; goalSuffix stays '/%lld MIN'.",
+        "Keeps the bare minute figure in the ro a11y labels (no ' minute' or ' de minute'), because ManifestingTests/Widgets/FocusRingCopyTests.swift romanianAccessibilityLabelsAvoidTheCountedNoun pins it and a single %lld cannot take the partitive de from 20 upwards, or records a plural-variation rewrite plus the test change as an owner decision instead of doing it; the tension between spoken VoiceOver text and the abbreviation is named.",
+        "Uses comma-below ș and ț (never ş or ţ), informal tu (Setează-ți, Deschide), sentence case for status lines and uppercase with diacritics for the uppercase captions.",
+        "Reads the owner-accepted neighbours (displayName 'Obiectiv de focus', description '... de focus') and either aligns the needs_review units' focus/concentrare wording to them or records focus/concentrare as an open glossary decision; the widget does not ship both silently.",
+        "Writes the a11y labels as spoken sentences in state-then-figures order and the first-run and set-up lines as short status captions; at least one stiff noun-stacked line (a11y.unavailable's 'Progresul concentrării nu este disponibil') is rewritten as plain speech with the same meaning or confirmed with a reason.",
+        "If a blind packet exists it contains no English value, key or comment; if B or C did not run as separate agents the report says not_run instead of claiming a blind pass.",
+        "Ends with the report block: Localization run header with mode translate, catalog c8a49dd and the run dir; Keys changed, unchanged, blocked and needs_review left; Checks with build not_run; Reviews with the human review line; any unresolved term or a11y decision under Decisions needed."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ro-naturalness-audit",
+      "prompt": "Audit mode, Romanian, checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting read-only. I pulled these EN/RO pairs from Localizable.xcstrings and want to know what a Romanian user would trip over: calques, imported English sentence shapes, wrong register, gender slips, idioms rendered literally. Read each one as the control it is on the screen it sits on. Findings as proposals per key, full replacement line included, nothing applied.\n\npaywall.benefit.streak.title: 'Streaks that forgive.' / 'Serii care iartă.'\npaywall.benefit.value.detail: 'Set your rate and watch focus add up.' / 'Setează-ți tariful și vezi cum se adună concentrarea.'\npaywall.winBack.title: 'Your one-time offer' / 'Oferta ta unică'\npaywall.button.restore: 'Restore' / 'Restaurează'\ninsights.savings.forecast: 'Forecast' / 'Estimare viitoare'\ninsights.savings.monthEnd: 'Month-end estimate' / 'Estimare la sfârșitul lunii'\nwidgets.streak.copy.frozen.small: 'Covered by a freeze.' / 'Acoperit cu îngheț.'\nwidgets.streak.copy.frozen.medium: 'Yesterday was covered.' / 'Ieri a fost acoperită.'\nfocusTask.alert.deleteTask.title: 'Delete Task' / 'Șterge sarcina'\nfocusTask.alert.deleteTask.message: 'Are you sure you want to delete this task? This action cannot be undone.' / 'Sigur vrei să ștergi această activitate? Acțiunea nu poate fi anulată.'\nprofile.focusTarget.title: 'Daily Focus Target' / 'Obiectiv zilnic de focus'\nonboarding.welcome.preview.ring.goal: 'Daily focus goal' / 'Obiectiv zilnic de concentrare'\nachievements.streak.body (other): 'You showed up %lld days in a row. That's the habit.' / 'Ai fost prezent %lld de zile la rând. Ăsta e obiceiul.'\nshare.screenshot.title: 'Share this properly?' / 'Îl distribui ca lumea?'\nonboarding.alert.screenTimeMessage: 'In order to proceed you need to tap \"Continue\" in order to provide \"Moneyfesting\" access to Screen Time' / 'Ca să continui, apasă „Continuă” pentru a-i oferi aplicației „Moneyfesting” acces la Timp de utilizare'\n\nAnd one draft pair a contractor sent for the mood card, not in the catalog yet, don't add it: 'Some days it rains cats and dogs. Logging how you felt still counts.' / 'În unele zile plouă cu pisici și câini. Tot contează să notezi cum te-ai simțit.'",
+      "expected_output": "Category-level findings on real keys: calques and a personified fragment rewritten as full plain sentences, a meaning shift on the win-back title, a bare restore verb, forecast terminology drift on one card, the gender mismatch between the frozen variants and the literal freeze, a gendered predicate rewritten with a verb, term decisions rather than per-string fixes for sarcina/activitate and focus/concentrare, the literal idiom in the draft mapped to plouă cu găleata or plain meaning, two rows passed, no invariant changed.",
+      "files": [],
+      "expectations": [
+        "Flags 'Serii care iartă.' as a personified fragment and 'se adună concentrarea' as a calque of 'focus adds up', each with a full-sentence proposal that keeps the benefit (a freeze forgives a missed day; focused minutes turn into a value at your rate) in everyday Romanian.",
+        "Flags the meaning shift on paywall.winBack.title: 'unică' reads as unique, the source says one-time (offered once); classifies it as a claim finding on a paywall string, not a style note, and proposes a form that keeps 'once'.",
+        "Flags 'Restaurează' as the bare verb (restoring files or buildings) and proposes a button form that names what is restored (the purchases), marking the verb as unverified until Apple's Romanian Subscriptions wording is read rather than asserting it.",
+        "Flags terminology drift on the savings card: 'Estimare viitoare' and 'Estimare la sfârșitul lunii' read as the same thing side by side; proposes two distinct labels (forecast versus month-end figure) and names the card as the context.",
+        "Flags the masculine/feminine mismatch between 'Acoperit' (small) and 'acoperită' (medium), names the missing referent (ziua or seria), and flags 'îngheț' as a literal weather rendering of the streak-freeze concept; proposes both variants agreeing with the same referent and naming the freeze the way the glossary does.",
+        "Reports sarcina/activitate (deleteTask title versus message) and focus/concentrare (profile.focusTarget.title versus onboarding.welcome.preview.ring.goal) as glossary term decisions with a recommended pick, not as per-string fixes.",
+        "Flags 'Ai fost prezent' as a masculine participle addressed to the user and proposes a gender-neutral verb rewrite that keeps the one/few/other categories and 'de' before 20 or more.",
+        "Keeps 'ca lumea' in share.screenshot.title (the local idiom for 'properly') and Apple's term 'Timp de utilizare', the brand and the „…” quotes in onboarding.alert.screenTimeMessage, and raises no major or claim finding on either key; a minor note (the pronoun agreeing with the app's term 'captură', a missing final period) and a note on the clumsy English source are allowed.",
+        "Flags the draft's 'plouă cu pisici și câini' as a literal rendering of an English idiom and proposes 'plouă cu găleata' or the plain meaning (a hard day) with the same register; does not add an idiom to any row whose source has none.",
+        "Changes no invariant: keeps %lld, plural categories, 'Moneyfesting' exactly, the „…” quotes, edits no catalog or checkout file, and marks every finding as a proposal with the screen and control named (paywall benefit list, win-back sheet title, widget copy line, alert message)."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "widget-fit-verdict",
+      "prompt": "Have a look at evals/files/fit-packet.json: a few Romanian widget and paywall strings with the layout facts I pulled from the tiles (lineLimit, minimumScaleFactor, rough slot width and font size). Row f04 is a shortening someone proposed for f03. For each row give me a verdict (fits, shrinks, truncates, refuse), what to do about it, and what evidence you'd still need before you'd sign it off. Checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only; nothing gets edited or built.",
+      "expected_output": "Per-row verdicts with reasons: fit findings with shorter natural alternatives that keep the control's role, refusal of the paywall cut with a design-decision request, the plural longest form used as the sample, the brand kept, and every verdict marked approximate pending renders with fresh B and C on any changed id.",
+      "files": [
+        "evals/files/fit-packet.json"
+      ],
+      "expectations": [
+        "For f01 'Deschide aplicația' reports shrinks (about 0.9 of 14pt, above the view's 0.6 floor) rather than a failure, keeps the button form, and either accepts the shrink pending a render or offers a shorter natural button form that still means 'open the app'; it proposes no caption or sentence.",
+        "For f02 keeps 'Moneyfesting' exactly in every alternative; if a shorter form drops the brand it is offered only as an owner decision, never applied.",
+        "For f03 names truncation as the outcome (lineLimit 1 with minimumScaleFactor 1.0 and a 72pt slot) and routes it to a design decision (wider slot, second line, smaller font or scale) rather than to a copy cut.",
+        "Refuses f04 'Facturat' because it drops the billing period, a claim invariant on a paywall string, and asks for the design decision or proposes a Romanian form that keeps the period inside the slot.",
+        "For f06 uses the plural other category with 'de' (sample 25) as the fit sample and says the one and few forms are shorter, so the longest form decides.",
+        "Passes f05 and f07 with no copy change and says why (within width at full scale).",
+        "For f08 treats the uppercase caption as a caption (short noun phrase, diacritics kept in uppercase) and offers a shorter caption rather than a sentence.",
+        "Marks every verdict approximate: widthPt and fontPt are estimates, no fit is claimed from character counts, and a render in Romanian at the smallest widget size and the largest relevant accessibility size is required before sign-off, with the render paths to be recorded in the report.",
+        "States that any changed string needs a fresh editor pass on the changed ids plus neighbours and, for tier A ids (paywall billing), a fresh blind back-translation, and that a fit-only shortening that changes no invariant does not count as a material round."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "packet-leak",
+      "prompt": "Build the context packet for all 17 keys in evals/files/focus-ring.xcstrings (the 15 widgets.focusRing keys plus the two reference rows), Romanian, into a scratch run dir outside the checkout (use scripts/build_context_packet.py if it's there, otherwise build it by hand the way agent-protocol.md's packet separation says). Then prove the blind packet is blind: check it for every English value, every key and every comment sentence from the fixture and show me the result. Checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting stays read-only, nothing edited there.",
+      "expected_output": "A coordinator packet with screen and flow context and a blind target packet that carries no key, English value or comment; a leak check with zero hits and the allowlisted identical-by-design value explained; no checkout changes.",
+      "files": [
+        "evals/files/focus-ring.xcstrings"
+      ],
+      "expectations": [
+        "leak_check.txt reports `leak check: pass` with 0 matches (the file always carries a status line; allowlisted and role-vocabulary counts are not leaks), or the hand check reports zero hits, and the output states whether dispatch of B and C is unblocked, naming any packet defect that blocks it; the run dir path is outside the checkout and reported.",
+        "The blind packet (blind/target.rev1.json or its hand-built equivalent) contains none of the 17 keys, none of the fixture's English values of four or more characters, and no comment sentence; strings carry ids s01 onwards and only coordinator/id_map.json maps them back.",
+        "The blind packet still carries screen role, order, a control_role per string (VoiceOver label, status caption, uppercase caption, gallery description, hero headline, plural count), token samples for %lld, %1$lld, %2$lld, %3$@ and %@, and a fit or consistency note, so an editor can read the widget in flow.",
+        "coordinator/source.json carries screen_state, control, neighbours and tier per entry, with tier A on the a11y keys, a11y.money and paywall.hero.reclaimFormat and the daysCount plural.",
+        "Treats goalSuffix '/%lld MIN' as identical by design (en equals ro) and 'MIN' plus placeholder tokens as allowlisted, and says so instead of reporting them as leaks.",
+        "No file under the checkout is created or modified (git status --porcelain unchanged) and no build runs."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "round-trip-meaning",
+      "prompt": "Coordinator step for a Romanian batch. Below are source, current target and the blind back-translator's reading for six ids; editor C already said r1 and r3 read like a Romanian product team wrote them and had nothing on r2 or r6. Classify each as match, acceptable adaptation or meaning finding, say who wins where C and the back-translation disagree, and what happens next. Don't touch the checkout.\n\nr1 share.screenshot.title (banner title): EN 'Share this properly?' / RO 'Îl distribui ca lumea?' / back 'Want to share it the right way?'\nr2 paywall.winBack.title (title of the discount sheet when the user closes the paywall): EN 'Your one-time offer' / RO 'Oferta ta unică' / back 'Your unique offer'\nr3 insights.sessions.todayEmptyMessage (empty state): EN 'You still have time to build momentum. Start a Moneyfesting session and it will appear here.' / RO 'Mai ai timp să prinzi avânt. Pornește o sesiune Moneyfesting și va apărea aici.' / back 'There's still time to pick up speed. Start a Moneyfesting session and it'll show up here.'\nr4 paywall.hero.reclaimFormat (paywall hero headline, comment says keep 'up to', a target not a promise): EN 'Take back up to %@.' / RO 'Recuperează până la %@.' / back 'Recover up to %@.'\nr5 widgets.focusRing.a11y.money (VoiceOver sentence, medium widget): EN 'Estimated time value over the last 30 days: %@. Not money earned.' / RO 'Valoarea estimată a timpului în ultimele 30 de zile: %@. Nu sunt bani câștigați.' / back 'The estimated value of your time in the last 30 days: %@. This isn't money you earned.'\nr6 widgets.streak.copy.frozen.small (small streak widget copy line when a streak freeze bridged yesterday): EN 'Covered by a freeze.' / RO 'Acoperit cu îngheț.' / back 'Covered with frost.'",
+      "expected_output": "Proposition-level comparison: r1, r3 acceptable adaptations, r4, r5 matches, r2 and r6 meaning findings where the back-translation outranks the editor, with the rule stated and the next round scoped to the changed ids.",
+      "files": [],
+      "expectations": [
+        "Classifies r1 as an acceptable adaptation: 'ca lumea' carries 'properly', the question and the offer are the same proposition, and no finding is raised on the changed wording, the way 'plouă cu găleata' read back as 'it's pouring' is an acceptable adaptation.",
+        "Classifies r2 as a meaning finding: 'unică' reads as unique, the source says one-time (offered once); because it is a paywall claim the back-translation outranks editor C's silence, and a rev2 that keeps 'once' is requested.",
+        "Classifies r3 as an acceptable adaptation despite the different sentence shape and 'pick up speed' for momentum; the editor's style approval stands.",
+        "Classifies r4 as a match and names the 'up to' constraint (a target, not a promise) as the claim checked.",
+        "Classifies r5 as a match: the estimate, the 30-day window and the not-earned disclaimer survive despite different wording.",
+        "Classifies r6 as a meaning finding: 'îngheț' read back as frost shows the streak-freeze concept (one earned freeze covers one missed day) was rendered literally and lost; not a style note.",
+        "States the rule it applied, compare propositions not words, differences in rhetorical shape, sentence count, idiom or emphasis are never findings by themselves, editor wins on style and back-translation wins on claims, and applies it consistently: no finding is raised on wording alone and no idiom is invented where the source has none.",
+        "Scopes the next round: translator rev2 for r2 and r6 only, a fresh editor on those ids plus their listed neighbours, a fresh blind back-translation of the changed tier A ids, no re-review of r1, r3, r4, r5."
       ]
     }
   ]

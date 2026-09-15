@@ -1,0 +1,77 @@
+{
+  "snapshot": "2026-09-15",
+  "concepts": [
+    {
+      "id": "streak",
+      "definition": "consecutive days on which the user completed enough focus; a fact about the calendar, not praise",
+      "not_this": "days in the app, login streak, chain of tasks",
+      "where": ["widgets.streak.*", "share.card.streak*", "streakFreeze.*", "paywall.benefit.streak.*", "onboarding.welcome.slide.streak.*"]
+    },
+    {
+      "id": "streak_freeze",
+      "definition": "one earned freeze covers one missed focus day; not completed focus",
+      "not_this": "pause, skip, restore",
+      "where": ["paywall.benefit.streak.*", "streakFreeze.*", "widgets.streak.copy.frozen.*", "widgets.streak.a11y.frozen"]
+    },
+    {
+      "id": "focus_session",
+      "definition": "a timed session on one task, optionally with apps blocked; the app calls it focus, the timer screen is Moneyfesting",
+      "not_this": "meditation, Pomodoro as a product name, work shift (that is the badge metaphor)",
+      "where": ["moneyfesting.details.*", "focusTask.*", "widgets.startFocus.*", "profile.sessionDetails.*", "onboarding.welcome.preview.*"]
+    },
+    {
+      "id": "task",
+      "definition": "the thing the user focuses on or plans; a focus task is a saved template with a duration and a restricted list; 'ToDo' in keys is internal naming",
+      "not_this": "activity, chore, event",
+      "where": ["focusTask.*", "plan.*", "widgets.tasks.*", "insights.mood.completedTasks"]
+    },
+    {
+      "id": "restricted_list",
+      "definition": "the named set of apps and categories blocked during a session; the group name 'No Restricted Apps' ships as an unlocalized Swift literal",
+      "not_this": "blacklist, restrictions in general, parental controls",
+      "where": ["screenTime.createRestrictedList.*", "screenTime.restrictedAppsPicker.*", "plan.createToDo.removeRestrictedApps", "plan.createToDo.restrictedAppsSection"]
+    },
+    {
+      "id": "time_value",
+      "definition": "focused time multiplied by the user's own hourly rate; an estimate shown as money, never money received",
+      "not_this": "earnings, income, savings, profit, wage paid",
+      "where": ["insights.savings.*", "achievements.category.wages.*", "achievements.badge.*.earned", "widgets.cash.*", "widgets.monthlyTimeValue.*", "widgets.focusRing.a11y.money", "onboarding.withoutMoneyfesting.*", "onboarding.withMoneyfesting.*"]
+    },
+    {
+      "id": "time_value_disclaimer",
+      "definition": "the fixed sentence that follows a time value ('Not money earned.' and its four sibling forms); one target form per source form, reused verbatim on every screen",
+      "not_this": "a per-screen paraphrase, a softened or dropped sentence",
+      "where": ["achievements.badge.*.earned", "achievements.category.wages.description", "widgets.cash.description", "widgets.focusRing.a11y.money", "widgets.monthlyTimeValue.description", "insights.savings.disclaimer", "insights.savings.compactDisclaimer", "onboarding.hourlyWage.disclaimer", "onboarding.withoutMoneyfesting.fourthLine"]
+    },
+    {
+      "id": "forecast",
+      "definition": "the month-end projection of time value from recent focus or screen time; an estimate with a stated formula",
+      "not_this": "prediction, promise, guaranteed amount",
+      "where": ["insights.savings.forecast", "insights.savings.monthEnd", "insights.savings.*EstimateExplanation", "insights.appUsage.permissionDescription", "widgets.monthlyTimeValue.*"]
+    },
+    {
+      "id": "hourly_rate",
+      "definition": "the rate the user sets to price their own time; the source says hourly wage or hourly rate",
+      "not_this": "salary, earnings per hour, what the app pays",
+      "where": ["onboarding.hourlyWage.*", "profile.hourlyWage.*", "currency.settings.*", "screenTimeReport.missingWage", "achievements.category.wages.description"]
+    },
+    {
+      "id": "daily_focus_goal",
+      "definition": "the daily minutes target drawn as a ring; met or not met, never scored",
+      "not_this": "aim, aspiration, life goal (the affirmations use that word differently)",
+      "where": ["onboarding.dailyFocusGoal.*", "profile.focusTarget.*", "widgets.focusRing.*"]
+    },
+    {
+      "id": "minute_unit",
+      "definition": "the compact minutes unit appended to durations ('2h 15m'); one form per locale, spacing decided by the render",
+      "not_this": "a spelled-out plural in the tight widget and report lines",
+      "where": ["common.durationMinuteUnit", "share.duration.minutesShort", "screenTimeReport.durationMinutesOnly", "widgets.streak.focusedInStreak", "widgets.streak.focusedMinutesSummary", "moneyfesting.details.timeElapsedFormat", "component.templateTaskCard.duration"]
+    },
+    {
+      "id": "screen_time",
+      "definition": "Apple's Screen Time feature and its permission, in Apple's own localization; generic time spent on the screen is a different concept",
+      "not_this": "usage tracking, monitoring, surveillance",
+      "where": ["onboarding.screenTimePermission.*", "onboarding.alert.screenTime*", "insights.appUsage.*", "screenTime.*", "screenTimeReport.*"]
+    }
+  ]
+}
