@@ -75,11 +75,11 @@
     "Edit": {"preferred": "Editează", "roles": {"ios_mirror_pill": "Editați"}},
     "Delete": {"preferred": "Șterge", "roles": {}},
     "Skip": {"preferred": "Sari peste", "roles": {"skip_for_now": "Sari peste deocamdată"}},
-    "Allow": {"preferred": "Permite", "roles": {}},
-    "Don't allow": {"preferred": "Nu permite", "roles": {}},
+    "Allow": {"preferred": "Permite", "roles": {"ios_mirror_alert": "Permiteți"}, "note": "ios_mirror_alert is Apple's formal plural for a mirrored system alert (onboarding.notificationPermission.alertAllow), decided 2026-09-16 (mock_permission_alerts); 'Permite' stays preferred for any future app-owned Allow"},
+    "Don't allow": {"preferred": "Nu permite", "roles": {"ios_mirror_alert": "Nu permiteți"}, "note": "ios_mirror_alert is Apple's formal plural for a mirrored system alert (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow), decided 2026-09-16 (mock_permission_alerts); 'Nu permite' stays preferred for any future app-owned Don't allow"},
     "Got it": {"preferred": "Am înțeles", "roles": {}},
     "Retry": {"preferred": "Reîncearcă", "roles": {"in_sentence": "Încearcă din nou"}},
-    "Settings": {"preferred": "Setări", "roles": {"open_button": "Deschide Setările", "setup_noun": "configurare"}}
+    "Settings": {"preferred": "Configurări", "roles": {"open_button": "Deschide Configurări", "setup_noun": "configurare"}, "note": "decided 2026-09-16 (settings_app_name, owner's delegation); was 'Setări' / 'Deschide Setările'"}
   },
   "open": [
     {
@@ -88,7 +88,9 @@
       "recommended": "sesiune de concentrare",
       "recommended_reason": "Plain Romanian that a reader without English understands at first read, and the catalog majority (concentr* in 72 keys against focus* in 30). The pre-registered harvest condition was applied on 2026-09-16 and did not flip it (see note).",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "sesiune de concentrare, as the standing rule for the term (owner's delegation, 2026-09-16). The 3 keys that still said 'sesiune de focus' were aligned to it: profile.sessionDetails.analyticsTitle ('Detalii sesiune de concentrare'), widgets.startFocus.heading ('Sesiune de concentrare'), widgets.streak.extendStreakHint ('Fă o sesiune de concentrare azi ca să-ți prelungești seria.'). Each touched ro unit was written back needs_review, never translated, per the binding rule; the two keys that already said 'sesiune de concentrare' were untouched.",
       "note": "Archived guide section 7 prefers 'sesiune de focus'; the catalog has 3 keys with 'sesiune de focus' and 2 with 'sesiune de concentrare' (term_audit, snapshot 2026-09-15); across all ro copy the stem 'concentr*' appears in 72 keys against 'focus*' in 30 (whole-word 'focus' in 29); the same-source group 'Focus' renders as Focus (insights.focus.title, profile.sessionDetails.splitFocus) and Concentrare (profile.home.focusSection). Decide before the first ro batch; a flip is a global term change with its own follow-up batch, never a per-string choice. Harvest 2026-09-16 (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Focus; System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE): iOS ro names the system Focus mode 'Concentrare', so the first half of the pre-registered rule holds. The second half does not: no key names the system mode, the app ships no Focus filter, iOS never says 'sesiune', and en already shares 'Focus' with the iOS mode, so ro carries the overlap en accepted. What changed: recommended_reason no longer carries the pending condition; recommended stays 'sesiune de concentrare'. The exact overlap is on bare labels, 'Concentrare' (profile.home.focusSection, en 'Focus') and 'Concentrare în desfășurare' (onboarding.welcome.preview.blocking.active); the owner may weigh that as confusion and flip. App Store evidence (store-ro-evidence.md, fetched 2026-09-16): Focus To-Do, one of the few Romanian-shipping focus-timer competitors, calls the same mechanic 'Temporizator Pomodoro' and the accumulated time 'timpul de concentrare' -- further competitor support for 'concentrare' over 'focus', though it uses neither word for the app-side 'sesiune' either; the recommendation is unchanged."
     },
     {
@@ -97,7 +99,9 @@
       "recommended": "Prognoză",
       "recommended_reason": "The forecast line and the month-end figure are heard one after the other (VoiceOver names each dashed chart point, then the month-end label), so they need two different words; 'Prognoză' is the everyday word for a forecast and leaves 'Estimare' for the month-end figure ('Estimare la final de lună').",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Prognoză on insights.savings.forecast; Estimare la final de lună on insights.savings.monthEnd (owner's delegation, 2026-09-16). Both units were written back needs_review, never translated, per the binding rule. The pre-existing 3-way 'Estimare'/'Proiecție' split across estimateExplanation, measuredEstimateExplanation and focusHistoryEstimateExplanation was not touched; this decision resolves only the two VoiceOver-adjacent labels.",
       "note": "Shipped split 3/3: 'Estimare' in insights.savings.forecast, monthEnd and focusHistoryEstimateExplanation; 'Proiecție' in estimateExplanation, measuredEstimateExplanation and insights.appUsage.permissionDescription. Whatever is chosen, the forecast line and the month-end figure stay distinct; reconcile the two 'Proiecție:' prefixes in the same follow-up batch."
     },
     {
@@ -106,7 +110,9 @@
       "recommended": "Configurări",
       "recommended_reason": "The Home Screen icon and every iOS screen that sends the user to Settings say 'Configurări', so 'Setări' names an app no ro iPhone screen shows.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Configurări, with buttons 'Deschide Configurări' (owner's delegation, 2026-09-16; the app's own tu verb stays, only the app name changed). All 8 keys carrying 'Setări' were updated and each touched ro unit was written back needs_review, never translated, per the binding rule: insights.appUsage.openSettings, share.alert.openSettings, onboarding.alert.goToSettings, theme.picker.goToSettingsButton (now 'Deschide Configurări'); insights.appUsage.permissionSettingsHint ('În Configurări, deschide Timp de utilizare...'), onboarding.alert.photoAccessDeniedMessage, theme.picker.photoAccessDeniedMessage ('Mergi în Configurări ca să-l activezi.'), share.alert.photoAccessDeniedMessage ('...poze din Configurări...'). glossary/ro.json controls.Settings updated to preferred 'Configurări', open_button 'Deschide Configurări'; the Control forms row in references/locale-briefs/ro.md updated to match.",
       "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: Applications/Preferences.app | InfoPlist.strings | CFBundleDisplayName; Applications/Preferences.app | Localizable.strings | Settings; SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS 'Deschideți Configurări'; ScreenTimeAppIntentsExtension.appex | Localizable.strings | Go to Settings 'Accesați Configurări'). Keys: insights.appUsage.openSettings, share.alert.openSettings, onboarding.alert.goToSettings, theme.picker.goToSettingsButton ('Deschide Setările'); insights.appUsage.permissionSettingsHint, onboarding.alert.photoAccessDeniedMessage, theme.picker.photoAccessDeniedMessage, share.alert.photoAccessDeniedMessage ('în Setări', 'din Setări'); onboarding.notificationPermission.alertMessage belongs to mock_permission_alerts. Nine keys carry the name; term_audit counts the 5 bare ones, the other 4 being the articulated 'Setările' on the buttons. Rule: app-owned copy keeps tu and names an app the way the device does; a yes gives the buttons 'Deschide Configurări'. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names. New strings follow controls.Settings ('Setări') until decided so the app stays consistent; a yes changes controls.Settings and the brief's Control forms row in that scope."
     },
     {
@@ -115,8 +121,10 @@
       "recommended": "ar dori să",
       "recommended_reason": "The mock previews the iOS alert that the same step then raises, and a preview in another voice shows the user labels the device will not.",
       "decided_by": "user",
-      "status": "open",
-      "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL, COMMON_CONTINUE, COMMON_DONT_ALLOW; System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, USER_NOTIFICATION_PERMISSION_ALERT_BODY, PERMISSION_ALERT_ALLOW, PERMISSION_ALERT_DENY). Keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; the Screen Time mock's Continue is the shared common.continue 'Continuă', which onboarding.alert.screenTimeMessage quotes. Apple says 'ar dori să ... vă', Continuați, Permiteți, Nu permiteți and 'Acestea pot fi configurate în Configurări.'; the mocks say 'dorește să ... -ți', Continuă, Permite, Nu permite and 'Le poți configura în Setări.' Rule: a mock of an iOS alert mirrors the device verbatim, formal plural included. A yes also costs a Continue key of its own (code change), a source flag first because both en messages differ from Apple's English, and a device check of which Screen Time message key the live .individual request shows. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names. The mocks keep tu until decided, and common.continue never changes for this."
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "ar dori să (Apple's wording verbatim). onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow and onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow now equal Apple's ro.lproj text exactly, formal plural included ('ar dori să ... vă'/'ar dori să acceseze', Permiteți, Nu permiteți, 'Acestea pot fi configurate în Configurări.'); every touched ro unit was written back needs_review, never translated, per the binding rule. The Screen Time mock's Continue stays the shared common.continue 'Continuă' (tu) rather than Apple's alert-specific 'Continuați': the owner accepted this gap for this pass because fixing it needs a dedicated key (a code change), not a text edit; onboarding.screenTimePermission.alertAllow was confirmed not to exist and was not created, since the mock correctly has no Allow button (Apple's own Screen Time alert has none either) and reuses common.continue, which already equals Apple's COMMON_CONTINUE. Platform terms table rows 'Screen Time access alert (mock)' and 'Notification permission alert (mock)' updated to match.",
+      "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL, COMMON_CONTINUE, COMMON_DONT_ALLOW; System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, USER_NOTIFICATION_PERMISSION_ALERT_BODY, PERMISSION_ALERT_ALLOW, PERMISSION_ALERT_DENY). Keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; the Screen Time mock's Continue is the shared common.continue 'Continuă', which onboarding.alert.screenTimeMessage quotes. Apple says 'ar dori să ... vă', Continuați, Permiteți, Nu permiteți and 'Acestea pot fi configurate în Configurări.'; the mocks said 'dorește să ... -ți', Continuă, Permite, Nu permite and 'Le poți configura în Setări.' before this decision. Rule: a mock of an iOS alert mirrors the device verbatim, formal plural included. Kept as historical context for the pre-decision mismatch; see 'shipped' for what changed."
     },
     {
       "id": "require_face_id_label",
@@ -124,7 +132,9 @@
       "recommended": "Impuneți utilizarea Face\u00a0ID",
       "recommended_reason": "The illustrated menu row resolves against the device language precisely so it reads like the user's own app menu, and no test pins the shipped value.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Impuneți utilizarea Face ID (owner's delegation, 2026-09-16; shipped with a plain space, not Apple's U+00A0). Key onboarding.widgets.howTo.requireFaceIDLabel written back needs_review, never translated, per the binding rule. The 304-point illustrated menu (HomeScreenJiggleIllustrationView.swift:151) was not independently render-checked in this pass.",
       "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/AppProtectionUI.framework | Localizable.strings | REQUIRE_AUTH_FACEID; Apple's value has U+00A0 inside 'Face ID', the en source a plain space). Key: onboarding.widgets.howTo.requireFaceIDLabel 'Solicitați Face ID'. Rule: an illustrated iOS label mirrors the device verbatim. A yes is a one-key catalog change plus a render check of the 304-point menu in HomeScreenJiggleIllustrationView. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names."
     },
     {
@@ -133,7 +143,9 @@
       "recommended": "Căutați în widgeturi",
       "recommended_reason": "It is the placeholder the device shows in the widget gallery search field the illustration copies, and the change touches one key no test pins.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Căutați în widgeturi (owner's delegation, 2026-09-16). Key onboarding.widgets.howTo.searchPlaceholder written back needs_review, never translated, per the binding rule.",
       "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | WIDGET_ADD_SHEET_SEARCH_PLACEHOLDER). Key: onboarding.widgets.howTo.searchPlaceholder 'Căutați widgeturi'. Rule: an illustrated iOS label mirrors the device verbatim. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names."
     },
     {
@@ -142,7 +154,9 @@
       "recommended": "Adăugați widgetul",
       "recommended_reason": "iOS 26.1 labels the edit-menu item and the gallery button differently in ro, he and tr (and fr in the later wave), so one shared key cannot mirror both buttons.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "a new key, onboarding.widgets.howTo.addWidgetGalleryLabel (en 'Add Widget', ro 'Adăugați widgetul', needs_review), used on the gallery button (HomeScreenJiggleIllustrationView.swift:274, via WidgetsHowToViewModel.LocalizedStrings.addWidgetGalleryLabel) and in step5, now 'Atinge Adăugați widgetul, apoi OK.' (needs_review). onboarding.widgets.howTo.addWidgetLabel keeps 'Adăugați un widget' on the edit-menu row (line 167) and in step2, unchanged (owner's delegation, 2026-09-16).",
       "note": "Mismatch from the platform-term harvest 2026-09-16 (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | EDIT_MENU_ADD_WIDGET 'Adăugați un widget'; WIDGET_ADD_SHEET_ADD_WIDGET_THIS_STRING_NEEDS_TO_HAVE_A_LEADING_SPACE_FOR_LAYOUT_PURPOSES ' Adăugați widgetul'). Keys: onboarding.widgets.howTo.addWidgetLabel, drawn on the edit menu row and on the gallery button (HomeScreenJiggleIllustrationView.swift lines 167 and 274), and step5 'Atinge Adăugați un widget, apoi OK.'; step2 matches the edit menu. Rule: illustrated labels and the steps that quote them mirror the device verbatim. 'Adăugați widgetul' needs a new gallery key used by the gallery button and step5 (code change; en stays 'Add Widget', so OnboardingWidgetsStepTests.swift:178 still holds); 'Adăugați un widget' keeps the shared key with a recorded reason. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names. No key is added without the owner."
     },
     {
@@ -151,7 +165,9 @@
       "recommended": "Restaurează abonamentul",
       "recommended_reason": "The button restores a subscription (its catalog comment; the paywall's plans are annual and weekly), and 'Restaurați abonamentul' is Apple's own StoreKit label for that action, here in the tu form.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Restaurează abonamentul (owner's delegation, 2026-09-16). Key paywall.button.restore written back needs_review, never translated, per the binding rule. The paywall's fixed-width button was not independently render-checked in this pass.",
       "note": "Mismatch from the platform-term harvest 2026-09-16: iOS 26.1 (23B86) has no 'Restore Purchases' label on disk; System/Library/Frameworks/_StoreKit_SwiftUI.framework | Localizable.strings | RESTORE_SUBSCRIPTION_LABEL says 'Restaurați abonamentul' and RESTORE_PURCHASES_LABEL 'Restaurați cumpărăturile care lipsesc'. Key: paywall.button.restore 'Restaurează', app-owned because the StoreKit purchase sheet has no restore control. Rule: app-owned copy keeps tu and defaults to Apple's wording for a matching control. The verb is verified; 'achizițiile', the earlier brief form, is a noun Apple does not use here. A yes needs a paywall render check. Meanwhile the translated keys stay locked and findings on them go to an audit scope the owner names."
     },
     {
@@ -160,7 +176,9 @@
       "recommended": "Insignă",
       "recommended_reason": "Owner-accepted, already shipped in 5 keys, and plain Romanian a reader without English understands; Apple's own analog uses a different word for the same object, but a different metaphor from Apple's is not itself a defect.",
       "decided_by": "user",
-      "status": "open",
+      "status": "decided",
+      "decision_date": "2026-09-16",
+      "shipped": "Insignă, kept as shipped (owner's delegation, 2026-09-16); no catalog change to the 5 keys. Recorded here so the divergence from Apple's own 'Premiu' (Fitness achievement icon) is not reopened blindly: Apple reserves 'Insignă' for the OS icon-decoration badge, a different UI object, and never uses it for an earned achievement icon. The counter-evidence stands as a documented, considered trade-off, not an oversight.",
       "note": "Disagreement from the Apple-Romanian vocabulary cross-reference (iOS 26.1 (23B86) runtime, fetched 2026-09-16: System/Library/PrivateFrameworks/ActivitySharingUI.framework | Localizable.strings | GENERIC_ACHIEVEMENT_NAME 'Premiu'; System/Library/CoreServices/MobileCoreTypes.bundle | InfoPlist.strings | Icon Decoration Badge 'Insignă'). Apple's own achievement system (Fitness) never uses 'insignă' for an earned achievement icon -- it says 'premiu' -- and reserves 'insignă' for a different UI object, the small icon-decoration badge (notification dot, lock, sync icon on an app icon). Keys: achievements.action.seeAllBadges, achievements.badgeUnlock.title, achievements.card.allEarned, achievements.gallery.earnedOfTotal, achievements.gallery.subtitle (5 keys, 'Insignă'/'Insigne' for the achievement concept); onboarding.notificationPermission.alertMessage also says 'insigne' but correctly in Apple's icon-decoration sense and is not part of this decision. Rule: a concept-vocabulary divergence from Apple's own nearest analog is an owner call, not a translation error, since 'insignă' is plain, understandable Romanian either way. Meanwhile the five keys stay locked and findings on them go to an audit scope the owner names; no App Store competitor evidence exists either way for this concept."
     }
   ]
