@@ -5,8 +5,9 @@ Necessary, not sufficient: xcodebuild stays the structural gate and the language
 reviewers decide everything a script cannot. Checks (each finding carries its id):
 
   C1  placeholder multiset en vs target per unit (numbered tokens by position;
-      an integer placeholder may be dropped only in the zero/one plural form; a comment
-      reading "placeholder moved to <key>" turns a dropped token into info)
+      an integer placeholder may be dropped only in an exact-count plural form (zero,
+      one, two -- Hebrew's dual, e.g. "יומיים"), never in a range form (few, many, other);
+      a comment reading "placeholder moved to <key>" turns a dropped token into info)
   C2  plural categories: a missing CLDR category is major, an extra one is info
   C3  markup and typography parity: **bold**, newlines, links (major);
       ellipsis form, double spaces, edge whitespace, emoji (info)
@@ -101,12 +102,9 @@ QUALIFIER = re.compile(r"\s+(?:used|shown|opening|above|below|under|for|on|in|by
 BODY_TAIL = re.compile(r"(criterion|earned|message|body|description|explanation)$", re.I)
 IDENTICAL_BY_DESIGN = {"moneyfesting", "ok", "warren buffett", "apple", "3d"}
 UNIT_WORDS = {"h", "min", "s", "m", "sec", "kg", "km"}
-SHIELD_INIT = re.compile(
-    r'\.init\(\s*id:\s*"([^"]+)",\s*style:\s*\.(\w+),\s*titleEnglish:\s*"((?:[^"\\]|\\.)*)",'
-    r'\s*titleRomanian:\s*"((?:[^"\\]|\\.)*)",\s*bodyEnglish:\s*"((?:[^"\\]|\\.)*)",'
-    r'\s*bodyRomanian:\s*"((?:[^"\\]|\\.)*)"', re.S)
 SHIELD_FIELD = re.compile(r'(\w+):\s*"((?:[^"\\]|\\.)*)"')
-SHIELD_TARGET_FIELD = {"en": "English", "ro": "Romanian"}
+SHIELD_STYLE = re.compile(r'\bstyle:\s*\.(\w+)')
+SHIELD_TARGET_FIELD = {"en": "English", "ro": "Romanian", "he": "Hebrew"}
 SKIP_DIRS = {"ManifestingTests", "DerivedData", "build", "Pods"}
 
 
@@ -156,28 +154,41 @@ def units(entry, lang):
     return out
 
 
-def unescape_swift(s):
-    return s.replace('\\"', '"').replace("\\n", "\n").replace("\\\\", "\\")
-
-
 def shield_entries(path):
-    """Shield copy lives in Swift, not the catalog; expose each pair as two flat pseudo-keys."""
+    """Shield copy lives in Swift, not the catalog; expose each pair as two flat pseudo-keys.
+
+    Field-name based (shared parser with worklist.py and term_audit.py, `shield_fields`), not a fixed
+    field sequence: a locale's struct field (titleHebrew, bodyHebrew, ...) is read whenever present,
+    so a new SHIELD_TARGET_FIELD locale needs no regex change here."""
     text = open(path, encoding="utf-8").read()
     entries = {}
-    for mid, style, t_en, t_ro, b_en, b_ro in SHIELD_INIT.findall(text):
-        for part, en, ro in (("title", t_en, t_ro), ("body", b_en, b_ro)):
+    for fields in shield_fields(text):
+        mid, style = fields.get("id"), fields.get("style")
+        if not mid or "titleEnglish" not in fields:
+            continue
+        for part in ("title", "body"):
+            localizations = {}
+            for locale, suffix in SHIELD_TARGET_FIELD.items():
+                value = fields.get(part + suffix)
+                if value is not None:
+                    # shield_fields() already drops backslash escapes per field; no second unescape here.
+                    localizations[locale] = {"stringUnit": {"state": "translated", "value": value}}
             entries[f"shield.{mid}.{part}"] = {
                 "comment": f"Shield {style} {part} (ShieldMessageCatalog.swift, id {mid})",
                 "extractionState": "manual", "shield": True, "style": style,
-                "localizations": {"en": {"stringUnit": {"state": "translated", "value": unescape_swift(en)}},
-                                  "ro": {"stringUnit": {"state": "translated", "value": unescape_swift(ro)}}}}
+                "localizations": localizations}
     return entries
 
 
 def shield_fields(text):
-    """Every string field of each .init( block with escapes dropped, the parse worklist.py and term_audit.py share."""
+    """Every string field of each .init( block with escapes dropped, plus its unquoted `style: .word`
+    enum case as `style`, the parse worklist.py and term_audit.py share."""
     for block in text.split(".init(")[1:]:
-        yield {name: re.sub(r"\\(.)", r"\1", value) for name, value in SHIELD_FIELD.findall(block)}
+        fields = {name: re.sub(r"\\(.)", r"\1", value) for name, value in SHIELD_FIELD.findall(block)}
+        style = SHIELD_STYLE.search(block)
+        if style:
+            fields["style"] = style.group(1)
+        yield fields
 
 
 def tokens(value):
@@ -211,7 +222,10 @@ def compare_tokens(key, var, src, tgt):
     missing, extra = type_counts(src) - type_counts(tgt), type_counts(tgt) - type_counts(src)
     category = var.split(":")[-1]
     for typ in missing:
-        accepted = typ == "d" and category in ("zero", "one")
+        # zero/one/two are the CLDR categories that name an exact count (0, 1, 2); a form for one of
+        # them may spell the count out and drop the digit, as Hebrew's dual does ('יומיים', not '2 ימים').
+        # few/many/other cover a range of counts, so the digit must stay or the reader loses which count it is.
+        accepted = typ == "d" and category in ("zero", "one", "two")
         yield finding("C1", "info" if accepted else "critical", key, var,
                       f"placeholder {typ} from the source is absent in the target"
                       + (f"; accepted in the '{category}' form where the count is spelled out" if accepted

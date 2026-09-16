@@ -1,0 +1,18 @@
+# Hebrew examples
+
+Seeded from the `he` pilot batch, snapshot 2026-09-16, catalog commit `83961f5` (run `2026-09-16-a/b01`), the locale's first-ever translated strings. Provenance: forward-translator draft, blind-edited twice, blind back-translated on the claim-bearing tier, coordinator-disposed — every row is agent output with `state: needs_review`, not a native or owner-accepted corpus (`references/research-provenance.md` `## Locale research (2026-09-16)`). Give the file to the forward translator and the final adjudicator only; never to the blind editor or back-translator, because the EN column breaks packet separation. A native read is recommended before fan-out (`references/locale-briefs/he.md` Identity).
+
+Read the screen column before the pattern: every row is what it is because of where it renders.
+
+## Keep (patterns to reproduce)
+
+| Key | EN | HE | Screen and control | Pattern |
+|---|---|---|---|---|
+| `widgets.focusRing.a11y.money` | Estimated time value over the last 30 days: %@. Not money earned. | ערך הזמן המשוער ב-30 הימים האחרונים: ‏%@. לא כסף שהרווחת. | VoiceOver label, Focus Goal widget (medium), money row | fixed disclaimer reused verbatim from `glossary/he.json` `time_value_disclaimer`; sanctioned `ערך הזמן המשוער` glossary form; the RLM sits only after the colon, not scattered across the line |
+| `widgets.focusRing.a11y.unavailable` | Focus progress unavailable. We'll try again soon. | התקדמות הריכוז אינה זמינה. ננסה שוב בקרוב. | VoiceOver label, Focus Goal widget, data-unavailable state | first-person-plural verb (`ננסה`) kept for a sentence that needs an actor, instead of a literal "we"; unmarked for gender by construction, not a company-memo risk the way a bare `אנחנו` pronoun would be |
+| `widgets.focusRing.firstRun` | Start your first session | התחלת מפגש ריכוז ראשון | on-widget label, Focus Goal widget, no-session state | the English reader-directed imperative becomes a verbal noun, avoiding the banned gendered form `התחל` |
+| `widgets.streak.copy.frozen.small` | Covered by a freeze. | היום מוגן בזכות הקפאה. | on-widget label, Focus Streak widget (small), frozen state | masculine agreement with the implied noun `יום` (day, m.), not a feminine participle borrowed from `הקפאה` (freeze, f.) — the exact agreement trap `he.md` `## Header and label forms` warns about. The blind editor flagged the translator's rev1 draft (`היום כוסה בהקפאה.`, a "covered by" calque of the English shape) and rev2 replaced it with this active, idiomatic form |
+| `paywall.onboardingSubscription.heroLineOne` / `.heroLineTwo` | Your hours \n have a price. | לשעות שלך \n יש מחיר. | onboarding paywall hero headline, two stacked `Text` views | existential `יש` construction carries the money-frame claim ("hours have a price") without any verb that could imply the app itself pays the reader |
+| `shield.companion.on_your_side.title` | On your side. | לצדך. | shield companion title, no app name, no exclamation | one-word line with an unmarked possessive suffix; calm register, no verb, matches the voice card's shield Surface rules |
+
+Pilot batch findings that reshaped these six and the rest of the batch: dropped a stray possessive the imported-shapes table warns about (`widgets.focusRing.a11y.firstRun` lost `שלך`), reordered a streak phrase to match its on-screen sibling (`ימים ברצף`, not `רצף ימים`), and swapped one impersonal fallback for the brief's higher-ranked informal-plural strategy (`widgets.focusRing.a11y.setUp`). Full record: `.codex-tmp/localization/he/2026-09-16-a/b01/coordinator/` in the Moneyfesting checkout (gitignored run directory).
