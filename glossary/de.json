@@ -1,0 +1,290 @@
+{
+  "locale": "de",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "task": {
+      "preferred": "Aufgabe",
+      "forms": [
+        "Aufgabe",
+        "Aufgaben",
+        "die Aufgabe",
+        "Fokusaufgabe",
+        "Fokusaufgaben"
+      ],
+      "forbidden": [
+        "Aktivität"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/de.md '## Header and label forms' ships 'Edit Focus Task' -> 'Fokusaufgabe bearbeiten' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> 'Meine Aufgaben' (focusTask.picker.myTasksHeader); '## Header and label forms' lists 'die Aufgabe' among the gender-agreement examples. forbidden holds 'Aktivität', the word glossary/concepts.json 'task' marks not_this; the brief's own Screen Time citations for 'Aktivitätsdaten' (activity data, a distinct Health concept) are a closed compound, so whole-word matching on 'Aktivität' never fires on it. A batch that needs to say 'activity data' is naming the Health concept, not this one, and should read as such."
+    },
+    "restricted_list": {
+      "preferred": "gesperrte Apps",
+      "forms": [
+        "gesperrte Apps",
+        "gesperrte App",
+        "Sperrliste",
+        "die Sperrliste",
+        "gesperrten Apps",
+        "gesperrten App"
+      ],
+      "forbidden": [
+        "schwarze Liste",
+        "Schwarzliste"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). The brief does not narrate this term in prose, so it is seeded here directly, the way nl.json and fi.json seed the same concept without a brief passage. 'gesperrt' matches the en source's own mix of 'Restricted Apps' and 'blocked list' (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task') with one German adjective. forbidden marks the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this, the same concept nl.json bans as 'zwarte lijst' and fi.json as 'mustalista'; it cannot catch a paraphrase such as 'Liste eingeschränkter Apps', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "Zeitwert",
+      "forms": [
+        "Zeitwert",
+        "der Zeitwert",
+        "Wert",
+        "Wert deiner Zeit",
+        "geschätzter Zeitwert"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/de.md '## Money frame' ships 'Zeitwert, keine Einnahmen.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'Zeitwert' as one of the words governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family. forbidden is deliberately empty: the outcome words this concept must avoid (verdien-, Einkommen, ausbezahlt) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; 'Zeitwert, keine Einnahmen.' itself contains 'Einnahmen', so banning it on this term would misfire on the approved sentence the moment de copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Kein verdientes Geld.",
+      "forms": [
+        "Kein verdientes Geld."
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/de.md '## Money frame' fixes this exact form and says it mirrors this glossary entry exactly. The four sibling source sentences keep their own single de form, listed in the same table. forbidden is empty because no de variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "Prognose",
+      "forms": [
+        "Prognose",
+        "die Prognose",
+        "Prognosen"
+      ],
+      "forbidden": [
+        "Versprechen",
+        "Garantie"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept in prose, so it is seeded directly as nl.json and fi.json seed it, rather than sent to Open decisions as ro.md does for its own equivalent term: unlike ro's shipped 3/3 split, no de copy exists, and German keeps the forecast line and the month-end estimate apart without effort ('Prognose' for the forward-looking figure, 'Schätzung' for insights.savings.monthEnd and .estimated), so VoiceOver's back-to-back read of the two needs two distinct words the way the ro open decision requires an owner call to get. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'Versprechen' and 'Garantie' would turn an estimate into a claim, and 'Garantie' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garant', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "Stundensatz",
+      "forms": [
+        "Stundensatz",
+        "der Stundensatz",
+        "dein Stundensatz",
+        "Stundensätze",
+        "deinen Stundensatz",
+        "deinem Stundensatz"
+      ],
+      "forbidden": [
+        "Stundenlohn",
+        "Gehalt"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/de.md '## Control forms' and '## Header and label forms' ship 'Set Your Hourly Wage' -> 'Lege deinen Stundensatz fest' (onboarding.hourlyWage.title), and '## Header and label forms' lists 'der Stundensatz' among the gender-agreement examples. 'Stundenlohn' and 'Gehalt' are forbidden because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. The badge family's payroll vocabulary ('Lohnliste', 'Schicht', references/locale-briefs/de.md '## Idioms and figurative language') is a metaphor built from a different compound and does not collide with 'Stundenlohn'."
+    },
+    "daily_focus_goal": {
+      "preferred": "Tagesziel",
+      "forms": [
+        "Tagesziel",
+        "das Tagesziel",
+        "Ziel",
+        "dein Ziel",
+        "Ziele"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/de.md '## Header and label forms' lists 'das Ziel' among the gender-agreement examples, and '## Audience and register' / '## Decided conflicts' settle closed-compound spelling for this kind of noun ('Bildschirmzeit', 'Fokussitzung'), which 'Tagesziel' follows. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'Ziel'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "Min.",
+      "forms": [
+        "Min.",
+        "%lld Min.",
+        "%lldMin"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/de.md '## Short forms and units' and '## Decided conflicts' settle 'Min.' from Foundation's de_DE abbreviated duration output ('1 Std., 45 Min.'), with the bare narrow multi-letter form reserved for the share-card compact triple, itself a seed (share.duration.minutesShort). forbidden is empty because the drift form is the single letter 'm', and a one-letter forbidden entry would fire on anything; a bare 'm' left over from en outside the share card is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "Bildschirmzeit",
+      "forms": [
+        "Bildschirmzeit",
+        "die Bildschirmzeit",
+        "der Bildschirmzeit"
+      ],
+      "forbidden": [
+        "Screen Time"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's de name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/de.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because German uses the same noun for the feature and for the generic hours-on-screen sense (capitalized 'Bildschirmzeit' either way, distinguished only by quoting and context, not case): a count here mixes both senses and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "Fokussitzung",
+      "forms": [
+        "Fokussitzung",
+        "Fokussitzungen",
+        "die Fokussitzung"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/locale-briefs/de.md '## Audience and register' gives the worked example 'Fokus Sitzung' -> 'Fokussitzung' for widgets.startFocus.heading (en 'Focus session'), and '## Decided conflicts' / '## Platform terms' note that German reuses the same word 'Fokus' for the app's own concept and the system Focus mode, exactly as en overlaps 'Focus' both ways, so no open decision is needed the way ro's 'sesiune de focus' vs 'sesiune de concentrare' needed one. forbidden is empty because the brief records no rival German word for this sense."
+    }
+  },
+  "controls": {
+    "Cancel": {
+      "preferred": "Abbrechen",
+      "roles": {
+        "discard": "Änderungen verwerfen",
+        "quit": "Sitzung abbrechen",
+        "dismiss": "Schließen"
+      },
+      "note": "Apple's de label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); discard spells the object out so it never reads as deleting the quote (common.editor.discard, quotes.user.discard), and quit is distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton)"
+    },
+    "Done": {
+      "preferred": "Fertig",
+      "roles": {
+        "completed_count_header": "Erledigt",
+        "ios_mirror_pill": "Fertig"
+      },
+      "note": "Apple's de label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done); the Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel; SpringBoardHome.framework | SpringBoardHome.strings | DONE)"
+    },
+    "Continue": {
+      "preferred": "Weiter",
+      "roles": {
+        "mock_alert": "Fortfahren"
+      },
+      "note": "Apple's de label for the generic Continue is Weiter (UIKitCore.framework | Localizable.strings | Continue), but the Screen Time access alert's own Continue button is Fortfahren (FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE); the app has one shared key common.continue for both senses, an unresolved mismatch tracked in references/locale-briefs/de.md Open decisions 'continue_mirror_mismatch'"
+    },
+    "Save": {
+      "preferred": "Sichern",
+      "roles": {
+        "save_money": "Du sparst 56%"
+      },
+      "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role (paywall.onboardingSubscription.annualPlanBadge 'Save 56%'), rendered as the 2nd-person indicative 'Du sparst 56%' rather than the du-imperative 'Spare' the brief's own infinitive/non-imperative button convention rules out, though the rendered badge itself is numeric-only per Short forms and units"
+    },
+    "Edit": {
+      "preferred": "Bearbeiten",
+      "roles": {
+        "ios_mirror_pill": "Bearb.",
+        "edit_home_screen": "Home-Bildschirm bearbeiten"
+      },
+      "note": "Apple's de label for Edit is Bearbeiten (UIKitCore.framework | Localizable.strings | Edit), but the Home Screen edit-menu pill is truncated to Bearb. on the device (SpringBoardHome.framework | SpringBoardHome.strings | EDIT); onboarding.widgets.howTo.editPillLabel must match that truncation, not the full verb"
+    },
+    "Delete": {
+      "preferred": "Löschen",
+      "roles": {},
+      "note": "no glossary role; confirmation questions conjugate (quotes.user.deleteTitle) and compounds keep the infinitive (plan.dailyPlan.deleteAll 'Alle löschen')"
+    },
+    "Skip": {
+      "preferred": "Überspringen",
+      "roles": {
+        "skip_for_now": "Jetzt überspringen"
+      },
+      "note": "no exact Apple string was harvested for this app's Skip sense (gap); onboarding.name.skip is the only exact Skip key; keep skip_for_now distinct from 'Nicht jetzt' on onboarding.appReview.notNow"
+    },
+    "Allow": {
+      "preferred": "Erlauben",
+      "roles": {},
+      "note": "the same word covers every alert family harvested for this app (notifications, Health, Photos) — UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW; mock alert only (onboarding.notificationPermission.alertAllow)"
+    },
+    "Don't allow": {
+      "preferred": "Nicht erlauben",
+      "roles": {},
+      "note": "again the same word across every alert family harvested (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW); mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow)"
+    },
+    "Got it": {
+      "preferred": "Verstanden",
+      "roles": {},
+      "note": "no exact Apple string was harvested for this sense in this pass (gap); non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done)"
+    },
+    "Retry": {
+      "preferred": "Erneut versuchen",
+      "roles": {
+        "in_sentence": "Wiederholen"
+      },
+      "note": "preferred is Apple's de label for the JetEngine retry action (_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY); in_sentence is Apple's de label for 'Try Again' (SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON) and is also the form for the label quoted inside component.errorView.message, which must equal the button's own value"
+    },
+    "Settings": {
+      "preferred": "Einstellungen",
+      "roles": {
+        "open_button": "Einstellungen öffnen",
+        "go_to_button": "Zu den Einstellungen",
+        "setup_noun": "Einrichtung"
+      },
+      "note": "German keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label for 'Open Settings' (insights.appUsage.openSettings, share.alert.openSettings; SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS), go_to_button the Screen Time one for 'Go to Settings' (onboarding.alert.goToSettings, theme.picker.goToSettingsButton; ScreenTimeAppIntentsExtension.appex | Localizable.strings | Go to Settings) — two distinct English source strings, each with its own German value"
+    }
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": [
+        "Serie",
+        "Tage in Folge",
+        "Streak"
+      ],
+      "recommended": "Serie",
+      "recommended_reason": "It is the only plain German noun that fills a one-word widget header and an uppercase caption; no Apple citation for this exact sense exists in this harvest, and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No de copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: 'Serie' is the plain German noun (5 characters), used generically for a winning or losing streak in sport, and takes a compound ('Serienwidget'), with no Apple evidence for this exact sense found in this harvest (a gap, unlike nl's and ro's Fitness-bundle citations for their own equivalent nouns); 'Tage in Folge' is a plain phrase, natural in running text, but cannot fill a header or a compact compound; 'Streak' is the English loan some German apps use and is ruled out by the no-English-needed rule. Meanwhile agents write 'Serie' in noun slots and 'Tage in Folge' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first de batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "streak_freeze_term",
+      "options": [
+        "Frost",
+        "Frostschutz",
+        "Serienschutz",
+        "Serie einfrieren (verb only, no noun)",
+        "Streak-Freeze"
+      ],
+      "recommended": "Frostschutz",
+      "recommended_reason": "'Frost' fails as the countable noun the badge/inventory copy needs: it is ordinarily an uncountable weather noun and its rare plural 'Fröste' reads oddly as a UI count, and a web check for how German speakers discuss the identical Duolingo mechanic surfaced only a verb phrase, never a coined noun like 'Frost'; a compound such as 'Frostschutz' or 'Serienschutz' should be tested with a native reviewer before the pilot instead.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No de copy exists. Keys: the 12 streakFreeze.* keys, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen, paywall.benefit.streak.detail. Rule: keep the 'frozen' image the source relies on, in everyday German a reader without English understands, and still work as a countable noun where badge/inventory copy needs one. Evidence per option: 'Frost' is a short punchy noun that fits a one-word widget label and pairs with the verb phrase 'die Serie einfrieren', but is a pure agent proposal with no Apple string or other verified precedent, and is ordinarily uncountable in German ('Fröste' as a plural count reads oddly); 'Frostschutz'/'Serienschutz' are compounds built the way German normally coins a countable protection-noun, avoiding the countability problem at the cost of being longer and still uncited; 'Serie einfrieren' as a verb-only option avoids coining a noun German does not already have for this sense, at the cost of leaving badge and inventory labels that need a countable noun without a clean short form; 'Streak-Freeze' is the English loan some fitness and language-learning apps keep, ruled out for the same reason as the streak noun itself. Meanwhile agents mark every use of 'Frost'/'Frostschutz' as a proposal and list every key touched, so a flip is one recorded change. This item exists because the evidence for a de streak-freeze word is weaker than for streak_term itself, not because the concept is any less settled elsewhere in the brief."
+    },
+    {
+      "id": "badge_conceit",
+      "options": [
+        "keep it",
+        "drop it"
+      ],
+      "recommended": "keep it",
+      "recommended_reason": "It is what makes the badge family cohere in en, and German carries the whole workplace vocabulary with ordinary HR words and no gendered role noun anywhere in the family; the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain. Evidence per option: keep it draws on German vocabulary with no gendered agent nouns at all ('Eingestempelt', 'Eingestellt', 'Auf Gehalt', 'Wieder angeheuert', 'Zurück im Dienst', 'Festangestellt', 'Doppelschicht', 'Die Lohnliste', 'Die Schicht', 'Dienstjahre'); drop it replaces the employment names with plain achievement names ('Erste Sitzung', 'Sieben Tage in Folge', 'Fünfzig volle Tage'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Meanwhile the first achievements batch drafts the conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "continue_mirror_mismatch",
+      "options": [
+        "keep the single shared key at Weiter",
+        "add a dedicated mirror key at Fortfahren"
+      ],
+      "recommended": "add a dedicated mirror key at Fortfahren",
+      "recommended_reason": "The entire purpose of a mock alert is to look identical to the real one, and a visible mismatch on the one button most likely to be compared side by side with the device undermines that purpose.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: common.continue, shared by the generic Continue control and quoted inside onboarding.alert.screenTimeMessage to describe the mock Screen Time alert's own button. Rule: a string that mocks an iOS alert equals Apple's value verbatim (references/locale-briefs/de.md Platform terms, Verbatim rule). Evidence: iOS 26.1 (23B86) runtime, UIKitCore.framework | Localizable.strings | Continue gives 'Weiter'; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE gives 'Fortfahren' for the same concept in the Screen Time access alert specifically — the two Apple frameworks disagree with each other in German, unlike in Dutch, where they happened to coincide, so this finding is de-specific. Options: keep the single shared key accepts a small mismatch against the mocked alert's own wording with no code change; adding a dedicated key is a faithful mock at the cost of a new catalog key and call-site change (an engineering ask). Meanwhile: ship the shared key as 'Weiter' and record the mismatch in the report; do not add the key without the owner."
+    },
+    {
+      "id": "de_at_audience",
+      "options": [
+        "Germany wording",
+        "Austria-aware wording"
+      ],
+      "recommended": "Germany wording",
+      "recommended_reason": "Both the Germany and Austria App Store storefronts already default to German, unlike Belgium's English-first default in the Dutch case, so there is less risk that Germany-first vocabulary reads as wrong in Austria rather than merely unfamiliar.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects vocabulary across the catalog, not any single key. Rule: one de resource serves both audiences, because de-DE and de-AT both negotiate to de and iOS ships only de.lproj (apple-coverage system_negotiation). Evidence per option: Germany wording follows the larger market and iOS's own de.lproj, which reads as standard German rather than Austrian German throughout this harvest; Austria-aware wording would check the handful of terms Austrian German spells or uses differently before the first batch, though this app does not currently write any of the classic Germany/Austria vocabulary pairs (month names, foodstuffs) as literal copy, so the practical risk is smaller than the Dutch brief's Netherlands/Belgium item. Meanwhile: write Germany German, and record any term an editor flags as Austria-divergent in the batch report rather than hedging the line."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "locale": "ko",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "동결",
+      "forms": ["동결", "동결하다", "동결한", "동결된", "동결됩니다", "동결되었습니다", "스트릭 동결"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no ko copy ships, so this is a seed. references/locale-briefs/ko.md '## Idioms and figurative language' proposes the noun '동결' and the passive '동결되다/동결된', including the past form '동결되었습니다' the same brief names, for the frozen-day state line ('Covered by a freeze.'), matching the formal register decided in '## Address and gender'. forbidden is empty: no en key or Apple ko string reaches for a competing word here (Apple's own ko has no Activity-ring-style 'freeze' vocabulary in the harvest), so there is nothing evidenced to ban yet. Whether '동결' itself reads first as a financial account freeze to an ordinary Korean reader, rather than a neutral/playful pause, is an open call needing a native reaction, not corpus evidence: see 'open' entry 'streak_freeze_connotation' below."
+    },
+    "task": {
+      "preferred": "할 일",
+      "forms": ["할 일", "할 일을", "할 일의", "포커스 할 일"],
+      "forbidden": ["활동", "이벤트"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/ko.md '## Header and label forms' proposes 'Edit Focus Task' -> '포커스 할 일 편집' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> '내 할 일' (focusTask.picker.myTasksHeader), a seed since no ko copy ships. forbidden holds '활동'(activity) and '이벤트'(event), the words glossary/concepts.json 'task' marks not_this; both are common everyday Korean words with their own uses elsewhere in the catalog, so a hit is read before filing, exactly as nl.json flags for 'activiteit'. **Standing exemption**: `onboarding.screenTimePermission.alertMessage` is pinned verbatim to Apple's own Screen Time individual-access alert wording (references/locale-briefs/ko.md '## Platform terms', Verbatim rule), which reads '...이 앱이 사용자의 활동 데이터를 보고...' — every batch that ships that mirrored string will hit '활동' on this key by design; do not file it as a task-term finding."
+    },
+    "restricted_list": {
+      "preferred": "제한된 앱",
+      "forms": ["제한된 앱", "제한된 앱 목록", "앱 제한 목록"],
+      "forbidden": ["블랙리스트", "블랙 리스트"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). The brief does not narrate this term in prose beyond Platform terms, so it is seeded here the way glossary/nl.json seeds the same concept without a full brief passage. '제한된 앱' mirrors the en source's own 'Restricted Apps' literally (제한=restriction), covering both 'Restricted Apps' and 'blocked list' senses the en source mixes (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task'). forbidden marks the blacklist loanword calque glossary/concepts.json 'restricted_list' rules out as not_this, the same concept fi.json and nl.json ban under their own words; it cannot catch a paraphrase such as '차단 목록', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "시간 가치",
+      "forms": ["시간 가치", "시간의 가치", "추정 시간 가치"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/ko.md '## Money frame' proposes '시간 가치이며, 수익이 아닙니다.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives '가치' as the word governing achievements.category.wages.name 'Time value'. forbidden is deliberately empty: the outcome words this concept must avoid (벌다-family earning verbs, 수익, 소득) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; the disclaimer itself uses '수익' negated, so banning it on this term would misfire on the approved sentence the moment ko copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "번 돈이 아닙니다.",
+      "forms": ["번 돈이 아닙니다."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/ko.md '## Money frame' fixes this exact form ('번' is the attributive of 벌다, 'to earn', so the sentence reads literally 'not earned money') and says it mirrors this glossary entry exactly. The four sibling source sentences keep their own single ko form, listed in the same table. forbidden is empty because no ko variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "전망",
+      "forms": ["전망", "월말 전망"],
+      "forbidden": ["예측", "보장"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept in prose beyond Numbers and Money frame, so it is seeded directly. '전망'(outlook) keeps the hedge the source keeps ('Forecast:' introducing a formula), distinct from '추정'(estimate) used for insights.savings.monthEnd and .estimated, so a VoiceOver read of the two back to back keeps two distinct Korean words. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): '예측'(prediction) reads as a stronger claim than the source's hedge, and '보장'(guarantee) already backs the brief's own Money frame ban on 'guaranteed' (0 en keys, per en-inventory '## Not found'), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "시급",
+      "forms": ["시급", "시급을", "시급이"],
+      "forbidden": ["월급"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). '시급' is the ordinary, unambiguous Korean word for 'hourly wage/rate' with no other everyday sense, so it needs no brief passage to justify. '월급'(monthly pay) is forbidden because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. '급여'(salary/pay) is scoped OUT of this ban, not in it: references/locale-briefs/ko.md '## Idioms and figurative language' assigns '급여' as the badge family's own approved category name (achievements.category.payroll.name, 'Payroll'), so banning it catalog-wide would misfire on the app's own shipped copy the moment it ships; word bans here govern only the hourly-rate keys this term names, not every occurrence of the word in the catalog."
+    },
+    "daily_focus_goal": {
+      "preferred": "일일 목표",
+      "forms": ["일일 목표", "하루 목표", "목표"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need '목표'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy, exactly the reasoning glossary/nl.json gives for 'doel'."
+    },
+    "minute_unit": {
+      "preferred": "분",
+      "forms": ["분", "%lld분"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, glued to the digit with no space by default (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/ko.md '## Short forms and units' settles '분' with no space from Apple's own ko duration output ('1시간 45분', '25분') and from the Arabic-numeral exception in Korean orthography (한글 맞춤법 제43항, korean.go.kr, fetched 2026-09-16). forbidden is empty because there is no competing Korean word for this unit; a leftover Latin 'm' or English 'min' is a drift finding for the brief's Short forms table, not a glossary ban."
+    },
+    "screen_time": {
+      "preferred": "스크린 타임",
+      "forms": ["스크린 타임", "스크린타임"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own ko name for the feature is the English phrase transliterated, not translated (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time = '스크린 타임'; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle = '스크린 타임'), on the 18 en keys that name it. references/locale-briefs/ko.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the literal English spelling: unlike nl or ro, Korean does not need a separate generic-sense word, because the app's own catalog never uses 'screen time' in a lower-case generic sense the way it uses 'schermtijd'/'timp de utilizare' elsewhere — every en key governed by this term names the Apple feature specifically."
+    },
+    "focus_session": {
+      "preferred": "집중 세션",
+      "forms": ["집중 세션", "집중세션"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/locale-briefs/ko.md '## Platform terms' flags that Apple's own ko name for the system Focus mode is '집중 모드' (Applications/Preferences.app | Localizable.strings | Focus; ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE), which shares the root '집중' with this term; no en key names the system mode today (en-inventory '## Not found': 'Focus mode (system)' not found), so there is no live collision, but any future copy naming the system mode must read '집중 모드' as Apple's fixed term and never blend it with the app's own '집중 세션'. forbidden is empty because the brief records no rival Korean word for the app's own sense."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "취소", "roles": {"discard": "변경 내용 취소", "quit": "세션 종료", "dismiss": "닫기"}, "note": "Apple's ko label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel = 취소); discard and quit are seeds (no direct Apple ko citation for those compound labels), spelling the object out so discard never reads as deleting the quote (common.editor.discard, quotes.user.discard), and quit staying distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton)"},
+    "Done": {"preferred": "완료", "roles": {"completed_count_header": "완료", "ios_mirror_pill": "완료"}, "note": "Apple's ko label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done = 완료; SpringBoardHome.framework | SpringBoardHome.strings | DONE = 완료); the Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel). completed_count_header is a section heading over a list of completed items, not a per-item state label, so it takes the bare noun rather than the '-됨' state-noun pattern decided in '## Header and label forms' for per-item badges (선택됨, 차단됨)"},
+    "Continue": {"preferred": "계속", "roles": {"resume": "재개"}, "note": "Apple's ko label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE = 계속); resume is a seed distinct from Continue (moneyfesting.details.resumeButton en 'Resume')"},
+    "Save": {"preferred": "저장", "roles": {"save_money": "-%lld%%"}, "note": "persist-data sense only; the discount sense on the paywall badge takes the numeric-first badge convention decided in '## Short forms and units' (paywall.onboardingSubscription.annualPlanBadge en 'Save 56%'), not the verb '저장', so it never collides with the money-outcome word '절약' this brief keeps out of the banned-word table"},
+    "Edit": {"preferred": "편집", "roles": {"ios_mirror_pill": "편집"}, "note": "Apple's ko label for Edit (UIKitCore.framework | Localizable.strings | Edit = 편집); the Home Screen mirror pill is the same word (SpringBoardHome.framework | SpringBoardHome.strings | EDIT = 편집), so the pill and app copy agree (onboarding.widgets.howTo.editPillLabel)"},
+    "Delete": {"preferred": "삭제", "roles": {}, "note": "Apple's ko label for Delete (UIKitCore.framework | Localizable.strings | Delete = 삭제); no glossary role; confirmation questions take a full formal question (quotes.user.deleteTitle) and compounds keep the bare noun (plan.dailyPlan.deleteAll)"},
+    "Skip": {"preferred": "건너뛰기", "roles": {"skip_for_now": "지금은 건너뛰기"}, "note": "onboarding.name.skip is the only exact Skip key; Apple ko citation: SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP = 건너뛰기, HealthUI.framework | PREGNANCY_SKIP_LABEL = 건너뛰기 (both ko.lproj, iOS 26.1 23B86). The verbal-noun '-기' form matches the decided button convention (Control forms); keep skip_for_now distinct from '나중에' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "허용", "roles": {}, "note": "Apple's ko label for Allow (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW = 허용; System/Library/PrivateFrameworks/TCC.framework | Localizable.strings | REQUEST_ACCESS_ALLOW = 허용); mock alert only (onboarding.notificationPermission.alertAllow)"},
+    "Don't allow": {"preferred": "허용 안 함", "roles": {}, "note": "Apple's ko label for Don't Allow (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY = 허용 안 함; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW = 허용 안 함); mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow)"},
+    "Got it": {"preferred": "알겠습니다", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done); a full sentence-final verb form on purpose, distinct from the bare-noun buttons this brief otherwise decides, and distinct from the OK mirror '확인' (common.ok)"},
+    "Retry": {"preferred": "재시도", "roles": {"in_sentence": "다시 시도"}, "note": "Apple's ko label for Retry (System/Library/PrivateFrameworks/_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY = 재시도); in_sentence is also the form for the four 'Try Again' buttons (System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON = 다시 시도) and for the label quoted inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "설정", "roles": {"open_button": "설정 열기", "go_to_button": "설정으로 이동", "setup_noun": "설정"}, "note": "Apple's ko label for Settings (Applications/Preferences.app | Localizable.strings | Settings = 설정); Korean keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS = 설정 열기; insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (System/Library/ExtensionKit/Extensions/ScreenTimeAppIntentsExtension.appex | Localizable.strings | Go to Settings = 설정으로 이동; onboarding.alert.goToSettings, theme.picker.goToSettingsButton)"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["연속일", "스트릭", "연속 기록"],
+      "recommended": "연속일",
+      "recommended_reason": "It is the shortest plain Korean noun that fills a one-word widget header and takes a compound ('연속일 위젯'), while running text can still use the fuller phrase '%lld일 연속'; the loanword '스트릭' fails the skill's own rule that a reader without English must understand each line, and '연속 기록' is too long for the tightest header slots.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No ko copy exists, so all three options are untested against a real render. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: '연속일'(consecutive day(s)) is 3 syllables, takes a compound, and Korean nouns do not inflect for number so the same form serves the header regardless of the count (widget_noun.plural_header in apple-coverage shows Apple itself reusing one Korean noun, '위젯', for both 'Widget' and 'Widgets'); '스트릭' is the English loan several Korean gamification apps (Duolingo among them) use, ruled out by the no-English-needed rule; '연속 기록'(consecutive record) is the fullest, most native phrase but at 5 syllables does not fit the tightest widget slots the way '연속일' does. Meanwhile agents write '연속일' in noun/header slots and '%lld일 연속' in running sentences, and list every key that touched the concept; no terms row is added until this closes. Decide before the first ko batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it", "drop it"],
+      "recommended": "keep it",
+      "recommended_reason": "It is what makes the badge family cohere in en, Korean carries the whole workplace vocabulary with ordinary Sino-Korean nouns that have no grammatical gender to manage, and the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain (references/project-context.md '## Content policy'). Evidence per option: keep it draws on Korean employment vocabulary that carries no marked gender at all ('입사'=hired, '재입사'=rehired, '월급제 전환'=salaried/switched to monthly pay, '복귀'=back on shift, '근속'=tenure, '급여'=payroll category, '근무'=shift category) — Korean role nouns are unmarked for gender across the board (references/locale-briefs/ko.md '## Address and gender'), so this family carries none of the Romance-locale agreement risk; drop it replaces the employment names with plain achievement names ('첫 세션', '7일 연속', '50일 완주'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Salaried maps to '월급제 전환', not the more literal '정규직 전환' (conversion to regular-employee status), because the latter converges semantically on the Tenure badge's own '근속' (continuous service) and the two would read as near-duplicate badges; '월급제 전환' isolates the pay-structure sense instead (references/locale-briefs/ko.md '## Decided conflicts'). Meanwhile the first achievements batch drafts the conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "occurrence_counter",
+      "options": ["회", "번"],
+      "recommended": "회",
+      "recommended_reason": "It is the more written/formal of the two counters and matches the 하십시오체 register decided for body text throughout the app, while '번' reads slightly more spoken and colloquial.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects every 'N times' count: achievements.badge.earnedCount (en 'Earned %lld times'), onboarding.notificationsSetup.howManyFormat, profile.reminders.frequencyValue. Both '회' and '번' are ordinary, grammatically correct Korean counters for occurrences; neither is evidenced from the Apple ko harvest in this run (no matching string was captured), so this is a plain register call, not a platform mismatch. Meanwhile agents use '회' consistently across the three keys and record any editor pushback toward '번' in the batch report; a flip is a single find-and-replace across those three keys, not a structural change."
+    },
+    {
+      "id": "coaching_register",
+      "options": ["하십시오체 throughout (current default)", "해요체 for short motivational/celebratory lines only"],
+      "recommended": "하십시오체 throughout (current default)",
+      "recommended_reason": "The app's own copy is overwhelmingly the permission/disclaimer/control-form genre the Apple OS-chrome harvest actually evidences for 하십시오체, and a two-register app is its own risk without a native read to confirm it lands well; keep one register until a native reviewer weighs in.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the momentum, ring, come-back-strong and 'Make it yours' rows in references/locale-briefs/ko.md '## Idioms and figurative language', plus any future badge-earned caption. The register decided in '## Address and gender' was evidenced from Apple's OS permission/system-chrome strings, the one genre guaranteed to be maximally formal in any language; Apple's closest coaching-copy analogue, Fitness+ achievement text, instead uses 해요체 ('계속 움직여주세요!', FirstFitnessPlusWorkoutAward-Yoga | Localizable.stringsdict | ACHIEVEMENT_YESTERDAY_DESC, ko.lproj, iOS 26.1 23B86), so the register call for this specific line type was made on a genre-mismatched sample. Meanwhile all idiom-table proposal lines are written in 하십시오체 (기세를 이어가십시오, 힘차게 돌아오십시오, etc.) and any native or editor preference for 해요체 on these lines is logged in the batch report; a flip touches only the Idioms table's proposal lines, not the rest of the brief."
+    },
+    {
+      "id": "streak_freeze_connotation",
+      "options": ["동결 (keep)", "스트릭 보호 (streak protection) or another lighter alternative"],
+      "recommended": "동결 (keep)",
+      "recommended_reason": "Provisionally: it is the literal, evidenced match for the source 'freeze' concept and reinforces the frost/ice widget treatment, but this needs a native reader's gut reaction, not corpus evidence, before the pilot batch.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects the streak_freeze term above and its 12 governing en keys. '동결' is the standard Korean word for a frozen bank account or frozen assets (계좌 동결, 자산 동결) as well as the neutral verb 'to freeze'; in a money-adjacent app whose money frame already states five times that nothing is earned or lost, a reader's first association with '동결' attached to a wage-tracking feature may be financial rather than playful. No corpus check can settle this either way. Meanwhile agents keep using '동결' and its forms, and the native review recommended in the brief's Identity section is asked explicitly about this word; a flip is a single term-wide rename in this glossary, not a structural change."
+    }
+  ]
+}
