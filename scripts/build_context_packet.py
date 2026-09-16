@@ -673,7 +673,8 @@ class Packet:
             if s["existing_target"] == s["en"] and s["state"] == "translated":
                 anywhere.add(norm(s["en"]))
         avoid = {norm(f) for t in self.glossary.get("terms", {}).values() for f in t.get("forbidden", [])}
-        return {a for a in anywhere if a}, {norm(v) for v in PACKET_VOCABULARY}, {a for a in avoid if a}
+        vocabulary = {norm(v) for v in PACKET_VOCABULARY} | {norm(r) for _, r in SCREEN_ROLES} | {norm("app screen")}
+        return {a for a in anywhere if a}, vocabulary, {a for a in avoid if a}
 
     def leak_check(self, blind_path):
         forb = self.forbidden()
@@ -689,7 +690,9 @@ class Packet:
                 line = "%s: contains %s of %s: %r" % (path, kind, key, raw)
                 if needle in anywhere or (needle in avoid and AVOID_FIELD_RE.search(path)):
                     allowed.append(line)
-                elif needle in fixed_fields and not TEXT_FIELD_RE.search(path):
+                # a structural field holds the script's own vocabulary; an English word inside one of
+                # its phrases ("profile" in "settings and profile") is not a leaked source string
+                elif not TEXT_FIELD_RE.search(path) and any(contains_whole(v, needle) for v in fixed_fields):
                     vocabulary += 1
                 else:
                     fails.append(line)
