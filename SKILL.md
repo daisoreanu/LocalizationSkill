@@ -89,7 +89,7 @@ Transcreate rhythm and imagery, not facts, within the persuasion limits in the [
 
 Shortening for fit cuts words, never facts; a fact that must go moves to a neighbouring element and the key's comment says so. Strings that mirror iOS labels (`onboarding.widgets.howTo.*`) keep Apple's register beside the app's informal voice by design.
 
-Follow the live quote policy in `Data/quotes/SCHEMA.md`: app-authored affirmations are transcreated; published quotations, scripture, definitions and user text are neither rewritten as marketing copy nor translated automatically. Agents are AI language specialists, not native people; describe their reviews honestly and never invent human approval, linguistic credentials or conversion gains.
+Follow the live quote policy in `Data/quotes/SCHEMA.md` with [project context](references/project-context.md) `## Content policy`: English quote content is the source of truth and ports to every shipped language, but per kind. App-authored affirmations are transcreated; an attributed quotation ports only once the labelled-translation field exists, and never as the speaker's own words; scripture takes that language's canonical published translation; a category ports completely or not at all, because a partial pool replaces English rather than supplementing it; user text is never touched. Agents are AI language specialists, not native people; describe their reviews honestly and never invent human approval, linguistic credentials or conversion gains.
 
 ## Verify and deliver
 

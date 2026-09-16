@@ -43,7 +43,7 @@ Allowed: loss framing about the user's own time, the real price ladder, the one-
 ## Brand and fixed names
 
 - `Moneyfesting` stays exactly as written in every language and script: no transliteration into Arabic, Hebrew, Chinese, Japanese or Korean script, no declension glued on beyond the locale's normal hyphen rule; the brand row of each brief's `## Platform terms` records how the language carries case and where quotes apply (ro: "aplicației Moneyfesting", never "Moneyfesting-ul").
-- Coach names and quote authors stay as authored [archive: `Docs/Archive/I18N_PLAN.md` section 7; no coach name exists in the catalog at snapshot 2026-09-15, so the rule is dormant]. Sourced quotations stay in their language; authored affirmations carry EN/RO pairs through `pairId` [`Data/quotes/SCHEMA.md`].
+- Coach names and quote authors stay as authored [archive: `Docs/Archive/I18N_PLAN.md` section 7; no coach name exists in the catalog at snapshot 2026-09-15, so the rule is dormant]. Attributed quotations port only as labelled translations and never as the speaker's own words; authored affirmations carry their English original through `pairId` [`Data/quotes/SCHEMA.md`; rules in `references/project-context.md` `## Content policy`].
 - Apple product names take Apple's own localization, recorded per locale in the brief's `## Platform terms` table; a generic phrase sharing their words ("time on screen") is a different concept and stays generic.
 - The restricted-apps group name ships as the Swift literal "No Restricted Apps" (`Manifesting/Features/Plan/Data/Repositories/ToDoTaskRepository.swift:333`), unlocalized: flag it, never translate it in place.
 
