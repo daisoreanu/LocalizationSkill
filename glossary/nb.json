@@ -1,0 +1,136 @@
+{
+  "locale": "nb",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "task": {
+      "preferred": "oppgave",
+      "forms": ["oppgave", "oppgaven", "oppgaver", "oppgavene", "fokusoppgave", "fokusoppgaven", "fokusoppgaver", "fokusoppgavene"],
+      "forbidden": ["aktivitet", "aktiviteten", "aktiviteter", "aktivitetene", "gjøremål", "gjøremålet", "gjøremålene"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own nb for Task (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/WorkflowKit.framework | Localizable.strings | Task (Parameter Label), Task (OmniFocusProject), Task (twodoType); System/Library/Frameworks/ClassKit.framework | ClassKit.strings | CONTEXT_TYPE_TASK). Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks; 'fokusoppgave' is the compound for 'Focus Task' screen titles (focusTask.createTask.screenTitleEdit 'Edit Focus Task'). No nb copy ships, so this is a seed. forms covers the everyday cases plus the compound; it cannot cover every compound a batch invents (oppgavekort, oppgaveliste), so read the drift list too. 'aktivitet' is the loan-adjacent word a translator reaches for and collides with Apple's own 'aktivitetsdata' for Screen Time usage data, a different concept; 'gjøremål' (chore/errand) is excluded by product choice, though Apple's own Shortcuts synonym string pairs 'gjøremål' and 'oppgave' as interchangeable for the same English 'todo'/'task' concept (System/Library/PrivateFrameworks/WorkflowKit.framework | Localizable.strings | todo|task, todo|to-do|task). forbidden lists the definite and plural-definite forms too, because term_audit.py matches whole words, not stems."
+    },
+    "streak_freeze": {
+      "preferred": "frys",
+      "forms": ["frys", "frysen", "fryser", "frysene", "fryst", "frosset"],
+      "forbidden": ["pause", "pauser", "fryse"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no nb copy ships, so this is a seed and the least confident term in this file. 'frys' is a common-gender noun ('en frys/frysen/fryser/frysene'), the standard Bokmål declension (bil/bilen/biler/bilene) and the value Apple's own nb gives for the English word 'freeze' itself (iOS 26.1 (23B86) runtime: System/Library/ExtensionKit/Extensions/CameraSettingsAppIntentsExtension.appex | Localizable.strings | freeze -> 'frys'); the earlier seed proposed the infinitive 'fryse' as the noun on a faulty analogy to 'en bremse' (which in Norwegian names the horsefly, not the brake device: the brake is 'en brems'), and its own forms list was already built on the 'frys-' stem, not 'fryse-'. Flag this term for a native read before the first batch, more so than the others in this file. 'fryst'/'frosset' are the adjective forms for a covered day ('en fryst dag'); forbidden marks the word the concept note rules out (concepts.json streak_freeze: 'not_this: pause, skip, restore') plus the rejected 'fryse' lemma."
+    },
+    "focus_session": {
+      "preferred": "fokusøkt",
+      "forms": ["fokusøkt", "fokusøkten", "fokusøkter", "fokusøktene", "økt", "økten", "økter", "øktene"],
+      "forbidden": ["sesjon", "sesjonen", "sesjoner"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "moneyfesting.details.* (33), focusTask.*, widgets.startFocus.*, profile.sessionDetails.*, onboarding.welcome.preview.*, profile.home.focusSection, insights.focus.title, onboarding.dailyFocusGoal.*. 'økt' is Apple's own nb for Session (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SensorKitUI.framework/AuthGroups/ECG.bundle | InfoPlist.strings | Session) and is also the word Apple's own Fitness copy uses for a workout ('en roøkt', 'økt med yoga'; System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/BestWorkout-HKWorkoutActivityTypeRowing | Localizable.stringsdict | ACHIEVEMENT_ACHIEVED_DESCRIPTION_CAL/NSStringLocalizedFormatKey). Decided rather than left open, unlike fi and ro: the system Focus mode is named 'Fokus' (Applications/Preferences.app | Localizable.strings | Focus), an unrelated stem from 'økt', so the compound 'fokusøkt' carries no overlap risk the way Finnish 'keskittymisjakso' or Romanian 'sesiune de concentrare' do against their own Focus-mode words. 'sesjon' is the English-shaped loan a translator reaches for; Apple never uses it for this sense."
+    },
+    "restricted_list": {
+      "preferred": "blokkeringsliste",
+      "forms": ["blokkeringsliste", "blokkeringslisten", "blokkeringslister", "blokkeringslistene"],
+      "forbidden": ["svarteliste", "svartelisten", "svartelista", "svarte liste"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). No Apple string names this app concept; chosen for plainness from 'blokkere', the verb Apple's own nb copy uses for blocking apps ('Blokkerte apper' as a search keyword, System/Library/PreferenceManifests/MCUISettingsSearch.bundle | SettingsSearchManifest-com.apple.devicemanagementclient.MCUISettingsSearch.strings | SEARCH_KEYWORDS). forbidden marks the blacklist calque the concept note rules out; it cannot catch a paraphrase such as 'liste over sperrede apper', which is drift the editor reports."
+    },
+    "time_value": {
+      "preferred": "tidsverdi",
+      "forms": ["tidsverdi", "tidsverdien", "tidsverdier", "tidsverdiene", "anslått tidsverdi"],
+      "forbidden": ["inntekt", "inntekten", "inntekter", "inntektene", "fortjeneste", "fortjenesten", "overskudd", "overskuddet", "sparing"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). 'verdi' is Apple's own nb for Value (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/Heart.healthplugin | AFibBurden-Localizable.strings | AFIB_BURDEN_ADD_DATA_QUANTITY_SECTION_VALUE_LABEL; System/Library/PrivateFrameworks/ActionKit.framework | Localizable.strings | Value (Content Property Name)); 'tidsverdi' is a plain compound of that word with 'tid' (time), a productive and unremarkable Norwegian compound. forms lists the compound in the cases the labels need; a rival compound a batch may coin ('tidsverdien din') is covered by the definite form already listed. forbidden holds the outcome nouns nearest to this concept (concepts.json time_value: 'not_this: earnings, income, savings, profit, wage paid'); whole-word matching means these do not fire on an unrelated word sharing letters, which the brief's Money frame records."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Ikke opptjente penger.",
+      "forms": ["Ikke opptjente penger."],
+      "forbidden": ["Ikke tjente penger."],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.*.earned (7), achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). The four sibling source sentences keep their own single nb form, listed in references/locale-briefs/nb.md '## Money frame'. A bare past-tense verb directly before a noun ('Ikke tjente penger.', the earlier seed) reads in ordinary Bokmål as an elliptical main clause with a dropped subject rather than the terse adjectival fragment the English achieves; 'opptjente', a participle, keeps the fragment reading unambiguous and is recorded as forbidden so the earlier form is never reintroduced as a paraphrase. This still needs a native read in context before the pilot batch, same as the rest of this file. A further paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "prognose",
+      "forms": ["prognose", "prognosen", "prognoser", "prognosene"],
+      "forbidden": ["løfte", "garanti"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). No Apple string names a forecast in this app's sense; 'prognose' is the everyday Norwegian noun for a forward projection and is kept apart from the month-end figure, 'anslag' (estimate; Apple's own nb for 'Estimated', iOS 26.1 (23B86) runtime: System/Library/Messages/iMessageApps/SafetyMonitorMessages.bundle | Localizable.strings | Estimated Travel Time -> 'Anslått reisetid'), so insights.savings.monthEnd and insights.savings.estimated stay a different word from insights.savings.forecast. forbidden marks the two nouns that would turn a projection into a claim; 'garanti' is also a banned outcome word in the brief's Money frame (Apple's own nb uses the verb 'garanterer' for 'does not guarantee', System/Library/Health/FeedItemPlugins/MenstrualCyclesAppPlugin.healthplugin | Localizable-Luna.strings | FERTILITY_ESTIMATES_OVULATION_CONFIRMATION_DESCRIPTION)."
+    },
+    "hourly_rate": {
+      "preferred": "timepris",
+      "forms": ["timepris", "timeprisen", "timepriser", "timeprisene", "din timepris"],
+      "forbidden": ["timelønn", "timelønnen", "lønn per time", "fortjeneste per time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). Built from 'time' (the Norwegian noun for hour, abbreviated 't.'; Foundation nb_NO prints '1 t, 45 min') and 'pris', Apple's own nb for Price (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/MobileStoreUI.framework | Gifting.strings | GIFTING_CONFIRM_PRICE_LABEL). 'timelønn' is correct, common Norwegian for an hourly wage and exactly the wrong word here, because the app pays nobody; en says 'hourly wage' on several keys, so a translator will reach for it, which is why it is forbidden rather than merely discouraged. The badge names in the payroll family are a metaphor and may use wage-adjacent words; running copy may not."
+    },
+    "daily_focus_goal": {
+      "preferred": "dagsmål",
+      "forms": ["dagsmål", "dagsmålet", "dagsmålene", "mål", "målet", "målene"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). 'mål' is Apple's own nb for Goal (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/SleepHealthAppPlugin.healthplugin | Localizable.strings | DURATION_PICKER_SLEEP_DURATION_GOAL_HEADER; System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable-Eucalyptus.strings | SLEEP_MULTIPLE_GOAL_AXIS); 'dagsmål' is a plain compound with 'dag' (day). forms lists the compound and the bare noun, so counts include keys that say only 'mål'. forbidden is empty on purpose: the words a wrong draft would use ('ambisjon', 'drøm') are correct everyday Norwegian that onboarding.personalGoal.* and the quote surfaces may legitimately need for an aspiration, so banning them would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesShort and minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). Foundation's own nb_NO duration formatter prints 'min' for minutes and 't' (not 'h') for the hour: '1 t, 45 min' at .abbreviated width, '1 t, 45 m' at .narrow width (locale-formats.json durations.screen_time_abbreviated_1h45min, .reference_narrow_1h45min). forbidden is empty because the drift form is the single letter 'm' left over from en, an editor finding recorded in the brief's Short forms table instead of a forbidden hit here."
+    },
+    "screen_time": {
+      "preferred": "Skjermtid",
+      "forms": ["Skjermtid", "Skjermtiden", "skjermtid", "skjermtiden"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's nb name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. What this list cannot cover: Norwegian uses the same word for the generic notion of time spent on a screen, and term_audit matches case-insensitively, so a count here mixes the feature (capital S, e.g. insights.appUsage.title) with the generic sense (lower case, e.g. screenTimeReport.noData, insights.savings.estimateExplanation). Only the English name is forbidden; 'skjermtid' lower case is ordinary Norwegian elsewhere, not drift to report."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Avbryt", "roles": {"discard": "Forkast", "quit": "Avslutt", "dismiss": "Lukk"}, "note": "Apple's nb label for Cancel (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Cancel). discard/quit/dismiss cover 'Discard Changes' (common.editor.discard), 'Discard' (quotes.user.discard), 'Quit' (moneyfesting.details.stopConfirmationQuitButton) and 'Dismiss' (share.screenshot.dismiss); unlike fi and ro, Norwegian does not reach for one shared word across all four, so each role carries its own form rather than repeating the preferred one"},
+    "Done": {"preferred": "Ferdig", "roles": {"completed_count_header": "Utført", "ios_mirror_pill": "Ferdig"}, "note": "Apple's nb Home Screen edit-mode pill is also 'Ferdig' (System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | DONE), so unlike ro (whose pill says 'OK') the mirror and the generic control share one form"},
+    "Continue": {"preferred": "Fortsett", "roles": {"resume": "Fortsett"}, "note": "Apple's nb label for Continue (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Continue; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE)"},
+    "Save": {"preferred": "Lagre", "roles": {"save_money": "Spar"}, "note": "'Lagre' is the everyday Bokmål word for saving data or changes, used generically across mainstream Norwegian apps. Apple's own UIKitCore label for the generic Save control is 'Arkiver' (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Save; also confirmed on five further, unrelated iOS 26.1 (23B86) bundles), but no ordinary Norwegian consumer app renders a plain Save button as 'Arkiver'; that value is recorded, rejected, under Decided conflicts rather than adopted here. 'Spar' is the imperative for saving money on the plan badge (en 'Save 56%', paywall.onboardingSubscription.annualPlanBadge), a different verb from the generic control because Norwegian does not use 'lagre' or 'arkiver' for money"},
+    "Edit": {"preferred": "Rediger", "roles": {"ios_mirror_pill": "Rediger"}, "note": "Apple's nb value for the Home Screen EDIT key is also 'Rediger' (SpringBoardHome.strings | EDIT and | REARRANGE_ICONS_SHORTCUT_ITEM_TITLE 'Rediger Hjem-skjerm'), so unlike fi (literal '+') and ro, the illustrated pill and the generic control need no separate role value and no open decision"},
+    "Delete": {"preferred": "Slett", "roles": {}, "note": "Apple's nb label for Delete (UIKitCore.framework | Localizable.strings | Delete)"},
+    "Skip": {"preferred": "Hopp over", "roles": {"skip_for_now": "Hopp over for nå"}, "note": "Apple's nb label for Skip (System/Library/BridgeManifests/BridgeManifests.bundle | SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP); skip_for_now covers the app's one 'Skip for now' key (onboarding.name.skip)"},
+    "Allow": {"preferred": "Tillat", "roles": {}, "note": "Apple's nb label for Allow (System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW; System/Library/PrivateFrameworks/TCC.framework | Localizable.strings | REQUEST_ACCESS_ALLOW)"},
+    "Don't allow": {"preferred": "Ikke tillat", "roles": {}, "note": "Apple's nb label for Don't Allow (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "OK", "roles": {}, "note": "Apple's own nb value for this exact English is 'OK' in both places it was found (System/Library/PrivateFrameworks/PodcastsFoundation.framework | Localizable.strings | NOW_PLAYING_SCROLLING_TIP_DONE_BUTTON_TITLE; Applications/MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS), not a warmer word; no Apple nb source gives an alternative, so none is adopted without evidence. The owner may prefer a warmer word ('Skjønner') on review; that would be a deviation from this seed, recorded as a finding, not a silent change"},
+    "Retry": {"preferred": "Prøv igjen", "roles": {}, "note": "Apple's nb label for Retry and for 'Try Again' alike (System/Library/PrivateFrameworks/_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY; System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON); Apple also quotes it unchanged inside a sentence ('Trykk på ... eller på Prøv igjen for å gjøre et nytt forsøk.', System/Library/PrivateFrameworks/WatchControlSettings.framework | Localizable.strings | grey.practice.gesture.failure.repeat.message), so unlike fi no separate narrow-button role is evidenced"},
+    "Settings": {"preferred": "Innstillinger", "roles": {"open_button": "Åpne Innstillinger", "goto_button": "Gå til Innstillinger", "setup_noun": "oppsett"}, "note": "Apple's nb app name is 'Innstillinger' (Applications/Preferences.app | InfoPlist.strings | CFBundleDisplayName). Unlike fi and ro, Apple's own nb keeps 'Open Settings' and 'Go to Settings' as two distinct labels (SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS 'Åpne Innstillinger'; System/Library/ExtensionKit/Extensions/ScreenTimeAppIntentsExtension.appex | Localizable.strings | Go to Settings 'Gå til Innstillinger'), so both roles are named rather than collapsed to one; setup_noun covers 'Finalize reminders setup.' (onboarding.notificationPermission.title) with the everyday Norwegian noun for setup"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["rekke", "serie", "streak"],
+      "recommended": "rekke",
+      "recommended_reason": "It is the shorter, everyday Norwegian word for an unbroken run of countable units and reads well in a widget header. 'serie' is the closest lexicalized precedent in Norwegian sports and gaming media ('vinnerserie', 'tapsserie' for winning/losing streaks), so it is a stronger rival than a first pass gave it credit for, not a weaker one; 'streak' itself is an increasingly common untranslated loanword in Norwegian tech and gaming contexts and is listed as a third option for the owner to weigh, though it has not been checked against the Apple nb harvest, which never uses a noun for this concept at all (see note).",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No nb copy exists, so both counts are 0. Keys: widgets.streak.* (about 39), share.card.streak*, streakFreeze.* (11), paywall.benefit.streak.* (2), onboarding.welcome.slide.streak.* (2), insights.summary.dayStreakTitle, achievements.streak.* (8). Apple's own nb never names the concept with a noun: its Fitness copy states the count and the phrase 'på rad' instead ('Du får denne utmerkelsen hvis du når bevegelsesmålet {{goal_value}} på rad.', iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION/NSStringLocalizedFormatKey), which is exactly the fallback available meanwhile: write the days instead of the noun ('%lld dager på rad'), never choose per string. Decide before the first nb batch; a flip afterwards is a global term change with its own follow-up batch. Nothing enters glossary/nb.json terms until this closes."
+    },
+    {
+      "id": "mock_permission_alerts",
+      "options": ["%@ vil ha tilgang til Skjermtid", "«%@» ønsker å få tilgang til Skjermtid"],
+      "recommended": "%@ vil ha tilgang til Skjermtid",
+      "recommended_reason": "The same onboarding step raises the real alert moments later, and a mock in a shape iOS never uses shows the reader a screen they will not then recognise.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; the Screen Time mock's Continue is the shared common.continue, quoted by onboarding.alert.screenTimeMessage. Rule: a mock of an iOS alert mirrors the device verbatim. The en source mocks already copy Apple's own English wording, quotes around %@ included ('\"%@\" Would Like to Access Screen Time'), but Apple's nb differs in three ways (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL, COMMON_CONTINUE, COMMON_DONT_ALLOW; System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, USER_NOTIFICATION_PERMISSION_ALERT_BODY, PERMISSION_ALERT_ALLOW, PERMISSION_ALERT_DENY): no quotation marks around the app name, an active 'du'-voiced message rather than the en mock's imperative-shaped access sentence, and a capitalised 'Innstillinger' where the en mock lower-cases 'settings'. The two options are the two title shapes, so the counts read as a quote check. Meanwhile the seven keys stay unwritten in nb and findings go to an audit scope the owner names."
+    },
+    {
+      "id": "compact_currency_suffix",
+      "options": ["m", "mill."],
+      "recommended": "mill.",
+      "recommended_reason": "The suffix sits directly against a money figure the money frame already asks readers to read carefully; even a same-first-letter mismatch invites misreading a million as a thousand-scale amount.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "An engineering finding, not a copy choice, recorded here because agents meet it in packets. AppCurrency.formatCompact appends a hardcoded Latin 'k'/'m'/'b' (Manifesting/Foundation/Localization/AppCurrency.swift:53-56), so nb renders '1,25k NOK' and '1,25m NOK', while nb_NO's own compact notation from Foundation's Decimal.FormatStyle.Currency(...).notation(.compactName) gives '1,25k' for thousands (matching the app already) and '1,25 mill.' for millions, '1,25 mrd.' for billions (locale-formats.json money_compact_locale, compact_finding). Severity is recorded as low for nb, unlike the high-severity ro finding, because the thousand token already matches; only millions (and, unreached at this app's amounts, billions) differ. Surfaces: widgets.focusRing.row.money, widgets.monthlyTimeValue.*, insights.savings.*, screenTimeReport.*, and the insights, celebration and session screens. Using the locale's own notation changes the formatter for every locale, not just nb. Meanwhile agents never translate around the suffix, never spell it into copy, and report it once per batch that renders a compact amount; accessibility labels use the full format and are unaffected."
+    },
+    {
+      "id": "restore_button",
+      "options": ["Gjenopprett abonnement", "Gjenopprett manglende kjøp"],
+      "recommended": "Gjenopprett abonnement",
+      "recommended_reason": "The button restores a subscription (the paywall's plans are annual and weekly), and 'Gjenopprett abonnement' is Apple's own StoreKit label for that exact action, already in the nb-appropriate imperative-free noun phrase.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Mirrors the identical situation ro opens as restore_button. Key: paywall.button.restore, currently seeded as 'Gjenopprett abonnement', app-owned because the StoreKit purchase sheet has no restore control. Apple's own iOS 26.1 (23B86) nb runtime carries two distinct labels for this action (System/Library/Frameworks/_StoreKit_SwiftUI.framework | Localizable.strings | RESTORE_SUBSCRIPTION_LABEL 'Gjenopprett abonnement'; RESTORE_PURCHASES_LABEL 'Gjenopprett manglende kjøp'), the same ambiguity ro treats as owner-level rather than settling silently. A yes needs a paywall render check. Meanwhile the key stays at the seeded form and findings go to an audit scope the owner names."
+    }
+  ]
+}

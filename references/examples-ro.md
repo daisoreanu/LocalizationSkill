@@ -27,7 +27,7 @@ Read the screen column before the pattern: every row is what it is because of wh
 |---|---|---|---|
 | `paywall.benefit.value.detail` | Setează-ți tariful și vezi cum se adună concentrarea. | calque of "watch focus add up"; concentration does not add up in Romanian | Setează-ți tariful și vezi cât valorează orele tale de concentrare. |
 | `paywall.benefit.streak.title` | Serii care iartă. | personified English fragment ("Streaks that forgive"); Romanian puts the user or the outcome first. It renders inline before its detail as one `Text` (`Manifesting/Features/Paywall/Business/SubscriptionPaywall/View/OnboardingSubscriptionPaywallView.swift:178`), so keep it a short lead-in no stronger than the detail's condition | Poți rata o zi fără să-ți pierzi seria. |
-| `paywall.button.restore` | Restaurează | bare verb, reads as restoring a file | Restaurează achizițiile (the verb stays unverified until Apple's ro Subscriptions wording is read; `locale-briefs/ro.md` Platform terms) |
+| `paywall.button.restore` | Restaurează | bare verb, reads as restoring a file | Restaurează abonamentul, Apple's StoreKit label "Restaurați abonamentul" in the tu form (open decision `restore_button` in `glossary/ro.json`; `locale-briefs/ro.md` Platform terms) |
 | `share.alert.photoAccessDeniedTitle` | Acces la Poze necesar | English word order | E nevoie de acces la Poze |
 | `achievements.category.payroll.name` | Statul de plată | payroll-document register for a badge family about showing up | Pontaj (pairs with "Primul pontaj") |
 | `widgets.streak.copy.frozen.small` | Acoperit cu îngheț. | agreement: the covered thing is yesterday (zi, feminine); the medium line already says "Ieri a fost acoperită" | Acoperită de un îngheț. |

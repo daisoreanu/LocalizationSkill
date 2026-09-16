@@ -17,6 +17,21 @@ The community repositories present MIT licensing and attribution. Follow each re
 
 The Romanian conventions this skill seeds (`glossary/ro.json`, `references/locale-briefs/ro.md`, `references/examples-ro.md`) descend from `Docs/Archive/I18N_PROMPT.md` "Romanian translation guide" and `Docs/Archive/I18N_PLAN.md` section 7 in the app checkout, written as owner-directed agent output in commit `503cd42` (2026-08-11) and checked by review agents, not authored by a native product team. Where the guide and the shipped catalog differ, the catalog majority at `c8a49dd` is the stronger evidence, because the owner accepted it; the guide's Cancel = Renunță lost to the shipped Anulează that way, and "sesiune de focus" stays an open owner decision. For the same reason the ro pilot runs in `translate` mode limited to `needs_review` keys: its findings correct the brief and glossary, while the owner lock keeps `translated` units untouched.
 
+## Locale research (2026-09-16)
+
+The briefs for the decided target set were written from first-party evidence gathered in one pass; `references/locale-decisions.md` `## Platform terms` carries the reproducible procedure.
+
+| Question | Method | Grounds |
+|---|---|---|
+| What does Apple call this in the target language? | decode every `en`/`Base`/`en_GB` `.strings` and `.stringsdict` in the iOS 26.1 (23B86) simulator runtime, find the key by its English value, read the same key in the locale's `lproj` | each brief's Platform terms rows and the system-mirror values, cited as `bundle \| table \| key` |
+| Which plural categories does the locale really select? | ICU `uplrules_open`/`uplrules_select` over every integer below a million plus fractions, cross-checked with Xcode's own `PluralRule.ComplementedPluralKeys` table | `scripts/catalog_check.py` `PLURAL_REQUIRED` and `PLURAL_OPTIONAL`, and each brief's boundary values |
+| How do numbers, money, dates and quotes render? | Foundation with the app's own `AppCurrency.format`/`formatCompact` replicated verbatim, invisible characters recorded as code points | the Numbers section of each brief and the compact-suffix engineering finding |
+| Which tag does a device actually receive? | `Bundle.preferredLocalizations(from:forPreferences:)` against the runtime's real `lproj` lists and against candidate app tag sets | the catalog tag in each brief's Identity, and the `nb`/`no`, `he`/`iw`, `es-MX`/`es-419` and `pt-BR`/`pt` decisions |
+| How much does the language expand? | ratio distribution of Apple's own translations against their English source, calibrated so the procedure returns `ro`'s shipped 1.35x | the length trigger in each brief, display-width based for `ja` and `ko` |
+| Can the store list this language? | App Store Connect's published localization list, fetched 2026-09-16 | the store rows in each brief and the Icelandic and Bulgarian gaps |
+
+Every row in a brief outside `ro` is agent research: no shipped copy, no native source, and no owner acceptance. Glossary rows carry `decided_by: "skill-seed-2026-09-16"` so an owner can tell research from accepted copy, and `scripts/brief_check.py` fails a brief that claims human approval. Two independent checks ran over each locale: a language specialist trying to refute the choices, and the script for structure, schema, cited keys and evidence.
+
 ## Primary references for maintenance
 
 - [Apple localization](https://developer.apple.com/localization/) and [Code-along: Explore localization with Xcode](https://developer.apple.com/videos/play/wwdc2025/225/): catalog workflow, translator context and platform surfaces. Keep repository conventions where they intentionally differ from generic examples.

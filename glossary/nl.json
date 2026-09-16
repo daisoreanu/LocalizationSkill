@@ -1,0 +1,136 @@
+{
+  "locale": "nl",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "bevriezing",
+      "forms": ["bevriezing", "bevriezingen", "bevriezen", "bevriest", "bevroren", "reeksbevriezing"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no nl copy ships, so this is a seed. references/locale-briefs/nl.md '## Idioms and figurative language' settles the noun 'bevriezing' and the verb 'je reeks bevriezen' for the streak-freeze row, and gives 'Gisteren is afgedekt.' for the covered-day state line, which uses a different adjective ('afgedekt') the editor supplies per key, not this noun. forbidden is empty: no en key or Apple string reaches for a competing Dutch word here, unlike fi's food-freezer literal, so there is nothing evidenced to ban yet."
+    },
+    "task": {
+      "preferred": "taak",
+      "forms": ["taak", "taken", "de taak", "focustaak", "focustaken"],
+      "forbidden": ["activiteit", "activiteiten"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/nl.md '## Header and label forms' settles 'Edit Focus Task' -> 'Wijzig focustaak' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> 'Mijn taken' (focusTask.picker.myTasksHeader); '## Address and gender' lists 'de taak' among the de-word agreement examples. forbidden holds 'activiteit' and its plural 'activiteiten' (term_audit.py matches whole words, and Dutch grammar forces the plural whenever copy names more than one task), the word glossary/concepts.json 'task' marks not_this; the brief's own Apple citation for 'activiteitsgegevens' (activity data, a distinct Health concept) is a closed compound, so whole-word matching on 'activiteit'/'activiteiten' never fires on it. A batch that needs to say 'activity data' is naming the Health concept, not this one, and should read as such."
+    },
+    "restricted_list": {
+      "preferred": "geblokkeerde apps",
+      "forms": ["geblokkeerde apps", "geblokkeerde app", "blokkeerlijst", "de blokkeerlijst"],
+      "forbidden": ["zwarte lijst", "zwartelijst"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). The brief does not narrate this term in prose, so it is seeded here the way fi.json seeds the same concept without a brief passage. Chosen to reuse the word the brief already establishes: '## Header and label forms' gives 'Geblokkeerd' as Apple's own Dutch for 'Blocked' (PreferencesManifests.bundle | SettingsSearchManifest-com.apple.mobilemail.settings.strings | BLOCKED), and the en source itself mixes 'Restricted Apps' (screenTime.restrictedAppsPicker.title 'Select Restricted Apps List', plan.createToDo.restrictedAppsSection 'Restricted Apps:') with 'blocked list' (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task'), so 'geblokkeerde apps' fits both source spellings with one Dutch phrase. forbidden marks the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this, the same concept fi.json bans as 'mustalista'; it cannot catch a paraphrase such as 'lijst met beperkte apps', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "tijdwaarde",
+      "forms": ["tijdwaarde", "de tijdwaarde", "waarde", "waarde van je tijd", "geschatte waarde van je tijd"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/nl.md '## Money frame' ships 'Tijdwaarde, geen inkomsten.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'waarde' as the word governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family, so forms lists both the compact compound and the bare sanctioned noun. forbidden is deliberately empty: the outcome words this concept must avoid (verdien, inkom, ansio-style earnings) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; 'Tijdwaarde, geen inkomsten.' itself contains 'inkomsten', so banning it on this term would misfire on the approved sentence the moment nl copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Geen verdiend geld.",
+      "forms": ["Geen verdiend geld."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/nl.md '## Money frame' fixes this exact form and says it 'mirrors glossary/nl.json time_value_disclaimer exactly'. The four sibling source sentences keep their own single nl form, listed in the same table. forbidden is empty because no nl variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "prognose",
+      "forms": ["prognose", "de prognose", "prognoses"],
+      "forbidden": ["belofte", "garantie"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept in prose, so it is seeded directly as fi.json seeds it, rather than sent to Open decisions as ro.md does: unlike ro's shipped 3/3 split, no nl copy exists, and Dutch keeps the forecast and the month-end estimate apart without effort, 'prognose' for the forward-looking figure and 'schatting'/'raming' for insights.savings.monthEnd and .estimated, so VoiceOver's back-to-back read of the two needs two distinct words the way the ro open decision requires an owner call to get. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'belofte' and 'garantie' would turn an estimate into a claim, and 'garantie' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garan', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "uurtarief",
+      "forms": ["uurtarief", "het uurtarief", "je uurtarief", "uurtarieven"],
+      "forbidden": ["uurloon", "salaris", "loon", "lonen"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/nl.md '## Header and label forms' ships 'Set Your Hourly Wage' -> 'Stel je uurtarief in' (onboarding.hourlyWage.title), and '## Address and gender' lists 'het uurtarief' among the het-word agreement examples. 'uurloon' and 'salaris' are forbidden because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. The bare root 'loon' (and its plural 'lonen') is forbidden too: term_audit.py matches whole words, so 'je loon per uur' or 'het loon dat dit je oplevert' would carry the same banned sense past a check that only looked for the compound. The badge family's payroll vocabulary ('loonlijst', 'dienst', references/locale-briefs/nl.md '## Idioms and figurative language') is a metaphor built from a different compound and does not collide with 'uurloon' or 'loon'."
+    },
+    "daily_focus_goal": {
+      "preferred": "dagdoel",
+      "forms": ["dagdoel", "het dagdoel", "doel", "je doel", "doelen"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/nl.md '## Address and gender' lists 'het doel' among the het-word agreement examples, and '## Decided conflicts' settles closed-compound spelling for this kind of noun ('beginscherm', 'bewegingsring'), which 'dagdoel' follows. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'doel'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/nl.md '## Short forms and units' and '## Decided conflicts' settle 'min' from Foundation's nl_NL abbreviated duration output ('1 uur, 45 min'), with the bare narrow 'm' reserved for the share-card compact triple (share.duration.minutesShort). forbidden is empty because the drift form is the single letter 'm', and a one-letter forbidden entry would fire on anything; a bare 'm' left over from en outside the share card is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "Schermtijd",
+      "forms": ["Schermtijd", "schermtijd"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's nl name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/nl.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because Dutch spells the feature and the generic sense with the same word: the feature is capital-S 'Schermtijd' and the generic hours-on-screen sense is lower-case 'schermtijd', so a count here mixes both and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "focussessie",
+      "forms": ["focussessie", "focussessies", "de focussessie"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/locale-briefs/nl.md '## Audience and register' gives the worked example 'focus sessie' -> 'focussessie' for widgets.startFocus.heading (en 'Focus session'), and '## Decided conflicts' settles the closed-compound spelling. Unlike ro and fi, nl.md carries no open decision for this concept: Dutch orthography already forces the one-word spelling, so there is no competing register to leave to the owner. forbidden is empty because the brief records no rival Dutch word for this sense."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Annuleer", "roles": {"discard": "Verwijder wijzigingen", "quit": "Stop de sessie", "dismiss": "Sluit"}, "note": "Apple's nl label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); discard spells the object out so it never reads as deleting the quote (common.editor.discard, quotes.user.discard), and quit is distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton)"},
+    "Done": {"preferred": "Gereed", "roles": {"completed_count_header": "Afgerond", "ios_mirror_pill": "Gereed"}, "note": "Apple's nl label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done); the Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel)"},
+    "Continue": {"preferred": "Ga door", "roles": {"resume": "Hervat"}, "note": "Apple's nl label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE)"},
+    "Save": {"preferred": "Bewaar", "roles": {"save_money": "Bespaar"}, "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role (paywall.onboardingSubscription.annualPlanBadge 'Save 56%')"},
+    "Edit": {"preferred": "Wijzig", "roles": {"ios_mirror_pill": "Wijzig"}, "note": "Apple's nl label for Edit (UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is the same word, so the pill and app copy agree (onboarding.widgets.howTo.editPillLabel; SpringBoardHome.framework | SpringBoardHome.strings | EDIT)"},
+    "Delete": {"preferred": "Verwijder", "roles": {}, "note": "no glossary role; confirmation questions conjugate (quotes.user.deleteTitle) and compounds keep the imperative (plan.dailyPlan.deleteAll 'Verwijder alle')"},
+    "Skip": {"preferred": "Sla over", "roles": {"skip_for_now": "Sla dit nu over"}, "note": "onboarding.name.skip is the only exact Skip key; keep skip_for_now distinct from 'Niet nu' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "Sta toe", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's nl label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW)"},
+    "Don't allow": {"preferred": "Sta niet toe", "roles": {}, "note": "mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's nl label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "Begrepen", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done)"},
+    "Retry": {"preferred": "Opnieuw", "roles": {"in_sentence": "Probeer opnieuw"}, "note": "in_sentence is also the form for the four 'Try Again' buttons and for the label quoted inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "Instellingen", "roles": {"open_button": "Open Instellingen", "go_to_button": "Ga naar Instellingen", "setup_noun": "instellen"}, "note": "Dutch keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton)"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["reeks", "dagen op rij", "streak"],
+      "recommended": "reeks",
+      "recommended_reason": "It is the only plain Dutch noun that fills a one-word widget header and an uppercase caption; Apple never uses a noun for this sense, only the phrase, and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No nl copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: 'reeks' is the plain Dutch noun, 5 characters, and takes a compound ('reekswidget', 'reeksbevriezing'), with no Apple evidence for this exact sense; 'dagen op rij' is Apple's own Dutch for a Move streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION_NAME) but is a phrase, not a noun, so it cannot fill a header or a compact compound; 'streak' is the English loan several Dutch apps use and is ruled out by the no-English-needed rule. Meanwhile agents write 'reeks' in noun slots and 'dagen op rij' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first nl batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "quote_marks",
+      "options": ["‘ ’", "“ ”"],
+      "recommended": "‘ ’",
+      "recommended_reason": "It is the locale's own reported delimiter for nl_NL and matches Apple's habit for the quoted-label case, which is the more frequent one of the two (five keys against five).",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: moneyfesting.details.quoteWrapper, notifications.contentExtension.quoteDecoration, moneyfesting.main.quotePlaceholder, theme.createTheme.sampleQuote, widgets.quotes.placeholderText, plus the UI labels quoted inside component.errorView.message, onboarding.dataMigration.errorMessage, theme.picker.errorMessage, onboarding.alert.screenTimeMessage, focusTask.picker.emptyMessage (11 en keys use a straight double quote). Rule: the locale's own delimiters, and a mock or quoted iOS label follows the device. Evidence per option: Foundation reports U+2018/U+2019 as both the primary and the alternate delimiters for nl_NL, and Apple's own Dutch UI uses the same shape as a straight apostrophe around a feature name (\"toegang tot 'Schermtijd'\", FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL); U+201C/U+201D is the double form a Dutch pull-quote or quote card often takes but is not the locale's reported delimiter. onboarding.alert.screenTimeMessage is not one of the mock-alert bodies the brief's Platform terms verbatim rule enumerates, so its quotes around 'Continue' and 'Moneyfesting' follow this general recommendation, not the verbatim mirror. Meanwhile the first batch uses the curly single form everywhere, and the adjudicator lists the quote-card keys separately so a flip touches only them."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it", "drop it"],
+      "recommended": "keep it",
+      "recommended_reason": "It is what makes the badge family cohere in en, and Dutch carries the whole workplace vocabulary with ordinary words rather than jargon; the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain. Evidence per option: keep it draws on Dutch vocabulary with no gendered role nouns ('Ingeklokt', 'Aangenomen', 'In vaste dienst', 'Opnieuw aangenomen', 'Terug in dienst', 'Dubbele dienst', 'De loonlijst', 'De dienst'); drop it replaces the employment names with plain achievement names ('Eerste sessie', 'Zeven dagen op rij', 'Vijftig volle dagen'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Meanwhile the first achievements batch drafts the conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "nl_be_audience",
+      "options": ["Netherlands wording", "NL/BE-neutral wording"],
+      "recommended": "Netherlands wording",
+      "recommended_reason": "The Netherlands storefront's default language is Dutch while Belgium's default is English (U.K.) with Dutch as an additional language, and a neutral variety invented by an agent with no native read on either side is more likely to read as translated in both.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects vocabulary across the catalog, not any single key. Rule: one nl resource serves both audiences, because nl-NL and nl-BE both negotiate to nl and iOS ships only nl.lproj. Evidence per option: Netherlands wording follows the storefront default and Apple's own nl.lproj, which is Netherlands Dutch, so the Belgian reader already sees this variety throughout the device; NL/BE-neutral wording avoids the handful of terms that differ, at the cost of blunting everyday phrasing in the larger market. Meanwhile: write Netherlands Dutch, and record any term an editor flags as Belgium-divergent in the batch report rather than hedging the line."
+    }
+  ]
+}

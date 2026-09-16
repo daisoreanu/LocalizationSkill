@@ -1,6 +1,6 @@
 # Voice card
 
-Snapshot 2026-09-15, catalog commit `c8a49dd`. Tags: [test] a pinned test (executable truth), [comment] the catalog comment on the named key, [archive] an archived plan (a claim to verify before relying on it), [inferred] read off the shipped copy, not policy. Route: the translator and adjudicator get the whole card; blind reviewers get only the target-language banned words from `## Money frame` and the persuasion categories from `## Persuasion limits` named as categories (countdown or dated deadline, social proof, guarantee, shaming, medical claim, privacy promise, hype noun), never as English phrases, because the English lines here would break packet separation.
+Snapshot 2026-09-15, catalog commit `c8a49dd`. Tags: [test] a pinned test (executable truth), [comment] the catalog comment on the named key, [archive] an archived plan (a claim to verify before relying on it), [inferred] read off the shipped copy, not policy. Route: the translator and adjudicator get the whole card; blind reviewers get only the target-language banned words from the locale brief's `## Money frame` and the persuasion categories from `## Persuasion limits` named as categories (countdown or dated deadline, social proof, guarantee, shaming, medical claim, privacy promise, hype noun), never as English phrases, because the English lines here would break packet separation.
 
 ## Voice
 
@@ -14,19 +14,19 @@ Snapshot 2026-09-15, catalog commit `c8a49dd`. Tags: [test] a pinned test (execu
 
 ## Money frame
 
-Time has a price at the user's own rate; the app never pays, earns, saves or loses money. Banned as an outcome word in every locale: earn, pays you, make money, cash out, wealth, income, guaranteed; in `ro`: avere, câștig, and on the widgets screen urmăre-, monitoriz-, ai ratat, miezul nopții. A negated disclaimer ("nu bani câștigați") is the frame itself, not an outcome. [test: `ManifestingTests/Paywall/PaywallCopyTests.swift:80-93` for the hero in en and ro; `ManifestingTests/Onboarding/OnboardingWidgetsStepTests.swift:200-215` for the widgets screen, which also bans track, monitor, you missed, midnight and "!"]
+Time has a price at the user's own rate; the app never pays, earns, saves or loses money. Banned as an outcome word in every locale: earn, pays you, make money, cash out, wealth, income, guaranteed. A negated disclaimer ("Not money earned.") is the frame itself, not an outcome. [test: `ManifestingTests/Paywall/PaywallCopyTests.swift:80-93` for the hero in en and ro; `ManifestingTests/Onboarding/OnboardingWidgetsStepTests.swift:200-215` for the widgets screen in en and ro, which also bans track, monitor, you missed, midnight and "!"] Each locale brief's `## Money frame` gives the target forms of this section: fixed phrases, banned words with grep stems, the widgets-screen words and the sanctioned words (ro: `references/locale-briefs/ro.md`).
 
 "Earned" is fine for freezes and badges ("One earned freeze", `achievements.badge.*.earned`) [comment: `paywall.benefit.streak.detail`, `achievements.badge.clockedIn.earned`]. Sanctioned: worth, value, price, costs, adds up, estimated [archive: `Docs/Archive/APP_UPDATE_PLANS/04_app_store_marketing.md:44`, citing a `WelcomeViewModel` rulebook no longer in code]. "A freeze covers one day, not two" is never strengthened [comment: `paywall.benefit.streak.detail`]. The wage footer claims no national average [test: `ManifestingTests/Onboarding/OnboardingCopyTests.swift:72-82`].
 
-Fixed phrases, one target form each (`ro` as shipped; `glossary/ro.json` `time_value_disclaimer` enforces the first row):
+Fixed phrases, one target form each; `glossary/<tag>.json` `time_value_disclaimer` enforces the first row:
 
-| Source | Keys | ro |
-|---|---|---|
-| Not money earned. | `achievements.badge.*.earned` (7), `achievements.category.wages.description`, `widgets.cash.description`, `widgets.focusRing.a11y.money`, `widgets.monthlyTimeValue.description` | Nu sunt bani câștigați. (10 keys; `widgets.monthlyTimeValue.description` still says "Nu reprezintă bani câștigați.", align through the glossary) |
-| Estimated value of time, not money earned. | `insights.savings.disclaimer` | Valoare estimată a timpului, nu bani câștigați. |
-| Time value, not earnings. | `insights.savings.compactDisclaimer` | Valoarea timpului, nu venituri. |
-| It is not a source of income. | `onboarding.hourlyWage.disclaimer` | Nu e o sursă de venit. |
-| Not money lost. | `onboarding.withoutMoneyfesting.fourthLine` | Nu sunt bani pierduți. |
+| Source | Keys |
+|---|---|
+| Not money earned. | `achievements.badge.*.earned` (7), `achievements.category.wages.description`, `widgets.cash.description`, `widgets.focusRing.a11y.money`, `widgets.monthlyTimeValue.description` |
+| Estimated value of time, not money earned. | `insights.savings.disclaimer` |
+| Time value, not earnings. | `insights.savings.compactDisclaimer` |
+| It is not a source of income. | `onboarding.hourlyWage.disclaimer` |
+| Not money lost. | `onboarding.withoutMoneyfesting.fourthLine` |
 
 ## Surface rules
 
@@ -42,9 +42,9 @@ Allowed: loss framing about the user's own time, the real price ladder, the one-
 
 ## Brand and fixed names
 
-- `Moneyfesting` stays exactly as written in every language and script: no transliteration into Arabic, Hebrew, Chinese, Japanese or Korean script, no declension glued on beyond the locale's normal hyphen rule (ro: "aplicației Moneyfesting", quotes only where the source mirrors a system alert as in `onboarding.alert.screenTimeMessage`; never "Moneyfesting-ul").
+- `Moneyfesting` stays exactly as written in every language and script: no transliteration into Arabic, Hebrew, Chinese, Japanese or Korean script, no declension glued on beyond the locale's normal hyphen rule; the brand row of each brief's `## Platform terms` records how the language carries case and where quotes apply (ro: "aplicației Moneyfesting", never "Moneyfesting-ul").
 - Coach names and quote authors stay as authored [archive: `Docs/Archive/I18N_PLAN.md` section 7; no coach name exists in the catalog at snapshot 2026-09-15, so the rule is dormant]. Sourced quotations stay in their language; authored affirmations carry EN/RO pairs through `pairId` [`Data/quotes/SCHEMA.md`].
-- Apple product names take Apple's own localization: Screen Time = Timp de utilizare (15 keys), Photos = Poze, Health = Sănătate, Home Screen = ecranul principal. Generic "time on screen" is "timp de ecran", a different concept.
+- Apple product names take Apple's own localization, recorded per locale in the brief's `## Platform terms` table; a generic phrase sharing their words ("time on screen") is a different concept and stays generic.
 - The restricted-apps group name ships as the Swift literal "No Restricted Apps" (`Manifesting/Features/Plan/Data/Repositories/ToDoTaskRepository.swift:333`), unlocalized: flag it, never translate it in place.
 
 ## Source lines to flag, not fix

@@ -85,7 +85,7 @@
       "expectations": [
         "Flags 'Serii care iartă.' as a personified fragment and 'se adună concentrarea' as a calque of 'focus adds up', each with a full-sentence proposal that keeps the benefit (a freeze forgives a missed day; focused minutes turn into a value at your rate) in everyday Romanian.",
         "Flags the meaning shift on paywall.winBack.title: 'unică' reads as unique, the source says one-time (offered once); classifies it as a claim finding on a paywall string, not a style note, and proposes a form that keeps 'once'.",
-        "Flags 'Restaurează' as the bare verb (restoring files or buildings) and proposes a button form that names what is restored (the purchases), marking the verb as unverified until Apple's Romanian Subscriptions wording is read rather than asserting it.",
+        "Flags 'Restaurează' as the bare verb (restoring files or buildings) and proposes a button form that names what is restored (the purchases), citing that Apple's own Romanian StoreKit strings use the same verb in the polite form ('Restaurați abonamentul', 'Restaurați cumpărăturile care lipsesc') while the object is the app's own choice, so the finding is about naming the object, not about verifying the verb.",
         "Flags terminology drift on the savings card: 'Estimare viitoare' and 'Estimare la sfârșitul lunii' read as the same thing side by side; proposes two distinct labels (forecast versus month-end figure) and names the card as the context.",
         "Flags the masculine/feminine mismatch between 'Acoperit' (small) and 'acoperită' (medium), names the missing referent (ziua or seria), and flags 'îngheț' as a literal weather rendering of the streak-freeze concept; proposes both variants agreeing with the same referent and naming the freeze the way the glossary does.",
         "Reports sarcina/activitate (deleteTask title versus message) and focus/concentrare (profile.focusTarget.title versus onboarding.welcome.preview.ring.goal) as glossary term decisions with a recommended pick, not as per-string fixes.",
@@ -147,6 +147,23 @@
         "Classifies r6 as a meaning finding: 'îngheț' read back as frost shows the streak-freeze concept (one earned freeze covers one missed day) was rendered literally and lost; not a style note.",
         "States the rule it applied, compare propositions not words, differences in rhetorical shape, sentence count, idiom or emphasis are never findings by themselves, editor wins on style and back-translation wins on claims, and applies it consistently: no finding is raised on wording alone and no idiom is invented where the source has none.",
         "Scopes the next round: translator rev2 for r2 and r6 only, a fresh editor on those ids plus their listed neighbours, a fresh blind back-translation of the changed tier A ids, no re-review of r1, r3, r4, r5."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "new-locale-readiness",
+      "prompt": "I want to add Ukrainian (uk) to Moneyfesting. The checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only: don't build it, don't translate anything, don't edit the app. Prepare only: what does the skill need before a first uk batch, what evidence must a uk brief carry when no uk copy exists, and what has to change in the app before uk can ship?",
+      "expected_output": "A preparation answer that names the two files uk needs and the structural gate over them, grounds every rule in first-party evidence rather than memory, reports uk's real plural categories, separates in-app localization from store coverage, and lists the engineering work that blocks a ship, while stating plainly that agent-written rows are seeds.",
+      "files": [],
+      "expectations": [
+        "Names references/locale-briefs/uk.md (filled from TEMPLATE.md, headings and order kept) and glossary/uk.json, and says Control forms, Platform terms and Money frame are required before the pilot batch.",
+        "Grounds the brief's rules in first-party evidence for a locale with no shipped copy: Apple's own Ukrainian iOS wording cited as bundle | table | key, ICU plural categories cross-checked against Xcode's own table, Foundation formatting output, and the en keys each rule governs; no catalog count is presented as uk evidence, because uk has none.",
+        "Names scripts/brief_check.py --locale uk as the structural gate over the brief and glossary, and scripts/term_audit.py for the glossary's terms, controls and open items.",
+        "Reports Ukrainian's plural categories as one, few and many (with other carried by the String Catalog) rather than assuming English's pair, and names boundary integers to exercise.",
+        "Lists the engineering work that blocks a uk ship: AppLanguage.supportedLanguageCodes and knownRegions, the per-language fields and == \"ro\" branches in ShieldMessage, CFBundleLocalizations in the shield extension's Info.plist, the literal [\"en\", \"ro\"] arrays under ManifestingTests, and the welcome captures.",
+        "Treats App Store Connect coverage as a separate question from in-app localization rather than assuming a language the app supports can also carry store metadata.",
+        "Marks every proposed uk term as a seed the owner may flip (decided_by skill-seed-<date>), states that no native speaker, translator or owner has approved anything, and recommends a native read before the first ship.",
+        "Leaves the app checkout untouched: no edits, no build, no tests, no simulator, and no translated strings produced."
       ]
     }
   ]

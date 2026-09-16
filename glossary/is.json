@@ -1,0 +1,175 @@
+{
+  "locale": "is",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "runa",
+      "forms": ["runa", "runu", "runur", "runan", "rununa", "rununni", "rununnar", "runurnar", "runum", "rununum", "runanna", "dagaruna", "dagarunu", "dagarunur", "dagarunan", "dagarununa", "dagarununni", "dagarununnar"],
+      "forbidden": ["streak", "streaks", "streakið", "streakinu"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys exist; the catalog holds en and ro only, so this is a researched seed the owner may flip before the pilot. 'runa' is the Icelandic noun for an unbroken row or sequence and declines runa/runu/runur/runan (https://en.wiktionary.org/wiki/runa, fetched 2026-09-16); it is four characters, which the 160x72pt accessoryRectangular streak tile needs. The everyday phrase „X dagar í röð“ is correct and „röð“ is deliberately NOT forbidden: forbidding it would collide with the phrase most streak copy will use. Open decision streak_term carries the alternatives. The forms list is agent-generated from the Wiktionary paradigm and cannot cover compounds a translator coins at the call site; term_audit matches whole words, so a new compound needs a glossary addition. The widgets how-to pick step must not name the widget at all (ManifestingTests/Onboarding/OnboardingWidgetsStepTests.swift:170-192, en and ro today)."
+    },
+    "streak_freeze": {
+      "preferred": "frysting",
+      "forms": ["frysting", "frystingu", "frystingar", "frystingin", "frystinguna", "frystingunni", "frystingarinnar", "frystingarnar", "frystingum", "frystingunum", "frystinga", "frystinganna", "runufrysting", "runufrystingu", "runufrystingar", "runufrystingin", "runufrystinguna", "runufrystingunni", "runufrystingarinnar", "runufrystingarnar", "runufrystingum", "runufrystingunum", "runufrystinga", "runufrystinganna"],
+      "forbidden": ["freeze", "freezes"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. 12 en keys carry the image (streakFreeze.*, widgets.streak.*frozen*, paywall.benefit.streak.detail). The verb 'frysta' is correct Icelandic and deliberately unpoliced; only the untranslated English loan is forbidden. The claim a freeze carries is fixed: one earned freeze covers one day, not two (paywall.benefit.streak.detail comment; StreakFreeze.swift:6 cap = 1), and no is wording may strengthen it. The compound runufrysting depends on open decision streak_term and flips with it; its forms mirror the base noun's full declension set one-for-one so it ships with the same coverage once the decision closes."
+    },
+    "focus_session": {
+      "preferred": "einbeitingarlota",
+      "forms": ["einbeitingarlota", "einbeitingarlotu", "einbeitingarlotur", "einbeitingarlotan", "einbeitingarlotuna", "einbeitingarlotunni", "einbeitingarlotunnar", "einbeitingarloturnar", "einbeitingarlotum", "einbeitingarlotunum", "einbeitingarlotanna", "lota", "lotu", "lotur", "lotan", "lotuna", "lotunni", "lotunnar", "loturnar", "lotum", "lotunum", "lotanna", "einbeiting", "einbeitingu", "einbeitingar", "einbeitingin", "einbeitinguna", "einbeitingunni", "einbeitingarinnar"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed, and open decision focus_term is the live question, so this row tracks the recommended option and flips with it. forbidden is empty on purpose: the competing loan „fókus“ is a living everyday word in spoken Icelandic and one of the open options, so policing it would both prejudge the decision and risk a collision. „lota“ alone is the short form once a screen has established the term; „einbeiting“ alone is the state, not the session. Length cost: einbeitingarlota is 16 characters against en 'focus session' 13, above the 1.15 length trigger, so every widget key that carries it goes on the render list."
+    },
+    "task": {
+      "preferred": "verkefni",
+      "forms": ["verkefni", "verkefnið", "verkefnis", "verkefnisins", "verkefninu", "verkefnin", "verkefnum", "verkefnunum", "verkefna", "verkefnanna"],
+      "forbidden": ["task", "tasks"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. 'verkefni' is the ordinary Icelandic noun for a task, assignment or project, neuter, declension verkefni/verkefnis/verkefnum/verkefna (https://en.wiktionary.org/wiki/verkefni, fetched 2026-09-16). „verk“, „aðgerð“ and „athöfn“ are correct everyday Icelandic and are deliberately unpoliced, so the forbidden list holds only the untranslated English. 'ToDo' in key names (plan.createToDo.*, widgets.tasks.*) is internal naming and never surfaces in copy. Icelandic „eyða“ governs the dative, so the delete compounds read „Eyða verkefninu“, not „Eyða verkefni“ - the forms list cannot encode that; the brief's Control forms row does."
+    },
+    "restricted_list": {
+      "preferred": "lokunarlisti",
+      "forms": ["lokunarlisti", "lokunarlistinn", "lokunarlista", "lokunarlistann", "lokunarlistans", "lokunarlistanum", "lokunarlistar", "lokunarlistarnir", "lokunarlistana", "lokunarlistum", "lokunarlistunum", "lokunarlistanna", "listi yfir lokuð öpp", "lista yfir lokuð öpp", "listinn yfir lokuð öpp", "listanum yfir lokuð öpp"],
+      "forbidden": ["bannlisti", "bannlistinn", "bannlistans", "bannlistanum", "svartur listi", "svartlisti", "svartlistans", "svartlistanum"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Chosen for plain wording over „hömlulisti“ (restriction list) and „bannlisti“ (ban list): the app closes apps for the length of a session, it does not ban them, and glossary/concepts.json names blacklist and parental controls as what this concept is not - which is why the blacklist forms are forbidden even though they are real Icelandic words. The spelled-out phrase „listi yfir lokuð öpp“ is the form for slots that have room; the compound is for the tight ones. The group name 'No Restricted Apps' ships as an unlocalized Swift literal (ToDoTaskRepository.swift:333): flag it, never translate it in place."
+    },
+    "time_value": {
+      "preferred": "verðmæti tímans",
+      "forms": ["verðmæti tímans", "verðmæti tíma", "verðmæti", "verðmætið", "verðmætis", "verðmætisins", "verðmætum", "verðmætin", "tímavirði", "tímavirðið"],
+      "forbidden": ["gróði", "gróðinn", "gróða", "ávöxtun", "ávöxtunin", "sparnaður", "sparnaðurinn", "sparnaði", "sparnaðar"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. The concept is focused time multiplied by the user's own rate, shown as money and never received (glossary/concepts.json time_value). „sparnaður“ (savings) is a correct everyday Icelandic word and is forbidden here anyway, because the app saves nobody money - note that the en keys are named insights.savings.*, which is a source naming habit, not a licence. The verb „spara“ is NOT forbidden: paywall.onboardingSubscription.annualPlanBadge is a plan discount („Þú sparar 56%“) and sits outside this row and outside both pinned copy tests. „tekjur“ is not forbidden here either, because it is the word the approved disclaimer sentences use in the negative; see time_value_disclaimer and the brief's Money frame."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Ekki áunnar tekjur.",
+      "forms": ["Ekki áunnar tekjur."],
+      "forbidden": ["Ekki raunverulegar tekjur.", "Þetta eru ekki tekjur.", "Ekki unnar tekjur."],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. 11 en keys carry 'Not money earned.' (achievements.badge.*.earned 7, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). „áunninn“ is the ordinary Icelandic participle for accrued or earned entitlements and agrees with 'tekjur' (feminine plural). The forbidden entries are near-variants a second writer would reach for, not everyday words: disclaimers take one approved form per locale and a third variant is the exact failure ro already carries on widgets.monthlyTimeValue.description. The four sibling source sentences keep their own single is form, listed in references/locale-briefs/is.md '## Money frame'."
+    },
+    "forecast": {
+      "preferred": "spá",
+      "forms": ["spá", "spár", "spáin", "spána", "spánni", "spárinnar", "spárnar", "spám", "spánum", "spánna", "mánaðarspá", "mánaðarspáin"],
+      "forbidden": ["forecast"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Icelandic keeps „spá“ (a forecast) and „áætlun / áætlað“ (an estimate) apart as everyday words, so the two labels VoiceOver reads one after the other stay distinct without an owner decision: insights.savings.forecast takes „spá“, insights.savings.monthEnd takes the estimate word. This is where is differs from ro, whose „Estimare“ collided with itself and became open decision 'forecast'. Whatever else changes, those two keys must not converge on one word. The forms list is agent-generated and includes the genitive plural definite (spánna, e.g. 'niðurstöður spánna') for the same reason streak.forms includes runanna."
+    },
+    "hourly_rate": {
+      "preferred": "tímagjald",
+      "forms": ["tímagjald", "tímagjaldið", "tímagjalds", "tímagjaldsins", "tímagjaldi", "tímagjaldinu", "tímagjöld", "tímagjöldin"],
+      "forbidden": ["tímakaup", "tímakaupið", "tímakaups", "tímalaun", "tímalaunin", "launataxti", "launataxtinn"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. „tímagjald“ is the rate you charge for an hour of your own time; „tímakaup“ is the pay you receive for an hour of work. Both are correct everyday Icelandic, and „tímakaup“ is forbidden precisely because it is the everyday one: glossary/concepts.json hourly_rate names salary, earnings per hour and what the app pays as what this concept is not, so the wrong-frame word is the one worth policing. Keys: onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description. The en source itself says “hourly wage” on several of these; that is a source line to flag, not to mirror."
+    },
+    "goal": {
+      "preferred": "markmið",
+      "forms": ["markmið", "markmiðið", "markmiðs", "markmiðsins", "markmiði", "markmiðinu", "markmiðin", "markmiðum", "markmiðunum", "markmiða", "markmiðanna", "daglegt markmið", "daglega markmiðið"],
+      "forbidden": ["goal", "goals"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Covers both glossary/concepts.json goal and daily_focus_goal: the daily ring target is „daglegt markmið“, the same noun with a modifier, so one term row serves onboarding.dailyFocusGoal.*, profile.focusTarget.* and widgets.focusRing.*. „mark“ and „takmark“ are correct everyday Icelandic words with other meanings and are deliberately unpoliced. The affirmation corpus uses goal language in another sense and is out of scope (Data/quotes/SCHEMA.md)."
+    },
+    "minute_unit": {
+      "preferred": "mín.",
+      "forms": ["mín.", "%lld mín."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Foundation prints „25 mín.“ for is_IS (Measurement .abbreviated, macOS 15.7.9 Build 24G830, 2026-09-16; also locale-formats.json durations). Every abbreviated unit ICU prints for is_IS is spaced, so „%lld mín.“ is the default everywhere, including the width-limited widget and report lines (screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat). „%lldmín.“ is deliberately NOT in this policed forms list: it is a fit concession a render must authorise and the key's comment must record, never a default the translator picks (unlike ro, where the glued form is an accepted local convention) — keeping it out of `forms` means term_audit does not read the glued form as an equally valid default. The full stop is part of the abbreviation and dropping it is a finding: bare „mín“ is the possessive pronoun („verkefnin mín“ = my tasks), which is why it is not listed as a form either and why term_audit would over-count if it were. Unlike ro there is no pinned test forcing an abbreviation into a VoiceOver label, so the a11y keys spell „mínúta / mínútur“ out from the first draft."
+    },
+    "app": {
+      "preferred": "app",
+      "forms": ["app", "appið", "appinu", "appsins", "appi", "öpp", "öppin", "öppum", "öppunum", "appa", "appanna"],
+      "forbidden": ["smáforrit", "smáforritið", "smáforritinu", "snjallforrit", "snjallforritið", "snjallsímaforrit", "snjallsímaforritið"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Decided in ## Decided conflicts: 'app' over 'smáforrit'. Over fifty Icelandic coinages for the English 'app' are registered at Árnastofnun and none established itself (Vísindavefurinn, University of Iceland, https://www.visindavefur.is/svar.php?id=49938, fetched 2026-09-16); Landsbankinn's own consumer pages say 'appið' (https://www.landsbankinn.is/einstaklingar/appid, fetched 2026-09-16). This row exists so term_audit can catch a drift back to 'smáforrit' or an invented coinage the way every other settled noun in this glossary is policed; the brand noun 'Moneyfesting' itself is a separate, unpoliced case (Platform terms)."
+    },
+    "widget": {
+      "preferred": "widget",
+      "forms": ["widget", "widgets"],
+      "forbidden": ["widgetið", "widgetinu", "widgetsins", "viðbót", "viðbótin", "viðbótina", "viðbótinni"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed. Platform terms: no Icelandic coinage for 'widget' was found in any fetched source, so the unadapted loan is the safe default, unpoliced plural 'widgets', with no Icelandic article glued on — 'widgetið' is itself a finding, not a variant, which is why it sits in forbidden rather than forms. 'viðbót' (add-on/extension) is forbidden in this sense because it names a different concept and would collide with any future 'extension' or 'add-on' copy. Covers the 13 en keys that use the noun."
+    },
+    "screen_time": {
+      "preferred": "Screen Time",
+      "forms": ["Screen Time", "Screen Time-aðgangur", "Screen Time-aðgang", "Screen Time-aðgangi", "Screen Time-stillingar"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 is keys; seed, and the inverse of glossary/ro.json screen_time, which forbids the English name. iOS 26.1 (23B86) ships no Icelandic interface - no harvested UI bundle has is.lproj - and an is-IS device negotiates Preferences and ScreenTimeSettingsUI to en (apple-coverage.json system_negotiation, 2026-09-16), so Apple's English name is the label the user will actually look for. forbidden is empty on purpose: the generic „skjátími“ (hours spent on screen) is a correct everyday word and a different concept that legitimately appears in screenTimeReport.noData and insights.savings.estimateExplanation, so nothing can be policed as forbidden here. Open decision apple_ui_names is the live question; this row carries the recommended option and flips with it. 18 en keys name the feature."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Hætta við", "roles": {"discard": "Henda breytingum", "quit": "Hætta", "dismiss": "Loka"}, "note": "Icelandic buttons take the infinitive, not the imperative: 'Hætta við' is the label on the Icelandic MediaWiki edit form (is.wikipedia.org, fetched 2026-09-16). 'Hætta' alone is stop or quit, which is why the running-session quit button takes it and a form's cancel does not."},
+    "Done": {"preferred": "Lokið", "roles": {"completed_count_header": "Lokið", "section_header": "LOKIÐ", "ios_mirror_pill": "Done"}, "note": "ios_mirror_pill is English on purpose: onboarding.widgets.howTo.doneLabel draws the iOS Done pill and iOS shows it in English on an Icelandic device (open decision ios_mirror_language)."},
+    "Continue": {"preferred": "Halda áfram", "roles": {"resume": "Halda áfram", "permission_continue": "Halda áfram", "subscribe_cta": "Halda áfram"}},
+    "Save": {"preferred": "Vista", "roles": {"save_money": "Þú sparar"}, "note": "second person on the plan badge (paywall.onboardingSubscription.annualPlanBadge, en 'Save 56%'), a statement about the reader rather than a command; the verb spara is sanctioned there while the noun sparnaður stays forbidden under terms.time_value."},
+    "Edit": {"preferred": "Breyta", "roles": {"ios_mirror_pill": "Edit"}},
+    "Delete": {"preferred": "Eyða", "roles": {}, "note": "eyða governs the dative, so compounds read 'Eyða öllu' and 'Eyða verkefninu'; confirmation questions conjugate ('Viltu eyða þessari tilvitnun?')."},
+    "Skip": {"preferred": "Sleppa", "roles": {"skip_for_now": "Sleppa í bili"}},
+    "Allow": {"preferred": "Leyfa", "roles": {"mock_alert_button": "Allow"}},
+    "Don't allow": {"preferred": "Leyfa ekki", "roles": {"mock_alert_button": "Don't Allow"}},
+    "Got it": {"preferred": "Ég skil", "roles": {}, "note": "the one control that is not an infinitive, because the en source is deliberately not an imperative either (references/surface-briefs.md '## CTA rule')."},
+    "Retry": {"preferred": "Reyna aftur", "roles": {"in_sentence": "Reyndu aftur"}, "note": "also the form for 'Try Again' (4 en keys) and inside quotes: Ýttu á „Reyna aftur“ quotes the button's own infinitive — one quotation level, around the button name only; the sentence itself is not wrapped in its own outer quotes."},
+    "Settings": {"preferred": "Stillingar", "roles": {"open_button": "Opna stillingar", "setup_noun": "uppsetning"}, "note": "the meanwhile form while open decision apple_ui_names is open; a yes to the recommendation changes these rows to Apple's English name and the brief's Control forms row with them."}
+  },
+  "open": [
+    {
+      "id": "apple_ui_names",
+      "options": ["Screen Time", "skjátími"],
+      "recommended": "Screen Time",
+      "recommended_reason": "A string that points at a control the user must find only works if it names that control the way the user's own screen does, and on an Icelandic device every Apple screen is in English.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "The two options are the countable proxy for a policy that covers every Apple name. Keys: the 18 Screen Time keys, the 8 Settings keys plus onboarding.notificationPermission.alertMessage, the 7 Photos keys, the 7 Health keys plus both InfoPlist.xcstrings usage descriptions, share.destination.messages, the 6 Home Screen keys, onboarding.widgets.howTo.requireFaceIDLabel, paywall.onboardingSubscription.legalText. Rule (references/locale-decisions.md '## Platform terms'): app-owned copy names an Apple app or feature the way that locale's device shows it. Evidence 2026-09-16: iOS 26.1 (23B86) ships no is.lproj in any of 26 UI bundles, and is-IS negotiates Preferences, UIKitCore, SpringBoardHome, UserNotificationsServer, FamilyControlsAuthUI and StoreKitUIService all to en (apple-coverage.json ios_lproj_presence, system_negotiation); is-IS,da-DK negotiates to da, so the device language is not even constant across users. Against: the register sources (landsbankinn.is, island.is, fetched 2026-09-16) keep everything Icelandic. The recommended policy is the split the en source already makes itself, writing 'Photos' for the app and 'photo gallery' for the concept: English where the string points at a control, Icelandic where it names a concept the user only reads. Meanwhile agents follow that split, controls.Settings stays 'Stillingar' so app-owned copy is internally consistent, the Platform terms table records which side each key took, and the adjudicator lists every key that named an Apple product. Nothing is forbidden under terms.screen_time while this is open."
+    },
+    {
+      "id": "ios_mirror_language",
+      "options": ["Add Widget", "Bæta við widgeti"],
+      "recommended": "Add Widget",
+      "recommended_reason": "The mock previews the iOS alert the same step then raises and the illustration copies a menu the user is looking at, so a value in another language shows labels the device will not.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "21 keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; onboarding.widgets.howTo.editPillLabel, doneLabel, addWidgetLabel, editHomeScreenLabel, editPagesLabel, editWallpaperLabel, customizeLabel, shareAppLabel, removeAppLabel, removeWidgetLabel, requireFaceIDLabel, searchPlaceholder, step2, step5. Rule: a mock of an iOS alert or an illustrated iOS control equals the device's own value verbatim. Evidence 2026-09-16: the label keys resolve through String(localized:defaultValue:bundle:.main) with no explicit locale (WidgetsHowToViewModel.swift:91-163, comment 'Use the device language for iOS labels'), so shipping is.lproj makes them Icelandic while SpringBoardHome, UserNotificationsServer and FamilyControlsAuthUI stay en for is-IS (apple-coverage.json risks). Against the recommendation: an English alert body inside an otherwise Icelandic onboarding step is a visible language switch, and an is-IS,da-DK user gets Danish chrome, which no single value matches. Note also that the two Add Widget buttons differ in ro, he and tr but not in English, so under the recommendation the shared key addWidgetLabel mirrors both and is needs no new key, unlike ro's add_widget_gallery_label. Meanwhile agents write Apple's English value into those 21 keys, keep the surrounding app copy Icelandic, upgrade each key's comment to say why the value is English, and list every key in the report so a flip is one scoped change; a yes to the Icelandic option also needs a render check of the 304-point illustrated menu (HomeScreenJiggleIllustrationView.swift:151). Flag first that onboarding.notificationPermission.alertMessage says lower-case 'settings' where Apple says 'Settings'."
+    },
+    {
+      "id": "focus_term",
+      "options": ["einbeitingarlota", "fókuslota", "einbeitingartörn"],
+      "recommended": "einbeitingarlota",
+      "recommended_reason": "Both halves are everyday Icelandic, so a reader who knows no English understands it at first read, while the loan 'fókus' collides with the English 'Focus' the same device already shows for the system mode.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the focusTask.*, moneyfesting.details.*, widgets.startFocus.*, widgets.focusRing.* and profile.sessionDetails.* families, plus profile.home.focusSection (en 'Focus') and onboarding.dailyFocusGoal.*. Rule: one term per concept, decided once and applied everywhere (glossary/concepts.json focus_session). Evidence 2026-09-16: 'einbeiting' is the ordinary Icelandic noun for focused attention, defined by Sýnum Karakter (run with ÍSÍ and UMFI) as giving what matters complete attention (https://www.synumkarakter.is/grein/einbeiting); 'lota' is the everyday noun for one round or bout, declension lota/lotu/lotur (https://en.wiktionary.org/wiki/lota). For „fókuslota“: the loan is live in spoken Icelandic and shorter, but no iOS Icelandic exists, so the system Focus mode reads 'Focus' in English on this user's phone (platform-terms.md focus_mode.*) and the loan disambiguates nothing. For „einbeitingartörn“: idiomatic for a stint of work but carries an effortful connotation the app's calm register avoids. Cost of the recommendation: 16 characters against en 13, above the 1.15 length trigger, so every widget key carrying it goes on the render list. Meanwhile agents use „einbeitingarlota“ for the full term and „lota“ once a screen has established it, terms.focus_session carries that, and the adjudicator lists every key that touched the term. A flip is a global term change with its own follow-up batch, never a per-string choice."
+    },
+    {
+      "id": "streak_term",
+      "options": ["runa", "dagaröð", "sigurganga"],
+      "recommended": "runa",
+      "recommended_reason": "It names an unbroken sequence without claiming a win, and it leaves the everyday phrase 'dagar í röð' free instead of colliding with it.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: widgets.streak.*, share.card.streak*, streakFreeze.*, paywall.benefit.streak.*, onboarding.welcome.slide.streak.*, achievements.streak.*, insights.summary.dayStreakTitle. Rule: glossary/concepts.json defines a streak as consecutive days of completed focus, a fact about the calendar and not praise. Evidence 2026-09-16: 'runa' is the Icelandic noun for a row or sequence, feminine, runa/runu/runur/runan (https://en.wiktionary.org/wiki/runa), and at four characters it fits the 160x72pt accessoryRectangular streak tile (references/surface-budgets.md). For „dagaröð“: more transparent, but „röð“ alone also means queue and sort order in Icelandic UI and the copy needs the bare phrase „X dagar í röð“ constantly, so term and phrase would collide. For „sigurganga“: the sports word for a winning streak, which imports the victory frame the concept rejects. Meanwhile agents use „runa“, never forbid „röð“, and the adjudicator lists every key that touched the term."
+    },
+    {
+      "id": "badge_conceit_neutral",
+      "options": ["Ráðning", "Ráðinn"],
+      "recommended": "Ráðning",
+      "recommended_reason": "Icelandic event nouns keep the whole workplace conceit while agreeing with nothing, so every badge name is gender-free at no length cost.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "The two options are the countable proxy for the whole family. Keys: the 24 achievements.badge.*.name keys and the 5 achievements.category.*.name keys, with achievements.badge.hired.earned and rehired.earned as the sentences that carry the conceit; BadgeCopy+Comeback/FullDays/Payroll/Shift/Wages.swift hold the family. Rule: references/project-context.md '## Content policy' - the conceit's local equivalent is decided once per locale, plain descriptors stay plain, gender-neutral forms are preferred. Evidence: Icelandic adjectives and past participles agree with their subject in gender, so „Ráðinn“ (m.) / „Ráðin“ (f.) forces a guess about the reader, while „Ráðning“ (a hiring) agrees with nothing; the language forms such event nouns from all of these verbs as a matter of course. Proposed family under the recommendation: Stimplað inn / Ráðning / Á launaskrá / Endurráðning / Aftur á vakt / Full vakt / Löng vakt / Tvöföld vakt / Starfsaldur / Fastráðning, categories Endurkoman / Heilir dagar / Launaskráin / Vaktin / Verðmæti tímans. Against: en's badge names are participles about the reader and the agent form is punchier; ro ships the masculine forms (Angajat, Salariat, Reangajat) as an owner-accepted choice that now sits in its own open decision, so repeating it in a locale with nothing shipped would be choosing the known problem. A third path, dropping the conceit for plain descriptors, costs the screen its only joke on a surface references/surface-briefs.md calls 'proud, dry'. Meanwhile agents use the event nouns, list them in the batch's glossary additions, and treat a gendered agent noun aimed at the reader as an editorial finding rather than a preference."
+    },
+    {
+      "id": "store_metadata_language",
+      "options": ["Íslenska", "English (U.K.)"],
+      "recommended": "English (U.K.)",
+      "recommended_reason": "App Store Connect offers no Icelandic localization at all, so there is no Icelandic slot to fill and the Iceland storefront's own default is English (U.K.).",
+      "decided_by": "user",
+      "status": "open",
+      "note": "The options are store-listing language labels, not copy forms, so term_audit's counts for this item are expected to be zero. Scope: references/store-metadata.md, plus the five welcome captions that feed store screenshots verbatim (onboarding.welcome.slide.*.eyebrow and .headline) and Manifesting/Resources/WelcomeScreenshots/welcome_capture_{block,plan,ring,themes}_<code>.png. Rule: app resource tags, formatting locales and App Store Connect language labels are three different lists, and the absence of a metadata locale is no bar to an in-app localization (references/locale-decisions.md). Evidence fetched 2026-09-16: Icelandic is absent from both the App Store Connect help-page language list (50 languages) and the locale-shortcode table (50 shortcodes), and the Iceland storefront row is ISL | Iceland | English (U.K.) | with no additional language (apple-coverage.json q5_app_store_connect). The real question is the captions, the one copy class that crosses the boundary: the recommendation is to ship the app and the captions in Icelandic while the store listing stays English (U.K.), because the in-app carousel is what the Icelandic user lives in and the captures are per-language files the build already carries. Meanwhile agents translate the captions as ordinary in-app copy, flag in the report that welcome_capture_*_is.png must be regenerated after the copy is final (which itself waits on AppLanguage.supportedLanguageCodes accepting 'is'), and write no Icelandic store metadata until the owner rules."
+    }
+  ]
+}

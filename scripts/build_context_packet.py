@@ -58,11 +58,35 @@ SCREEN_ROLES = [
     ("shield.", "app shield"), ("companion.", "app shield"), ("common.", "shared controls"), ("component.", "shared controls"),
     ("main.", "main navigation"), ("user.", "account"),
 ]
+# Formatting samples per locale, rendered on 2026-09-16 with the app's own AppCurrency.format
+# and Foundation styles; the '*' row fills whatever a locale row leaves out (see references/
+# research-provenance.md '## Locale research'). Language words come from the glossary at runtime.
 SAMPLES = {
-    "ro": {"noun": ["exemplu"], "name": ["Ana", "Alexandra-Maria"], "money": ["120 RON", "1.250,5 RON"],
-           "percent": ["40%", "100%"], "date": ["12 mai", "31 decembrie 2026"], "time": ["9:41", "23:59"],
-           "duration": ["25 min", "1 h 45 min"], "app": ["Safari", "Instagram"], "number": ["3", "21"],
-           "text": ["exemplu", "un exemplu ceva mai lung"]},
+    "ro": {"money": ["120 RON", "1.250,5 RON"], "percent": ["40 %", "100 %"], "date": ["12 mai", "31 decembrie 2026"], "time": ["9:41", "23:59"], "duration": ["25 min.", "1 oră, 45 min."]},
+    "da": {"money": ["120 DKK", "1.250,5 DKK"], "percent": ["40 %", "100 %"], "date": ["12. maj", "31. december 2026"], "time": ["9.41", "23.59"], "duration": ["25 min.", "1 t. og 45 min."]},
+    "sv": {"money": ["120 SEK", "1 250,5 SEK"], "percent": ["40 %", "100 %"], "date": ["12 maj", "31 december 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 tim, 45 min"]},
+    "nb": {"money": ["120 NOK", "1 250,5 NOK"], "percent": ["40 %", "100 %"], "date": ["12. mai", "31. desember 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 t, 45 min"]},
+    "fi": {"money": ["120 €", "1 250,5 €"], "percent": ["40 %", "100 %"], "date": ["12. toukokuuta", "31. joulukuuta 2026"], "time": ["9.41", "23.59"], "duration": ["25 min", "1 t 45 min"]},
+    "is": {"money": ["120 ISK", "1.250 ISK"], "percent": ["40%", "100%"], "date": ["12. maí", "31. desember 2026"], "time": ["9:41", "23:59"], "duration": ["25 mín.", "1 klst. og 45 mín."]},
+    "pl": {"money": ["120 PLN", "1250,5 PLN"], "percent": ["40%", "100%"], "date": ["12 maja", "31 grudnia 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 godz. i 45 min"]},
+    "hu": {"money": ["120 HUF", "1250,5 HUF"], "percent": ["40%", "100%"], "date": ["május 12.", "2026. december 31."], "time": ["9:41", "23:59"], "duration": ["25 p", "1 ó és 45 p"]},
+    "he": {"money": ["‏120 ‏ILS", "‏1,250.5 ‏ILS"], "percent": ["40%", "100%"], "date": ["12 במאי", "31 בדצמבר 2026"], "time": ["9:41", "23:59"], "duration": ["25 דק׳", "1 שעה ו45 דק׳"]},
+    "tr": {"money": ["TRY 120", "TRY 1.250,5"], "percent": ["%40", "%100"], "date": ["12 Mayıs", "31 Aralık 2026"], "time": ["9:41", "23:59"], "duration": ["25 dk.", "1 sa. 45 dk."]},
+    "el": {"money": ["120 €", "1.250,5 €"], "percent": ["40%", "100%"], "date": ["12 Μαΐου", "31 Δεκεμβρίου 2026"], "time": ["9:41 πμ", "11:59 μμ"], "duration": ["25 λ.", "1 ώ., 45 λ."]},
+    "cs": {"money": ["120 CZK", "1 250,5 CZK"], "percent": ["40 %", "100 %"], "date": ["12. května", "31. prosince 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h, 45 min"]},
+    "nl": {"money": ["€ 120", "€ 1.250,5"], "percent": ["40%", "100%"], "date": ["12 mei", "31 december 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 uur, 45 min"]},
+    "sk": {"money": ["120 €", "1 250,5 €"], "percent": ["40 %", "100 %"], "date": ["12. mája", "31. decembra 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h 45 min"]},
+    "bg": {"money": ["120 €", "1250,5 €"], "percent": ["40%", "100%"], "date": ["12 май", "31 декември 2026 г."], "time": ["9:41", "23:59"], "duration": ["25 мин", "1 ч и 45 мин"]},
+    "pt-BR": {"money": ["BRL 120", "BRL 1.250,5"], "percent": ["40%", "100%"], "date": ["12 de maio", "31 de dezembro de 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h e 45 min"]},
+    "pt-PT": {"money": ["120 €", "1250,5 €"], "percent": ["40%", "100%"], "date": ["12 de maio", "31 de dezembro de 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h e 45 min"]},
+    "es-ES": {"money": ["120 €", "1250,5 €"], "percent": ["40 %", "100 %"], "date": ["12 de mayo", "31 de diciembre de 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h y 45 min"]},
+    "es-MX": {"money": ["MXN 120", "MXN 1,250.5"], "percent": ["40%", "100%"], "date": ["12 de mayo", "31 de diciembre de 2026"], "time": ["9:41 a.m.", "11:59 p.m."], "duration": ["25 min", "1 h y 45 min"]},
+    "de": {"money": ["120 €", "1.250,5 €"], "percent": ["40 %", "100 %"], "date": ["12. Mai", "31. Dezember 2026"], "time": ["9:41", "23:59"], "duration": ["25 Min.", "1 Std., 45 Min."]},
+    "it": {"money": ["120 €", "1250,5 €"], "percent": ["40%", "100%"], "date": ["12 maggio", "31 dicembre 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h e 45 min"]},
+    "fr": {"money": ["120 €", "1 250,5 €"], "percent": ["40 %", "100 %"], "date": ["12 mai", "31 décembre 2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h et 45 min"]},
+    "ja": {"money": ["￥120", "￥1,250"], "percent": ["40%", "100%"], "date": ["5月12日", "2026年12月31日"], "time": ["9:41", "23:59"], "duration": ["25分", "1時間 45分"]},
+    "ko": {"money": ["KRW 120", "KRW 1,250"], "percent": ["40%", "100%"], "date": ["5월 12일", "2026년 12월 31일"], "time": ["오전 9:41", "오후 11:59"], "duration": ["25분", "1시간 45분"]},
+    "en": {"money": ["$120", "$1,250.5"], "percent": ["40%", "100%"], "date": ["May 12", "December 31, 2026"], "time": ["9:41 AM", "11:59 PM"], "duration": ["25 min", "1 hr, 45 min"]},
     "*": {"noun": ["sample"], "name": ["Ana", "Alexandra-Maria"], "money": ["120", "1,250.50"], "percent": ["40%", "100%"],
           "date": ["12/05", "31/12/2026"], "time": ["9:41", "23:59"], "duration": ["25 min", "1 h 45 min"],
           "app": ["Safari", "Instagram"], "number": ["3", "21"], "text": ["sample", "a somewhat longer sample"]},
@@ -70,7 +94,7 @@ SAMPLES = {
 COUNT_SAMPLES = {"minutes": [1, 25, 90], "hours": [1, 2, 21], "days": [1, 3, 21], "weeks": [1, 2, 21],
                  "months": [1, 3, 12], "years": [1, 2, 21], "seconds": [1, 30, 45], "percent": [5, 40, 100],
                  "count": [1, 3, 21]}
-PER_DAY_SAMPLES = {"ro": ["3h pe zi", "12h pe zi"], "*": ["3h a day", "12h a day"]}
+PER_DAY_SAMPLES = {"ro": ["3h pe zi", "12h pe zi"], "en": ["3h a day", "12h a day"]}
 UNIT_KINDS = (("minutes", r"min"), ("hours", r"h(ou)?rs?\b|\bh\b"), ("days", r"day"), ("weeks", r"w(ee)?k"),
               ("months", r"mo(nth)?"), ("years", r"y(ea)?r"), ("seconds", r"sec"), ("percent", r"%|percent"))
 AT_KINDS = (("money", ("amount", "price", "currency", "money", "wage", "cost", "earn", "value")),
@@ -165,8 +189,14 @@ def count_kind(en, token, comment):
     return "count"
 
 
-def placeholders(en, comment, locale):
-    table = SAMPLES.get(locale, SAMPLES["*"])
+def placeholders(en, comment, locale, glossary=None):
+    # A blind packet carries target text only, so fall back key by key and take the
+    # language's own words from its glossary rather than the English placeholders.
+    table = {**SAMPLES["*"], **SAMPLES.get(locale, {})}
+    terms = [t.get("preferred") for t in (glossary or {}).get("terms", {}).values() if t.get("preferred")]
+    if terms:
+        table["noun"] = terms[:1]
+        table["text"] = terms[:2]
     # Tokens in the comment ("%@ is ...") must not read as the percent keyword.
     cm = PLACEHOLDER_RE.sub(" ", (comment or "").lower())
     out, seen = [], set()
@@ -186,7 +216,7 @@ def placeholders(en, comment, locale):
                 kind = count_kind(en, token, cm)
                 samples = COUNT_SAMPLES[kind]
             elif kind == "duration" and re.search(r"\ba day\b|\bper day\b|\bdaily\b", cm):
-                kind, samples = "duration-per-day", PER_DAY_SAMPLES.get(locale, PER_DAY_SAMPLES["*"])
+                kind, samples = "duration-per-day", PER_DAY_SAMPLES.get(locale, table["duration"])
             else:
                 samples = table.get(kind, table["noun"])
         out.append({"token": token, "type": kind, "samples": samples})
@@ -529,7 +559,7 @@ class Packet:
             cat_text, cat_plural, cat_state = unit(entry, self.locale)
             control = control_for(key, comment)
             kind = kind_for(key, en, comment, control)
-            ph = placeholders(en, comment, self.locale)
+            ph = placeholders(en, comment, self.locale, self.glossary)
             screen, state_desc = screen_and_state(comment)
             siblings = self.same_source(key, en)
             sites = self.sites.get(key, [])

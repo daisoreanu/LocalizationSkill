@@ -1,0 +1,129 @@
+{
+  "locale": "da",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "frys",
+      "forms": ["frys", "frysen", "en frys", "optjent frys", "optjente frys"],
+      "forbidden": ["nedfrysning"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no da copy ships, so this is a seed. The head noun stands alone on purpose, independent of whatever the open decision streak_term picks for the streak itself. 'optjent' contains the banned stem 'tjen' from the Money frame table on purpose: the voice-card rule allows 'earned' for freezes and badges, so this is the one place the stem is not a finding. forms cannot cover every compound a batch invents ('frysdag'); forbidden marks the literal food-freezer noun, which no string in this app can legitimately want."
+    },
+    "task": {
+      "preferred": "opgave",
+      "forms": ["opgave", "opgaven", "opgaver", "opgaverne", "opgavens", "fokusopgave", "fokusopgaven", "fokusopgaver", "fokusopgaverne", "fokusopgavens"],
+      "forbidden": ["aktivitet", "aktiviteter"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own da for Task (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/WorkflowKit.framework | Localizable.strings | Task (Parameter Label); also ClassKit.framework | ClassKit.strings | CONTEXT_TYPE_TASK). Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. forms covers the everyday singular/plural/definite cases plus the focus-task compound's own definite plural and genitive (fokusopgaverne, fokusopgavens), matching the coverage the bare noun already has; it still cannot cover every compound a batch forms (opgavekort, opgaveliste), so read the drift list too. 'aktivitet' is the loan a translator reaches for and is never right here; it does not collide with Apple's own use of 'aktivitet' for Screen Time activity data, which is a different concept (onboarding.screenTimePermission.*, screenTimeReport.noDataExplanation)."
+    },
+    "restricted_list": {
+      "preferred": "blokeringsliste",
+      "forms": ["blokeringsliste", "blokeringslisten", "blokeringslister", "blokeringslisterne"],
+      "forbidden": ["sortliste", "sort liste"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). Chosen for plainness and a one-word compound, matching the productive Danish compounding Apple's own 'Apptidsgrænser' shows (iOS 26.1 (23B86) runtime: System/Library/ExtensionKit/Extensions/ScreenTimeAppIntentsExtension.appex | Localizable.strings | App Limits); 'blokeret'/'blokerede' is Apple's own da for Blocked (System/Library/AccessibilityBundles/ContactsUI.axbundle | Accessibility.strings | contact.cell.blocked; System/Library/ExtensionKit/Extensions/MailSettingsIntentsExtension.appex | Localizable.strings | Blocked). forbidden marks the blacklist calque the concept note rules out; it cannot catch a paraphrase such as 'liste over blokerede apps', which is drift the editor reports, not a forbidden form."
+    },
+    "time_value": {
+      "preferred": "tidsværdi",
+      "forms": ["tidsværdi", "tidsværdien", "tidsværdier", "anslået tidsværdi"],
+      "forbidden": ["indtægt", "indtægter", "fortjeneste"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). 'værdi' is Apple's own da for Value (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/ActionKit.framework | Localizable.strings | Value (Content Property Name); System/Library/PrivateFrameworks/HealthRecordsUI.framework | HealthRecordsUI-Localizable.strings | MEDICAL_RECORD_DETAIL_TITLE_VALUE). forms lists the compound in the cases the labels need; a bare 'værdi' alone is not scoped to this concept and may legitimately appear elsewhere, so a term_audit hit on the bare word needs the same manual read the forbidden-field note asks for. forbidden holds the outcome nouns nearest to this concept, including 'indtægter', Apple's own da for Income (System/Library/Frameworks/FinanceKit.framework | BankConnect_Localizable.strings | TRANSACTION_CATEGORY_INCOME). 'indtjening' was removed from forbidden: this concept's own approved fixed disclaimer, 'Tidsværdi, ikke indtjening.' (insights.savings.compactDisclaimer, references/locale-briefs/da.md '## Money frame'), contains it verbatim and falls inside this concept's own key scope (glossary/concepts.json time_value.where includes insights.savings.*), so keeping it forbidden would make term_audit flag the concept's own sanctioned, negated sentence."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Ikke tjente penge.",
+      "forms": ["Ikke tjente penge."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.*.earned (7), achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). The four sibling source sentences keep their own single da form, listed in references/locale-briefs/da.md '## Money frame'. forbidden is empty because no da variant has shipped yet; the first batch's variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "hourly_rate": {
+      "preferred": "timesats",
+      "forms": ["timesats", "timesatsen", "din timesats"],
+      "forbidden": ["timeløn", "timelønnen"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). Chosen over 'timeløn' (a literal, correct Danish word for an hourly wage) precisely because it is exactly the wrong word here: the app pays nobody, and en says 'hourly wage' on several keys, so a translator will reach for 'timeløn', which is why it is forbidden rather than merely discouraged. 'sats' (rate) is neutral, financial-register vocabulary with no payment implication, distinct from Apple's own 'pris' for Price (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/StoreKitUI.framework | Gifting.strings | GIFTING_CONFIRM_PRICE_LABEL), which this term deliberately avoids repeating so 'pris' stays free for the sanctioned Money frame table. The badge names in the payroll family are a metaphor and may use løn-words; running copy may not. forms is prenominal-possessive only ('din timesats'); a postposed possessive after the definite suffix ('timesatsen din') is Norwegian word order, not written Danish, and was removed from this list."
+    },
+    "daily_focus_goal": {
+      "preferred": "fokusmål",
+      "forms": ["fokusmål", "fokusmålet", "mål", "målet", "dit fokusmål"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). 'mål' is Apple's own da for Goal (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/SleepHealthAppPlugin.healthplugin | Localizable.strings | DURATION_PICKER_SLEEP_DURATION_GOAL_HEADER; System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable-Eucalyptus.strings | SLEEP_MULTIPLE_GOAL_AXIS). forms lists the compound and the bare noun, so counts include keys that say only 'mål'. forbidden is empty on purpose: the bare 'mål' form is not scoped to this concept's keys, so onboarding.personalGoal.* and the quote surfaces may legitimately use 'mål' for a life aspiration too, and term_audit's per-key breakdown is how the adjudicator tells the two apart rather than a forbidden word."
+    },
+    "minute_unit": {
+      "preferred": "min.",
+      "forms": ["min.", "%lld min.", "%lld m."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Foundation's own duration formatter for da_DK uses two widths for the minute abbreviation: narrow width gives 'm.' (reference_narrow_25min: '25 m.') and abbreviated width gives 'min.' (screen_time_abbreviated_25min: '25 min.'), both harvested on the host's Foundation 2026-09-16; the hour abbreviation 't.' is identical in both widths. 'min.' is the default because most of this app's duration labels sit closer to Apple's own abbreviated-width Screen Time report than to the tightest widget tile; screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary and moneyfesting.details.timeElapsedFormat may drop to 'm.' on a render verdict, per key (references/locale-briefs/da.md '## Short forms and units'). forbidden is empty because the drift form is the bare letter 'm' with no period, which is an editor finding recorded in the brief's Short forms table instead of a term_audit rule."
+    },
+    "screen_time": {
+      "preferred": "Skærmtid",
+      "forms": ["Skærmtid", "Skærmtiden", "Skærmtiden din"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's da name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. What this list cannot cover: Danish uses the same word for the generic notion of time spent on a screen, and term_audit matches case-insensitively, so a count here mixes the feature (capital S, e.g. insights.appUsage.title) with the generic sense (lower case, e.g. screenTimeReport.noData, insights.savings.estimateExplanation). Only the English name is forbidden; 'skærmtid' lower case is ordinary Danish elsewhere, not drift to flag."
+    },
+    "forecast": {
+      "preferred": "prognose",
+      "forms": ["prognose", "prognosen", "prognoser"],
+      "forbidden": ["løfte", "garanti"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). Danish keeps this apart from the month-end figure without effort: 'prognose' is the forecast (a projection) and 'skøn'/'anslået' the estimate (insights.savings.monthEnd, insights.savings.estimated), so the ro open decision 'forecast' has no Danish counterpart. VoiceOver reads the two one after the other, so they must stay two words, exactly as in fi. forbidden marks the two nouns that would turn an estimate into a claim; 'garanti' is also a banned outcome word in the brief's Money frame."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Annuller", "roles": {}, "note": "Apple's da label for Cancel (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Cancel); no separate everyday word for discard/quit/dismiss was found in the harvest, so these roles default to the same form"},
+    "Done": {"preferred": "OK", "roles": {"completed_count_header": "Udført", "ios_mirror_pill": "OK"}, "note": "Apple's da Home Screen Done pill is also 'OK' (SpringBoardHome.strings | DONE), so the mirror and the generic control share one form, as in ro. completed_count_header is the unmarked singular participle, matching the DONE-type section header default (references/locale-briefs/da.md '## Header and label forms'), not a plural agreeing with the listed items."},
+    "Continue": {"preferred": "Fortsæt", "roles": {"resume": "Fortsæt"}},
+    "Save": {"preferred": "Gem", "roles": {"save_money": "Spar"}, "note": "imperative on the plan badge ('Spar 56 %', paywall.onboardingSubscription.annualPlanBadge); Danish controls are imperative and do not conjugate for person"},
+    "Edit": {"preferred": "Rediger", "roles": {"ios_mirror_pill": "Rediger"}, "note": "unlike fi, Apple's da value for the Home Screen EDIT key is the real word 'Rediger' (SpringBoardHome.strings | EDIT), not a symbol, so the mirror and the generic control share one form"},
+    "Delete": {"preferred": "Slet", "roles": {}},
+    "Skip": {"preferred": "Spring over", "roles": {"skip_for_now": "Spring over for nu"}},
+    "Allow": {"preferred": "Tillad", "roles": {}},
+    "Don't allow": {"preferred": "Tillad ikke", "roles": {}},
+    "Got it": {"preferred": "OK", "roles": {}},
+    "Retry": {"preferred": "Prøv igen", "roles": {}, "note": "'Try Again' takes the same preferred form; unlike fi, no separate narrow-button short form was found for da in this harvest"},
+    "Settings": {"preferred": "Indstillinger", "roles": {"open_button": "Åbn Indstillinger", "goto_button": "Gå til Indstillinger", "setup_noun": "opsætning"}, "note": "unlike fi, Apple's da keeps 'Open Settings' and 'Go to Settings' as two distinct forms; open_button covers insights.appUsage.openSettings, share.alert.openSettings, theme.picker.goToSettingsButton, goto_button covers onboarding.alert.goToSettings"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["stribe", "serie", "række"],
+      "recommended": "stribe",
+      "recommended_reason": "It reads as an unbroken run on its own without a qualifying phrase, and it is short enough for the widget headers and the uppercase caption where this concept mostly lives — but this is a weak recommendation: it rests on general-dictionary evidence, while 'serie' now has real shipped precedent for this exact referent (see note). Read both before deciding.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No da copy exists, so all three counts are 0. Keys: widgets.streak.* (about 30), share.card.streak*, streakFreeze.* (11), paywall.benefit.streak.*, onboarding.welcome.slide.streak.*, insights.summary.dayStreakTitle, achievements.streak.*. Evidence per option: 'stribe' is the everyday Danish word general dictionaries give for this sense of streak (techdico.com/translation/english-danish/streak.html, da.bab.la/ordbog/engelsk-dansk/streake, both fetched 2026-09-16), though no Apple string in the iOS 26.1 (23B86) runtime uses it; 'serie' is a cognate Danish sports writing uses for a winning run ('sejrsserie'), and it is also real shipped precedent for this exact referent: Microsoft's own da-DK support page for the Rewards streak feature uses 'serie' standalone throughout — 'din Microsoft Rewards-serie', 'beskytter din serie' (support.microsoft.com/da-dk/topic/microsoft-rewards-streak-beskyttelse-bc0753f8-be5b-4284-9fcd-ee93946ec822, fetched 2026-09-16) — for a persistent day-streak, not only the broader 'a series of items' sense; 'række' ties directly to 'i træk' ('in a row'), the phrase Apple's own Fitness translations use instead of any single noun (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION/NSStringLocalizedFormatKey 'i træk'). Other Danish-localized streak surfaces (Duolingo, TikTok, Snapchat, Lifesum) were not confirmed — the relevant pages either failed to render or 404'd within a 4-fetch budget — so 'serie' vs 'stribe' is not settled beyond the one Microsoft citation. Meanwhile agents write the days instead of the noun ('%lld dage i træk'), matching Apple's own practice exactly, never choose per string, and the adjudicator lists every key that touched the concept; no terms row is added until this closes. Decide before the first da batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "focus_session",
+      "options": ["fokusperiode", "koncentrationsperiode", "session"],
+      "recommended": "fokusperiode",
+      "recommended_reason": "Plain Danish that leans into the same root Apple's own system Focus mode uses rather than avoiding it, where 'session' belongs to a medical or technical register and 'koncentrationsperiode' reads a step more clinical for a consumer coach.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No da copy exists, so all three counts are 0. Keys: moneyfesting.details.* (33), focusTask.*, widgets.startFocus.*, profile.sessionDetails.*, onboarding.welcome.preview.*, profile.home.focusSection, insights.focus.title, onboarding.dailyFocusGoal.*. Evidence per option: 'fokusere' is Apple's own verb for focusing (iOS 26.1 (23B86) runtime: System/Library/CoreServices/AccessibilityUIServer.app/Extensions/AccessibilityAppIntents.appex | Localizable.strings | BACKGROUND_SOUNDS_DESCRIPTION 'hjælpe dig med at fokusere'), and Apple's own name for the system mode is 'Fokus' (Applications/Preferences.app | Localizable.strings | Focus); 'koncentration' is the competing everyday word Apple itself also uses for a comparable sense ('forbedre koncentrationen i klasseværelset', System/Library/PrivateFrameworks/SchoolTimeSettingsUI.framework | SchoolTimeSettings.strings | SCHEDULE_FEATURE_EXPLANATION_FOOTER); 'session' is Apple's own bare loanword for a technical session (System/Library/PrivateFrameworks/SensorKitUI.framework/AuthGroups/ECG.bundle | InfoPlist.strings | Session). The overlap with the iOS Focus mode is a shared root, not a shared referent: the app never claims to be the system Focus mode. Meanwhile a new string follows its own screen's majority and the packet's same-source siblings, and the adjudicator lists every key that touched the term."
+    },
+    {
+      "id": "mock_permission_alerts",
+      "options": ["Giv appen adgang til Skærmtid for at give den mulighed for at se dine aktivitetsdata...", "Hvis du giver \"%@\" adgang til Skærmtid, kan appen muligvis se dine aktivitetsdata..."],
+      "recommended": "Hvis du giver \"%@\" adgang til Skærmtid, kan appen muligvis se dine aktivitetsdata...",
+      "recommended_reason": "The same onboarding step raises the real alert moments later, and a preview in another shape shows the reader a screen iOS will not.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: onboarding.screenTimePermission.alertMessage. Rule: a mock of an iOS alert mirrors the device verbatim. The app's own en mock is an imperative ('Provide \"%@\" access to Screen Time to allow it to see your activity data, restrict content, and limit the usage of apps and websites.') while Apple's own English, and its Danish translation, is a conditional gerund ('Providing \"%@\" access to Screen Time may allow it to see...' -> 'Hvis du giver \"%@\" adgang til Skærmtid, kan appen muligvis se...', iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL). The title and the two buttons already mirror Apple's own English closely enough to translate verbatim without a decision (see the brief's Platform terms table); only this one message needs the owner's call. A yes needs a source flag first, because the en mock already differs from Apple's own English, independent of any Danish work. Meanwhile the key stays unwritten in Danish and findings go to an audit scope the owner names."
+    },
+    {
+      "id": "compact_currency_suffix",
+      "options": ["k/m/b", "t/mio./mia. with the currency code kept visible"],
+      "recommended": "t/mio./mia. with the currency code kept visible",
+      "recommended_reason": "The suffix sits directly against a money figure the money frame already asks readers to read carefully, and a Latin 'k' beside a currency code reads as a bug; keeping the code visible also keeps the locale's own thousand token 't' from being misread as this app's own hour-duration abbreviation 't.' used nearby.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "An engineering finding, not a copy choice, recorded here because agents meet it in packets. AppCurrency.formatCompact appends a hardcoded Latin 'k', 'm' or 'b' (Manifesting/Foundation/Localization/AppCurrency.swift:53-56), so da renders '1,25k DKK' and '1,25m DKK', while da_DK's own compact tokens from Foundation's Decimal.FormatStyle.Currency(...).notation(.compactName) are 't', 'mio.' and 'mia.' ('1,25 t DKK', '1,25 mio. DKK'). Surfaces: widgets.focusRing.row.money, widgets.monthlyTimeValue.*, insights.savings.*, screenTimeReport.*, and the insights, celebration and session screens. A second, Danish-specific wrinkle beyond the Latin-letter mismatch: the locale's own thousand token 't' is visually identical to this app's own hour-duration abbreviation 't.' (references/locale-briefs/da.md '## Numbers, dates, currency and punctuation'), so even the correct locale notation risks being misread beside a money figure unless the currency code stays visible rather than a bare symbol. Using the locale's notation changes the formatter for every locale, not just da. Meanwhile agents never translate around the suffix, never spell it into copy, and report it once per batch that renders a compact amount; accessibility labels use the full format and are unaffected."
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "locale": "hu",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "széria",
+      "forms": [
+        "széria",
+        "szériát",
+        "szériád",
+        "szériádat",
+        "szériája",
+        "szériáját",
+        "szériának",
+        "szériában",
+        "szériáig",
+        "szériák",
+        "szériákat"
+      ],
+      "forbidden": [
+        "streak"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own Hungarian for the same fact: 'Mozgás-széria' for Move streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION). No hu copy exists, so there is no count. What the forms list cannot cover: term_audit matches whole words, so a compound that contains the term ('fókuszszéria', 'szériavédő', 'szériahossz') never matches any form here and never raises the preferred count; possessive and case suffixes stack in Hungarian, so a form the list misses ('szériájával', 'szériájukat') is a miss, not a finding. The everyday word 'sorozat' is deliberately not forbidden: it is correct Hungarian for a series or a sequence and would collide with ordinary copy."
+    },
+    "streak_freeze": {
+      "preferred": "szériavédő",
+      "forms": [
+        "szériavédő",
+        "szériavédőt",
+        "szériavédőd",
+        "szériavédődet",
+        "szériavédője",
+        "szériavédők",
+        "szériavédőket",
+        "szériavédővel"
+      ],
+      "forbidden": [
+        "szériafagyasztás",
+        "fagyasztás",
+        "lefagyasztás"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs the 12 en streak-freeze keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen). No Hungarian image carries the English 'freeze' here, so the rule is to state the meaning plainly (references/locale-briefs/hu.md '## Idioms and figurative language'); 'fagyasztás' reads as a calque. Open decision streak_freeze_term may flip this before the pilot. What the forms list cannot cover: the noun is usually possessed and case-marked together ('a szériavédőddel'), and a sentence that says what the freeze did rather than naming it ('Tegnapot lefedtük') carries the concept with no term in it at all."
+    },
+    "task": {
+      "preferred": "feladat",
+      "forms": [
+        "feladat",
+        "feladatot",
+        "feladatok",
+        "feladatokat",
+        "feladata",
+        "feladatod",
+        "feladatát",
+        "feladatnak",
+        "feladatban",
+        "feladathoz",
+        "feladataid"
+      ],
+      "forbidden": [
+        "taszk"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Covers both the focus task and the plan to-do; 'ToDo' in the keys is internal naming (glossary/concepts.json). 'tevékenység' is the word a translator is most likely to reach for and the one concepts.json rules out, but it is NOT forbidden here because it is also the correct word in the Screen Time copy ('tevékenységadatok', 'a tevékenységed', onboarding.screenTimePermission.message and .alertMessage), so banning it would fire on correct lines; the editor watches for it instead. What the forms list cannot cover: compounds ('fókuszfeladat', 'feladatlista') do not match under whole-word matching."
+    },
+    "restricted_list": {
+      "preferred": "letiltott appok listája",
+      "forms": [
+        "letiltott appok listája",
+        "letiltott appok listáját",
+        "letiltott appok listái",
+        "letiltott applista",
+        "letiltott appok"
+      ],
+      "forbidden": [
+        "tiltólista",
+        "feketelista",
+        "korlátozott appok listája"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps and plan.createToDo.restrictedAppsSection. 'app' rather than 'alkalmazás' follows Apple's Hungarian, which writes appok, appkönyvtár, 'App eltávolítása' (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | REMOVE_APP_SHORTCUT_ITEM_TITLE; Applications/Preferences.app | Localizable.strings | Home Screen & App Library). The group name itself ships as the unlocalized Swift literal 'No Restricted Apps' (Manifesting/Features/Plan/Data/Repositories/ToDoTaskRepository.swift:333): flag it, never translate it in place. What the forms list cannot cover: the phrase is long, so screens will shorten it to 'a lista' or 'a letiltott appok' in running text, which no form here counts."
+    },
+    "time_value": {
+      "preferred": "időérték",
+      "forms": [
+        "időérték",
+        "időértéket",
+        "időértéke",
+        "időértéked",
+        "időértékét",
+        "az idő értéke",
+        "az idő becsült értéke"
+      ],
+      "forbidden": [
+        "megtakarítás",
+        "megtakarítást",
+        "megtakarítása",
+        "kereset",
+        "keresmény",
+        "jövedelem",
+        "bevétel"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate; an estimate shown as money, never money received (glossary/concepts.json). Governs insights.savings.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, achievements.category.wages.*, onboarding.withoutMoneyfesting.* and onboarding.withMoneyfesting.*. 'érték' is Apple's own word for a value (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/ActionKit.framework | Localizable.strings | Value (Content Property Name)). 'megtakarítás' is forbidden although the keys are named insights.savings.*: the en values say time value, and the plan discount uses 'kedvezmény' (controls.Save.roles.save_money), so nothing legitimate needs it. 'jövedelem' is forbidden as a bare word; the fixed disclaimer 'Ez nem jövedelemforrás.' is a compound and does not match under whole-word matching."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Nem megkeresett pénz.",
+      "forms": [
+        "Nem megkeresett pénz."
+      ],
+      "forbidden": [
+        "Nem keresett pénz",
+        "Nem pénzkereset",
+        "Nem kapott pénz"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "One target form per source form, reused verbatim on every screen; this row is the first of the five, governing the 11 en keys listed in references/locale-briefs/hu.md '## Money frame'. The four sibling sentences keep their own single hu form in that table and are not policed here. The negated disclaimer is the money frame itself, so the 'keres' grep stem hitting 'megkeresett' inside this sentence is never a finding. What the forms list cannot cover: a paraphrase that keeps the meaning but changes a word ('Ez nem megkeresett pénz.') does not match and will not be counted, which is the point - one form only."
+    },
+    "hourly_rate": {
+      "preferred": "óradíj",
+      "forms": [
+        "óradíj",
+        "óradíjat",
+        "óradíjad",
+        "óradíjadat",
+        "óradíja",
+        "óradíját",
+        "óradíjnak",
+        "óradíjas"
+      ],
+      "forbidden": [
+        "óránkénti kereset",
+        "óránkénti jövedelem"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (glossary/concepts.json hourly_rate); governs onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage and achievements.category.wages.description. Deliberate deviation from the source: the en keys say 'hourly wage' (onboarding.hourlyWage.title 'Set Your Hourly Wage'), but the app pays nobody, so 'óradíj', the rate a person charges, is preferred over the literal 'órabér'. 'órabér' is NOT forbidden: open decision hourly_rate_term (see 'open' below) — no Apple string or corpus evidence pins 'órabér' as employer-paid only, and in everyday Hungarian it is also the ordinary word freelancers use for their own rate, so the split is a live product/market call rather than a settled ban. Meanwhile: term_audit does not flag 'órabér'; 'óradíj' stays the seeded preferred form. 'óránkénti kereset' and 'óránkénti jövedelem' stay forbidden regardless, as the wrong concept and as money-outcome words. What the forms list cannot cover: the concept often appears as a bare 'a díjad' or inside the formula line 'óránkénti díj × órák'."
+    },
+    "daily_focus_goal": {
+      "preferred": "napi fókuszcél",
+      "forms": [
+        "napi fókuszcél",
+        "napi fókuszcélt",
+        "napi fókuszcélod",
+        "napi fókuszcélodat",
+        "napi fókuszcélja",
+        "fókuszcél",
+        "fókuszcélt",
+        "fókuszcélod"
+      ],
+      "forbidden": [
+        "napi célkitűzés"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring; met or not met, never scored (glossary/concepts.json). Governs onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*. Depends on the open decision focus_session: if the focus term flips away from 'fókusz', this compound changes with it in the same follow-up batch. Bare 'célkitűzés'/'célkitűzést' are NOT forbidden: it is a common, neutral word for goal-setting in everyday Hungarian coaching writing, not bureaucratic, and no Apple citation or corpus evidence supported the earlier whole-word ban — downgraded to an editor style note (prefer 'napi fókuszcél' for this concept). Only the specific collocation 'napi célkitűzés' stays forbidden, since it collides directly with the app's own 'napi fókuszcél' naming. The personal goal keys (onboarding.personalGoal.*) take plain 'cél', which is why bare 'cél' is neither preferred nor forbidden here. What the forms list cannot cover: the goal is often referred to without the word ('a mai 60 percedből')."
+    },
+    "minute_unit": {
+      "preferred": "perc",
+      "forms": [
+        "perc",
+        "percet",
+        "percig",
+        "perce",
+        "%lld perc",
+        "%lld p"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's Hungarian keeps a space between number and unit at every width and uses two ladders: '%@ perc' in running text and '%@ p' where space is short (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable.strings | MINUTES_PAIR_MEDIUM and MINUTES_PAIR_SHORT). The brief's Short forms table assigns the two by role. Nothing is forbidden: 'MIN' is not a translator's error in an uppercase caption, because Apple ships both 'PERC' (System/Library/NanoTimeKit/ComplicationBundles/ActivityComplicationBundleCompanion.bundle | Localizable.strings | ACTIVITY_TITLE_MIN) and 'MIN' (System/Library/PrivateFrameworks/NanoTimeKit.framework | ClockFaces.strings | COUNTDOWN_MINUTE_SINGLE) in Hungarian; the app takes PERC unless a render proves it does not fit. What the forms list cannot cover: the bare short unit 'p' is one letter, so listing it would count every stray p; grep it only inside a rendered duration."
+    },
+    "screen_time": {
+      "preferred": "Képernyőidő",
+      "forms": [
+        "Képernyőidő",
+        "Képernyőidőt",
+        "Képernyőidőhöz",
+        "Képernyőidőben",
+        "Képernyőidőre",
+        "Képernyőidőnél",
+        "Képernyőidőről",
+        "Képernyőideje"
+      ],
+      "forbidden": [
+        "Screen Time"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's Hungarian name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle); governs the 18 en keys that name it. Generic time spent on the screen is a different concept and stays generic ('képernyő előtt töltött idő', insights.savings.estimateExplanation and kin). This is the only platform term with a glossary row; the rest live in references/locale-briefs/hu.md '## Platform terms'. What the forms list cannot cover: Hungarian case suffixes on a compound are open-ended, so a form the list misses is a miss, not a finding."
+    }
+  },
+  "controls": {
+    "Cancel": {
+      "preferred": "Mégsem",
+      "roles": {
+        "discard": "Elvetés",
+        "quit": "Kilépés",
+        "dismiss": "Bezárás"
+      }
+    },
+    "Done": {
+      "preferred": "Kész",
+      "roles": {
+        "completed_count_header": "Elvégezve",
+        "ios_mirror_pill": "Kész"
+      }
+    },
+    "Continue": {
+      "preferred": "Folytatás",
+      "roles": {
+        "resume": "Folytatás"
+      }
+    },
+    "Save": {
+      "preferred": "Mentés",
+      "roles": {
+        "save_money": "kedvezmény"
+      },
+      "note": "save_money is the plan discount on paywall.onboardingSubscription.annualPlanBadge ('56% kedvezmény'); 'megtakarítás' belongs to the money frame and is forbidden under terms.time_value"
+    },
+    "Edit": {
+      "preferred": "Szerkesztés",
+      "roles": {
+        "ios_mirror_pill": "+"
+      },
+      "note": "Apple's Hungarian labels the Home Screen jiggle pill with a plus sign, not a word (SpringBoardHome.strings | EDIT); open decision edit_pill_step_wording covers the step that quotes it"
+    },
+    "Delete": {
+      "preferred": "Törlés",
+      "roles": {}
+    },
+    "Skip": {
+      "preferred": "Kihagyás",
+      "roles": {
+        "skip_for_now": "Most kihagyom"
+      }
+    },
+    "Allow": {
+      "preferred": "Engedélyezés",
+      "roles": {}
+    },
+    "Don't allow": {
+      "preferred": "Tiltás",
+      "roles": {
+        "photos_tcc_alert": "Nem engedélyezem"
+      }
+    },
+    "Got it": {
+      "preferred": "Értem",
+      "roles": {},
+      "note": "The only harvested Apple value, 'Rendben' (Applications/MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS), dismisses a music-identification result, a different speech act than acknowledging a tip or explanation; 'Értem' is the more common Hungarian consumer-app convention for this role. 'Rendben' stays the form for a plain OK/Alright control, not this one."
+    },
+    "Retry": {
+      "preferred": "Újra",
+      "roles": {
+        "try_again": "Új próba"
+      }
+    },
+    "Settings": {
+      "preferred": "Beállítások",
+      "roles": {
+        "open_button": "Beállítások megnyitása",
+        "go_to_button": "Ugrás a Beállításokhoz",
+        "setup_noun": "beállítás"
+      }
+    }
+  },
+  "open": [
+    {
+      "id": "address_formality",
+      "options": [
+        "te",
+        "Ön"
+      ],
+      "recommended": "te",
+      "recommended_reason": "Moneyfesting's whole register is coaching copy - streak celebrations, badge unlocks, shield nudges, welcome headlines - and Apple's own Hungarian switches from Ön to te for exactly that kind of line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects every reader-directed line: the 177 en units with a second-person possessive, the 5 'you are' and 5 'are you' units, every achievements.badge.*.criterion and .earned line, the 25 shield pairs and the six notification bodies. Rule: app-owned copy uses one address throughout; a string that mirrors an iOS alert follows the device and keeps Ön either way. Evidence for Ön: every iOS surface the app mirrors is formal (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE 'A(z) „%@” értesítéseket szeretne Önnek küldeni'; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL 'az Ön tevékenységadatait'; System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable.strings | AUTHORIZATION_DONT_ALLOW_ALERT_MESSAGE 'bekapcsolhatja'), and Apple's Hungarian support prose keeps the same distance (support.apple.com/hu-hu/guide/iphone/iph9374b7411/ios, fetched 2026-09-16). Evidence for te: Apple ships informal coaching tables beside the formal ones in the same OS (System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION_NAME 'Meg tudod csinálni'; .../365AllGoals/localization | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_THREE_AWAY_DESC 'Zárd be ... a gyűrűidet', against 'Zárja be a gyűrűit' in the same folder's Localizable.stringsdict). Meanwhile: draft app-owned copy in te, keep every mirror at Apple's Ön, and have the translator list each ID whose address is visible so a flip is a mechanical pass over a known list. Buttons are verbal nouns and carry no address, so no control key changes either way. term_audit counts these options as whole words, which under-reports Hungarian: the pronoun is normally dropped and the address lives in the verb ending."
+    },
+    {
+      "id": "focus_session",
+      "options": [
+        "fókuszmenet",
+        "fókuszidő",
+        "fókuszfoglalkozás"
+      ],
+      "recommended": "fókuszmenet",
+      "recommended_reason": "It keeps 'fókusz', the word a Hungarian reader recognises and the word Apple uses for the system mode, while staying short enough for the streak widget's 20-character small line, which 'fókuszfoglalkozás' would blow.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects moneyfesting.details.*, focusTask.*, widgets.startFocus.*, profile.sessionDetails.*, insights.sessions.*, onboarding.dailyFocusGoal.*, widgets.focusRing.* and the ring and streak widget lines. Rule: one term for the concept across the app, chosen once, never per string. 'fókuszidő' is the plainest but collides with the app's own time and time-value vocabulary, which prices idő in money; 'fókuszfoglalkozás' uses Apple's Hungarian word for a guided session (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/FitnessFiltering.framework | Localizable.strings | Sessions 'Foglalkozások') but is 17 characters and reads like a class you attend. Apple's Hungarian for the iOS Focus mode is 'Fókusz' (Applications/Preferences.app | Localizable.strings | Focus; System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE), the same overlap en already accepts between the app's focus and the system mode; no key names the system mode and the app ships no Focus filter. Meanwhile: a new string follows its own screen's majority and the packet's same-source siblings, and the adjudicator lists every key that touched the term. terms.daily_focus_goal depends on this choice and follows it in the same follow-up batch."
+    },
+    {
+      "id": "streak_freeze_term",
+      "options": [
+        "szériavédő",
+        "szériafagyasztás",
+        "szériamentés"
+      ],
+      "recommended": "szériavédő",
+      "recommended_reason": "The freeze's whole job is to protect one missed day, and the plain noun says so without carrying an English picture Hungarian does not use.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 12 en streak-freeze units (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.small, widgets.streak.a11y.frozen, widgets.streak.strip.a11y.frozen). Rule: where no local image carries the source image, state the meaning plainly rather than translate the picture (references/voice-card.md '## Money frame' keeps 'earned' legitimate for freezes and badges). 'szériafagyasztás' is the literal calque; 'szériamentés' collides with the Save control 'Mentés'. Whichever wins, no line may say the freeze does more than it does: one earned freeze covers one day, not two (catalog comment on paywall.benefit.streak.detail). Meanwhile: use 'szériavédő' and flag any line where a 'protect' reading would overstate the feature. A flip is a global term change with its own follow-up batch, never a per-string choice."
+    },
+    {
+      "id": "forecast",
+      "options": [
+        "Előrejelzés",
+        "Becslés",
+        "Kivetítés"
+      ],
+      "recommended": "Előrejelzés",
+      "recommended_reason": "VoiceOver reads the forecast line and the month-end figure one after the other, so they need two different words; 'Előrejelzés' is the everyday word for a forecast and leaves 'becsült/becslés' for the month-end figure and the estimate explanations.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: insights.savings.forecast (en 'Forecast') beside insights.savings.monthEnd, plus insights.savings.estimateExplanation, .measuredEstimateExplanation, .focusHistoryEstimateExplanation and insights.appUsage.permissionDescription. 'becsült' is Apple's Hungarian for an estimate (iOS 26.1 (23B86) runtime: System/Library/Messages/iMessageApps/SafetyMonitorMessages.bundle | Localizable.strings | Estimated Travel Time 'Utazás becsült ideje'), which is why it is kept for the figure rather than spent on the label. A forecast is an estimate with a stated formula, never a promise or a guaranteed amount (glossary/concepts.json forecast). Meanwhile: keep the forecast line and the month-end figure distinct in every draft and reconcile the explanation prefixes in the same batch."
+    },
+    {
+      "id": "edit_pill_step_wording",
+      "options": [
+        "+",
+        "Szerkesztés"
+      ],
+      "recommended": "+",
+      "recommended_reason": "The illustrated pill resolves against the device language precisely so it reads like the user's own Home Screen, and Apple's Hungarian value for that pill is the plus sign.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: onboarding.widgets.howTo.editPillLabel, drawn at Manifesting/Features/Onboarding/Business/WidgetsHowTo/View/HomeScreenJiggleIllustrationView.swift:151, and onboarding.widgets.howTo.step2 ('Tap Edit in the top corner, then Add Widget.'), which quotes it. Rule: an illustrated iOS label mirrors the device verbatim. Apple's Hungarian value is '+' where en says 'Edit' and ro says 'Editați' (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | EDIT), so step2 cannot quote a verb and must name the button instead ('Koppints a bal felső sarokban lévő + gombra, majd a Widget hozzáadása elemre.'). Choosing 'Szerkesztés' keeps a quotable word but shows the user a label their Home Screen does not have. A yes on '+' needs a render check of the pill at .large - a one-character label in a pill sized for a word - and of the 304-point menu beside it; no test pins either value. Meanwhile: no key is written against this step until the owner answers; the other four steps and the nine mirror labels proceed."
+    },
+    {
+      "id": "hourly_rate_term",
+      "options": [
+        "óradíj",
+        "órabér"
+      ],
+      "recommended": "óradíj",
+      "recommended_reason": "The app prices the user's own time rather than paying anyone, and 'óradíj' keeps that distinction visible, even though it risks reading more like a professional service's billing rate than a plain personal number.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description. Rule: one term for the concept across the app, chosen once, never per string. 'órabér' is the literal rendering of 'hourly wage', but in everyday Hungarian it is not employer-only - it is also the ordinary word freelancers and self-employed people use for the hourly rate they themselves charge, so a hard ban risked the opposite of 'plain beats clever'. Neither the brief nor this glossary cites an Apple string or corpus evidence pinning 'órabér' as employer-paid only; the split is a live product/market call, not a settled fact. Meanwhile: use 'óradíj' as the seeded preferred form (terms.hourly_rate), and the translator flags any line where 'órabér' would plainly read more naturally to a Hungarian freelancer, so a flip is a mechanical pass over a known list."
+    },
+    {
+      "id": "compact_currency_suffix",
+      "options": [
+        "E",
+        "k"
+      ],
+      "recommended": "E",
+      "recommended_reason": "The 'k' a Hungarian reader sees is not a Hungarian abbreviation for anything, and moving to the locale's own compact notation fixes every locale whose compact forms differ rather than this one alone.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "An engineering decision, not a translation one. AppCurrency.formatCompact appends a hard-coded Latin k/m/b (Manifesting/Foundation/Localization/AppCurrency.swift:53-57), reaching FocusRingCopy.swift:25, MonthlyTimeValueTile.swift:53,68, InsightsSavingsCard.swift:36,46 and ScreenTimeUsageReportViews.swift:126,251. Rendered for hu_HU on macOS 15.7.9 (ICU 76.1, CLDR 46): the app prints '1,25k HUF', '1,25m HUF', '1,25b HUF' where the locale prints '1,25 E HUF', '1,25 M HUF' and '1,25 Mrd' through Decimal.FormatStyle.Currency(code:locale:).notation(.compactName); severity medium, because the thousands letter differs outright and the millions letter only in case. Option 'E' means locale-aware suffixes; option 'k' means keeping the current cross-locale convention with a recorded reason. Meanwhile: never translate or hand-edit a suffix, report it as an engineering finding, and generate every packet sample value with the real formatter. term_audit cannot count either option, because the suffix is glued to a formatted number at runtime and never appears in a catalog value."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "locale": "sv",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "frysning",
+      "forms": ["frysning", "frysningen", "frysningar", "frysningarna", "frysningens", "en frysning", "intjänad frysning", "intjänade frysningar"],
+      "forbidden": ["infrysning", "nedfrysning"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "11 en keys (streakFreeze.*), plus paywall.benefit.streak.detail, widgets.streak.copy.frozen.* and widgets.streak.a11y.frozen; no sv copy ships, so this is a seed. 'Earned' is the allowed money-frame exception here ('en intjänad frysning'), matching en and ro. forms lists the singular/plural and definite cases UI copy produces; it cannot cover a compound a batch invents ('frysningsdag') or the verb 'frysa', so a term count is a floor, not a total. forbidden marks the food-freezing literal (deep-freezing groceries), which no string in this app can legitimately want."
+    },
+    "task": {
+      "preferred": "uppgift",
+      "forms": ["uppgift", "uppgiften", "uppgifter", "uppgifterna", "uppgiftens", "fokusuppgift", "fokusuppgiften", "fokusuppgifter", "din uppgift"],
+      "forbidden": ["aktivitet", "aktiviteter"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own sv for Task (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/WorkflowKit.framework | Localizable.strings | Task (Parameter Label), sv 'Uppgift'; System/Library/Frameworks/ClassKit.framework | ClassKit.strings | CONTEXT_TYPE_TASK, sv 'Uppgift'). Governs focusTask.* (100 keys), plan.*, widgets.tasks.*, insights.mood.completedTasks. forms covers the everyday cases plus the closed compound 'fokusuppgift' (Swedish bans splitting compounds); it cannot cover every compound a batch forms ('uppgiftskort', 'uppgiftslista'), so read the drift list too. 'aktivitet' is the loan a translator reaches for and is never right here; it does collide with a real Swedish sense — Apple's own Screen Time access alert says '...kan den se dina aktivitetsdata...' (NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL), so 'aktivitetsdata' is the Swedish phrase for Screen Time's own activity data. That collision happens to fall outside this concept's own key list, so no term_audit conflict results from it, but 'aktivitet' stays forbidden here regardless, because the app's task concept and Screen Time's activity data must not share a word even where the two never render on the same key."
+    },
+    "restricted_list": {
+      "preferred": "blockeringslista",
+      "forms": ["blockeringslista", "blockeringslistan", "blockeringslistor", "blockeringslistorna", "blockeringslistans", "din blockeringslista"],
+      "forbidden": ["svartlista", "svart lista"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). Chosen as one closed compound, matching Swedish's ban on splitting compounds across two words: 'blockering' is what happens to the apps, plain and accurate. forbidden marks the blacklist calque the concept note rules out ('blacklist' is explicitly not this concept); it cannot catch a paraphrase such as 'lista över blockerade appar', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "tidsvärde",
+      "forms": ["tidsvärde", "tidsvärdet", "tidsvärden", "tidsvärdena", "uppskattat tidsvärde", "ditt tidsvärde"],
+      "forbidden": ["inkomst", "inkomster", "vinst", "vinster"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). 'värde' is Apple's own sv for Value (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/HealthRecordsUI.framework | HealthRecordsUI-Localizable.strings | MEDICAL_RECORD_DETAIL_TITLE_VALUE, sv 'Värde'). forms lists the closed compound in the cases the labels need; a paraphrase the batch may coin ('värdet av din tid') is drift, not a form, and the editor should flag it toward the compound instead. forbidden holds the two outcome nouns nearest to this concept ('inkomst'/income, 'vinst'/profit); whole-word matching means these do not hit unrelated compounds, but a plain grep for the stem will, which the brief's Money frame records."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Inte intjänade pengar.",
+      "forms": ["Inte intjänade pengar."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.*.earned (7), achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). The four sibling source sentences keep their own single sv form, listed in references/locale-briefs/sv.md '## Money frame'. forbidden is empty because no sv variant has shipped yet; the first batch's variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "hourly_rate": {
+      "preferred": "timpris",
+      "forms": ["timpris", "timpriset", "ditt timpris", "ett timpris"],
+      "forbidden": ["timlön", "timlönen", "lön"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). 'pris' is Apple's own sv for Price (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/StoreKitUI.framework | Gifting.strings | GIFTING_CONFIRM_PRICE_LABEL, sv 'Pris'). 'timlön' is correct Swedish for an hourly wage and exactly the wrong word here, because the app pays nobody; en says 'hourly wage' on several keys, so a translator will reach for it, which is why it is forbidden rather than merely discouraged. The badge names in the payroll family may use employment vocabulary ('månadsavlönad' for the Salaried badge); running copy pricing the user's own time may not use 'lön' or its compounds."
+    },
+    "daily_focus_goal": {
+      "preferred": "dagsmål",
+      "forms": ["dagsmål", "dagsmålet", "ditt dagsmål", "dagsmålen"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). Closed compound of 'dag' + 'mål', matching Swedish's ban on splitting compounds. forbidden is empty on purpose: the words a wrong draft would use ('syfte', 'ambition') are correct everyday Swedish that onboarding.personalGoal.* and the quote surfaces may legitimately need for an aspiration, so banning them would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, share.duration.minutesShort and minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). Foundation's sv_SE narrow duration form prints '1 h 45 m' and '25 m' with U+202F before the unit; the abbreviated report form spells minutes 'min' with a comma before the hour unit ('1 tim, 45 min'). forbidden is empty because the drift form is the single letter 'm' left over from en, which collides with the metre abbreviation in general Swedish and is an editor finding, recorded in the brief's Short forms table instead."
+    },
+    "screen_time": {
+      "preferred": "Skärmtid",
+      "forms": ["Skärmtid", "Skärmtiden", "skärmtid", "skärmtiden"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's sv name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time, sv 'Skärmtid'; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. What this list cannot cover: Swedish uses the same word for the generic notion of time spent on a screen, and term_audit matches case-insensitively, so a count here mixes the feature (capital S, e.g. insights.appUsage.title) with the generic sense (lower case, e.g. screenTimeReport.noData, insights.savings.estimateExplanation). Only the English name is forbidden; the case distinction is drift for the editor to report, not a forbidden form, because lower-case 'skärmtid' is ordinary Swedish elsewhere."
+    },
+    "forecast": {
+      "preferred": "prognos",
+      "forms": ["prognos", "prognosen", "prognoser", "prognosens"],
+      "forbidden": ["löfte", "garanti"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). Swedish keeps this apart from the month-end figure without effort: 'prognos' is the forecast and 'uppskattning' the estimate (insights.savings.monthEnd, insights.savings.estimated), so this stays two words the way the ro brief's open forecast decision never quite settles. VoiceOver reads the two one after the other, so they must stay two words. forbidden marks the two nouns that would turn an estimate into a claim; 'garanti' is also a banned outcome word in the brief's Money frame."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Avbryt", "roles": {}, "note": "Apple's sv label for Cancel (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Cancel)"},
+    "Done": {"preferred": "Klar", "roles": {"ios_mirror_pill": "Klar"}, "note": "Apple's sv Home Screen edit-menu Done pill is also 'Klar' (SpringBoardHome.strings | DONE), so unlike ro the mirror and the generic control share one form"},
+    "Continue": {"preferred": "Fortsätt", "roles": {}},
+    "Save": {"preferred": "Spara", "roles": {}},
+    "Edit": {"preferred": "Ändra", "roles": {"ios_mirror_pill": "Ändra"}, "note": "Apple's sv uses 'Redigera' instead where the phrase names an object ('Edit Pages' -> 'Redigera sidor'); the bare control stays 'Ändra' (see Decided conflicts)"},
+    "Delete": {"preferred": "Radera", "roles": {}},
+    "Skip": {"preferred": "Hoppa över", "roles": {"skip_for_now": "Hoppa över för nu"}},
+    "Allow": {"preferred": "Tillåt", "roles": {}},
+    "Don't allow": {"preferred": "Tillåt inte", "roles": {}},
+    "Got it": {"preferred": "OK", "roles": {}, "note": "Apple's sv collapses 'Got it/Got It' to the loanword 'OK' rather than coining a native phrase"},
+    "Retry": {"preferred": "Försök igen", "roles": {}, "note": "'Try Again' takes the same preferred form"},
+    "Settings": {"preferred": "Inställningar", "roles": {"open_button": "Öppna Inställningar", "goto_button": "Gå till Inställningar"}, "note": "Apple's sv keeps two distinct phrases for 'Open Settings' and 'Go to Settings', unlike fi; inside a sentence the word takes its own definite suffix ('i Inställningar')"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["svit", "räcka", "streak"],
+      "recommended": "svit",
+      "recommended_reason": "It is the shortest option that unambiguously means an unbroken run on its own, established in Swedish sports writing, and it compounds cleanly for a widget header.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No sv copy exists, so all three counts are 0. Keys: widgets.streak.* (39 keys at this snapshot), share.card.streak*, streakFreeze.* (11), paywall.benefit.streak.*, onboarding.welcome.slide.streak.*, insights.summary.dayStreakTitle, achievements.streak.*. Evidence per option: 'svit' is the established Swedish sports-writing word for an unbroken run ('en vinstsvit på fem matcher') and gives 'DAGSVIT' for the DAY STREAK caption; 'räcka' is the more literary word for a run or series, correct but less at home in consumer/sports copy; 'streak' is an English gaming/betting loanword, understood but not Apple's own style anywhere harvested. Apple's own Fitness translations never use a bare noun for this concept at all, always the periphrasis 'X dagar i följd' (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/365AllGoals/localization | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_THREE_AWAY_DESC/NSStringLocalizedFormatKey), which supports the plain fallback for body copy but does not answer what a compact widget header needs on its own. Meanwhile agents write the days instead of the noun ('%lld dagar i följd'), never pick per string, and the adjudicator lists every key that touched the concept; nothing enters glossary/sv.json terms until the owner closes this. Decide before the first sv batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "focus_session_term",
+      "options": ["fokuspass", "fokussession", "koncentrationspass"],
+      "recommended": "fokuspass",
+      "recommended_reason": "The Swedish suffix '-pass' already names a timed session or segment of activity everywhere in everyday Swedish (träningspass, yogapass), so the compound reads as native rather than borrowed or overly formal.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No sv copy exists, so all three counts are 0. Keys: moneyfesting.details.* (21), focusTask.* (100), widgets.startFocus.* (15), profile.sessionDetails.* (29), onboarding.welcome.preview.* (28), profile.home.focusSection, insights.focus.title, onboarding.dailyFocusGoal.* (3). Evidence per option: '-pass' is the standard Swedish suffix for a timed activity segment (no single Apple citation needed; it is ordinary Swedish word formation); 'fokussession' matches Apple's own unchanged borrowing of 'Session' (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/SensorKitUI.framework/AuthGroups/ECG.bundle | InfoPlist.strings | Session, sv 'Session' unchanged) but reads more clinical; 'koncentrationspass' is longer for no clear gain. The overlap with the iOS Focus mode is small: Apple names the system mode bare 'Fokus' (Applications/Preferences.app | Localizable.strings | Focus), which has no session concept of its own to collide with 'fokuspass'. Meanwhile a new string follows its own screen's majority and the packet's same-source siblings, and the adjudicator lists every key that touched the term."
+    },
+    {
+      "id": "mock_permission_alerts",
+      "options": ["Om ”%@” får tillgång till Skärmtid kan den se dina aktivitetsdata...", "en-shaped imperative translated clause-for-clause"],
+      "recommended": "Om ”%@” får tillgång till Skärmtid kan den se dina aktivitetsdata...",
+      "recommended_reason": "The same onboarding step raises the real iOS alert moments later, and a preview in another shape shows the reader a screen iOS will not.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; the Screen Time mock's Continue is the shared common.continue, quoted by onboarding.alert.screenTimeMessage. Rule: a mock of an iOS alert mirrors the device verbatim. Apple's sv differs from the en mocks in two ways (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL, COMMON_CONTINUE, COMMON_DONT_ALLOW; System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, USER_NOTIFICATION_PERMISSION_ALERT_BODY, PERMISSION_ALERT_ALLOW, PERMISSION_ALERT_DENY): the Screen Time message is a conditional clause rather than the en mock's imperative, and the notification message capitalises 'Inställningar' where the app's own en source lower-cases 'settings' (itself a defect against Apple's own English, which capitalises 'Settings'). A yes costs a source flag first, because both en messages already differ from Apple's own English independent of sv. Meanwhile the seven keys stay unwritten in sv and findings go to an audit scope the owner names."
+    },
+    {
+      "id": "require_face_id_label",
+      "options": ["Kräv Face ID", "Kräv Face ID"],
+      "recommended": "Kräv Face ID",
+      "recommended_reason": "The illustrated menu row resolves against the device language precisely so it reads like the user's own app menu, and no test pins a value on this key.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: onboarding.widgets.howTo.requireFaceIDLabel. Rule: an illustrated iOS label mirrors the device verbatim, character for character. Apple's sv value has U+00A0 NO-BREAK SPACE inside 'Face ID' (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/AppProtectionUI.framework | Localizable.strings | REQUIRE_AUTH_FACEID), while the en source key throughout the catalog uses a plain space. A yes is a one-key catalog change plus a render check of the menu row in HomeScreenJiggleIllustrationView at its illustrated width. Meanwhile the key stays unwritten in sv and findings go to an audit scope the owner names."
+    },
+    {
+      "id": "compact_currency_suffix",
+      "options": ["k", "tn"],
+      "recommended": "tn",
+      "recommended_reason": "The suffix sits directly against a money figure the money frame already asks readers to read carefully, and the app's 'k' shares nothing with the locale's own thousands token 'tn', unlike the millions pair which at least shares an initial letter.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "An engineering finding, not a copy choice, recorded here because agents meet it in packets. AppCurrency.formatCompact appends a hardcoded Latin 'k', 'm' or 'b' (Manifesting/Foundation/Localization/AppCurrency.swift:53-56), so sv renders '1,25k SEK', '1,25m SEK' and '1,25b SEK', while sv_SE's own compact tokens from Foundation's Decimal.FormatStyle.Currency(...).notation(.compactName) are 'tn' (thousand), 'mn' (million) and 'md' (billion): '1,25 tn SEK', '1,25 mn SEK', '1,25 md SEK'. Severity is medium: millions share an initial letter ('m' vs 'mn') but thousands ('k' vs 'tn') and billions ('b' vs 'md') do not, so a reader could misjudge the size of the figure — the billion case shares no letters at all, at least as severe as the thousands mismatch. Surfaces: widgets.focusRing.row.money, widgets.monthlyTimeValue.*, insights.savings.*, screenTimeReport.*, and the insights, celebration and session screens. Using the locale's notation changes the formatter for every locale, not just sv. Meanwhile agents never translate around the suffix, never spell it into copy, and report it once per batch that renders a compact amount; accessibility labels use the full format and are unaffected."
+    }
+  ]
+}

@@ -9,7 +9,9 @@ reviewers decide everything a script cannot. Checks (each finding carries its id
   C2  plural categories: a missing CLDR category is major, an extra one is info
   C3  markup and typography parity: **bold**, newlines, links (major);
       ellipsis form, double spaces, edge whitespace, emoji (info)
-  C4  cedilla diacritics U+015E/U+015F/U+0162/U+0163 in Romanian (major)
+  C4  script and diacritic slips the locale is known for: cedilla instead of comma-below
+      (ro), circumflex/tilde instead of double acute (hu), Latin letters inside a Greek or
+      Cyrillic word (el, bg), an ASCII quote where Hebrew writes geresh (he) (major)
   C5  length above the brief's trigger on single-line, widget and button classes;
       a render-list entry, not a finding
   C6  glossary forbidden forms in the target (major, needs --glossary)
@@ -44,10 +46,40 @@ TYPE_CLASS.update({c: "s" for c in "sScC"})
 LINK = re.compile(r"\[[^\]]+\]\([^)]+\)")
 EMOJI = re.compile("[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF\\u2B50\\u2B06\\u2B07]")
 CEDILLA = re.compile("[\\u015e\\u015f\\u0162\\u0163]")
+
+# (pattern, severity, message) per locale for C4: a slip a target-language reviewer cannot
+# see but a reader can. Severity is info where the convention itself is the brief's call.
+TYPOGRAPHY = {
+    "ro": [(CEDILLA, "major", "cedilla ş/ţ instead of comma-below ș/ț")],
+    "hu": [(re.compile("[õûÕÛ]"), "major",
+            "tilde/circumflex õ/û instead of double acute ő/ű")],
+    "el": [(re.compile("[Ͱ-Ͽ][A-Za-z]|[A-Za-z][Ͱ-Ͽ]"), "major",
+            "Latin letter inside a Greek word (homoglyph)"),
+           (re.compile(r"\?"), "info", "Latin question mark where Greek writes the erotimatiko ;")],
+    "bg": [(re.compile("[Ѐ-ӿ][A-Za-z]|[A-Za-z][Ѐ-ӿ]"), "major",
+            "Latin letter inside a Cyrillic word (homoglyph)")],
+    "he": [(re.compile("[֐-׿][\'\"]"), "major",
+            "ASCII quote after a Hebrew letter instead of geresh ׳ or gershayim ״")],
+}
 LETTER = re.compile(r"[^\W\d_]")
 NAMED_KEY = re.compile(r"^[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+)+$")
 # CLDR cardinal categories; add a locale here before its first run (default one/other).
-PLURAL_REQUIRED = {"ro": {"one", "few", "other"}, "en": {"one", "other"}}
+# Categories an integer below a million can select, per locale, from ICU uplrules on the
+# shipping runtime cross-checked with Xcode's own table (snapshot 2026-09-16); `other` is
+# added to every locale because a String Catalog always carries it. PLURAL_OPTIONAL holds
+# categories a locale reaches only at exact millions or through fractions: present is fine,
+# absent is fine, and neither is a finding.
+PLURAL_REQUIRED = {"en": {"one", "other"}, "ro": {"one", "few", "other"}, "da": {"one", "other"},
+                   "sv": {"one", "other"}, "nb": {"one", "other"}, "fi": {"one", "other"},
+                   "is": {"one", "other"}, "pl": {"one", "few", "many"}, "hu": {"one", "other"},
+                   "he": {"one", "two", "other"}, "tr": {"one", "other"}, "el": {"one", "other"},
+                   "cs": {"one", "few", "other"}, "nl": {"one", "other"}, "sk": {"one", "few", "other"},
+                   "bg": {"one", "other"}, "pt-BR": {"one", "other"}, "pt-PT": {"one", "other"},
+                   "es-ES": {"one", "other"}, "es-MX": {"one", "other"}, "de": {"one", "other"},
+                   "it": {"one", "other"}, "fr": {"one", "other"}, "ja": {"other"}, "ko": {"other"}}
+PLURAL_OPTIONAL = {"pl": {"other"}, "cs": {"many"}, "sk": {"many"}, "pt-BR": {"many"},
+                   "pt-PT": {"many"}, "es-ES": {"many"}, "es-MX": {"many"}, "it": {"many"},
+                   "fr": {"many"}}
 RISK_PREFIXES = tuple(p + "." for p in ("paywall", "screenTime", "screenTimeReport", "streakFreeze", "notifications",
                                          "insights", "moneyfesting", "currency", "onboarding.hourlyWage", "onboarding.income"))
 RISK_PATTERN = re.compile(r"^onboarding\.[^.]*Permission")
@@ -204,10 +236,11 @@ def check_plurals(key, locale, en_units, tg_units):
         return
     if not tg_cats:
         return
-    required = PLURAL_REQUIRED.get(locale, {"one", "other"})
+    required = PLURAL_REQUIRED.get(locale, {"one", "other"}) | {"other"}
+    optional = PLURAL_OPTIONAL.get(locale, set())
     for cat in sorted(required - tg_cats):
         yield finding("C2", "major", key, f"plural:{cat}", f"missing plural form '{cat}' required for {locale}")
-    for cat in sorted(tg_cats - required):
+    for cat in sorted(tg_cats - required - optional):
         yield finding("C2", "info", key, f"plural:{cat}", f"extra plural form '{cat}' that {locale} never selects")
 
 
@@ -234,11 +267,11 @@ def check_markup(key, en_units, tg_units):
             yield finding("C3", "info", key, var, "emoji count differs from the source; the brief keeps emoji as shipped")
 
 
-def check_cedilla(key, tg_units):
-    for var, unit in tg_units.items():
-        if CEDILLA.search(unit.get("value", "")):
-            yield finding("C4", "major", key, var, "cedilla ş/ţ instead of comma-below ș/ț")
-
+def check_typography(key, locale, tg_units):
+    for pattern, severity, message in TYPOGRAPHY.get(locale, []):
+        for var, unit in tg_units.items():
+            if pattern.search(unit.get("value", "")):
+                yield finding("C4", severity, key, var, message)
 
 def names_control(phrase):
     """True when the head noun of the phrase's first clause is a control: 'Generic Close button used across the app'
@@ -541,8 +574,7 @@ def run_checks(key, entry, locale, glossary, trigger, render_list):
     en, tg = units(entry, "en"), units(entry, locale)
     findings = list(check_placeholders(key, en, tg)) + list(check_plurals(key, locale, en, tg))
     findings += list(check_markup(key, en, tg)) + list(check_identity(key, en, tg))
-    if locale == "ro":
-        findings += list(check_cedilla(key, tg))
+    findings += list(check_typography(key, locale, tg))
     if glossary:
         findings += list(check_glossary(key, tg, glossary))
     findings += list(check_target_state(key, tg))

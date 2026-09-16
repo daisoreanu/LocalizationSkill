@@ -1,0 +1,154 @@
+{
+  "locale": "pl",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "seria",
+      "forms": ["seria", "serii", "serię", "serią", "serie", "seriach", "seriom"],
+      "forbidden": ["streak"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "No pl copy exists; 'seria' is Apple's own Polish word for a streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION 'seria celu W ruchu'). Governs the 46 en keys under widgets.streak.*, share.card.streak*, streakFreeze.*, paywall.benefit.streak.*, onboarding.welcome.slide.streak.*, insights.summary.dayStreakTitle. 'serii' is both genitive singular and genitive plural, so a per-prefix count cannot tell the two apart. The widget display name will carry the term, and ManifestingTests/Onboarding/OnboardingWidgetsStepTests.swift:189-190 forbids naming the widget on the pick step for en and ro; extending that ban to pl is a proposal for the report, never a test edit."
+    },
+    "streak_freeze": {
+      "preferred": "zamrożenie serii",
+      "forms": ["zamrożenie serii", "zamrożenia serii", "zamrożeń serii", "zamrożeniem serii", "zamrożeniu serii", "zamrożenie", "zamrożenia", "zamrożeń", "zamrożeniem", "zamrożeniu"],
+      "forbidden": ["zamrażanie", "zamrażania", "freeze"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen, paywall.benefit.streak.detail). The instance is 'zamrożenie' (a freeze the user holds), never the process 'zamrażanie'. The verb that goes with it is 'pokryć' ('Pokryliśmy %@ zamrożeniem serii.', streakFreeze.usedBody). The bare forms also match a literal freezing of something else, which this app never mentions. paywall.benefit.streak.detail's comment says one earned freeze covers one day, not two, and that condition is never strengthened; 'earned' there is 'zdobyte', which the money frame's banned stems deliberately do not catch."
+    },
+    "task": {
+      "preferred": "zadanie",
+      "forms": ["zadanie", "zadania", "zadań", "zadaniu", "zadaniem", "zadaniach", "zadaniom"],
+      "forbidden": ["task"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks; 'ToDo' in keys is internal naming and never surfaces. 'zadania' is nominative plural and genitive singular at once, so the count merges them. 'aktywność' is deliberately not forbidden: it is the correct word for activity data in Apple's own Screen Time wording ('danych dotyczących Twojej aktywności', iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL), which onboarding.screenTimePermission.* and screenTimeReport.noDataExplanation mirror."
+    },
+    "restricted_list": {
+      "preferred": "lista zablokowanych aplikacji",
+      "forms": ["lista zablokowanych aplikacji", "listy zablokowanych aplikacji", "listę zablokowanych aplikacji", "liście zablokowanych aplikacji", "listą zablokowanych aplikacji", "list zablokowanych aplikacji"],
+      "forbidden": ["czarna lista", "czarnej listy", "lista restrykcji", "listy restrykcji"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Keys: screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle. 'Zablokowane' says what happens, which is the plainest Polish for a reader who has not read a settings screen. The forms cannot cover the bare section header 'Zablokowane aplikacje:' (en 'Restricted Apps:', two keys), which drops the word 'lista' and is checked by eye. The group name 'No Restricted Apps' ships as an unlocalized Swift literal (Manifesting/Features/Plan/Data/Repositories/ToDoTaskRepository.swift:333): flag it, never translate it in place."
+    },
+    "time_value": {
+      "preferred": "wartość czasu",
+      "forms": ["wartość czasu", "wartości czasu", "wartością czasu", "wartość Twojego czasu", "wartości Twojego czasu", "wartość swojego czasu"],
+      "forbidden": ["oszczędności", "oszczędność", "oszczędnościami", "oszczędnościach", "oszczędnościom"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The estimate of focused time priced at the user's own rate, never money received. Keys: insights.savings.*, achievements.category.wages.*, achievements.badge.*.earned, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, widgets.focusRing.row.money, onboarding.withoutMoneyfesting.*, onboarding.withMoneyfesting.*. The insights.savings.* prefix says savings, but the concept is a time value, so the noun 'oszczędności' is forbidden: the app saves no money. The verb on the annual plan badge ('Oszczędzasz 56%', paywall.onboardingSubscription.annualPlanBadge) is a plan discount and no whole-word form here matches it. The uppercase caption forms (SZAC. WARTOŚĆ CZASU, WARTOŚĆ CZASU, 30 DNI) match case-insensitively and are counted with the rest."
+    },
+    "time_value_disclaimer": {
+      "preferred": "To nie są zarobione pieniądze.",
+      "forms": ["To nie są zarobione pieniądze."],
+      "forbidden": ["Nie są to zarobione pieniądze", "To nie są pieniądze zarobione", "To nie są zarobki."],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "11 en keys carry 'Not money earned.' (achievements.badge.*.earned 7, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). One form, reused verbatim on every screen; the forbidden entries are the grammatical Polish variants a writer would otherwise drift into. The four sibling source sentences keep their own single pl form, listed in references/locale-briefs/pl.md '## Money frame'. Whole-word matching on a whole sentence fails on any punctuation change, so a near-miss shows as a missing preferred hit rather than as drift."
+    },
+    "forecast": {
+      "preferred": "prognoza",
+      "forms": ["prognoza", "prognozy", "prognozę", "prognozie", "prognozą"],
+      "forbidden": ["przewidywanie", "przewidywania"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value from recent focus or Screen Time; an estimate with a stated formula, never a promise. Keys: insights.savings.forecast (en 'Forecast'), insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*. VoiceOver reads insights.savings.forecast and insights.savings.monthEnd one after the other, so the two must stay different words: 'Prognoza' for the forecast line, 'Szacunek na koniec miesiąca' for the month-end figure. These forms cannot police the month-end label, which carries 'szacunek' and is checked by eye against this note."
+    },
+    "hourly_rate": {
+      "preferred": "stawka godzinowa",
+      "forms": ["stawka godzinowa", "stawki godzinowej", "stawkę godzinową", "stawką godzinową", "stawce godzinowej", "stawka", "stawki", "stawkę", "stawką"],
+      "forbidden": ["pensja", "pensji", "pensję", "wynagrodzenie", "wynagrodzenia", "zarobek na godzinę"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time. Keys: onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, currency.onboarding.subtitle, screenTimeReport.missingWage, achievements.category.wages.description. The en source says both 'hourly wage' and 'hourly rate'; Polish takes one form for both. 'Pensja' and 'wynagrodzenie' are forbidden because they name money actually paid to the reader, which the money frame excludes; 'zarobek na godzinę' is forbidden twice over, being an outcome word (references/locale-briefs/pl.md '## Money frame'). The bare 'stawka' forms would also match a rate for something else, which the app does not have today. The badge name 'Etat' (en 'Salaried') is a metaphor, not the rate, and is not in this list."
+    },
+    "goal": {
+      "preferred": "cel",
+      "forms": ["cel", "celu", "celem", "celowi", "cele", "celów", "celom", "celach"],
+      "forbidden": ["zamierzenie", "zamierzenia", "target"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "35 en keys carry a goal or target word (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*, onboarding.personalGoal.*, moneyfesting.details.stopConfirmationMessage). Forbidden is preventive: 'zamierzenie' is bureaucratic and 'target' is the English word. The forms cannot separate the daily focus goal from the different sense of a life goal that the affirmations and onboarding.personalGoal.* use, so a per-prefix count mixes them; the concept split is glossary/concepts.json daily_focus_goal."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "common.durationMinuteUnit and insights.sessions.durationMinuteUnit are 'm' in en and 'min' in pl, because a bare 'm' reads as 'metr'. Spaced '%lld min' in running text and labels, tight '%lldmin' on the width-limited widget and report lines (widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, screenTimeReport.durationMinutesOnly, moneyfesting.details.timeElapsedFormat). Matching is case-insensitive, so the uppercase caption 'MIN' (insights.focus.minutesUnit, widgets.focusRing.goalSuffix) is counted here too. The spelled-out plurals that accessibility strings need ('minuta / minuty / minut') are deliberately not listed, because they are the correct form there and would otherwise read as drift."
+    },
+    "screen_time": {
+      "preferred": "Czas przed ekranem",
+      "forms": ["Czas przed ekranem", "Czasu przed ekranem", "Czasie przed ekranem", "Czasem przed ekranem", "Czasowi przed ekranem"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's Polish name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle). 18 en keys name it. Polish declines it inside a sentence, which is why the oblique forms are listed; a plural never occurs. Matching is case-insensitive, so a generic lowercase 'czas przed ekranem' (hours on a screen, a different concept) counts as a preferred hit: the editor checks the capital C, and the generic sense should read 'czas spędzony przed ekranem' instead."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Anuluj", "roles": {"discard": "Odrzuć", "quit": "Zakończ", "dismiss": "Zamknij"}},
+    "Done": {"preferred": "Gotowe", "roles": {"completed_count_header": "Zrobione", "section_header": "ZROBIONE", "ios_mirror_pill": "Gotowe"}, "note": "ios_mirror_pill must equal Apple's label and happens to equal the preferred form (SpringBoardHome.strings | DONE); section_header covers plan.dailyPlan.doneHeader, whose en value 'DONE' matches the label under term_audit's casefolded rule"},
+    "Continue": {"preferred": "Dalej", "roles": {"resume": "Wznów"}},
+    "Save": {"preferred": "Zapisz", "roles": {"save_money": "Oszczędzasz"}, "note": "save_money is second person as a statement about the reader ('Oszczędzasz 56%', paywall.onboardingSubscription.annualPlanBadge), not a command; the persist-data verb is the open decision save_verb"},
+    "Edit": {"preferred": "Edytuj", "roles": {}},
+    "Delete": {"preferred": "Usuń", "roles": {}},
+    "Skip": {"preferred": "Pomiń", "roles": {"skip_for_now": "Pomiń na razie"}},
+    "Allow": {"preferred": "Pozwól", "roles": {"mock_alert_button": "Pozwalaj"}, "note": "Apple's Polish uses the iterative 'Pozwalaj' for a standing notification permission and 'Pozwól' for one-off access; onboarding.notificationPermission.alertAllow mirrors the former"},
+    "Don't allow": {"preferred": "Nie pozwalaj", "roles": {}},
+    "Got it": {"preferred": "Rozumiem", "roles": {}},
+    "Retry": {"preferred": "Ponów", "roles": {"in_sentence": "Spróbuj ponownie"}},
+    "Settings": {"preferred": "Ustawienia", "roles": {"open_button": "Otwórz Ustawienia", "setup_noun": "konfiguracja"}}
+  },
+  "open": [
+    {
+      "id": "save_verb",
+      "options": ["Zapisz", "Zachowaj"],
+      "recommended": "Zapisz",
+      "recommended_reason": "Outside Apple's own UI 'zachować' means to keep or preserve, so 'Zachowaj zmiany' reads as keeping the old version rather than writing the new one, while 'Zapisz' is the verb the whole Polish software market uses for writing data.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pl copy exists, so both counts start at 0. Keys: common.save, focusTask.createTask.saveChangesButton, quotes.user.saveChanges, focusTask.createTask.createButton, quotes.user.saveQuote, share.action.saveImage, common.editor.selectionHint, plus the 17 'Could not save ...' failure messages. Rule: app-owned copy defaults to Apple's wording for a matching control, but the verb also has to read as everyday Polish, and Save is not an iOS mirror. Apple's Polish is 'Zachowaj' in every bundle checked (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Save; System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | PASSCODE_ALERT_DONE; System/Library/PrivateFrameworks/HealthUI.framework; System/Library/AccessibilityBundles/VoiceOver.axuiservice | VoiceOverUIService.strings | Save). Meanwhile agents use controls.Save ('Zapisz') so the app stays consistent and the adjudicator lists every key that touched the verb; a yes to 'Zachowaj' changes controls.Save, the brief's Control forms row and the failure messages in one follow-up batch."
+    },
+    {
+      "id": "courtesy_capitalization",
+      "options": ["Ci", "ci"],
+      "recommended": "Ci",
+      "recommended_reason": "The mock permission alerts sit on the same screen as the real iOS alert they preview, and the real one capitalizes, so a lowercase mock would show the user a register the device does not use.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Whether reader-directed pronouns (Ci, Ciebie, Tobie, Twój, Twoja, Twoje) are capitalized. term_audit matches case-insensitively, so its two option counts will always be equal and prove nothing: this one is checked by the editor for consistency, not by the script. Affects every direct address, including the 177 en units carrying a second-person possessive and the 9 mock-alert keys. Rule: the choice is the author's but must be consistent across the whole app (PWN, https://sjp.pwn.pl/poradnia/haslo/zaimki-w-zwrotach-do-czytelnika;12352.html, fetched 2026-09-16: 'albo wielką, albo małą literą'). Capitalized is Apple's runtime Polish (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE 'chce wysyłać Ci powiadomienia'; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL 'Twojej aktywności') and PWN's recommendation for websites (https://sjp.pwn.pl/poradnia/haslo/Pisownia-zwrotow-grzecznosciowych-na-stronach-internetowych;16681.html, fetched 2026-09-16); lowercase is what Apple's own Polish support pages use (https://support.apple.com/pl-pl/guide/iphone/iph2e1f4d0e4/ios, fetched 2026-09-16) and reads as the younger register. The runtime citations are both permission-alert bodies, so on their own they justify capitalizing only the 9 mock-alert keys, which do sit beside a real iOS alert; they say nothing about the other ~168 possessive keys (achievements, profile, onboarding, paywall), which never sit next to a real alert, and Apple's own support pages use lowercase in exactly that non-alert setting. The recommendation below therefore rests on the consistency rule (one choice, used everywhere) rather than on a non-alert citation, and a native/UX read of whether capitalized pronouns feel formal against the app's otherwise casual voice is the open item that would settle it. Meanwhile agents capitalize; a flip is a global find-and-replace batch, never a per-string call."
+    },
+    {
+      "id": "focus_session",
+      "options": ["sesja skupienia", "sesja koncentracji"],
+      "recommended": "sesja skupienia",
+      "recommended_reason": "'Skupienie' is the word a Polish reader without English understands first, and it is the noun Apple's own Polish uses for the concept; the overlap with the iOS Focus mode is the same one en already accepts with the word 'Focus'.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pl copy exists, so both counts start at 0. Keys: moneyfesting.details.*, focusTask.*, widgets.startFocus.*, widgets.focusRing.*, profile.sessionDetails.*, profile.home.focusSection (en 'Focus'), onboarding.dailyFocusGoal.*, insights.focus.*, onboarding.welcome.preview.blocking.*. Harvest 2026-09-16 (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Focus 'Tryb skupienia'; System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE 'Skupienie'): iOS Polish names the system Focus mode with the same noun, so the pre-registered confusion condition is live in a way it was not for ro, where the collision is only on the Settings row. It is still narrow: no key names the system mode, the app ships no Focus filter, iOS never says 'sesja', and the exact overlap is the bare label profile.home.focusSection. The owner may weigh that as confusion and flip to 'koncentracja', which has no overlap but is the more Latinate word. Until decided, a new string follows its own screen's majority and the packet's same-source siblings, and the adjudicator lists every key that touched the term; a flip is a global term change with its own follow-up batch, never a per-string choice."
+    },
+    {
+      "id": "mock_permission_alerts",
+      "options": ["może zyskać możliwość", "aby mogła"],
+      "recommended": "aby mogła",
+      "recommended_reason": "A mock may not silently change what the app claims a permission does, and Apple's Polish message states a hedge ('may allow') where the app's own en states a purpose ('to allow it to see').",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pl copy exists, so both counts start at 0. Keys: onboarding.screenTimePermission.alertTitle, alertMessage, alertDoNotAllow; onboarding.notificationPermission.alertTitle, alertMessage, alertAllow, alertDoNotAllow; onboarding.alert.screenTimeMessage quotes the Continue button. Rule: a mock of an iOS alert mirrors the device verbatim. In Polish the titles and buttons raise no conflict at all, unlike ro: Apple says „%@” chce uzyskać dostęp do Czasu przed ekranem, „%@” chce wysyłać Ci powiadomienia, Dalej, Pozwalaj, Nie pozwalaj, all in the same informal register the app uses, and common.continue 'Dalej' already equals Apple's button so pl needs no separate Continue key (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, COMMON_CONTINUE, COMMON_DONT_ALLOW; System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, PERMISSION_ALERT_ALLOW, PERMISSION_ALERT_DENY). The two messages do conflict: Apple's Screen Time message says 'aplikacja %@ może zyskać możliwość odczytywania danych' and its notification message compresses the second English sentence into '(konfigurowane w Ustawieniach)'. Option one takes Apple's Polish verbatim for all seven keys; option two takes Apple verbatim for titles and buttons and a faithful translation of the app's own en for the two messages. A yes to either needs a source flag first, because both en messages differ from Apple's English, and a device check of which Screen Time message key the live .individual request shows (Manifesting/Features/Onboarding/Business/ScreenTimePermission/ViewModel/ScreenTimePermissionViewModel.swift:130). Meanwhile agents write titles and buttons from the brief's Platform terms table and translate the two messages faithfully, flagging both en lines."
+    },
+    {
+      "id": "badge_role_nouns",
+      "options": ["Zatrudnienie", "Zatrudniony"],
+      "recommended": "Zatrudnienie",
+      "recommended_reason": "No Polish role noun has a gender-neutral form, and a badge that greets half the audience in the wrong gender on a celebration screen costs more than the slight change of word class.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pl copy exists, so both counts start at 0. Keys: achievements.badge.hired.name, .salaried.name, .rehired.name, .permanent.name, .backOnShift.name, .clockedIn.name, .tenure.name, achievements.category.payroll.name, achievements.category.shift.name. Rule: UI copy is gender-neutral and never uses a slash form or a doubled ending (references/locale-decisions.md '## Voice choices that need locale review'). Option one is the abstract event noun throughout: Zatrudnienie, Etat, Ponowne zatrudnienie, Stałe zatrudnienie, Powrót na zmianę, Pierwsze wejście, Staż, Lista płac, Zmiana. Option two is the masculine role noun (Zatrudniony, Etatowiec, Ponownie zatrudniony), closer to the English word class but assigning the reader a gender. Register is a second axis neither option has been tested on: 'Zatrudnienie' is also the plain word for the bureaucratic fact of being on payroll ('zaświadczenie o zatrudnieniu' = an employment certificate, 'umowa o zatrudnieniu' = an employment contract), so the abstract-noun route risks landing on flat HR vocabulary for what is meant to read as a celebration screen; no citation here weighs that cost against the gender-neutrality win. The badge metaphor is a product choice, so a flip is an owner call, not an editor finding, and so is the register trade-off — a native read of the shipped nouns, or a hybrid (a gendered exclamation as the visual headline with the abstract noun only as a smaller category label), is the open item that would settle it. Meanwhile agents use the abstract nouns and the adjudicator lists the badge names it wrote."
+    },
+    {
+      "id": "restore_button",
+      "options": ["Odtwórz subskrypcję", "Przywróć zakupy", "Przywróć"],
+      "recommended": "Odtwórz subskrypcję",
+      "recommended_reason": "The button restores a subscription (its catalog comment; the paywall's plans are annual and weekly), and 'Odtwórz subskrypcję' is Apple's own StoreKit label for exactly that action, already in the app's ty register.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pl copy exists, so all three counts start at 0. Key: paywall.button.restore ('Restore'), app-owned because the StoreKit purchase sheet has no restore control. Rule: app-owned copy keeps ty and defaults to Apple's wording for a matching control. Harvest 2026-09-16: iOS 26.1 (23B86) has no 'Restore Purchases' label on disk; System/Library/Frameworks/_StoreKit_SwiftUI.framework | Localizable.strings | RESTORE_SUBSCRIPTION_LABEL says 'Odtwórz subskrypcję' and RESTORE_PURCHASES_LABEL 'Odtwórz brakujące kupione rzeczy', while System/Library/PrivateFrameworks/ChatKit.framework | ChatKit.strings | BLACKHOLE_RESTORE_PROMPT_CONFIRM uses the other restore verb 'Przywróć'. 'Przywróć zakupy' is the phrase Polish app paywalls use; bare 'Przywróć' is shortest but says nothing about what comes back. A yes to the recommendation needs a paywall render check, since it is the longest of the three (Manifesting/Features/Paywall/Business/SubscriptionPaywall/View/OnboardingSubscriptionPaywallView.swift). Meanwhile agents use it and flag the fit."
+    }
+  ]
+}

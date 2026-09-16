@@ -1,0 +1,330 @@
+{
+  "locale": "cs",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "série",
+      "forms": [
+        "série",
+        "sérii",
+        "sérií",
+        "sériím",
+        "sériích",
+        "sériemi"
+      ],
+      "forbidden": [
+        "streak",
+        "streaku",
+        "streaky",
+        "streaků"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys: no Czech copy has shipped. Apple's own Czech calls a Move streak a série (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION, 'sérii pohybové aktivity'). Governs 48 en keys under widgets.streak.*, share.card.streak*, streakFreeze.*, paywall.benefit.streak.*, achievements.streak.* and onboarding.welcome.slide.streak.*. The forms list covers the six distinct surface forms of the feminine soft declension; it cannot cover compounds a writer may build ('denní série' in the uppercase caption, 'série soustředění'), which the editor reads by screen. The widgets how-to pick step must not name the widget at all (OnboardingWidgetsStepTests.swift:189-190)."
+    },
+    "task": {
+      "preferred": "úkol",
+      "forms": [
+        "úkol",
+        "úkolu",
+        "úkolem",
+        "úkole",
+        "úkoly",
+        "úkolů",
+        "úkolům",
+        "úkolech"
+      ],
+      "forbidden": [
+        "task",
+        "tasku",
+        "tasky",
+        "tasků"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys. Apple's Czech for Task is Úkol (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/WorkflowKit.framework | Localizable.strings | 'Task (Parameter Label)'; plural Úkoly in System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable-Chamomile.strings | TASKS_DOMAIN). Governs focusTask.*, plan.*, widgets.tasks.* and insights.mood.completedTasks. 'aktivita' is deliberately NOT forbidden: it is the correct everyday word in the Screen Time keys ('údaje o vaší aktivitě', onboarding.screenTimePermission.*, screenTimeReport.noDataExplanation), so forbidding it would flag correct lines. The forms list cannot cover the adjective 'úkolový' or the diminutive, which no en key needs at snapshot."
+    },
+    "restricted_list": {
+      "preferred": "seznam blokovaných aplikací",
+      "forms": [
+        "seznam blokovaných aplikací",
+        "seznamu blokovaných aplikací",
+        "seznamem blokovaných aplikací",
+        "seznamy blokovaných aplikací",
+        "seznamů blokovaných aplikací",
+        "blokované aplikace",
+        "blokovaných aplikací",
+        "blokovaným aplikacím"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "forbidden": [
+        "blacklist",
+        "černá listina",
+        "černou listinu",
+        "černé listiny"
+      ],
+      "note": "0 cs keys. Governs screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps and plan.createToDo.restrictedAppsSection. 'blokovaný' says what happens (the apps are blocked) in the plainest Czech; 'omezený' would echo Apple's Screen Time 'omezování obsahu' and blur the two. The forms list cannot cover the short reference a writer will use once the full phrase is on screen ('tento seznam', 'seznam'), because bare 'seznam' is an everyday word the audit must not chase. The group name 'No Restricted Apps' ships as an unlocalized Swift literal (ToDoTaskRepository.swift:333): flag it, never translate it in place."
+    },
+    "time_value": {
+      "preferred": "hodnota času",
+      "forms": [
+        "hodnota času",
+        "hodnoty času",
+        "hodnotě času",
+        "hodnotu času",
+        "hodnotou času",
+        "hodnot času"
+      ],
+      "forbidden": [
+        "zisk",
+        "zisky",
+        "zisku",
+        "výnos",
+        "výnosy",
+        "výnosu"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys. 'Hodnota' is Apple's Czech for Value (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/ActionKit.framework | Localizable.strings | 'Value (WFGetDictionaryValueType)'). Governs insights.savings.*, achievements.category.wages.*, achievements.badge.*.earned, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money and the onboarding.with/withoutMoneyfesting.* projection. The forbidden list is profit and return, which are never correct here; the earn family is NOT listed because 'vydělané peníze' occurs negated inside the fixed disclaimers, where it is the frame itself (references/locale-briefs/cs.md '## Money frame' carries the grep stems for that table instead)."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Nejsou to vydělané peníze.",
+      "forms": [
+        "Nejsou to vydělané peníze."
+      ],
+      "forbidden": [
+        "Nevyděláváte tím peníze.",
+        "Nevyděláváš tím peníze.",
+        "Nejde o vydělané peníze."
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys; governs the 11 en keys carrying 'Not money earned.' (achievements.badge.*.earned 7, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). One form, reused verbatim on every screen. The forbidden entries are plausible paraphrase drifts, not everyday words, so a hit is always a real finding. The four sibling source sentences keep their own single cs form, listed in references/locale-briefs/cs.md '## Money frame'; this list cannot police them because term_audit matches one preferred form per term."
+    },
+    "forecast": {
+      "preferred": "výhled",
+      "forms": [
+        "výhled",
+        "výhledu",
+        "výhledem",
+        "výhledy",
+        "výhledů"
+      ],
+      "forbidden": [
+        "předpověď",
+        "předpovědi",
+        "předpovědí"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys; governs insights.savings.forecast, insights.savings.monthEnd, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription and widgets.monthlyTimeValue.*. VoiceOver reads the forecast line and the month-end figure one after the other, so the two need different words: 'výhled' for the projection, 'odhad' for the figure ('Odhad ke konci měsíce'). 'předpověď' is forbidden because it is the prediction word and the concept explicitly excludes a prediction or a promise; it is not an everyday word this app has any correct use for."
+    },
+    "hourly_rate": {
+      "preferred": "hodinová sazba",
+      "forms": [
+        "hodinová sazba",
+        "hodinové sazby",
+        "hodinové sazbě",
+        "hodinovou sazbu",
+        "hodinovou sazbou",
+        "sazba",
+        "sazby",
+        "sazbě",
+        "sazbu",
+        "sazbou"
+      ],
+      "forbidden": [
+        "hodinová mzda",
+        "hodinové mzdy",
+        "hodinovou mzdu",
+        "hodinový plat",
+        "hodinového platu",
+        "hodinová výplata",
+        "hodinové výplaty",
+        "hodinovou výplatu"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys; governs onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage and achievements.category.wages.description. 'sazba' is what you charge for your own time; 'mzda' and 'plat' name money an employer pays, which is exactly the frame the money rules forbid, so the two-word collocations are forbidden while the bare words are not (they are ordinary Czech and may legitimately appear in a quote or a task name). The forms list cannot cover the adjective used alone ('hodinový'), which is ambiguous and should not be used alone."
+    },
+    "daily_focus_goal": {
+      "preferred": "denní cíl",
+      "forms": [
+        "denní cíl",
+        "denního cíle",
+        "dennímu cíli",
+        "denním cíli",
+        "denním cílem",
+        "denní cíle",
+        "cíl",
+        "cíle",
+        "cíli",
+        "cílem",
+        "cílů",
+        "cílům"
+      ],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys. Apple's Czech for Goal is Cíl (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/SleepHealthAppPlugin.healthplugin | Localizable.strings | DURATION_PICKER_SLEEP_DURATION_GOAL_HEADER; uppercase CÍL in System/Library/PrivateFrameworks/HealthToolbox.framework | WellnessDashboard-Localizable.strings | SLEEP_GOAL_HEADER). Governs onboarding.dailyFocusGoal.*, profile.focusTarget.* and widgets.focusRing.*. forbidden is empty on purpose: the near synonym 'meta' is a correct Czech word, so forbidding it would collide with legitimate use in a quote or an affirmation. The bare 'cíl' forms are listed because most keys mention the goal without repeating 'denní', which means the count also picks up the affirmation sense of 'cíl' (onboarding.personalGoal.*); the editor separates the two by screen."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": [
+        "min",
+        "%lld min",
+        "%lld min"
+      ],
+      "forbidden": [
+        "%lldm"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys. Apple's Czech compact minute unit is 'min' (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/Summaries.healthplugin | Localizable.strings | ACTIVITY_SUMMARY_EXERCISE_UNIT), and Foundation's cs_CZ abbreviated duration prints '25' + U+00A0 + 'min'. Governs common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesShort/minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat and component.templateTaskCard.duration. Both the plain-space and the U+00A0 template are listed because the brief prescribes U+00A0 and a render may force the plain form on the tight widget lines. The glued English '%lldm' is forbidden; the spelled-out 'minuta / minuty / minut' used in accessibility labels is correct and is not policed here because term_audit cannot tell a plural branch from a bare unit."
+    },
+    "screen_time": {
+      "preferred": "Čas u obrazovky",
+      "forms": [
+        "Čas u obrazovky",
+        "Času u obrazovky",
+        "Čase u obrazovky",
+        "Časem u obrazovky",
+        "Čas u obrazovky",
+        "Času u obrazovky"
+      ],
+      "forbidden": [
+        "Screen Time"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "0 cs keys; governs the 18 en keys containing 'Screen Time' (onboarding.screenTimePermission.*, onboarding.alert.screenTime*, insights.appUsage.*, screenTime.*, screenTimeReport.*, widgets.monthlyTimeValue.description). Apple's value carries U+00A0 after the one-letter preposition 'u' (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time, 'Čas u\\u00a0obrazovky'; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), so the plain-space variants are listed only so the audit still finds a string that lost the character; a plain space in a mirrored string is a finding. What the list cannot cover: term_audit is case-insensitive, and in Czech the feature name and the generic phrase 'time at the screen' are the same three words, so the count includes generic uses; the capital Č is the only marker and the editor decides by screen."
+    }
+  },
+  "controls": {
+    "Cancel": {
+      "preferred": "Zrušit",
+      "roles": {
+        "discard": "Zahodit",
+        "quit": "Ukončit",
+        "dismiss": "Zavřít"
+      },
+      "note": "Apple: UIKitCore | Localizable.strings | Cancel. discard from DocumentCamera.framework | Localizable.strings | Discard; dismiss from UIKitCore | Localizable.strings | Close; quit is a seed, iOS 26.1 ships no cs 'Quit' label."
+    },
+    "Done": {
+      "preferred": "Hotovo",
+      "roles": {
+        "ios_mirror_pill": "Hotovo",
+        "completed_count_header": "Dokončeno"
+      },
+      "note": "Apple's UIKitCore, SwiftUI and SpringBoardHome all say Hotovo, so the app's word and the Home Screen pill coincide; the tally under a completed-task count takes Dokončeno so the button stays distinct."
+    },
+    "Continue": {
+      "preferred": "Pokračovat",
+      "roles": {
+        "resume": "Pokračovat"
+      },
+      "note": "Apple: UIKitCore | Localizable.strings | Continue and FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE; resume from ControlCenter/Bundles/TimerModule.bundle | TimerModule.strings | RESUME."
+    },
+    "Save": {
+      "preferred": "Uložit",
+      "roles": {
+        "save_money": "Úspora"
+      },
+      "note": "Apple: UIKitCore | Localizable.strings | Save. save_money is a noun ('Úspora 56 %', paywall.onboardingSubscription.annualPlanBadge) so it carries no person and survives the open address_form decision."
+    },
+    "Edit": {
+      "preferred": "Upravit",
+      "roles": {
+        "ios_mirror_pill": "Upravit"
+      },
+      "note": "Apple: UIKitCore | Localizable.strings | Edit and SpringBoardHome.framework | SpringBoardHome.strings | EDIT; the app's word and the illustrated pill are the same, unlike ro."
+    },
+    "Delete": {
+      "preferred": "Smazat",
+      "roles": {},
+      "note": "Apple: UIKitCore | Localizable.strings | Delete. Compounds keep the infinitive ('Smazat vše') and confirmation titles stay infinitive questions ('Smazat tento citát?') rather than conjugating."
+    },
+    "Skip": {
+      "preferred": "Přeskočit",
+      "roles": {
+        "skip_for_now": "Zatím přeskočit"
+      },
+      "note": "Apple: BridgeManifests.bundle | SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP. No en key equals 'Skip' exactly; onboarding.name.skip is 'Skip for now'."
+    },
+    "Allow": {
+      "preferred": "Povolit",
+      "roles": {},
+      "note": "Apple: UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW, TCC.framework | Localizable.strings | REQUEST_ACCESS_ALLOW, HealthUI.framework | HealthUI-Localizable.strings | AUTHORIZATION_PROMPT_ALLOW."
+    },
+    "Don't allow": {
+      "preferred": "Zakázat",
+      "roles": {
+        "generic_tcc_alert": "Nepovolovat"
+      },
+      "note": "Apple has two cs values. Zakázat is the value in the notification, Screen Time and Health alerts, which are the two the app mocks (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW). Nepovolovat is the generic privacy and paste value (TCC.framework | Localizable.strings | REQUEST_ACCESS_DENY; UIKitCore | Localizable.strings | 'Don’t Allow') and applies only if a future key mocks one of those."
+    },
+    "Got it": {
+      "preferred": "Rozumím",
+      "roles": {},
+      "note": "Apple: PodcastsFoundation.framework | Localizable.strings | NOW_PLAYING_SCROLLING_TIP_DONE_BUTTON_TITLE and MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS. A first-person verb, so it carries no address and survives the open address_form decision."
+    },
+    "Retry": {
+      "preferred": "Zkusit znovu",
+      "roles": {
+        "in_sentence": "Zkuste to znovu"
+      },
+      "note": "Apple: _JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY. The same form covers the four 'Try Again' buttons. in_sentence is the one control form the open address_form decision changes: a ty answer makes it 'Zkus to znovu'. Apple's own in-sentence button is the 2pl imperative 'Zkuste znovu' (SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON)."
+    },
+    "Settings": {
+      "preferred": "Nastavení",
+      "roles": {
+        "open_button": "Otevřít Nastavení",
+        "go_to_button": "Přejít do Nastavení",
+        "setup_noun": "nastavení"
+      },
+      "note": "Apple: Preferences.app | InfoPlist.strings | CFBundleDisplayName and Preferences.app | Localizable.strings | Settings. Two different en labels have two different Apple cs values, so both roles exist: SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS ('Otevřít Nastavení') and ScreenTimeAppIntentsExtension.appex | Localizable.strings | 'Go to Settings' ('Přejít do Nastavení'). No en key equals 'Settings' exactly, so this control has no rows; setup_noun is the lower-case common noun ('Dokončit nastavení připomínek.')."
+    }
+  },
+  "open": [
+    {
+      "id": "address_form",
+      "options": [
+        "vy",
+        "ty"
+      ],
+      "recommended": "vy",
+      "recommended_reason": "Every string the app must mirror verbatim — the two mock permission alerts and the nine how-to labels — is already vy, so one register covers the whole widgets how-to screen an editor reads in one pass.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: every app-owned line with a finite second-person verb or a possessive, including the 177 en units carrying a second-person possessive and the reader-predicate keys (achievements.streak.body, achievements.badge.hired.earned, onboarding.age.title, onboarding.personalGoal.title, focusTask.alert.deleteTask.message, screenTime.restrictedAppsPicker.deleteAlertMessagePrefix), plus onboarding.widgets.howTo.placeTitle and moneyfesting.details.stopConfirmationMessage (idiom proposals with a finite ty verb — 'Umísti si ho, kam chceš.' / 'vrať se s čistou hlavou' — that need a vy alternative too), plus the control role Retry.in_sentence. Rule: app-owned copy uses one address throughout, while a string that mirrors an iOS label or alert follows the device regardless (references/locale-briefs/cs.md '## Platform terms'). Evidence for vy: iOS 26.1 (23B86) runtime: UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE ('vám chce posílat'); FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL ('povolíte', 'vaší aktivitě'); HealthUI.framework | HealthUI-Localizable.strings | AUTHORIZATION_DONT_ALLOW_ALERT_MESSAGE ('můžete'); and l10n.cz Stylistická příručka, https://l10n.cz/wiki/Slovníky/Stylistická_příručka/ fetched 2026-09-16: 'Pro oslovení uživatele používejte vykání („zadejte“, nikoliv „zadej“).' Evidence for ty: Apple's own Czech coaching copy in the same genre, ActivityUI.framework | Localizable.strings | THOPHY_CASE_ACTIVITY ('Uzavři svoje kroužky') and FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION ('To dáš!'), plus the app's Romanian precedent of informal tu. Neither option has a shipped key: 0 cs copy exists. Buttons do not change either way, because the Czech control form is the infinitive. Meanwhile: agents write person-free forms wherever the meaning allows (infinitive buttons, nominal headers, impersonal neuter states, present tense with the pronoun dropped) and use vy where a finite second-person verb is unavoidable, so a flip to ty touches a countable list the adjudicator reports rather than the whole batch."
+    },
+    {
+      "id": "focus_session",
+      "options": [
+        "soustředění",
+        "fokus"
+      ],
+      "recommended": "soustředění",
+      "recommended_reason": "It is the everyday Czech word a reader without English understands at first read, and the overlap with Apple's Focus mode is exactly the overlap en already accepts by calling both things Focus.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: moneyfesting.details.*, focusTask.*, widgets.startFocus.*, widgets.focusRing.*, profile.home.focusSection, onboarding.dailyFocusGoal.* and every a11y label naming a session. Rule: one word per concept across the catalog; a flip is a global term change with its own follow-up batch, never a per-string choice. Evidence: 0 cs keys for either option. iOS 26.1 (23B86) runtime names the system Focus mode Soustředění (Applications/Preferences.app | Localizable.strings | Focus; System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE), so the app's own focus word would share the noun; no en key names the system mode (en inventory 'Focus mode (system) (0), none found') and the app ships no Focus filter, so nothing forces the two to be told apart. 'fokus' is an English loan that reads as jargon and gives no natural adjective for 'focused hours'. The exact overlap to weigh is the bare label profile.home.focusSection (en 'Focus'), which is also the name of an iOS Settings row. Meanwhile: the first batch writes 'soustředění' and the adjudicator lists every key that touched the term."
+    },
+    {
+      "id": "streak_freeze",
+      "options": [
+        "zmrazení série",
+        "pojistka série"
+      ],
+      "recommended": "zmrazení série",
+      "recommended_reason": "It keeps the source image exactly ('zmrazit' is the ordinary Czech verb for freezing an account or a price) while 'pojistka' promises insurance-like protection the code does not provide.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 12 en keys under streakFreeze.* (usedBody, info.title, info.automatic, info.accessibilityHint, inventoryAccessibility, ready, noneAvailable, dayAccessibility), paywall.benefit.streak.detail, widgets.streak.a11y.frozen and widgets.streak.copy.frozen.small. Rule: where no local idiom carries the source image, state the meaning plainly rather than translating the picture, and never strengthen the promise — one earned freeze covers one day, not two (comment on paywall.benefit.streak.detail; StreakFreeze.swift cap = 1). Evidence: 0 cs keys for either option; iOS 26.1 has no Apple label for this concept, so both are seeds. Meanwhile: the first batch uses 'zmrazení série' and flags every line where it reads awkwardly, so the owner decides on real sentences rather than on the term alone; the short reference inside a widget line is 'zmrazení' on its own."
+    },
+    {
+      "id": "badge_conceit",
+      "options": [
+        "workplace event nouns",
+        "plain achievement nouns"
+      ],
+      "recommended": "workplace event nouns",
+      "recommended_reason": "The workplace frame is what makes 'your hours have a price' legible without ever saying the app pays anyone, and the Czech shift-and-payroll vocabulary is everyday speech.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name keys, the 5 achievements.category.*.name keys and the earned lines in BadgeCopy+{Comeback,FullDays,Payroll,Shift,Wages}.swift. Rule: the conceit is decided once per locale and every badge follows it; unlock criteria stay literal. Option 1, workplace event nouns: Příchod (Clocked in), Nástup (Hired), Na výplatě (Salaried), Návrat (Rehired), Na dobu neurčitou (Permanent), Odpracované roky (Tenure), Celá směna (Full shift), Dlouhá směna (Long shift), Dvojitá směna (Double shift), Zpátky na směně (Back on shift), Výplaty (Payroll), Směna (The Shift) — naming the event rather than the person is what keeps them gender-neutral, because Czech has no neutral personal noun for any of these; Salaried was reseeded from 'Výplatní páska' (a physical payslip, an object) to 'Na výplatě' (being on payroll, an event/state) so it matches the other badges' grammar instead of naming a document. Option 2, plain achievement nouns (První sezení, Týden v kuse, Dvacet ze třiceti): neutral by construction but it loses the reason the app prices time like work. Evidence: 0 cs keys for either; iOS 26.1 ships no Apple label for any of these, so both option sets are agent proposals. The option strings are the two strategies, so term_audit's option counts stay 0 until copy ships and the count column is not the signal here. Meanwhile: the first badge batch writes the event nouns listed in references/locale-briefs/cs.md '## Idioms and figurative language', marks each as a proposal, and the adjudicator lists every badge key that touched the conceit so a flip stays one scope."
+    }
+  ]
+}

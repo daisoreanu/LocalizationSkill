@@ -1,0 +1,371 @@
+{
+  "locale": "el",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "σερί",
+      "forms": [
+        "σερί",
+        "ΣΕΡΙ"
+      ],
+      "forbidden": [
+        "streak"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's own Greek for a Move streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_DESCRIPTION/NSStringLocalizedFormatKey, 'Το τρέχον σερί σου'). Indeclinable neuter loanword, so one form covers every case and every widget slot, which is worth a lot at the 1.45x length trigger. 'σειρά' is deliberately NOT forbidden: 'στη σειρά' is the ordinary rendering of 'in a row' (share.card.streakSupporting, achievements.streak.body). What the list cannot cover: the tonos-free all-caps form is listed, but term_audit matches whole words case-insensitively on exact characters, so any other accent-stripped variant a designer introduces will be missed."
+    },
+    "streak_freeze": {
+      "preferred": "πάγωμα σερί",
+      "forms": [
+        "πάγωμα σερί",
+        "παγώματα σερί",
+        "παγώματος σερί",
+        "το πάγωμα σερί",
+        "πάγωμα",
+        "παγώματα",
+        "παγωμάτων",
+        "παγωμάτων σερί",
+        "ΠΑΓΩΜΑ ΣΕΡΙ",
+        "ΠΑΓΩΜΑ"
+      ],
+      "forbidden": [
+        "κατάψυξη",
+        "streak freeze"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys carry the image (streakFreeze.*, widgets.streak.copy.frozen.*, paywall.benefit.streak.detail). 'πάγωμα' is the ordinary Greek noun for freezing something in place; 'κατάψυξη' is a freezer and never right here. The bare forms are listed on purpose so term_audit counts every mention, which inflates the per-prefix count on screens that also name the streak. What the list cannot cover: the participle 'παγωμένο/η/α' and the verb 'παγώνει', which the widget copy lines will produce (widgets.streak.copy.frozen.small implies η μέρα, feminine) and which agree with a noun the list cannot predict."
+    },
+    "task": {
+      "preferred": "εργασία",
+      "forms": [
+        "εργασία",
+        "εργασίας",
+        "εργασίες",
+        "εργασιών",
+        "την εργασία",
+        "ΕΡΓΑΣΙΑ",
+        "ΕΡΓΑΣΙΕΣ"
+      ],
+      "forbidden": [
+        "τασκ",
+        "todo",
+        "to-do"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Feminine, which fixes the gender of the three Daily Plan section headers (plan.dailyPlan.plannedHeader/doneHeader/anytimeHeader -> ΠΡΟΓΡΑΜΜΑΤΙΣΜΕΝΕΣ / ΟΛΟΚΛΗΡΩΜΕΝΕΣ / ΟΠΟΤΕΔΗΠΟΤΕ), so a flip of this term rewrites them. 'δραστηριότητα' is deliberately NOT forbidden: Apple's Screen Time alert and onboarding.screenTimePermission.alertMessage both say 'δεδομένα δραστηριότητας' for activity data, which is correct and unrelated. What the list cannot cover: the diminutive and the adjective-plus-noun compounds ('εργασία συγκέντρωσης', focusTask.*), which contain the listed forms and so do count. The noun's own inflection has no gap: 'forms' already carries nominative/accusative/genitive singular and plural (εργασία, εργασίας, εργασίες, εργασιών), so 'τις εργασίες' matches on the listed 'εργασίες' token exactly as the bare form does."
+    },
+    "restricted_list": {
+      "preferred": "λίστα αποκλεισμού",
+      "forms": [
+        "λίστα αποκλεισμού",
+        "λίστας αποκλεισμού",
+        "λίστες αποκλεισμού",
+        "λιστών αποκλεισμού",
+        "η λίστα αποκλεισμού",
+        "ΛΙΣΤΑ ΑΠΟΚΛΕΙΣΜΟΥ"
+      ],
+      "forbidden": [
+        "μαύρη λίστα",
+        "γονικός έλεγχος",
+        "γονικοί έλεγχοι"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Chosen over the literal 'λίστα αποκλεισμένων εφαρμογών' because Greek runs 1.45x wide and this string sits in screenTime.createRestrictedList.* titles and in plan.createToDo.restrictedAppsSection beside a summary. Apple's own vocabulary for the neighbourhood is Περιορισμοί, Όρια εφαρμογών, Αποκλεισμένες (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | RestrictionsGroupSpecifierName, AppLimitsSpecifierName; System/Library/AccessibilityBundles/ContactsUI.axbundle | Accessibility.strings | contact.cell.blocked). The forbidden forms are concepts.json's not_this and appear nowhere legitimately. Whether the bare noun 'αποκλεισμός' or Apple's own adjective 'αποκλεισμένος' anchors the term better is Open decision `restricted_list_term`; this row stays on the recommended option meanwhile. What the list cannot cover: the group name literal 'No Restricted Apps' (ToDoTaskRepository.swift:333), which ships unlocalized and is flagged, never translated."
+    },
+    "time_value": {
+      "preferred": "αξία χρόνου",
+      "forms": [
+        "αξία χρόνου",
+        "αξία του χρόνου",
+        "αξίας χρόνου",
+        "αξίας του χρόνου",
+        "την αξία του χρόνου",
+        "ΑΞΙΑ ΧΡΟΝΟΥ",
+        "αξία",
+        "αξίας"
+      ],
+      "forbidden": [
+        "αποταμίευση",
+        "αποταμιεύσεις"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Greek separates worth from price where English does not: 'αξία' is what the reader's time is worth and 'τιμή' is the price they pay, and Apple uses 'Τιμή' for both Price and a data Value (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/StoreKitUI.framework | Gifting.strings | GIFTING_CONFIRM_PRICE_LABEL; System/Library/PrivateFrameworks/ActionKit.framework | Localizable.strings | Value (WFGetDictionaryValueType)), so the two must never be swapped. 'αποταμίευση' is savings of actual money, which the app never does, despite the insights.savings.* key names. What the list cannot cover: the banned money-outcome words are NOT here, because their Greek stems collide with the five fixed disclaimers and with the allowed badge sense of 'earn'; they live in references/locale-briefs/el.md '## Money frame' with per-accent stems."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Δεν είναι κερδισμένα χρήματα.",
+      "forms": [
+        "Δεν είναι κερδισμένα χρήματα."
+      ],
+      "forbidden": [
+        "Δεν είναι πραγματικά χρήματα"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "11 en keys take this sentence. A participle agreeing with 'χρήματα' keeps it free of a person and a gender, so it survives either outcome of the open 'address_form' decision; the 2sg 'που κέρδισες' would not. The forbidden form changes the claim from 'you did not earn this' to 'this is not real money'. The four sibling source sentences keep their own single Greek form, listed in references/locale-briefs/el.md '## Money frame': 'Εκτιμώμενη αξία χρόνου, όχι κερδισμένα χρήματα.', 'Αξία χρόνου, όχι κέρδη.', 'Δεν είναι πηγή εισοδήματος.', 'Δεν είναι χαμένα χρήματα.' What the list cannot cover: those four, which term_audit does not police because only the first row has a glossary entry."
+    },
+    "forecast": {
+      "preferred": "πρόβλεψη",
+      "forms": [
+        "πρόβλεψη",
+        "πρόβλεψης",
+        "προβλέψεις",
+        "η πρόβλεψη",
+        "ΠΡΟΒΛΕΨΗ"
+      ],
+      "forbidden": [
+        "πρόγνωση"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "VoiceOver reads insights.savings.forecast and insights.savings.monthEnd one after the other, so they need two different words. Greek supplies them without a decision: 'πρόβλεψη' for the forecast line and 'εκτίμηση' for the month-end figure ('Εκτίμηση τέλους μήνα'), which also leaves 'εκτιμώμενη' free for the sanctioned word 'estimated' in the money frame. 'πρόγνωση' is forbidden here only to keep the forecast/month-end pair down to one word each, not because the word is wrong: it is ordinary, non-clinical Greek and is Apple's own word for a weather forecast (iOS 26.1 (23B86) runtime: System/Library/OnBoardingBundles/com.apple.onboarding.weather.bundle | Weather.strings | FIRST_BULLET, SECOND_BULLET, BUTTON_CAPTION, all rendering 'forecast'/'forecasts' as πρόγνωση/προγνώσεις). The forecast is an estimate with a stated formula, never a promise (concepts.json not_this). What the list cannot cover: 'εκτίμηση' itself, which is deliberately not a form here so the two labels stay distinct."
+    },
+    "hourly_rate": {
+      "preferred": "ωριαία αμοιβή",
+      "forms": [
+        "ωριαία αμοιβή",
+        "ωριαίας αμοιβής",
+        "την ωριαία αμοιβή",
+        "η ωριαία αμοιβή",
+        "αμοιβή",
+        "αμοιβής",
+        "ΩΡΙΑΙΑ ΑΜΟΙΒΗ"
+      ],
+      "forbidden": [
+        "ωριαίος μισθός",
+        "ωριαίο μισθό",
+        "μισθός ανά ώρα",
+        "κέρδος ανά ώρα"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the reader sets for their own time, never what the app pays (concepts.json not_this: salary, earnings per hour). Apple's Greek for Hourly is 'Ωριαία' (iOS 26.1 (23B86) runtime: System/Library/BridgeManifests/BridgeManifests.bundle | SettingsSearchManifest-com.apple.BridgeRemoteAccounts.strings | HOURLY). The forbidden entries are all multi-word so they do not collide with the bare 'μισθός' the badge conceit needs ('Σταθερός μισθός' for the Salaried badge). Open decision 'hourly_rate_term' may flip this to 'τιμή ώρας'. What the list cannot cover: the bare 'αμοιβή' forms over-count on any screen that also prices the subscription."
+    },
+    "daily_focus_goal": {
+      "preferred": "ημερήσιος στόχος",
+      "forms": [
+        "ημερήσιος στόχος",
+        "ημερήσιου στόχου",
+        "ημερήσιο στόχο",
+        "ο ημερήσιος στόχος",
+        "στόχος",
+        "στόχου",
+        "στόχο",
+        "στόχοι",
+        "ΗΜΕΡΗΣΙΟΣ ΣΤΟΧΟΣ",
+        "ΣΤΟΧΟΣ"
+      ],
+      "forbidden": [
+        "επιδίωξη",
+        "στόχος ζωής"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's Greek for Goal is 'Στόχος' (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/SleepHealthAppPlugin.healthplugin | Localizable.strings | DURATION_PICKER_SLEEP_DURATION_GOAL_HEADER). The goal is met or not met, never scored (concepts.json). 'σκοπός' is deliberately NOT forbidden: onboarding.personalGoal.* asks what the reader is making time for, where 'σκοπός' is correct. What the list cannot cover: the compound with the open focus term ('ημερήσιος στόχος συγκέντρωσης'), which contains a listed form and counts, and the bare 'στόχος' forms, which over-count wherever the affirmations vocabulary appears."
+    },
+    "minute_unit": {
+      "preferred": "λ",
+      "forms": [
+        "λ",
+        "λ.",
+        "%lld λ",
+        "λεπτό",
+        "λεπτά"
+      ],
+      "forbidden": [
+        "min",
+        "%lldm",
+        "m"
+      ],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Foundation on macOS 15.7.9 (24G830), Locale(identifier: 'el_GR'): Duration.seconds(1500).formatted(.units(allowed: [.minutes], width: .narrow)) = '25 λ', .abbreviated = '25 λ.', .wide = '25 λεπτά'. A space always separates the digit from the letter, because '%lldλ' reads as an algebraic term; that is the one place Greek must NOT copy the ro tight-widget form '%lldmin'. The abbreviated 'λ.' belongs to the screenTimeReport.* family only, matching Apple's '1 ώ., 45 λ.' style. Accessibility strings spell the unit out with a one/other split, and no test blocks that in Greek: FocusRingCopyTests.swift:116 pins Romanian only. What the list cannot cover: the hour and second units (ώ, ώ., δ, δευτ.) and the all-caps Λ of insights.focus.minutesUnit and widgets.focusRing.goalSuffix, which are in the brief's Short forms table and have no glossary row; and the bare 'm' in forbidden will not catch a glued '%lldm' on its own, which is why that literal is listed too."
+    },
+    "screen_time": {
+      "preferred": "Χρόνος επί οθόνης",
+      "forms": [
+        "Χρόνος επί οθόνης",
+        "Χρόνου επί οθόνης",
+        "Χρόνο επί οθόνης",
+        "στον Χρόνο επί οθόνης",
+        "ΧΡΟΝΟΣ ΕΠΙ ΟΘΟΝΗΣ"
+      ],
+      "forbidden": [
+        "Screen Time"
+      ],
+      "decided_by": "apple-platform-term",
+      "note": "Apple's Greek name for the feature, unchanged in every position, second word lowercase exactly as Apple writes it (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle). 18 en keys name it. Generic 'time on screen' is a different concept and stays generic ('ο χρόνος που περνάς στην οθόνη', paywall.beforeAfter.caption), which is why no near-miss word order is forbidden. What the list cannot cover: the genitive inside a longer noun phrase ('πρόσβαση στον Χρόνο επί οθόνης') is listed, but a rewrite that splits the two words across a clause will not match."
+    }
+  },
+  "controls": {
+    "Cancel": {
+      "preferred": "Ακύρωση",
+      "roles": {
+        "discard": "Απόρριψη",
+        "quit": "Διακοπή",
+        "dismiss": "Απόρριψη"
+      }
+    },
+    "Done": {
+      "preferred": "Τέλος",
+      "roles": {
+        "completed_count_header": "Ολοκληρωμένες",
+        "ios_mirror_pill": "Τέλος"
+      },
+      "note": "Τέλος is Apple's own value in UIKitCore, SwiftUI and the Home Screen edit pill, so the preferred form and the mirror role coincide; completed_count_header agrees with 'εργασίες' (feminine plural)"
+    },
+    "Continue": {
+      "preferred": "Συνέχεια",
+      "roles": {
+        "resume": "Συνέχιση"
+      },
+      "note": "Apple uses two nouns: Συνέχεια for continuing a flow (UIKitCore, FamilyControlsAuthenticationUI COMMON_CONTINUE) and Συνέχιση for resuming a paused timer (ControlCenter TimerModule RESUME); the Screen Time mock's Continue matches the app's own form, so no mismatch arises"
+    },
+    "Save": {
+      "preferred": "Αποθήκευση",
+      "roles": {
+        "save_money": "Οικονομία"
+      },
+      "note": "save_money is a discount on the subscription price, never a money-outcome word; the rendered badges paywall.discountBadge and paywall.plan.annual.savingBadge use the numeric template -%lld%% and only the orphan paywall.onboardingSubscription.annualPlanBadge spells it out. Whether the badge word should be 'Οικονομία' or the more familiar Greek discount-badge word 'Έκπτωση' is Open decision `save_money_badge`; this row stays on the recommended option meanwhile"
+    },
+    "Edit": {
+      "preferred": "Επεξεργασία",
+      "roles": {
+        "ios_mirror_pill": "Αλλαγή"
+      },
+      "note": "Apple ships three Greek forms: Αλλαγές (UIKitCore Edit), Αλλαγή (SpringBoardHome EDIT, the Home Screen pill the illustration copies) and Επεξεργασία (EDIT_MENU_EDIT_PAGES, CONFIGURE_WIDGET_SHORTCUT_ITEM_TITLE); the app's own Edit takes the everyday noun and only the pill mirrors the device"
+    },
+    "Delete": {
+      "preferred": "Διαγραφή",
+      "roles": {}
+    },
+    "Skip": {
+      "preferred": "Παράλειψη",
+      "roles": {
+        "skip_for_now": "Παράλειψη προς το παρόν"
+      }
+    },
+    "Allow": {
+      "preferred": "Να επιτρέπεται",
+      "roles": {},
+      "note": "system mirror: the only bare Allow key previews the iOS notifications alert. Apple uses a different form in the Photos/TCC alert (Να επιτραπεί) and in the Health sheet (Ναι), so a mock copies the alert it previews"
+    },
+    "Don't allow": {
+      "preferred": "Να μην επιτρέπεται",
+      "roles": {},
+      "note": "system mirror; Apple uses the same value in the notifications alert and in the Screen Time access alert"
+    },
+    "Got it": {
+      "preferred": "Κατάλαβα",
+      "roles": {},
+      "note": "The bare everyday acknowledgement, not the more deliberate 'Το κατάλαβα' (adding the pronoun specifies a referent and reads more bookish than the app's ordinary-word register goal); Apple's own value for Got It is ΟΚ, which common.ok, insights.mood.ok and quotes.user.okay already own, so two different controls may not collapse into one word"
+    },
+    "Retry": {
+      "preferred": "Νέα δοκιμή",
+      "roles": {},
+      "note": "Apple uses the same noun for Retry and Try Again, so the four Try Again keys take this form too and component.errorView.message quotes it as «Νέα δοκιμή»"
+    },
+    "Settings": {
+      "preferred": "Ρυθμίσεις",
+      "roles": {
+        "open_button": "Άνοιγμα των Ρυθμίσεων",
+        "setup_noun": "ρύθμιση"
+      },
+      "note": "Ρυθμίσεις is Apple's own app name, so unlike ro there is no settings_app_name mismatch; open_button covers both Open Settings and Go to Settings because both are the app's own buttons opening the same screen"
+    }
+  },
+  "open": [
+    {
+      "id": "address_form",
+      "options": [
+        "εσύ",
+        "εσείς"
+      ],
+      "recommended": "εσύ",
+      "recommended_reason": "The app coaches one reader about their own hours, and the only screens where the device's εσείς sits beside app copy are two mock alerts that quote iOS on purpose.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects every app-owned string (about 1,100 keys); the seven mock-alert keys (onboarding.screenTimePermission.alertTitle/alertMessage/alertDoNotAllow, onboarding.notificationPermission.alertTitle/alertMessage/alertAllow/alertDoNotAllow) and the onboarding.widgets.howTo.* mirrors are exempt either way because they copy Apple verbatim. Rule: app-owned copy takes one address for the whole app; a string that mirrors an iOS label follows the device. Evidence for εσείς: iOS Greek addresses the user in the plural throughout (iOS 26.1 (23B86) runtime: Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL 'Αν παραχωρήσετε ... σας'; System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable.strings | AUTHORIZATION_DONT_ALLOW_ALERT_MESSAGE 'Μπορείτε'). Evidence for εσύ: Apple drops to the singular when it coaches (System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION/NSStringLocalizedFormatKey 'Μπορείς να τα καταφέρεις!'), and the owner already chose informal tu for ro (app CLAUDE.md:43). Meanwhile: the pilot batch writes εσύ throughout and εσείς only inside the seven mock-alert keys; the adjudicator lists every key whose register a flip would change. The five fixed disclaimer forms are person-free by design, so a flip does not touch them."
+    },
+    {
+      "id": "focus_session",
+      "options": [
+        "συνεδρία συγκέντρωσης",
+        "σεσιόν συγκέντρωσης",
+        "χρόνος συγκέντρωσης"
+      ],
+      "recommended": "συνεδρία συγκέντρωσης",
+      "recommended_reason": "It is the only option a reader without English understands at first read and the only one Apple already prints in Greek.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "The focus word itself is settled: Apple's Greek for the iOS Focus mode is Συγκέντρωση (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Focus; System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE), and en already shares 'Focus' with the iOS mode, so Greek carries the overlap en accepted. This decision is only about the session noun. συνεδρία is Apple's own (System/Library/PrivateFrameworks/SensorKitUI.framework/AuthGroups/ECG.bundle | InfoPlist.strings | Session) but is also a therapy session; σεσιόν is the everyday loanword, warmer but informal and unattested on iOS; χρόνος συγκέντρωσης drops the session noun and forces a rewrite of the keys that count sessions (insights.sessions.*, achievements.gauge.sessionMinutes, profile.sessionDetails.*). Affected prefixes: moneyfesting.details.*, focusTask.*, widgets.startFocus.*, profile.sessionDetails.*, onboarding.welcome.preview.*. Meanwhile: the pilot uses the recommended form everywhere and never two forms in one batch; the adjudicator lists every key that touched the term. No terms row polices it until the owner decides, as glossary/ro.json also leaves focus_session open. A flip is a global term change with its own follow-up batch, never a per-string choice."
+    },
+    {
+      "id": "badge_role_nouns",
+      "options": [
+        "event nouns",
+        "gendered role nouns"
+      ],
+      "recommended": "event nouns",
+      "recommended_reason": "The workplace metaphor survives intact while the gender problem disappears instead of being defaulted to the masculine on every badge.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: achievements.badge.<id>.name for clockedIn, backOnShift, hired, rehired, salaried, permanent, tenure, doubleShift, fullShift, longShift, plus achievements.category.{comeback,payroll,shift,wages}.name. Rule: UI copy is gender-neutral and never slashes endings (references/locale-decisions.md '## Voice choices that need locale review'); the workplace conceit is a product choice. Greek has the whole vocabulary without a gendered role noun: Πρώτη κάρτα (clocked in, from 'χτυπάω κάρτα'), Πίσω στη βάρδια, Διπλή βάρδια, Ολόκληρη βάρδια, Μεγάλη βάρδια, Πρόσληψη, Επαναπρόσληψη, Σταθερός μισθός, Μόνιμη θέση, Προϋπηρεσία, and the categories Η επιστροφή, Μισθοδοσία, Η βάρδια, Η αξία του χρόνου. The alternative names the reader's job title (Προσληφθείς, Μισθωτός) and forces a masculine default on every badge. Meanwhile: the pilot writes the event nouns; the report lists all 24 names as one decision rather than 24 string findings, and a flip is one follow-up batch."
+    },
+    {
+      "id": "hourly_rate_term",
+      "options": [
+        "ωριαία αμοιβή",
+        "τιμή ώρας"
+      ],
+      "recommended": "ωριαία αμοιβή",
+      "recommended_reason": "It is what a Greek reader calls the number they are being asked to type, and the disclaimer under the field already carries the money frame.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: onboarding.hourlyWage.*, profile.hourlyWage.*, currency.onboarding.subtitle, screenTimeReport.missingWage, achievements.category.wages.description, widgets.cash.description. Rule: the rate is what the reader decides their own time is worth and no wording may suggest the app pays it (references/voice-card.md '## Money frame'). ωριαία αμοιβή is the everyday term on Greek invoices and freelance work and matches the source's 'hourly wage', but it is built on αμοιβή, a fee someone pays you. τιμή ώρας cannot be read as income and sits naturally beside the hero's 'your hours have a price', but it spends the word τιμή that the brief reserves for the subscription price, and Apple uses Τιμή for both Price and a data Value. Meanwhile: the pilot uses ωριαία αμοιβή, never the forbidden ωριαίος μισθός, and the adjudicator checks every occurrence against the money frame. A flip changes the terms row and the brief's Money frame sanctioned table in the same scope."
+    },
+    {
+      "id": "ok_label_script",
+      "options": [
+        "OK",
+        "ΟΚ"
+      ],
+      "recommended": "OK",
+      "recommended_reason": "These three are app-owned buttons rather than mirrors, the two forms are indistinguishable to the reader, and a Greek Ο inside a two-letter token is invisible to review while breaking every literal comparison.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Options are the Latin O+K (U+004F U+004B) and the Greek Ο+Κ (U+039F U+039A). Keys: common.ok, insights.mood.ok, quotes.user.okay, plus the key literal 'OK'. Rule: one script per word, and a string that mirrors an iOS label equals Apple's value. Apple's own alert button is the Greek pair (iOS 26.1 (23B86) runtime: System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | OK), so a Greek screenshot of the system contains Greek letters. Meanwhile: the pilot writes Latin OK, and every Greek batch runs an integration check that flags any unit mixing Greek and Latin letters inside one word. insights.mood.ok is a mood-scale value, not a button, so it is a separate question: it should follow Apple's State of Mind wording (System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable-Chamomile.strings | VALENCE_CLASSIFICATION_SLIGHTLY_PLEASANT 'Κάπως ευχάριστα') rather than be an OK at all, and that is a source finding to raise, not a silent rewrite."
+    },
+    {
+      "id": "day_compact_unit",
+      "options": [
+        "%lld ημ.",
+        "%lld η"
+      ],
+      "recommended": "%lld ημ.",
+      "recommended_reason": "A bare η beside a numeral reads as the feminine article, and the share card is a rendered image a stranger reads with no context.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: share.duration.daysShort only, with share.duration.daysSpelled as its spoken twin ('%lld εργάσιμη μέρα' / '%lld εργάσιμες μέρες'). Rule: the brief's short form is the one a local product team already prints, not a new abbreviation (references/surface-budgets.md '## Shortening for fit'). '%lld η' is ICU's own narrow day unit for el (Foundation on macOS 15.7.9 (24G830): a two-day range formatted .components(style: .narrow).locale(el_GR) gives '2 η'), and it is consistent with the ώ and λ in the same triple; 'ημ.' is the everyday written abbreviation and is unambiguous. Meanwhile: draft '%lld ημ.' and capture the 1080x1080 and 1080x1920 share-card renders with the longest reachable value (ShareCardFormat.swift:4,11); the render decides and the spoken twin is unaffected either way."
+    },
+    {
+      "id": "restricted_list_term",
+      "options": [
+        "λίστα αποκλεισμού",
+        "Λίστα αποκλεισμένων"
+      ],
+      "recommended": "λίστα αποκλεισμού",
+      "recommended_reason": "It is the shorter form at the 1.45x length trigger and stays grammatical the way ordinary Greek genitive-noun lists already are (λίστα αναμονής), while the anchored alternative reuses Apple's own Screen-Time adjective and may read faster on first encounter.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: screenTime.createRestrictedList.* titles, plan.createToDo.restrictedAppsSection. Rule: the term names a list of blocked apps, never a punitive or social 'blacklist' sense (concepts.json not_this). Options: **λίστα αποκλεισμού**, the shorter genitive-noun construction, grammatical but built on the bare noun 'αποκλεισμός', which more readily evokes social exclusion or a sports elimination than 'apps being blocked' before context resolves it, and does not reuse any of Apple's own Screen-Time vocabulary for the neighbourhood (Περιορισμοί, Όρια εφαρμογών, Αποκλεισμένες); **Λίστα αποκλεισμένων** (or 'Αποκλεισμένες εφαρμογές'), anchored to Apple's own adjective 'Αποκλεισμένες' so a reader already recognizes it from Screen-Time-adjacent surfaces, at the cost of a few more characters against the length trigger. Meanwhile: the pilot batch uses 'λίστα αποκλεισμού' throughout, and a native read before the pilot (already recommended generally, Identity) should include this term specifically. A flip changes the terms row's preferred and forms together."
+    },
+    {
+      "id": "save_money_badge",
+      "options": [
+        "Οικονομία",
+        "Έκπτωση"
+      ],
+      "recommended": "Οικονομία",
+      "recommended_reason": "It keeps the discount badge clear of the banned 'earn'-adjacent stems in the money frame, though it is a term-of-art avoidance choice rather than an attested Greek retail convention.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: paywall.onboardingSubscription.annualPlanBadge ('Save 56%'); the numeric-template badges paywall.discountBadge and paywall.plan.annual.savingBadge use '-%lld%%' and are unaffected either way. Rule: no wording near the price may collide with the money-frame's banned earn/income stems (references/voice-card.md '## Money frame'). Options: **Οικονομία**, which avoids any 'earn'-adjacent stem but on a bare percentage badge reads more like a category label ('economy') than a discount marker, with no local-app or Apple retail citation behind it; **Έκπτωση**, the familiar Greek discount-badge word local retail and subscription apps use for exactly this spot ('Έκπτωση -56%'), which carries no money-frame risk of its own but has not been checked against the badge's render. Meanwhile: the pilot keeps 'Οικονομία 56%', and both options should be tested against the actual badge render before the owner decides."
+    }
+  ]
+}
