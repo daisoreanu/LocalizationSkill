@@ -78,7 +78,7 @@ Marketing and authored copy, in this order:
 2. Cut the second clause when the first carries the claim.
 3. Swap the image for a shorter local one that carries the same meaning and register, the way "raining cats and dogs" becomes "plouă cu găleata"; when no local image fits, state the meaning plainly rather than keep a literal picture that reads as translationese.
 
-In both orders keep deliberate source line breaks (the paywall hero is three lines by design) and the claim's condition: "Not money earned." survives every cut. Shortening may cut words, never facts. A fact that must go moves to a neighbouring element, and the key's comment says where it went, so the next translator does not put it back.
+In both orders keep deliberate source line breaks (the paywall hero is three lines by design) and the claim's condition: "Not money earned." survives every cut. Shortening may cut words, never facts. A fact that must go moves to a neighbouring element, and the key's comment says where it went ("placeholder moved to `<key>`", which `scripts/catalog_check.py` C1 reads), so the next translator does not put it back.
 
 ## What a budget cannot decide
 

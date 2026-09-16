@@ -5,7 +5,8 @@ Necessary, not sufficient: xcodebuild stays the structural gate and the language
 reviewers decide everything a script cannot. Checks (each finding carries its id):
 
   C1  placeholder multiset en vs target per unit (numbered tokens by position;
-      an integer placeholder may be dropped only in the zero/one plural form)
+      an integer placeholder may be dropped only in the zero/one plural form; a comment
+      reading "placeholder moved to <key>" turns a dropped token into info)
   C2  plural categories: a missing CLDR category is major, an extra one is info
   C3  markup and typography parity: **bold**, newlines, links (major);
       ellipsis form, double spaces, edge whitespace, emoji (info)
@@ -45,6 +46,7 @@ TYPE_CLASS.update({c: "f" for c in "feEgGaAF"})
 TYPE_CLASS.update({c: "s" for c in "sScC"})
 LINK = re.compile(r"\[[^\]]+\]\([^)]+\)")
 EMOJI = re.compile("[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF\\u2B50\\u2B06\\u2B07]")
+PLACEHOLDER_MOVED = re.compile(r"placeholder moved to [\w.]+", re.I)
 CEDILLA = re.compile("[\\u015e\\u015f\\u0162\\u0163]")
 
 # (pattern, severity, message) per locale for C4: a slip a target-language reviewer cannot
@@ -572,7 +574,13 @@ def select_keys(strings, args):
 
 def run_checks(key, entry, locale, glossary, trigger, render_list):
     en, tg = units(entry, "en"), units(entry, locale)
-    findings = list(check_placeholders(key, en, tg)) + list(check_plurals(key, locale, en, tg))
+    findings = list(check_placeholders(key, en, tg))
+    # A comment that records where the value went ("placeholder moved to <key>") makes a dropped token a
+    # documented fit decision, not a lost fact; the named key must still carry it.
+    if PLACEHOLDER_MOVED.search(entry.get("comment", "")):
+        findings = [f if f["check"] != "C1" else {**f, "severity": "info", "message": f["message"] + " (moved, per comment)"}
+                    for f in findings]
+    findings += list(check_plurals(key, locale, en, tg))
     findings += list(check_markup(key, en, tg)) + list(check_identity(key, en, tg))
     findings += list(check_typography(key, locale, tg))
     if glossary:
