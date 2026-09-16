@@ -1,0 +1,136 @@
+{
+  "locale": "fr",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "gel",
+      "forms": ["gel", "gel de série", "gels", "geler", "gèle", "gelée", "gelé", "gelées", "gelés"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no fr copy ships, so this is a seed. references/locale-briefs/fr.md '## Idioms and figurative language' settles the noun 'gel' and the verb 'geler sa série' for the streak-freeze row, and gives 'Hier a été couverte.' for the covered-day state line, which uses a different adjective ('couverte') the editor supplies per key against the packet's agreement_target, not this noun. forbidden is empty: no en key or Apple string reaches for a competing French word here, so there is nothing evidenced to ban yet."
+    },
+    "task": {
+      "preferred": "tâche",
+      "forms": ["tâche", "tâches", "la tâche", "les tâches", "tâche de concentration"],
+      "forbidden": ["activité"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/fr.md '## Header and label forms' settles 'Edit Focus Task' -> 'Modifier la tâche de concentration' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> 'Mes tâches' (focusTask.picker.myTasksHeader). forbidden holds 'activité', the word glossary/concepts.json 'task' marks not_this; the en source itself uses 'activity data' for the distinct Health/Screen-Time concept, which whole-word matching on 'activité' would wrongly flag if a batch ever needs that phrase, so an editor reading such a hit should recognise it names the Health concept, not this one."
+    },
+    "restricted_list": {
+      "preferred": "applications bloquées",
+      "forms": ["applications bloquées", "application bloquée", "liste des applications bloquées", "liste bloquée", "la liste bloquée"],
+      "forbidden": ["liste noire"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). references/locale-briefs/fr.md does not narrate this term in prose, so it is seeded here the way nl.json and fi.json seed the same concept without a brief passage. Chosen because the en source itself mixes 'Restricted Apps' (screenTime.restrictedAppsPicker.title 'Select Restricted Apps List', plan.createToDo.restrictedAppsSection 'Restricted Apps:') with 'blocked list' (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task'), so 'applications bloquées' fits both source spellings with one French phrase. forbidden marks the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this, the same concept nl.json bans as 'zwarte lijst'; it cannot catch a paraphrase such as 'liste d’applications restreintes', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "valeur du temps",
+      "forms": ["valeur du temps", "la valeur du temps", "valeur", "valeur de votre temps", "valeur estimée du temps"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/fr.md '## Money frame' ships 'Valeur du temps, pas des revenus.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'valeur' as the word governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family, so forms lists both the compact phrase and the bare sanctioned noun. forbidden is deliberately empty: the outcome words this concept must avoid (gagn, revenu, and the money-frame ban on 'guaranteed') are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; 'Valeur du temps, pas des revenus.' itself contains 'revenus', so banning it on this term would misfire on the approved sentence the moment fr copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Pas de l’argent gagné.",
+      "forms": ["Pas de l’argent gagné."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/fr.md '## Money frame' fixes this exact form and says it mirrors this glossary entry exactly. The four sibling source sentences keep their own single fr form, listed in the same table. forbidden is empty because no fr variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "prévision",
+      "forms": ["prévision", "la prévision", "prévisions"],
+      "forbidden": ["promesse", "garantie"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). references/locale-briefs/fr.md does not narrate this concept in prose, so it is seeded directly, rather than sent to Open decisions as ro.md does for its own forecast/estimate split: unlike ro's shipped 3/3 split, no fr copy exists, and French keeps the forecast and the month-end estimate apart without effort, 'prévision' for the forward-looking figure and 'estimation' for insights.savings.monthEnd and .estimated, so VoiceOver's back-to-back read of the two needs two distinct words the way the ro open decision requires an owner call to get. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'promesse' and 'garantie' would turn an estimate into a claim, and 'garantie' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garant', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "taux horaire",
+      "forms": ["taux horaire", "le taux horaire", "votre taux horaire", "taux"],
+      "forbidden": ["salaire horaire", "salaire"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/fr.md '## Header and label forms' ships 'Set Your Hourly Wage' -> 'Définissez votre taux horaire' (onboarding.hourlyWage.title), and '## Header and label forms' lists 'le taux horaire' among the masculine agreement examples. 'salaire' and 'salaire horaire' are forbidden because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. The badge family's payroll vocabulary ('la paie', 'le pointage', references/locale-briefs/fr.md '## Idioms and figurative language') is a metaphor built from different nouns and does not collide with 'salaire'."
+    },
+    "daily_focus_goal": {
+      "preferred": "objectif quotidien",
+      "forms": ["objectif quotidien", "l’objectif quotidien", "objectif", "votre objectif"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/fr.md '## Header and label forms' lists 'l’objectif' among the masculine agreement examples for a fragment with no visible noun. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'objectif'/'but'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced with a no-break space by default and glued only where Foundation's own narrow French form already glues it (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/fr.md '## Short forms and units' and '## Decided conflicts' settle 'min' from Foundation's fr_FR abbreviated and narrow duration output ('1h 45min', '25min'). forbidden is empty because the drift form is the single letter 'm', and a one-letter forbidden entry would fire on anything; a bare 'm' left over from en is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "Temps d’écran",
+      "forms": ["Temps d’écran", "temps d’écran"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's fr name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/fr.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because French spells the feature and the generic sense with the same phrase either way, capitalised as a proper noun or not, so a whole-word count here mixes both senses and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "séance de concentration",
+      "forms": ["séance de concentration", "séance", "session de concentration", "de concentration"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. Chosen over the anglicism-adjacent 'session de focus' the same way ro.json's catalog majority prefers 'concentrare' over 'focus' (72 keys against 30), and matches the Audience and register rule against carrying an English shape into French where a plain word exists. forbidden is empty because no en key or Apple citation forces a specific competing French noun to ban here; 'focus' itself is flagged by the editor per the Audience and register rules, not by term_audit, because the app's own widget family (Focus Streak, Focus Goal, Focus Time Value) may legitimately keep 'Focus' as a brand-adjacent English name rather than this everyday-French concept."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Annuler", "roles": {"discard": "Annuler les modifications", "quit": "Quitter", "dismiss": "Fermer"}, "note": "Apple's fr label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); discard spells the object out so it never reads as deleting the quote (common.editor.discard, quotes.user.discard), and quit is distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton)"},
+    "Done": {"preferred": "OK", "roles": {"completed_count_header": "Terminées", "ios_mirror_pill": "OK"}, "note": "Apple's fr label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done); the Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel)"},
+    "Continue": {"preferred": "Continuer", "roles": {"resume": "Reprendre"}, "note": "Apple's fr label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE)"},
+    "Save": {"preferred": "Enregistrer", "roles": {"save_money": "Économisez"}, "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role that deliberately breaks the infinitive convention (paywall.onboardingSubscription.annualPlanBadge 'Save 56%')"},
+    "Edit": {"preferred": "Modifier", "roles": {"ios_mirror_pill": "+"}, "note": "Apple's fr label for Edit (UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is not a word at all in French: SpringBoardHome.framework | SpringBoardHome.strings | EDIT ships the literal glyph '+' in fr.lproj (onboarding.widgets.howTo.editPillLabel)"},
+    "Delete": {"preferred": "Supprimer", "roles": {}, "note": "no glossary role; confirmation questions keep the infinitive as a question stem (quotes.user.deleteTitle) and compounds keep it too (plan.dailyPlan.deleteAll 'Supprimer tout')"},
+    "Skip": {"preferred": "Passer", "roles": {"skip_for_now": "Passer pour l’instant"}, "note": "no Apple mirror harvested for this exact control; app-owned seed. onboarding.name.skip is the only exact Skip key; keep skip_for_now distinct from 'Plus tard' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "Autoriser", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's fr label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW; also HealthUI.framework AUTHORIZATION_PROMPT_ALLOW and TCC.framework REQUEST_ACCESS_ALLOW, consistently 'Autoriser')"},
+    "Don't allow": {"preferred": "Refuser", "roles": {}, "note": "mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's fr label (UIKitCore.framework | Localizable.strings | Don't Allow; UserNotificationsServer.framework PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app COMMON_DONT_ALLOW; HealthUI.framework AUTHORIZATION_PROMPT_DONT_ALLOW). Apple's Photos add-only alert uses the longer 'Ne pas autoriser' instead (TCC.framework REQUEST_ACCESS_DENY), not currently mocked by the app"},
+    "Got it": {"preferred": "Compris", "roles": {}, "note": "no Apple mirror harvested for this exact control; app-owned seed, non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done)"},
+    "Retry": {"preferred": "Réessayer", "roles": {"in_sentence": "Réessayer"}, "note": "in_sentence is the same single word, covering the four 'Try Again' buttons and the label quoted inside component.errorView.message, because Apple's own fr value is identical for 'Retry' (_JetEngine_SwiftUI.framework ACTION_RETRY) and 'Try Again' (SpringBoard.app ACTIVATION_FAILED_RETRY_BUTTON)"},
+    "Settings": {"preferred": "Réglages", "roles": {"open_button": "Ouvrir Réglages", "go_to_button": "Accéder à Réglages", "setup_noun": "configuration"}, "note": "French keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton); setup_noun has no Apple mirror and is an app-owned seed"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["série", "jours de suite", "streak"],
+      "recommended": "série",
+      "recommended_reason": "It is the only plain French noun that fills a one-word widget header and an uppercase caption; no device evidence favours a noun for this sense, and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No fr copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: 'série' is the plain French noun, 6 characters, and takes a compound ('série de focus', 'gel de série'), with no Apple citation harvested for this exact sense this run; 'jours de suite' (or 'jours d’affilée') is the everyday French phrase for a run of consecutive days but is a phrase, not a noun, so it cannot fill a header or a compact compound; 'streak' is the English loan some French apps use and is ruled out by the no-English-needed rule. Meanwhile agents write 'série' in noun slots and 'jours de suite' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first fr batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "quote_marks",
+      "options": ["«   »", "« »"],
+      "recommended": "«   »",
+      "recommended_reason": "It is what Apple's own French ships inside guillemets around a quoted app name, and the app already inserts no-break spaces elsewhere in formatted numbers, so the mechanism to do it correctly already exists in the codebase.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: moneyfesting.details.quoteWrapper, notifications.contentExtension.quoteDecoration, moneyfesting.main.quotePlaceholder, theme.createTheme.sampleQuote, widgets.quotes.placeholderText, plus the UI labels quoted inside component.errorView.message, onboarding.dataMigration.errorMessage, theme.picker.errorMessage, onboarding.alert.screenTimeMessage, focusTask.picker.emptyMessage (11 en keys use a straight double quote). Rule: the locale's own delimiters, and a mock or quoted iOS label follows the device. Evidence per option: the no-break-space form matches Apple's own harvested mock-alert title verbatim (FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE, iOS 26.1 (23B86)); the plain-space form is simpler to type and edit but only an approximation of that value. Foundation reports the guillemet as both the primary and the alternate fr_FR delimiter, so unlike most locales there is no first/second-level mark to decide, only the spacing. Meanwhile the first batch uses a plain space as a placeholder and flags every key above so the no-break space can be inserted in one pass once this closes."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it, with process nouns", "drop it"],
+      "recommended": "keep it, with process nouns",
+      "recommended_reason": "It is what makes the badge family cohere in en, and process nouns such as pointage, embauche and ancienneté avoid the gender agreement a participle describing the reader would force, which fits French's heavier gender load better than a participle-based translation.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain. Evidence per option: keep it with process nouns draws on French workplace vocabulary that names the status or the event rather than the person ('Pointage', 'Embauche', 'Salariat', 'Ancienneté', 'De retour', 'Double quart', 'La paie', 'Le quart'), so no en key's second-person or participial form forces a reader-gender choice; drop it replaces the employment names with plain achievement names ('Première séance', 'Sept jours de suite', 'Cinquante journées pleines'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Meanwhile the first achievements batch drafts the conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "add_widget_gallery_label",
+      "options": ["add a second key", "keep one shared key"],
+      "recommended": "add a second key",
+      "recommended_reason": "iOS 26.1 ships two different French strings for the edit-menu row and the gallery button, confirmed independently by Apple's own support page as well as the simulator harvest, so a single shared key cannot be correct in both illustrated positions at once.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: onboarding.widgets.howTo.addWidgetLabel, drawn on the edit-menu row and the gallery button (HomeScreenJiggleIllustrationView.swift lines 167 and 274), and quoted in step2 and step5. Rule: illustrated labels and the steps that quote them mirror the device verbatim. Evidence per option: iOS 26.1 (23B86) runtime System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | EDIT_MENU_ADD_WIDGET gives 'Ajouter un widget' for the edit menu, while WIDGET_ADD_SHEET_ADD_WIDGET_THIS_STRING_NEEDS_TO_HAVE_A_LEADING_SPACE_FOR_LAYOUT_PURPOSES gives ' Ajouter le widget' for the gallery button, and Apple's own French support page independently confirms the gallery wording ('Touchez Ajouter le widget.', https://support.apple.com/fr-fr/118610, fetched 2026-09-16); keeping one shared key means one of the two illustrated positions will not match the device exactly, the way the ro brief flags for its own equivalent mismatch. Meanwhile the first widgets-how-to batch drafts both French forms against the existing single key and flags the split in the report; no key is added without the owner."
+    }
+  ]
+}

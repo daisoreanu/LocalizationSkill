@@ -1,0 +1,134 @@
+{
+  "locale": "es-ES",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "racha",
+      "forms": ["racha", "rachas", "la racha", "de racha"],
+      "forbidden": ["streak"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The everyday Spanish noun for a run of consecutive days (widgets.streak.*, share.card.streakEyebrow/streakSupporting, insights.summary.dayStreakTitle, achievements.streak.title, onboarding.welcome.slide.streak.eyebrow/headline, paywall.benefit.streak.title, the whole streakFreeze.* family). No es-ES copy ships, so this is a seed. Apple's own Spanish for a Move streak uses this exact noun: 'Consigue una racha de movimiento de {{goal_value}} días...' (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION_NAME), unlike nl's 'reeks' or ro's 'serie', which have no Apple evidence for this exact sense. forbidden holds the English loan the skill's no-English-needed rule rules out; no other Spanish word competes for this sense the way Dutch's 'dagen op rij' does, so this term needed no Open decision."
+    },
+    "streak_freeze": {
+      "preferred": "congelación de racha",
+      "forms": ["congelación de racha", "congelación", "congelar tu racha", "racha congelada"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "One earned freeze covers one missed focus day, never two (StreakFreeze.swift:6, cap = 1); governs streakFreeze.* (11 keys), widgets.streak.copy.frozen.small/.medium, widgets.streak.a11y.frozen, paywall.benefit.streak.detail. references/locale-briefs/es-ES.md '## Idioms and figurative language' settles the noun and notes Spanish's own live use of 'congelar' for pausing something abstract without ending it (a frozen bank account). Whether this literal image or the plainer 'protección de racha' ships is an owner call, recorded in 'open' as streak_freeze_image; forbidden is empty because no en key or Apple string reaches for a competing Spanish word here."
+    },
+    "task": {
+      "preferred": "tarea",
+      "forms": ["tarea", "tareas", "la tarea", "las tareas"],
+      "forbidden": ["actividad"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. forbidden holds 'actividad', the word glossary/concepts.json 'task' marks not_this; the app's own 'activity data' sense (Screen Time access, screenTimeReport.noDataExplanation) is a distinct Health/Screen Time concept and stays 'actividad' there without colliding, because whole-word matching on 'actividad' never fires on the compound 'datos de actividad'. references/locale-briefs/es-ES.md '## Header and label forms' lists 'la tarea' among the feminine-agreement examples."
+    },
+    "restricted_list": {
+      "preferred": "aplicaciones restringidas",
+      "forms": ["aplicaciones restringidas", "aplicación restringida", "lista de aplicaciones restringidas", "la lista restringida"],
+      "forbidden": ["lista negra"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). Chosen because Apple's own Spanish already uses 'restringido/a' plainly for this exact adjective sense, with no pejorative connotation the way a blacklist calque would carry ('Restricted Network' -> 'Red restringida', SpringBoard.app | SpringBoard.strings | NETWORK_RESTRICTED), and the en source itself mixes 'Restricted Apps' (screenTime.restrictedAppsPicker.title 'Select Restricted Apps List') with 'blocked' (screenTime.createRestrictedList.selectApps 'Select apps to block', .footerDescription 'will be blocked'), so 'aplicaciones restringidas' fits both source spellings with one Spanish phrase. forbidden marks the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this; it cannot catch a paraphrase such as 'lista de apps bloqueadas', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "valor del tiempo",
+      "forms": ["valor del tiempo", "el valor de tu tiempo", "valor", "valor estimado de tu tiempo"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/es-ES.md '## Money frame' ships 'Valor del tiempo, no ingresos.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'valor' as the word governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family. forbidden is deliberately empty: the outcome words this concept must avoid (gan-, ingres- as a bare unnegated claim) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; 'Valor del tiempo, no ingresos.' itself contains 'ingresos', so banning it on this term would misfire on the approved sentence the moment es-ES copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "No es dinero ganado.",
+      "forms": ["No es dinero ganado."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/es-ES.md '## Money frame' fixes this exact form and says it mirrors this entry exactly. The four sibling source sentences keep their own single es-ES form, listed in the same table. forbidden is empty because no es-ES variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "previsión",
+      "forms": ["previsión", "la previsión", "previsiones"],
+      "forbidden": ["promesa", "garantía"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept in prose, so it is seeded directly the way nl.json seeds the same concept without a brief passage: Spanish keeps the forward-looking figure ('previsión') distinct from the month-end estimate ('estimación', insights.savings.monthEnd and .estimated) without effort, so VoiceOver's back-to-back read of the two needs two distinct words with no owner call required, unlike ro's shipped 3/3 split that forced one. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'promesa' and 'garantía' would turn an estimate into a claim, and 'garantía' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garan', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "tarifa por hora",
+      "forms": ["tarifa por hora", "tarifa horaria", "tu tarifa", "tarifa"],
+      "forbidden": ["salario por hora", "sueldo por hora"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/es-ES.md '## Header and label forms' ships 'Set Your Hourly Wage' -> 'Establece tu tarifa por hora' (onboarding.hourlyWage.title). forbidden holds 'salario'/'sueldo' compounds because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. The badge family's employment vocabulary (references/locale-briefs/es-ES.md '## Idioms and figurative language') is built from different words ('nómina', 'indefinido') and does not collide with 'salario por hora'."
+    },
+    "daily_focus_goal": {
+      "preferred": "objetivo diario",
+      "forms": ["objetivo diario", "el objetivo", "tu objetivo", "objetivos"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/es-ES.md '## Header and label forms' lists 'el objetivo' among the masculine-agreement examples. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'objetivo'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/es-ES.md '## Short forms and units' settles 'min' from Foundation's es_ES abbreviated duration output ('1 h 45 min'), which never shortens to a bare 'm' even in the narrow register, unlike Dutch. forbidden is empty because the drift form would be a bare 'm', and a one-letter forbidden entry would fire on anything; a bare 'm' left over from en outside the share-card triple (where 'm' for minuto is correct Spanish anyway) is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "Tiempo de uso",
+      "forms": ["Tiempo de uso", "tiempo de uso"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's es-ES name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/es-ES.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because Spanish spells the feature and the generic sense with the same phrase: only the English literal is a safe ban, and the feature/generic distinction is a capitalisation and quoting convention the editor applies per key, not a lexical one this glossary can police."
+    },
+    "focus_session": {
+      "preferred": "sesión de enfoque",
+      "forms": ["sesión de enfoque", "sesión", "sesiones de enfoque"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/locale-briefs/es-ES.md '## Open decisions' focus_session_term records the real tension with Apple's own 'concentración' for the system Focus mode and recommends 'enfoque' to avoid the overlap; this term entry carries that recommendation as the seed pending the owner's call, mirroring the open item exactly. forbidden is empty because the brief records no rival Spanish word competing for this exact sense once the system-overlap concern is set aside."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Cancelar", "roles": {}, "note": "Apple's es-ES label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); no glossary role, common.cancel/quotes.user.cancel/share.alert.cancel all take the plain form"},
+    "Done": {"preferred": "Listo", "roles": {"ios_mirror_pill": "OK", "completed_count_header": "Completado"}, "note": "Apple's es-ES label for Done is genuinely 'OK' (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done; SpringBoardHome.framework | SpringBoardHome.strings | DONE), so the Home Screen edit-mode pill (onboarding.widgets.howTo.doneLabel) must equal 'OK' exactly; app-owned general use deviates to 'Listo' with a recorded reason (references/locale-briefs/es-ES.md Decided conflicts) because a bare 'OK' reads as a dialog confirmation, not a completion"},
+    "Continue": {"preferred": "Continuar", "roles": {}, "note": "Apple's es-ES label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE); no glossary role, achievements.action.continue/common.continue/insights.appUsage.allowAccess/paywall.button.subscribe all take the plain form"},
+    "Save": {"preferred": "Guardar", "roles": {"save_money": "Ahorra"}, "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role (paywall.onboardingSubscription.annualPlanBadge 'Save 56%' -> 'Ahorra un 56%')"},
+    "Edit": {"preferred": "Editar", "roles": {"ios_mirror_pill": "Editar"}, "note": "Apple's es-ES label for Edit (UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is the same word, so the pill and app copy agree (onboarding.widgets.howTo.editPillLabel; SpringBoardHome.framework | SpringBoardHome.strings | EDIT)"},
+    "Delete": {"preferred": "Eliminar", "roles": {}, "note": "Apple's es-ES label for Delete (UIKitCore.framework | Localizable.strings | Delete); no glossary role, confirmation questions conjugate (quotes.user.deleteTitle) and compounds keep the imperative the editor supplies (plan.dailyPlan.deleteAll)"},
+    "Skip": {"preferred": "Omitir", "roles": {"skip_for_now": "Omitir por ahora"}, "note": "Apple's own es-ES translation of the English word Skip (iOS 26.1 (23B86) runtime: System/Library/BridgeManifests/BridgeManifests.bundle | SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP); onboarding.name.skip is the only Skip key ('Skip for now')"},
+    "Allow": {"preferred": "Permitir", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's es-ES label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW; TCC.framework | Localizable.strings | REQUEST_ACCESS_ALLOW)"},
+    "Don't allow": {"preferred": "No permitir", "roles": {}, "note": "mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's es-ES label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "Entendido", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done); deviates from Apple's own literal mirror 'OK' (PodcastsFoundation.framework | Localizable.strings | NOW_PLAYING_SCROLLING_TIP_DONE_BUTTON_TITLE; Applications/MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS) because neither key is an iOS label this app quotes"},
+    "Retry": {"preferred": "Reintentar", "roles": {"in_sentence": "Reintentar"}, "note": "Apple's es-ES label for Retry/Try Again (System/Library/PrivateFrameworks/_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY; System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON); in_sentence is also the label quoted inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "Ajustes", "roles": {"open_button": "Abrir Ajustes", "go_to_button": "Ir a Ajustes"}, "note": "Spain keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton)"}
+  },
+  "open": [
+    {
+      "id": "focus_session_term",
+      "options": ["sesión de enfoque", "sesión de concentración"],
+      "recommended": "sesión de enfoque",
+      "recommended_reason": "The Screen Time permission flow sits right next to Apple's own Focus-mode language in the same onboarding sequence, and a reader who has just seen 'Modos de concentración' in Settings should not also read the app's unrelated session concept under the same word.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No es-ES copy exists, so both counts are 0. Keys: widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*. Evidence: Apple's own es-ES for the system Focus mode is 'Modos de concentración' (Settings row, iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Focus) and 'Modos' (Control Center, System/Library/ControlCenter/Bundles/FocusUIModule.bundle | Localizable.strings | MODULE_DEFAULT_TITLE); 'sesión de concentración' reuses that trained vocabulary but overlaps the bare label profile.home.focusSection 'Focus' with a distinct system feature the app never touches; 'sesión de enfoque' is fully plain with zero overlap but does not reuse the word iOS trained the reader on. Meanwhile agents write 'enfoque' in every session key and list every key that touched the concept; no terms row is finalised until this closes. Decide before the first es-ES batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it", "drop it"],
+      "recommended": "keep it",
+      "recommended_reason": "It is what makes the badge family cohere in en, and Spanish carries the whole employment vocabulary with ordinary invariable nouns rather than gendered role adjectives; the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain. Evidence per option: keep it draws on Spanish vocabulary that is mostly invariable nouns rather than gendered role adjectives ('Fichado', 'Contratación', 'Indefinido', 'Recontratación', 'Vuelta al turno', 'Nómina', 'El turno', 'La remontada'); drop it replaces the employment names with plain achievement names ('Primera sesión', 'Siete días seguidos', 'Cincuenta días completos'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Meanwhile the first achievements batch drafts the conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "streak_freeze_image",
+      "options": ["congelación de racha", "protección de racha"],
+      "recommended": "congelación de racha",
+      "recommended_reason": "Spanish already uses the freeze image for exactly this kind of abstract-pause sense elsewhere (a frozen bank account, frozen prices), so the metaphor is not a fresh coinage, and the fixed one-day cap travels in the sentence regardless of which noun is chosen.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: streakFreeze.* (11), widgets.streak.copy.frozen.small/.medium, widgets.streak.a11y.frozen, paywall.benefit.streak.detail. Evidence per option: 'congelación de racha' carries the same image as the source and reuses a live Spanish metaphor for pausing something abstract without ending it; 'protección de racha' states plainly what the mechanic does (one freeze covers one missed day, StreakFreeze.swift:6 cap = 1) with no image at all, removing any risk a reader takes 'congelar' as stopping the streak rather than covering one gap in it. Meanwhile the first streak batch writes 'congelación' throughout and flags every key it touches, so a flip to the plainer noun is one batch, not a per-string rewrite."
+    }
+  ]
+}

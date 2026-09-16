@@ -1,0 +1,127 @@
+{
+  "locale": "ja",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "凍結",
+      "forms": ["凍結", "凍結する", "凍結された", "凍結中"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no ja copy ships, so this is a seed. references/locale-briefs/ja.md '## Idioms and figurative language' settles the noun/verb '凍結' for the streak-freeze row ('獲得した凍結が、休んだ1日を守ります。' for 'One earned freeze covers a missed day.'), tied to whichever streak_term option wins for the noun it modifies. forbidden is empty: no en key or Apple string reaches for a competing Japanese word here, so there is nothing evidenced to ban yet."
+    },
+    "task": {
+      "preferred": "タスク",
+      "forms": ["タスク", "タスクの", "このタスク", "タスクを"],
+      "forbidden": ["活動"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. Unlike streak_term or focus_session, タスク is the one loanword this brief keeps rather than fights: references/locale-briefs/ja.md '## Audience and register' notes it is fully naturalised in Japanese productivity apps and reads as native, not translated. forbidden holds '活動' (activity), the word glossary/concepts.json 'task' marks not_this; the brief's own Screen Time citation for activity data (a distinct Health concept, アクティビティデータ) uses a different word entirely, so this ban never fires on it. A batch that needs the Health sense of 'activity' is naming a different concept and should read as such."
+    },
+    "restricted_list": {
+      "preferred": "制限中のアプリ",
+      "forms": ["制限中のアプリ", "制限リスト", "制限中のアプリのリスト"],
+      "forbidden": ["ブラックリスト"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). references/locale-briefs/ja.md does not narrate this term in prose, so it is seeded directly the way glossary/nl.json seeds the same concept without a brief passage. Chosen to describe the Screen Time state plainly rather than borrow the blacklist calque; forbidden marks 'ブラックリスト', the same calque glossary/concepts.json 'restricted_list' rules out as not_this. It cannot catch a paraphrase such as '制限されたアプリの一覧', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "時間の価値",
+      "forms": ["時間の価値", "価値", "時間の推定価値"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/ja.md '## Money frame' ships '時間の価値であり、収入ではありません。' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table distinguishes this meaningful '価値' from the raw-figure '値' Apple itself uses for a numeric field. forbidden is deliberately empty: the outcome words this concept must avoid (稼ぐ, 収入) are already policed by the Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; the ja compact disclaimer itself contains '収入' negated, so banning it on this term would misfire on the approved sentence the moment ja copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "稼いだお金ではありません。",
+      "forms": ["稼いだお金ではありません。"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/ja.md '## Money frame' fixes this exact form and says it mirrors this entry exactly. The four sibling source sentences keep their own single ja form, listed in the same table. forbidden is empty because no ja variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "予測",
+      "forms": ["予測", "予測値", "予測される"],
+      "forbidden": ["約束", "保証"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept at length, so it is seeded directly: Japanese keeps '予測' (the forward-looking figure) and '推定'/'見積もり' (the month-end estimate, insights.savings.{monthEnd,estimated}) apart without effort, so VoiceOver's back-to-back read of the two keeps two distinct words the way ro's open decision needs an owner call to get. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): '約束' (promise) and '保証' (guarantee) would turn an estimate into a claim, and '保証' already backs references/locale-briefs/ja.md '## Money frame' ban on 'guaranteed' (grep stem 保証, 0 en keys), so this row reinforces that ban on a different concept rather than duplicating it."
+    },
+    "hourly_rate": {
+      "preferred": "時間単価",
+      "forms": ["時間単価", "時間単価を設定", "時間単価は"],
+      "forbidden": ["時給", "給料"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/ja.md '## Header and label forms' ships 'Set Your Hourly Wage' -> '時間単価を設定'. '時給' is forbidden even though it is the single most natural everyday Japanese word for an hourly rate, precisely because it is also the exact word for what a part-time job pays per hour (バイトの時給) — a direct collision with the money frame's rule that the app never pays anyone. '時間単価' is a real Japanese business/pricing term (freelance and consulting rates) that carries no employment-wage connotation. '給料' (salary/wages) is forbidden for the same reason; the badge family's own softened work vocabulary (references/locale-briefs/ja.md '## Idioms and figurative language') is a different, metaphorical register and does not collide with either forbidden form."
+    },
+    "daily_focus_goal": {
+      "preferred": "目標",
+      "forms": ["目標", "今日の目標", "1日の目標"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/ja.md '## Header and label forms' gives the worked example 'Set Your Hourly Wage' pattern for plain-noun titles and keeps this concept as the bare noun '目標'. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need '目的'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning '目標' itself or overlapping with '目的' would fire on correct copy in either direction."
+    },
+    "minute_unit": {
+      "preferred": "分",
+      "forms": ["分", "%lld分"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/ja.md '## Short forms and units' settles '分' from Foundation's ja_JP duration output ('1時間45分'), glued with no space in every register, narrow through spelled-out accessibility alike — Japanese has no separate abbreviated/spelled-out unit vocabulary the way en has m/min/minutes, so one form covers every context. forbidden is empty because there is no competing Japanese word for this unit; a bare English 'm' surviving from en is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "スクリーンタイム",
+      "forms": ["スクリーンタイム"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's ja name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/ja.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name: Japanese spells the Apple feature in katakana and the generic hours-on-screen sense as a plain phrase, so the two never share a word the way nl's capitalisation-only split does, and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "集中",
+      "forms": ["集中", "集中セッション", "集中の時間"],
+      "forbidden": ["フォーカスセッション", "フォーカス"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/project-context.md '## Voice choices that need locale review' states the house rule directly for Japanese: 'Prefer a familiar local term to an automatic phonetic loanword.' '集中' (concentration/focus) is the plain Sino-Japanese word every Japanese productivity app already uses; 'フォーカス'/'フォーカスセッション' are the phonetic-loanword drift this rule exists to catch, so both are forbidden. references/locale-briefs/ja.md '## Platform terms' notes iOS's own system Focus mode is named '集中モード', so ja inherits the same en/'Focus' overlap en already accepts, not a new collision."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "キャンセル", "roles": {"discard": "変更を破棄", "quit": "中断", "dismiss": "閉じる"}, "note": "Apple's ja label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); discard spells the object out so it never reads as deleting the quote (common.editor.discard, quotes.user.discard), and quit is distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton = 停止)"},
+    "Done": {"preferred": "完了", "roles": {"completed_count_header": "完了", "ios_mirror_pill": "完了"}, "note": "Apple's ja label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done); the count-label role and the Home Screen mirror pill both equal Apple's own value, so all three coincide with no register seam (onboarding.welcome.preview.planner.done, onboarding.widgets.howTo.doneLabel; SpringBoardHome.framework | SpringBoardHome.strings | DONE)"},
+    "Continue": {"preferred": "続ける", "roles": {"resume": "再開"}, "note": "Apple's ja label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE)"},
+    "Save": {"preferred": "保存", "roles": {"save_money": "お得"}, "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role (paywall.onboardingSubscription.annualPlanBadge 'Save 56%')"},
+    "Edit": {"preferred": "編集", "roles": {"ios_mirror_pill": "編集"}, "note": "Apple's ja label for Edit (UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is the same word, so the pill and app copy agree (onboarding.widgets.howTo.editPillLabel; SpringBoardHome.framework | SpringBoardHome.strings | EDIT)"},
+    "Delete": {"preferred": "削除", "roles": {}, "note": "no glossary role; confirmation questions stay polite (quotes.user.deleteTitle) and compounds keep the bare noun (plan.dailyPlan.deleteAll 'すべて削除')"},
+    "Skip": {"preferred": "スキップ", "roles": {"skip_for_now": "今はスキップ"}, "note": "onboarding.name.skip is the only exact Skip key; keep skip_for_now distinct from '今はしない' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "許可", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's ja label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW)"},
+    "Don't allow": {"preferred": "許可しない", "roles": {}, "note": "mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's ja label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "了解しました", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done); no Apple mirror found for this exact acknowledgement sense"},
+    "Retry": {"preferred": "再試行", "roles": {"in_sentence": "再試行"}, "note": "Apple's ja label for both Retry and Try Again is the same word (_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY; SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON), so in_sentence needs no split; it also names the four 'Try Again' buttons and the label quoted inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "設定", "roles": {"open_button": "設定を開く", "go_to_button": "設定に移動", "setup_noun": "設定"}, "note": "Japanese keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton)"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["連続記録", "連続", "ストリーク"],
+      "recommended": "連続記録",
+      "recommended_reason": "It is the only plain Japanese noun that can stand alone in a one-word widget header the way English 'Streak' does; Apple's own construction ('連続') is a phrase-forming element, not a noun, and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No ja copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: '連続記録' is a real compound noun built from the same root Apple uses, and fills a header ('連続記録: 7日') the way 'streak' does; '連続' is Apple's own ja for a Move streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/MonthlyAchievements/localization/challenge/MoveStreak_SMALL_INCREASE | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_ALERT_DESCRIPTION/NSStringLocalizedFormatKey, '{{goal_value}}日連続の…') but is a phrase, not a noun, so it cannot fill a bare header; 'ストリーク' is the English loan some Japanese habit apps use and is ruled out by the no-English-needed rule. Meanwhile agents write '連続記録' in noun slots and '○日連続' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first ja batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it", "drop it"],
+      "recommended": "drop it",
+      "recommended_reason": "Japanese mobile-game and habit-app achievement badges conventionally state the criterion plainly (a day or hour count) rather than personify it as an employment milestone, so an occupational pun here would read as translated English rather than a native app convention; the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family; Japanese needs no gendered-form check either way since Japanese role nouns carry no gender. Evidence per option: keep it draws on softened Japanese work vocabulary with no employment-precarity weight ('皆勤' perfect attendance, '常勤' regular/full-time status, '勤続' years of service); drop it replaces the employment names with the literal, criterion-stating names references/locale-briefs/ja.md '## Idioms and figurative language' already proposes in full ('60分集中', '1年連続', '10日達成'), losing the wink but matching how Japanese gamification names badges elsewhere. Meanwhile the first achievements batch drafts the literal set, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "get_started_wording",
+      "options": ["始める", "開始", "使用開始"],
+      "recommended": "始める",
+      "recommended_reason": "The button greets a brand-new user on the app's own first-time welcome screen rather than mirroring a system control, and this warmer verb fits that moment better than the terser noun Apple reaches for on its own settings-style onboarding rows.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Key: onboarding.welcome.startButton 'Get started'. Apple itself renders the identical English string two different ways depending on context (iOS 26.1 (23B86) runtime: System/Library/Health/FeedItemPlugins/MenstrualCyclesAppPlugin.healthplugin | Localizable-Pregnancy.strings | MENSTRUAL_CYCLES_ONBOARDING_SETUP_BUTTON_TITLE -> '開始'; System/Library/Health/FeedItemPlugins/Heart.healthplugin | AFibBurden-Localizable.strings | ONBOARDING_START_CONTINUE_BUTTON_TITLE -> '使用開始'), so there is no single Apple answer to mirror. Meanwhile the first onboarding batch drafts '始める' and records the key so a flip touches only this one control."
+    }
+  ]
+}

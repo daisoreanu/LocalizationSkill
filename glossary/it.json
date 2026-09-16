@@ -1,0 +1,127 @@
+{
+  "locale": "it",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak_freeze": {
+      "preferred": "congelamento",
+      "forms": ["congelamento", "congelamenti", "congelare", "congela", "congelato", "congelata"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no it copy ships, so this is a seed. references/locale-briefs/it.md '## Idioms and figurative language' settles the noun 'congelamento' and the verb 'congelare la tua serie', and gives 'Ieri è stato congelato.' for the covered-day state line, whose participle agrees with 'ieri' (giorno, masc.), not with the reader, sidestepping the gender problem the rest of '## Address and gender' has to solve. forbidden is empty: no en key or Apple string reaches for a competing Italian word here."
+    },
+    "task": {
+      "preferred": "compito",
+      "forms": ["compito", "compiti", "il compito", "compito di focus", "compiti di focus"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/it.md '## Header and label forms' settles 'Edit Focus Task' -> 'Modifica compito di focus' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> 'I miei compiti' (focusTask.picker.myTasksHeader). Apple's own Italian for the generic English word 'Task' is 'Attività' (WorkflowKit.framework | Localizable.strings | Task (Parameter Label); ClassKit.framework | ClassKit.strings | CONTEXT_TYPE_TASK), the same word Apple uses for Screen Time's own 'activity data' sense ('i dati sulle attività', FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL). Because that Screen Time sentence uses 'attività' as a separate word, not a closed compound, forbidding 'attività' as a competitor for this concept would misfire on that legitimate sentence the moment term_audit's whole-word match sees it — exactly the collision the task's own rule against banning 'a correct everyday word' warns against. So 'compito' is chosen instead of 'attività' for the preferred form, and forbidden stays empty rather than listing a word that cannot be safely banned; a batch that needs 'activity data' is naming the Health/Screen Time concept, not this one, and reads as such through 'attività' alone."
+    },
+    "restricted_list": {
+      "preferred": "app bloccate",
+      "forms": ["app bloccate", "app bloccata", "elenco delle app bloccate", "lista delle app bloccate"],
+      "forbidden": ["lista nera", "liste nere"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). The brief does not narrate this term in prose, so it is seeded directly, the way glossary/nl.json seeds the same concept without a brief passage. The en source itself mixes 'Restricted Apps' (screenTime.restrictedAppsPicker.title 'Select Restricted Apps List') with 'blocked list' (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task'), so 'app bloccate' fits both source spellings with one Italian phrase. forbidden holds the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this; it cannot catch a paraphrase such as 'elenco delle app con restrizioni', which is drift for the editor to report."
+    },
+    "time_value": {
+      "preferred": "valore del tempo",
+      "forms": ["valore del tempo", "il valore del tempo", "valore", "valore stimato del tuo tempo"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/it.md '## Money frame' ships 'Valore del tempo, non guadagno.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'valore' as the word governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family — Apple's own label for the same content-property sense is 'Valore' (ActionKit.framework | Localizable.strings | Value (Content Property Name)). forbidden is deliberately empty: the outcome words this concept must avoid (guadagn-, reddito) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; 'Valore del tempo, non guadagno.' itself contains 'guadagno', so banning it on this term would misfire on the approved sentence the moment it copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Non è denaro guadagnato.",
+      "forms": ["Non è denaro guadagnato."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/it.md '## Money frame' fixes this exact form and says it 'mirrors glossary/it.json time_value_disclaimer exactly'; 'denaro' (masculine, invariant) is used across all five fixed sentences precisely so the participle after it ('guadagnato', 'perso') never has to agree with the reader. The four sibling source sentences keep their own single it form, listed in the same table. forbidden is empty because no it variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "previsione",
+      "forms": ["previsione", "la previsione", "previsioni"],
+      "forbidden": ["promessa", "garanzia"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). Apple's own Italian for a weather forecast is 'previsione'/'previsioni' (com.apple.onboarding.weather.bundle | Weather.strings | SECOND_BULLET, BUTTON_CAPTION), the same forward-looking sense this concept needs, kept apart from 'stimato' (Sanctioned table), which covers the month-end estimate itself (insights.savings.monthEnd, .estimated) so VoiceOver's back-to-back read of the two keeps two distinct words. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'promessa' and 'garanzia' would turn an estimate into a claim, and 'garanzia' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garant', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "tariffa oraria",
+      "forms": ["tariffa oraria", "la tariffa oraria", "la tua tariffa oraria", "tariffe orarie"],
+      "forbidden": ["stipendio", "salario"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/it.md '## Header and label forms' ships 'Set Your Hourly Wage' -> 'Imposta la tua tariffa oraria' (onboarding.hourlyWage.title). 'stipendio' and 'salario' are forbidden because the en source itself says wage in three places this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), exactly the word a translator reaches for and exactly wrong, because the app pays nobody; both words are unambiguous salary nouns with no other legitimate use in this app, unlike 'paga', which also spells the user's own subscription payment ('Nessun pagamento richiesto ora.', paywall.noPaymentDue) and is left off this list for that reason. The badge family's payroll vocabulary ('libro paga', 'turno', references/locale-briefs/it.md '## Idioms and figurative language') is built from different nouns and does not collide."
+    },
+    "daily_focus_goal": {
+      "preferred": "obiettivo giornaliero",
+      "forms": ["obiettivo giornaliero", "l'obiettivo giornaliero", "obiettivo", "il tuo obiettivo"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'obiettivo'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minutes unit appended to durations, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/it.md '## Short forms and units' settles 'min' from Foundation's it_IT abbreviated duration output ('1 h 45 min'). forbidden is empty because no drift form has surfaced yet; a bare letter left over from en is an editor finding recorded in the brief's Short forms table, not a forbidden glossary entry."
+    },
+    "screen_time": {
+      "preferred": "Tempo di utilizzo",
+      "forms": ["Tempo di utilizzo", "tempo di utilizzo"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's it name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/it.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because Italian spells the feature name and the generic hours-on-screen sense with the same words in different case conventions: the feature is capitalised as a proper name and quoted the way Apple quotes it ('accedere a \"Tempo di utilizzo\"'), while the generic sense stays lower case, so a bare count here would mix both and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "sessione di focus",
+      "forms": ["sessione di focus", "la sessione di focus", "sessioni di focus"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. forbidden is empty because the brief records no rival Italian word for this sense."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Annulla", "roles": {"discard": "Annulla modifiche", "quit": "Esci dalla sessione", "dismiss": "Chiudi"}, "note": "Apple's it label for Cancel (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Cancel); discard spells the object out ('modifiche') so it never reads as deleting the quote (common.editor.discard, quotes.user.discard) — Apple's own 'Discard Changes' splits between 'Annulla modifiche' (System/Library/PrivateFrameworks/WorkflowUI.framework | Localizable.strings | Discard Changes; System/Library/PrivateFrameworks/NanoTimeKit.framework | NTKCustomization.strings | PHOTOS_CROP_CANCEL) and 'Elimina modifiche' (System/Library/NanoTimeKit/FaceBundles/NTKParmesanFaceBundleCompanion.bundle | LocalizableCompanion.strings | MANUAL_LAYOUT_CANCEL_ALERT_TITLE); 'Annulla modifiche' wins to stay in the Cancel family, not the Delete one. quit is a seed distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton); no Apple string names 'Quit' in it at this snapshot."},
+    "Done": {"preferred": "Fine", "roles": {"completed_count_header": "Completate", "ios_mirror_pill": "Fine"}, "note": "Apple's it label for Done (System/Library/PrivateFrameworks/UIKitCore.framework and System/Library/Frameworks/SwiftUI.framework | Localizable.strings | Done); 'Fine' is a noun, not a gendered adjective, which is why Apple's own choice sidesteps the Address-and-gender problem for this control. completed_count_header is a seed (plan.dailyPlan.doneHeader 'DONE' -> 'COMPLETATE', agreeing with the implied plural, not a control). The Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel)."},
+    "Continue": {"preferred": "Continua", "roles": {"resume": "Riprendi"}, "note": "Apple's it label for Continue (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Continue; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE); resume from System/Library/ControlCenter/Bundles/TimerModule.bundle | TimerModule.strings | RESUME"},
+    "Save": {"preferred": "Salva", "roles": {"save_money": "Risparmia"}, "note": "persist-data sense only (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role (paywall.onboardingSubscription.annualPlanBadge 'Save 56%' -> 'Risparmia il 56%')"},
+    "Edit": {"preferred": "Modifica", "roles": {"ios_mirror_pill": "Modifica"}, "note": "Apple's it label for Edit (System/Library/PrivateFrameworks/UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is the same word (onboarding.widgets.howTo.editPillLabel; System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | EDIT)"},
+    "Delete": {"preferred": "Elimina", "roles": {}, "note": "no glossary role; confirmations avoid the gendered 'Sei sicuro/a' the way Apple's own alerts do — 'Confermi di voler eliminare questo fattore?' (System/Library/Health/FeedItemPlugins/MenstrualCyclesAppPlugin.healthplugin | Localizable.strings | DELETE_CYCLE_FACTOR_ALERT_MESSAGE) is the model for quotes.user.deleteTitle and focusTask.alert.deleteTask.message; compounds keep the imperative (plan.dailyPlan.deleteAll 'Elimina tutto')"},
+    "Skip": {"preferred": "Salta", "roles": {"skip_for_now": "Salta per ora"}, "note": "onboarding.name.skip is the only exact Skip key (System/Library/BridgeManifests/BridgeManifests.bundle | SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP -> 'Salta'); keep skip_for_now distinct from 'Non ora' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "Consenti", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's it label (System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW; System/Library/PrivateFrameworks/HealthUI.framework | Localizable.strings | AUTHORIZATION_PROMPT_ALLOW)"},
+    "Don't allow": {"preferred": "Non consentire", "roles": {}, "note": "the negated tu imperative takes the infinitive, not 'Non consenti' (Control forms convention); mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's it label (System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "OK", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done); Apple's own 'Got it' dismiss is also non-imperative and terse (Applications/MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS -> 'OK')"},
+    "Retry": {"preferred": "Riprova", "roles": {"in_sentence": "Riprova"}, "note": "Apple's it label for both Retry and Try Again is the same word (System/Library/PrivateFrameworks/_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY; System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON), so in_sentence coincides with the control's own preferred form, including inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "Impostazioni", "roles": {"open_button": "Apri Impostazioni", "go_to_button": "Vai in Impostazioni", "setup_noun": "impostare"}, "note": "Apple's it label for Settings (Applications/Preferences.app | InfoPlist.strings | CFBundleDisplayName); Italian keeps Apple's two distinct Settings buttons apart: open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings; System/Library/CoreServices/SpringBoard.app | SpringBoard.strings | FACE_ID_DISABLED_GO_TO_SETTINGS is 'Apri Impostazioni'), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton; System/Library/ExtensionKit/Extensions/ScreenTimeAppIntentsExtension.appex | Localizable.strings | Go to Settings is 'Vai in Impostazioni')"}
+  },
+  "open": [
+    {
+      "id": "streak_term",
+      "options": ["serie", "giorni consecutivi", "streak"],
+      "recommended": "serie",
+      "recommended_reason": "It is the only plain Italian noun that fills a one-word widget header and an uppercase caption; Apple's own Italian only offers the phrase 'giorni consecutivi'/'di fila' for this sense, never a noun, and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No it copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: 'serie' is the plain Italian noun, 5 characters, and takes a compound reading ('serie di giorni'), with no Apple evidence for this exact sense; 'giorni consecutivi' is close to Apple's own Italian for a Move streak (iOS 26.1 (23B86) runtime: System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/PerfectWeekStand/localization | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_ONE_AWAY_DESC/NSStringLocalizedFormatKey — 'sarà il tuo settimo giorno consecutivo') but is a phrase, not a noun, so it cannot fill a header or a compact compound; 'streak' is the English loan several Italian apps use and is ruled out by the no-English-needed rule. Meanwhile agents write 'serie' in noun slots and 'giorni consecutivi'/'di fila' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first it batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it", "drop it"],
+      "recommended": "keep it",
+      "recommended_reason": "Italian carries the whole workplace vocabulary with ordinary nouns and object-agreeing participles that sidestep the reader-gender problem ('Timbrato il cartellino', 'Assunzione', 'Turno doppio'), and the money frame is already protected by the fixed disclaimers and the banned-word table, not by the badge names.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain (references/project-context.md '## Content policy'). Evidence per option: keep it drafts every name so the participle agrees with an object, never the reader — 'Timbrato il cartellino' (Clocked in, cartellino masc.), 'Assunzione' (Hired, a hiring, noun), 'In busta paga' (Salaried), 'Nuova assunzione' (Rehired), 'Di nuovo in turno' (Back on shift), 'Turno doppio'/'Turno lungo'/'Turno completo' (Double/Long/Full shift), 'A tempo indeterminato' (Permanent), 'Anzianità di servizio' (Tenure), 'Il libro paga' (Payroll), 'Il turno' (The Shift) — none of these force a masculine/feminine choice about the reader the way a bare participle ('Assunto/a') would; drop it replaces the employment names with plain achievement names ('Prima sessione', 'Sette giorni di fila', 'Cinquanta giornate piene'), losing the wink but removing any reading of the app as an employer next to a money frame that already says five times that nothing is earned. Meanwhile: the first achievements batch drafts the conceit with the gender-neutral forms above, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    },
+    {
+      "id": "reader_gender_default",
+      "options": ["masculine default", "gender-paired by stored profile"],
+      "recommended": "masculine default",
+      "recommended_reason": "Apple's own Italian defaults the same kind of reader-facing adjective to masculine with no gender signal at all ('Ready' -> 'Pronto'), and the stored profile gender is not a copy input without a product decision (references/project-context.md), so pairing every predicate on a field the copy layer is not authorised to read is not available as a mechanical alternative today.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Affects the reader-predicate adjectives and participles English never inflects: 44 en units by the en-inventory count (you_are 5, are_you 5, you_showed_up 1, welcome_back 1, ready 7, focused 19, done 15), for example onboarding.hourlyWage.disclaimer-adjacent 'ready'/'focused' state lines, shield.reflection.begin.title 'ready', and any future line describing the reader as done, focused or ready. Rule: prefer a rephrase that avoids the predicate first (Address and gender '## Address and gender' strategy 1-2: 'Confermi di voler eliminare...?' instead of 'Sei sicuro/a...?', System/Library/Health/FeedItemPlugins/MenstrualCyclesAppPlugin.healthplugin | Localizable.strings | DELETE_CYCLE_FACTOR_ALERT_MESSAGE; an invariant noun such as 'Fine' for Done instead of an adjective); only where no rephrase survives does this default apply. Evidence per option: masculine default matches Apple's own unmarked choice for 'Ready' -> 'Pronto' (System/Library/AccessibilityBundles/SiriUICore.axbundle | SiriUICoreAccessibility.strings | progress.indicator.value.idle; System/Library/PrivateFrameworks/TextToSpeechVoiceBankingSupport.framework | VoiceBankingSupport.strings | VB_READY) in contexts with no known reader gender; gender-paired by stored profile would need a copy-layer read of Gender.swift and a rule for 'Other'/'Prefer not to say', which is a product decision this brief cannot make on its own. Meanwhile: draft masculine on every predicate that survives the rephrase pass, and list each touched key so a later profile-based pass has a fixed inventory to work from."
+    }
+  ]
+}

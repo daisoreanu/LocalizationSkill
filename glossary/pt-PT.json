@@ -1,0 +1,143 @@
+{
+  "locale": "pt-PT",
+  "snapshot": "2026-09-16",
+  "catalog_commit": "c8a49dd",
+  "terms": {
+    "streak": {
+      "preferred": "sequência",
+      "forms": ["sequência", "sequências", "a sequência", "sequência de foco"],
+      "forbidden": ["streak"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "No pt-PT copy ships, so this is a seed backed by agent research only, no native review. references/locale-briefs/pt-PT.md Open decisions 'streak_term' weighs 'sequência' (plain noun, fits a widget header and an uppercase caption) against Apple's own phrase 'dias consecutivos' (FitnessUIAssets.bundle/ActivityAchievements/PerfectWeekStand/localization | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_ONE_AWAY_DESC/NSStringLocalizedFormatKey, 'será o sétimo dia consecutivo') and the ruled-out English loan 'streak'. Governs widgets.streak.*, share.card.streak*, streakFreeze.*, paywall.benefit.streak.*, onboarding.welcome.slide.streak.*. forbidden holds only the English loan; the recommended split (sequência in noun slots, dias consecutivos in running text) means both forms are legitimate pt-PT output, so forbidding the phrase would misfire on approved copy."
+    },
+    "streak_freeze": {
+      "preferred": "congelação",
+      "forms": ["congelação", "congelações", "a congelação", "congelar a sequência", "congelação da sequência"],
+      "forbidden": ["congelamento"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "12 en keys (streakFreeze.*, paywall.benefit.streak.detail, widgets.streak.copy.frozen.*, widgets.streak.a11y.frozen); no pt-PT copy ships, so this is a seed. references/locale-briefs/pt-PT.md '## Idioms and figurative language' settles the noun 'congelação' and the verb 'congelar a sequência', and gives 'Ontem foi protegido.' for the covered-day state line, which uses a different adjective ('protegido') the editor supplies per key and agrees with the implied masculine noun 'o dia', not this term. forbidden bans 'congelamento', the Brazilian Portuguese form for the same freezing sense (parallel to the Fotografias/Fotos split the app's own instructions single out): using it in pt-PT copy would read as translated from the wrong variant, the same risk the brief flags for Photos and Home Screen naming."
+    },
+    "task": {
+      "preferred": "tarefa",
+      "forms": ["tarefa", "tarefas", "a tarefa", "tarefa de foco", "tarefas de foco"],
+      "forbidden": ["atividade"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs focusTask.*, plan.*, widgets.tasks.*, insights.mood.completedTasks. references/locale-briefs/pt-PT.md '## Header and label forms' ships 'Edit Focus Task' -> 'Editar tarefa de foco' (focusTask.createTask.screenTitleEdit) and 'My Tasks' -> 'As minhas tarefas' (focusTask.picker.myTasksHeader); '## Header and label forms' agreement-rule discussion lists 'a tarefa' among the feminine-noun examples. forbidden holds 'atividade', the word glossary/concepts.json 'task' marks not_this; a batch that needs the Health sense of 'activity data' ('dados de atividade', seen in the Screen Time access alert harvest) is naming a different concept and should read as such, not as this term."
+    },
+    "restricted_list": {
+      "preferred": "lista de aplicações bloqueadas",
+      "forms": ["lista de aplicações bloqueadas", "a lista de aplicações bloqueadas", "listas de aplicações bloqueadas", "lista bloqueada"],
+      "forbidden": ["lista negra"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The named set of apps and categories blocked during a session (screenTime.createRestrictedList.*, screenTime.restrictedAppsPicker.*, plan.createToDo.removeRestrictedApps, plan.createToDo.restrictedAppsSection, focusTask.createTask.restrictedAppsSectionTitle). The brief does not narrate this term in prose beyond Address and gender's agreement examples, so it is seeded here directly, the way nl.json and fi.json seed the same concept without a dedicated passage. The en source itself mixes 'Restricted Apps' with 'blocked list' (plan.createToDo.removeRestrictedApps 'Remove blocked list from this task'), so 'lista de aplicações bloqueadas' fits both source spellings with one Portuguese phrase, matching Apple's own 'Bloqueado'/'Bloqueada' vocabulary for the Blocked state (references/locale-briefs/pt-PT.md '## Header and label forms'). forbidden marks the blacklist calque glossary/concepts.json 'restricted_list' rules out as not_this; it does not ban Apple's own generic 'Restrições de conteúdo e privacidade' (content and privacy restrictions), a different, broader Screen Time concept this term must not collide with."
+    },
+    "time_value": {
+      "preferred": "valor do tempo",
+      "forms": ["valor do tempo", "o valor do tempo", "valor", "valor estimado do tempo"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Focused time priced at the user's own rate, shown as money and never received (insights.savings.*, achievements.category.wages.*, widgets.cash.*, widgets.monthlyTimeValue.*, widgets.focusRing.a11y.money, onboarding.with*Moneyfesting.*). references/locale-briefs/pt-PT.md '## Money frame' ships 'Valor do tempo, não rendimentos.' for insights.savings.compactDisclaimer (en 'Time value, not earnings.'), and the Sanctioned table gives 'valor' as the word governing achievements.category.wages.name 'Time value' and the widgets.cash.*Header family, so forms lists both the compound and the bare sanctioned noun. forbidden is deliberately empty: the outcome words this concept must avoid (ganh-, rendiment-) are already policed by the brief's Money frame banned-word table, whose own rule is that a negated disclaimer in a fixed form is the frame, never a finding; the disclaimer form itself contains 'rendimentos', so banning it on this term would misfire on the approved sentence the moment pt-PT copy ships."
+    },
+    "time_value_disclaimer": {
+      "preferred": "Não é dinheiro ganho.",
+      "forms": ["Não é dinheiro ganho."],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The fixed sentence after a time-value figure, on 11 en keys (achievements.badge.{clockedIn,wageDay,wageHour,wageMonth,wageQuarter,wageWeek,wageYear}.earned, achievements.category.wages.description, widgets.cash.description, widgets.focusRing.a11y.money, widgets.monthlyTimeValue.description). references/locale-briefs/pt-PT.md '## Money frame' fixes this exact form and says it 'mirrors glossary/pt-PT.json time_value_disclaimer exactly'. The four sibling source sentences keep their own single pt-PT form, listed in the same table. forbidden is empty because no pt-PT variant has shipped yet; the first batch's rejected variants, if any, become forbidden rows. A paraphrase is what this list cannot catch: term_audit counts the approved sentence and says nothing about a line that reworded it, so the adjudicator compares every disclaimer key against this string."
+    },
+    "forecast": {
+      "preferred": "previsão",
+      "forms": ["previsão", "a previsão", "previsões"],
+      "forbidden": ["promessa", "garantia"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The month-end projection of time value (insights.savings.forecast, insights.savings.*EstimateExplanation, insights.appUsage.permissionDescription, widgets.monthlyTimeValue.*). The brief does not narrate this concept in prose, so it is seeded directly, as nl.json and fi.json seed the same concept, rather than sent to Open decisions the way ro.md's shipped 3/3 split required an owner call: no pt-PT copy exists, and Portuguese keeps the forecast and the month-end estimate apart without effort ('previsão' for the forward-looking figure, 'estimativa' for insights.savings.monthEnd and .estimated), so a VoiceOver read of the two back to back still needs two distinct words but not an owner decision to get them. forbidden mirrors glossary/concepts.json 'forecast' not_this (prediction, promise, guaranteed amount): 'promessa' and 'garantia' would turn an estimate into a claim, and 'garantia' already backs the brief's own Money frame ban on 'guaranteed' (grep stem 'garant', 0 en keys), so this row reinforces that ban rather than duplicating it on a different word."
+    },
+    "hourly_rate": {
+      "preferred": "tarifa horária",
+      "forms": ["tarifa horária", "a tarifa horária", "tua tarifa horária", "sua tarifa horária", "tarifa"],
+      "forbidden": ["salário à hora", "ordenado horário", "vencimento horário"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The rate the user sets to price their own time (onboarding.hourlyWage.*, profile.hourlyWage.*, currency.settings.*, screenTimeReport.missingWage, achievements.category.wages.description). references/locale-briefs/pt-PT.md '## Header and label forms' ships 'Set Your Hourly Wage' -> 'Define a tua tarifa horária' (onboarding.hourlyWage.title). 'salário à hora', 'ordenado horário' and 'vencimento horário' are forbidden because the en source itself says wage in the very keys this term governs (onboarding.hourlyWage.title 'Set Your Hourly Wage', .footer 'hourly rate', screenTimeReport.missingWage 'your hourly wage'), which is exactly the word a translator reaches for and exactly wrong, because the app pays nobody. The badge family's employment vocabulary ('em efetivo', 'turno', references/locale-briefs/pt-PT.md '## Idioms and figurative language') is a metaphor built from different words and does not collide with the forbidden forms here."
+    },
+    "daily_focus_goal": {
+      "preferred": "objetivo diário",
+      "forms": ["objetivo diário", "o objetivo diário", "objetivo", "o objetivo"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The daily minutes target drawn as a ring, met or not met (onboarding.dailyFocusGoal.*, profile.focusTarget.*, widgets.focusRing.*). references/locale-briefs/pt-PT.md '## Header and label forms' lists 'o objetivo' among the masculine-noun agreement examples. forbidden is empty on purpose: onboarding.personalGoal.* and the quote surfaces legitimately need 'objetivo'-family words for an aspiration, a different sense the concept's own not_this ('aim, aspiration, life goal') keeps separate, so banning the bare noun would fire on correct copy."
+    },
+    "minute_unit": {
+      "preferred": "min",
+      "forms": ["min", "%lld min", "%lldmin"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "The compact minute unit, spaced by default and glued only on a render verdict (common.durationMinuteUnit, insights.sessions.durationMinuteUnit, widgets.startFocus.minuteUnit, share.duration.minutesOnly, screenTimeReport.durationMinutesOnly, widgets.streak.focusedInStreak, widgets.streak.focusedMinutesSummary, moneyfesting.details.timeElapsedFormat, component.templateTaskCard.duration). references/locale-briefs/pt-PT.md '## Short forms and units' settles 'min' from Foundation's pt_PT abbreviated duration output ('1 h e 45 min'). forms carries no bare-letter drift entry because, unlike Dutch's clash between a bare 'm' and metres, Portuguese's own share-card triple reuses 'm' for minutes without ambiguity (dia/hora/minuto happen to share their initials with English), so there is no rival short form evidenced yet to forbid."
+    },
+    "screen_time": {
+      "preferred": "Tempo de ecrã",
+      "forms": ["Tempo de ecrã", "tempo de ecrã"],
+      "forbidden": ["Screen Time"],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Apple's pt-PT name for the feature (iOS 26.1 (23B86) runtime: Applications/Preferences.app | Localizable.strings | Screen Time; System/Library/PrivateFrameworks/ScreenTimeSettingsUI.framework | Localizable.strings | ScreenTimeControllerTitle), on the 18 en keys that name it. references/locale-briefs/pt-PT.md '## Platform terms' states that this glossary polices only screen_time, whose forbidden form is the English name, because the feature ('Tempo de ecrã', capitalised as a title) and the generic hours-on-screen sense ('tempo de ecrã', lower case mid-sentence) share the same words in Portuguese, so a whole-word count on the phrase mixes both senses and only the English literal is a safe ban."
+    },
+    "focus_session": {
+      "preferred": "sessão de foco",
+      "forms": ["sessão de foco", "sessões de foco", "a sessão de foco"],
+      "forbidden": [],
+      "decided_by": "skill-seed-2026-09-16",
+      "note": "Governs widgets.startFocus.*, onboarding.welcome.preview.*, profile.sessionDetails.*, insights.focus.title, onboarding.dailyFocusGoal.*; the timer screen itself stays 'Moneyfesting' per glossary/concepts.json 'focus_session', not this noun. references/locale-briefs/pt-PT.md '## Platform terms' notes that Apple's own pt-PT name for the system Focus mode is 'Concentração' (Applications/Preferences.app | Localizable.strings | Focus), a different word from 'foco', so choosing 'sessão de foco' here avoids the same-word collision the ro brief had to resolve between its own 'sesiune de focus' and the system 'Concentrare'. forbidden is empty because no rival Portuguese word for this sense is evidenced; unlike ro's open item, this concept needed no owner call precisely because the app's word and the system word never coincide."
+    }
+  },
+  "controls": {
+    "Cancel": {"preferred": "Cancelar", "roles": {"discard": "Ignorar alterações", "quit": "Terminar", "dismiss": "Fechar"}, "note": "Apple's pt-PT label for Cancel (iOS 26.1 (23B86) runtime: UIKitCore.framework | Localizable.strings | Cancel); discard mirrors Apple's own 'Discard Changes' value (System/Library/PrivateFrameworks/NanoTimeKit.framework | NTKCustomization.strings | PHOTOS_CROP_CANCEL 'Ignorar alterações') so the object stays spelled out and never reads as deleting the quote (common.editor.discard, quotes.user.discard); quit is app-owned, distinct from the sheet's own Stop button (moneyfesting.details.stopConfirmationQuitButton vs .stopButton), no Apple pt-PT value found on disk for the bare word 'Quit'"},
+    "Done": {"preferred": "OK", "roles": {"completed_count_header": "Concluídas", "ios_mirror_pill": "OK"}, "note": "Apple's pt-PT label for Done (UIKitCore.framework and SwiftUI.framework | Localizable.strings | Done; System/Library/PrivateFrameworks/SpringBoardHome.framework | SpringBoardHome.strings | DONE); the Home Screen mirror pill equals Apple's own value, so the role and the preferred form coincide (onboarding.widgets.howTo.doneLabel)"},
+    "Continue": {"preferred": "Continuar", "roles": {"resume": "Retomar"}, "note": "Apple's pt-PT label for Continue (UIKitCore.framework | Localizable.strings | Continue; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_CONTINUE); resume mirrors Apple's Timer module (System/Library/ControlCenter/Bundles/TimerModule.bundle | TimerModule.strings | RESUME 'Retomar')"},
+    "Save": {"preferred": "Guardar", "roles": {"save_money": "Poupe"}, "note": "persist-data sense only (UIKitCore.framework | Localizable.strings | Save); the discount sense on the paywall badge is a separate role using Apple's own formal command form for a savings amount (System/Library/PrivateFrameworks/Preferences.framework | Localizable.strings | ST_SIZE_INFO_FMT 'Poupe %@ – %@')"},
+    "Edit": {"preferred": "Editar", "roles": {"ios_mirror_pill": "Editar"}, "note": "Apple's pt-PT label for Edit (UIKitCore.framework | Localizable.strings | Edit); the Home Screen mirror pill is the same word, so the pill and app copy agree (onboarding.widgets.howTo.editPillLabel; SpringBoardHome.framework | SpringBoardHome.strings | EDIT)"},
+    "Delete": {"preferred": "Apagar", "roles": {}, "note": "Apple's pt-PT label for Delete (UIKitCore.framework | Localizable.strings | Delete); no glossary role; compounds keep the infinitive (plan.dailyPlan.deleteAll 'Apagar tudo'); 'Remover' and 'Eliminar' are near-synonyms Apple itself uses for related but distinct senses and must not be swapped in for this control's own word"},
+    "Skip": {"preferred": "Ignorar", "roles": {"skip_for_now": "Ignorar por agora"}, "note": "Apple's pt-PT label for Skip (System/Library/BridgeManifests/BridgeManifests.bundle | SettingsSearchManifest-com.apple.watchgestures.bridgesettings.strings | SKIP); onboarding.name.skip is the only exact Skip key; keep skip_for_now distinct from 'Agora não' on onboarding.appReview.notNow"},
+    "Allow": {"preferred": "Permitir", "roles": {}, "note": "mock alert only (onboarding.notificationPermission.alertAllow); Apple's pt-PT label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_ALLOW)"},
+    "Don't allow": {"preferred": "Não permitir", "roles": {}, "note": "mock alerts only (onboarding.notificationPermission.alertDoNotAllow, onboarding.screenTimePermission.alertDoNotAllow); Apple's pt-PT label (UserNotificationsServer.framework | Localizable.strings | PERMISSION_ALERT_DENY; FamilyControlsAuthenticationUI.app | Localizable.strings | COMMON_DONT_ALLOW)"},
+    "Got it": {"preferred": "OK", "roles": {}, "note": "non-imperative by design, as the source is (onboarding.widgets.howTo.continueButton, streakFreeze.info.done); Apple's own value for 'Got it' (Applications/MusicRecognition.app | Localizable.strings | SOUNDS_LIKE_ALERT_DISMISS 'OK')"},
+    "Retry": {"preferred": "Voltar a tentar", "roles": {"in_sentence": "Voltar a tentar"}, "note": "Apple's pt-PT label for Retry and Try Again alike (_JetEngine_SwiftUI.framework | Localizable.strings | ACTION_RETRY; SpringBoard.app | SpringBoard.strings | ACTIVATION_FAILED_RETRY_BUTTON); in_sentence is also the label quoted inside component.errorView.message, which must equal the button's own value"},
+    "Settings": {"preferred": "Definições", "roles": {"open_button": "Abrir Definições", "go_to_button": "Ir para Definições", "setup_noun": "configuração"}, "note": "Apple's pt-PT label for Settings (Applications/Preferences.app | InfoPlist.strings | CFBundleDisplayName); open_button is the SpringBoard label (insights.appUsage.openSettings, share.alert.openSettings), go_to_button the Screen Time one (onboarding.alert.goToSettings, theme.picker.goToSettingsButton)"}
+  },
+  "open": [
+    {
+      "id": "address_register",
+      "options": ["formal, pronoun-dropping", "tu/teu"],
+      "recommended": "formal, pronoun-dropping",
+      "recommended_reason": "It is the register every permission alert, the Health deny message and Apple's own pt-PT support pages use consistently, so app-owned copy never seams against the mock alerts it must mirror verbatim.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pt-PT copy exists, so all counts are 0. Affects every second-person sentence, not any single key: onboarding.*, moneyfesting.details.*, achievements.*.earned, the reader-predicate list in references/locale-briefs/pt-PT.md '## Address and gender'. Evidence per option: formal, pronoun-dropping is attested in the Screen Time access alert (Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_MESSAGE_INDIVIDUAL, 'poderá permitir que ... veja os seus dados'), the notification alert (System/Library/PrivateFrameworks/UserNotificationsServer.framework | Localizable.strings | USER_NOTIFICATION_PERMISSION_ALERT_TITLE, '... gostaria de lhe enviar notificações'), the Health deny message (System/Library/PrivateFrameworks/HealthUI.framework | HealthUI-Localizable.strings | AUTHORIZATION_DONT_ALLOW_ALERT_MESSAGE, 'Pode voltar a ativar...'), and Apple's own support prose (https://support.apple.com/pt-pt/105121, fetched 2026-09-16, '... que pode utilizar...'); tu/teu is attested only in a handful of newer Fitness achievement strings whose file names end '-tinker' (System/Library/Health/Assets/FitnessUIAssets.bundle/ActivityAchievements/PerfectWeekStand/localization | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_ONE_AWAY_DESC/NSStringLocalizedFormatKey, 'Completa o anel...'), likely an internal draft variant rather than the stable convention, since the non-tinker file for the same string ('Earn this award...') stays formal. Meanwhile agents write every sentence in the formal register and flag any line that reads stiff, so a flip is one recorded global change, not a per-string choice. Decide before the first pt-PT batch."
+    },
+    {
+      "id": "streak_term",
+      "options": ["sequência", "dias consecutivos", "streak"],
+      "recommended": "sequência",
+      "recommended_reason": "It is the only plain Portuguese noun that fills a one-word widget header and an uppercase caption; Apple never uses a noun for this sense, only the phrase 'dias consecutivos', and the English loan fails the skill's own rule that a reader without English must understand each line.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "No pt-PT copy exists, so all three counts are 0. Keys: widgets.streak.smallHeader, .currentStreakHeader, .displayName, .daysCount, .dayStreakCount, insights.summary.dayStreakTitle, share.card.streakEyebrow, achievements.streak.title, onboarding.welcome.slide.streak.{eyebrow,headline}, paywall.benefit.streak.title, the whole streakFreeze.* family. Evidence per option: 'sequência' is the plain Portuguese noun for a consecutive run, takes a compound ('sequência de foco') and an uppercase caption ('SEQUÊNCIA'), with no direct Apple noun evidence for this exact sense but a supporting adjective in Apple's own Fitness copy ('será o sétimo dia consecutivo', FitnessUIAssets.bundle/ActivityAchievements/PerfectWeekStand/localization | Localizable-Modified-tinker.stringsdict | ACHIEVEMENT_UNACHIEVED_PROGRESS_ONE_AWAY_DESC/NSStringLocalizedFormatKey); 'dias consecutivos' is Apple's own phrase for this sense but cannot fill a header or a compact compound; 'streak' is the English loan, ruled out by the no-English-needed rule. Meanwhile agents write 'sequência' in noun slots and 'dias consecutivos' in running text and list every key that touched the concept; no terms row is added until this closes. Decide before the first pt-PT batch; a flip afterwards is a global term change with its own follow-up batch."
+    },
+    {
+      "id": "quote_marks",
+      "options": ["« »", "“ ”"],
+      "recommended": "“ ”",
+      "recommended_reason": "It is the shape Apple's own UI actually uses to quote a placeholder inline in a sentence, and the more frequent of the two use cases in this app: UI labels quoted mid-sentence outnumber the standalone quote-card wrapper.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: moneyfesting.details.quoteWrapper, notifications.contentExtension.quoteDecoration, moneyfesting.main.quotePlaceholder, theme.createTheme.sampleQuote, widgets.quotes.placeholderText, plus the UI labels quoted inside component.errorView.message, onboarding.dataMigration.errorMessage, theme.picker.errorMessage, onboarding.alert.screenTimeMessage, focusTask.picker.emptyMessage (11 en keys use a straight double quote). Rule: the locale's own delimiters, and a mock or quoted iOS label follows the device. Evidence per option: Foundation reports U+00AB/U+00BB as the primary delimiters for pt_PT and U+201C/U+201D as the alternate pair; Apple's own UI uses the alternate curly pair to quote a placeholder inline ('“%@” gostaria de aceder a Tempo de ecrã', Applications/FamilyControlsAuthenticationUI.app | Localizable.strings | NOTIFICATION_AUTH_REQUEST_TITLE; '“%@” gostaria de adicionar às suas fotografias.', System/Library/PrivateFrameworks/TCC.framework | Localizable.strings | REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd). Meanwhile the first batch uses the curly double form everywhere, and the adjudicator lists the quote-card keys separately so a flip touches only them."
+    },
+    {
+      "id": "badge_conceit",
+      "options": ["keep it, nominalised", "drop it"],
+      "recommended": "keep it, nominalised",
+      "recommended_reason": "It is what makes the badge family cohere in en, and Portuguese carries the whole employment vocabulary with ordinary words once each agent-noun name is rewritten as a nominal or prepositional phrase to stay gender-neutral.",
+      "decided_by": "user",
+      "status": "open",
+      "note": "Keys: the 24 achievements.badge.*.name values and the 5 achievements.category.*.name values, with their .earned lines. Rule: one conceit per locale, decided once and kept across the family, gender-neutral, with plain descriptors left plain. Evidence per option: keep it, nominalised draws on Portuguese employment vocabulary rewritten to avoid gendered agent nouns ('Contratação' for Hired, 'Recontratação' for Rehired, 'Em efetivo' for Salaried, 'A folha de pagamento' for Payroll, 'O turno' for The Shift), following the same avoidance Apple's own copy shows for achievements ('Obterá esta distinção', never a gendered agent noun); drop it replaces the employment names with plain achievement names ('Primeira sessão', 'Sete dias seguidos', 'Cinquenta dias completos'), losing the wink but sidestepping every gender-agreement decision at once, next to a money frame that already says five times that nothing is earned. This is a closer call for pt-PT than for nl, where the equivalent '-er' suffix needed almost no rewrite. Meanwhile: the first achievements batch drafts the nominalised conceit, marks every name a proposal, and the adjudicator reports the whole family together so a flip is one batch."
+    }
+  ]
+}
