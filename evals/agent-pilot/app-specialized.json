@@ -1,0 +1,24 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {"id": "u01", "text": "Continuă gratuit", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["Small button; no render or measured width supplied, so fit is unverified."]},
+        {"id": "u02", "text": "Valoarea estimată a timpului economisit: %@.", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["Longer than the source; no render or measured width supplied, so wrapping and overflow are unverified."]},
+        {"id": "u03", "text": "Șterge", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["No render or measured width supplied; fit is unverified."]},
+        {"id": "u04", "text": "Continuă", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["No render or measured width supplied; fit is unverified."]}
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {"id": "u01", "text": "Tovább ingyenesen", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["Small button; no render or measured width supplied, so fit is unverified."]},
+        {"id": "u02", "text": "A megtakarított idő becsült értéke: %@.", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["Longer than the source; no render or measured width supplied, so wrapping and overflow are unverified."]},
+        {"id": "u03", "text": "Törlés", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["No render or measured width supplied; fit is unverified."]},
+        {"id": "u04", "text": "Tovább", "uncertainty": ["AI language judgment; no comparable local-app examples were supplied."], "display_concerns": ["No render or measured width supplied; fit is unverified."]}
+      ],
+      "holds": []
+    }
+  ]
+}

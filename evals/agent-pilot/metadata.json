@@ -1,0 +1,42 @@
+{
+  "status": "frozen_inputs_no_agent_runs",
+  "source_fixture_sha256": "d84b837409d54ac28a5863f3d7d491f01c297d341771c6ea3ea7699977b1c061",
+  "input_sha256": {
+    "authored-source.json": "91ebbab3bf272de5945502cccf6baf2b0ddfeb88c7f541813de38ccc5b5977eb",
+    "literary-source.json": "bb5ffca339c676a55016e80c8f337b947699e95866ad7a39e184cd3fc542afc8",
+    "editor-challenge.json": "4c9fe55464f73c8933cb5477ef13b3a98be3509c2e5501b9e1a50ae0bbe8ed2a",
+    "fidelity-challenge.json": "34b1f335ce12ecc6ce4ef18e12804b9adc240b194349e97d2a47be92da4a425a",
+    "oracle.json": "a78411e97fdc9ca0f9e187522f061646f5c115ca9fa2cb7300b2e755b09e420a"
+  },
+  "agent_spec_sha256": {
+    "literary_translator.toml": "4ccdd748400db06f605bea7a7721127452f9713af7cdcd0fd8a1526472080f83",
+    "quote_adjudicator.toml": "04be2a65233c25ff63d20c599db511ce71c5066975365b7f24d325b1452cdeb9",
+    "quote_backtranslator.toml": "329fb3caa427a82150f949f9dc68f667dc536115951f824d03203167a52a74bd",
+    "quote_editor.toml": "74157e1a3fd01782cfbcd849ef345b747a85dfcafdc8a9703524ea82f0b86a5b",
+    "quote_fidelity.toml": "b6ae040562f0c0d403e0f6ec0fd14a89d27b9a7a44e08db22ac21133192a285e",
+    "quote_researcher.toml": "5201f2f2e8e21940814fe31d0ba5c3829b844a0e9e31cc475c1115dd0f6ed51c",
+    "quote_translator.toml": "9bc1685ef6dc6b1db9642aaced5140b94f50d97431fc5edb90a8ce2dfd11ba99"
+  },
+  "counts": {
+    "authored_source_records": 6,
+    "literary_source_records": 3,
+    "editor_cases": 12,
+    "editor_ro": 6,
+    "editor_hu": 6,
+    "fidelity_cases": 12,
+    "fidelity_ro": 6,
+    "fidelity_hu": 6
+  },
+  "comparison_rule": "Use each packet unchanged for generic and specialized runs with the same model and reasoning effort; keep oracle out of agent context.",
+  "provenance": "Source translation examples are selected verbatim from the supplied pilot fixture. Editor and fidelity challenge sentences and expected findings were authored for this evaluation; their oracle is not native-certified quality ground truth.",
+  "additional_frozen_inputs": {
+    "app-source.json": "cd6b9f4f17aee208db609dfad36f3da1a5ec4fdc73853b38c7ed82127bbcc3ce",
+    "translation-editor-packets.json": "a8705fc48ee826fb1437af3f2a4806c12a37315948bbc3117ccce8c328d9734c",
+    "translation-fidelity-packets.json": "102f1621e3aead486f42478ba1ab9116b5df8e70a5c62ac6b145662743393c4a"
+  },
+  "additional_spec_hashes": {
+    "app_localizer.toml": "3bc0341c6f354f12d780af60ccf3f76c058bfbceca2778d9b836098fba43380d",
+    "app_copy_editor.toml": "54401b8c9e012ec09efce8eab828afd4bbf85656b106c17d00182434fed19bff"
+  },
+  "comparison": "Single paired run per role with matched model/effort and fresh fork_turns=none; no causal or human-quality claim."
+}

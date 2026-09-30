@@ -1,0 +1,26 @@
+{
+  "packets": [
+    {
+      "language": "en",
+      "renderings": [
+        {"id": "f01", "back_translation": "I can take a break before answering.", "uncertainty": []},
+        {"id": "f03", "back_translation": "I have to finish everything tonight.", "uncertainty": []},
+        {"id": "f05", "back_translation": "I choose how I use my time.", "uncertainty": []},
+        {"id": "f07", "back_translation": "The day sets my pace, even when plans change.", "uncertainty": []},
+        {"id": "f09", "back_translation": "Even a small step counts today.", "uncertainty": []},
+        {"id": "f11", "back_translation": "Tomorrow I have to change my mind.", "uncertainty": []}
+      ]
+    },
+    {
+      "language": "en",
+      "renderings": [
+        {"id": "f02", "back_translation": "Tomorrow I have to change my mind.", "uncertainty": []},
+        {"id": "f04", "back_translation": "Today even a small step counts.", "uncertainty": []},
+        {"id": "f06", "back_translation": "I set the pace of my day.", "uncertainty": []},
+        {"id": "f08", "back_translation": "I can stop for a moment before I answer.", "uncertainty": []},
+        {"id": "f10", "back_translation": "I have to finish everything tonight.", "uncertainty": []},
+        {"id": "f12", "back_translation": "I decide what I devote my time to.", "uncertainty": []}
+      ]
+    }
+  ]
+}

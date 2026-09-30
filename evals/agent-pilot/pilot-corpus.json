@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "fixtureOnly": true,
+  "quotes": [
+    {
+      "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "category": "affirmations",
+      "text": "I pause before buying what will not matter next month.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0003",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "category": "affirmations",
+      "text": "I spend slowly when a decision can wait.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0012",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "category": "affirmations",
+      "text": "I use my budget as a map, not a punishment.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0053",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "category": "affirmations",
+      "text": "I see wealth as room to be useful.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "wealth_mindset",
+      "pairId": "affirmations-0075",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "D10E5789-698E-58D3-A971-4456149F559D",
+      "category": "motivation",
+      "text": "You deserve respect while you grow, {userName}.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "growth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 99,
+        "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+        "reviewedOn": "2026-09-14"
+      },
+      "pairId": "affirmations-1444"
+    },
+    {
+      "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "category": "affirmations",
+      "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "development",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 191,
+        "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Distinct original expression; shared themes do not justify removing it.",
+        "reviewedOn": "2026-09-14",
+        "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+        "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+      },
+      "pairId": "affirmations-1143"
+    },
+    {
+      "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "category": "influential_people",
+      "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+      "attribution": {
+        "name": "Angela Duckworth",
+        "personId": "angela-duckworth",
+        "country": "US",
+        "fields": [
+          "Philosophers, psychologists and public intellectuals"
+        ]
+      },
+      "language": "en",
+      "context": "Duckworth's Learning Day session at Wharton",
+      "source": {
+        "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+        "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+        "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+        "published": null,
+        "retrieved": "2026-08-18",
+        "tier": "primary",
+        "verifiedBy": "refetch"
+      },
+      "verification": "sourced"
+    },
+    {
+      "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+      "category": "influential_people",
+      "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+      "attribution": {
+        "name": "Ed Catmull",
+        "personId": "ed-catmull",
+        "country": "US",
+        "fields": [
+          "Animators and animation studio founders"
+        ]
+      },
+      "language": "en",
+      "context": "Catmull's answer when asked for his best career advice",
+      "source": {
+        "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+        "publisher": "Forbes",
+        "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+        "published": "2014-04-08",
+        "retrieved": "2026-08-18",
+        "tier": "reputable_secondary",
+        "verifiedBy": "refetch"
+      },
+      "verification": "sourced"
+    },
+    {
+      "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "category": "stoic",
+      "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+      "language": "en",
+      "verification": "supplied_unverified",
+      "theme": "wealth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set4-stoic/test1.json",
+        "row": 2,
+        "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+        "author": "CATO THE YOUNGER"
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+        "reviewedOn": "2026-09-14",
+        "previousAction": "hold",
+        "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+        "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+      },
+      "attribution": {
+        "name": "Cato the Younger"
+      }
+    }
+  ]
+}

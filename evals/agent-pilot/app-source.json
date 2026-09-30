@@ -1,0 +1,16 @@
+{
+  "packet_type": "synthetic_screen_translation",
+  "brief": {
+    "product": "Moneyfesting",
+    "voice": "Calm, kind, credible, direct everyday language.",
+    "target_locales": ["ro", "hu"],
+    "locale_evidence": "No inspected local-app examples supplied; do not claim a market benchmark.",
+    "display": "Small mobile controls; no measured layout or rendered evidence supplied."
+  },
+  "records": [
+    {"id":"u01","text":"Start free","screen":"Subscription offer","control":"button","action":"Dismiss offer and enter the free app. Does not start a trial or subscription.","neighbors":["Explore your daily affirmations"]},
+    {"id":"u02","text":"You reclaimed %@.","screen":"Focus session summary","control":"summary label","action":"Show a currency-formatted estimate of time value based on time saved; no money was earned or deposited.","neighbors":["Time value","20 minutes of focus"],"placeholder":"%@ is runtime-formatted currency and must remain exactly %@."},
+    {"id":"u03","text":"Delete","screen":"Delete saved quote confirmation","control":"destructive button","action":"Permanently delete this saved quote.","neighbors":["This quote will be removed from your collection.","Cancel"]},
+    {"id":"u04","text":"Continue","screen":"Choose focus duration","control":"button","action":"Move to the next setup screen without starting a focus session, paying, or granting permission.","neighbors":["Choose your duration","20 minutes"]}
+  ]
+}

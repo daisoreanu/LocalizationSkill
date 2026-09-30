@@ -1,0 +1,50 @@
+{
+  "records": [
+    {
+      "id": "r01",
+      "author": "Marcus Aurelius",
+      "work": "Meditations",
+      "reference": "I.1",
+      "source_language": "Greek",
+      "target_locales": [
+        "ro",
+        "hu"
+      ],
+      "supplied_sources": [
+        "https://humanitas.ro/assets/media/ganduri-catre-sine-insusi-2020.pdf",
+        "https://mek.oszk.hu/00600/00606/00606.htm"
+      ],
+      "task": "Check that these primary publisher/archive editions expose the named section and translator. This is discoverability testing, not reuse permission or language quality."
+    },
+    {
+      "id": "r02",
+      "source_record": {
+        "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+        "category": "stoic",
+        "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+        "language": "en",
+        "verification": "supplied_unverified",
+        "theme": "wealth",
+        "import": {
+          "batch": "2026-09-14",
+          "file": "Set4-stoic/test1.json",
+          "row": 2,
+          "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+          "author": "CATO THE YOUNGER"
+        },
+        "curation": {
+          "action": "keep",
+          "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+          "reviewedOn": "2026-09-14",
+          "previousAction": "hold",
+          "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+          "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+        },
+        "attribution": {
+          "name": "Cato the Younger"
+        }
+      },
+      "task": "Check whether a primary source establishes this exact Cato wording/attribution; preserve the existing record and status regardless of failed lookup."
+    }
+  ]
+}

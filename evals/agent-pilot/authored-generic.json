@@ -1,0 +1,28 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {"id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1", "text": "Fac o pauză înainte să cumpăr ceva ce luna viitoare nu va mai conta.", "uncertainty": [], "display_concerns": []},
+        {"id": "8B6A7736-3584-5415-84AE-47FB022AD2F0", "text": "Nu mă grăbesc să cheltuiesc când pot amâna decizia.", "uncertainty": [], "display_concerns": []},
+        {"id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8", "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.", "uncertainty": [], "display_concerns": []},
+        {"id": "A4B08362-CB12-5387-926A-3EC5205F0851", "text": "Văd în prosperitate mai multă libertate de a fi de folos.", "uncertainty": [], "display_concerns": []},
+        {"id": "D10E5789-698E-58D3-A971-4456149F559D", "text": "Meriți respect pe măsură ce evoluezi, {userName}.", "uncertainty": [], "display_concerns": []},
+        {"id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3", "text": "Nimeni nu ar trebui să-mi spună ce să simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.", "uncertainty": [], "display_concerns": ["Long quote; verify wrapping on mobile."]}
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {"id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1", "text": "Mielőtt olyasmit vennék, ami jövő hónapban már nem számít, megállok egy pillanatra.", "uncertainty": [], "display_concerns": []},
+        {"id": "8B6A7736-3584-5415-84AE-47FB022AD2F0", "text": "Ha egy döntés várhat, nem sietek a költekezéssel.", "uncertainty": [], "display_concerns": []},
+        {"id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8", "text": "A költségvetésemet térképnek használom, nem büntetésnek.", "uncertainty": [], "display_concerns": []},
+        {"id": "A4B08362-CB12-5387-926A-3EC5205F0851", "text": "A jólét számomra teret ad arra, hogy mások hasznára legyek.", "uncertainty": [], "display_concerns": []},
+        {"id": "D10E5789-698E-58D3-A971-4456149F559D", "text": "Megérdemled a tiszteletet, miközben fejlődsz, {userName}.", "uncertainty": [], "display_concerns": []},
+        {"id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3", "text": "Senki ne mondja meg, hogyan érezzek önmagammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet szeretnék.", "uncertainty": [], "display_concerns": ["Long quote; verify wrapping on mobile."]}
+      ],
+      "holds": []
+    }
+  ]
+}

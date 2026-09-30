@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 2,
+  "fixtureOnly": true,
+  "quotes": [
+    {
+      "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "category": "affirmations",
+      "text": "I pause before buying what will not matter next month.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0003",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "category": "affirmations",
+      "text": "I spend slowly when a decision can wait.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0012",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "category": "affirmations",
+      "text": "I use my budget as a map, not a punishment.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0053",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "category": "affirmations",
+      "text": "I see wealth as room to be useful.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "wealth_mindset",
+      "pairId": "affirmations-0075",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "D10E5789-698E-58D3-A971-4456149F559D",
+      "category": "motivation",
+      "text": "You deserve respect while you grow, {userName}.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "growth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 99,
+        "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+        "reviewedOn": "2026-09-14"
+      },
+      "pairId": "affirmations-1444"
+    },
+    {
+      "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "category": "affirmations",
+      "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "development",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 191,
+        "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Distinct original expression; shared themes do not justify removing it.",
+        "reviewedOn": "2026-09-14",
+        "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+        "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+      },
+      "pairId": "affirmations-1143"
+    },
+    {
+      "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "category": "influential_people",
+      "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+      "attribution": {
+        "name": "Angela Duckworth",
+        "personId": "angela-duckworth",
+        "country": "US",
+        "fields": [
+          "Philosophers, psychologists and public intellectuals"
+        ]
+      },
+      "language": "en",
+      "context": "Duckworth's Learning Day session at Wharton",
+      "source": {
+        "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+        "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+        "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+        "published": null,
+        "retrieved": "2026-08-18",
+        "tier": "primary",
+        "verifiedBy": "refetch"
+      },
+      "verification": "sourced"
+    },
+    {
+      "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+      "category": "influential_people",
+      "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+      "attribution": {
+        "name": "Ed Catmull",
+        "personId": "ed-catmull",
+        "country": "US",
+        "fields": [
+          "Animators and animation studio founders"
+        ]
+      },
+      "language": "en",
+      "context": "Catmull's answer when asked for his best career advice",
+      "source": {
+        "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+        "publisher": "Forbes",
+        "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+        "published": "2014-04-08",
+        "retrieved": "2026-08-18",
+        "tier": "reputable_secondary",
+        "verifiedBy": "refetch"
+      },
+      "verification": "sourced"
+    },
+    {
+      "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "category": "stoic",
+      "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+      "language": "en",
+      "verification": "supplied_unverified",
+      "theme": "wealth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set4-stoic/test1.json",
+        "row": 2,
+        "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+        "author": "CATO THE YOUNGER"
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+        "reviewedOn": "2026-09-14",
+        "previousAction": "hold",
+        "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+        "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+      },
+      "attribution": {
+        "name": "Cato the Younger"
+      }
+    },
+    {
+      "id": "A017E5F0-0AA9-5ED9-ADA3-BE4D73A0B85C",
+      "category": "affirmations",
+      "text": "Mă opresc înainte să cumpăr ceva ce nu va mai conta luna viitoare.",
+      "attribution": null,
+      "language": "ro",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0003",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+        "sourceRecordHash": "a047d239fcd1d248fe18126f7988ef57d69a9af342fcfc866be2435173ef6cc6",
+        "candidateHash": "c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "54739544-633D-521B-8CC1-6DA03D0C953A",
+      "category": "affirmations",
+      "text": "Megállok egy pillanatra, mielőtt olyasmit vennék, ami jövő hónapban már nem számít.",
+      "attribution": null,
+      "language": "hu",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0003",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+        "sourceRecordHash": "a047d239fcd1d248fe18126f7988ef57d69a9af342fcfc866be2435173ef6cc6",
+        "candidateHash": "85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "3D3059B1-6EE3-533C-9D8C-8A5DC8E8B796",
+      "category": "affirmations",
+      "text": "Nu mă grăbesc să cheltuiesc când decizia poate aștepta.",
+      "attribution": null,
+      "language": "ro",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0012",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+        "sourceRecordHash": "7821c9ec0a0d3fc918d39d6c8adce07dcb97125a45f946a110c9882996f9bfbb",
+        "candidateHash": "10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "1F4E94A4-9D2C-5AE7-BD99-A0D34CC9F6D7",
+      "category": "affirmations",
+      "text": "Nem sietek a költéssel, ha a döntés várhat.",
+      "attribution": null,
+      "language": "hu",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0012",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+        "sourceRecordHash": "7821c9ec0a0d3fc918d39d6c8adce07dcb97125a45f946a110c9882996f9bfbb",
+        "candidateHash": "081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "8DED64F0-A36B-5F69-A84A-D3B412B5DD48",
+      "category": "affirmations",
+      "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+      "attribution": null,
+      "language": "ro",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0053",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+        "sourceRecordHash": "96936629b4e5ce442e14f70a26fdd018b01257d2cc45f67ab4c36b130c94f8c8",
+        "candidateHash": "b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "C15E11F8-56DC-57EE-9AE6-9C50ECAA2B80",
+      "category": "affirmations",
+      "text": "A költségvetésemet térképként használom, nem büntetésként.",
+      "attribution": null,
+      "language": "hu",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0053",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+        "sourceRecordHash": "96936629b4e5ce442e14f70a26fdd018b01257d2cc45f67ab4c36b130c94f8c8",
+        "candidateHash": "6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "8C8C50D7-D88F-5597-AFE9-EFE6C815506F",
+      "category": "affirmations",
+      "text": "Văd bogăția ca pe un spațiu în care pot fi de folos.",
+      "attribution": null,
+      "language": "ro",
+      "context": null,
+      "theme": "wealth_mindset",
+      "pairId": "affirmations-0075",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "A4B08362-CB12-5387-926A-3EC5205F0851",
+        "sourceRecordHash": "6f27ac2ba75a7f22d79f9ab1f8a45396afe1f7c4113e6cb33f3cfef3c7f8bdec",
+        "candidateHash": "1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "AF3D9088-1E80-5FE9-90CA-80F587A70932",
+      "category": "affirmations",
+      "text": "A vagyon számomra teret ad ahhoz, hogy hasznos legyek.",
+      "attribution": null,
+      "language": "hu",
+      "context": null,
+      "theme": "wealth_mindset",
+      "pairId": "affirmations-0075",
+      "source": null,
+      "verification": "authored",
+      "translationOf": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "A4B08362-CB12-5387-926A-3EC5205F0851",
+        "sourceRecordHash": "6f27ac2ba75a7f22d79f9ab1f8a45396afe1f7c4113e6cb33f3cfef3c7f8bdec",
+        "candidateHash": "44f42b316f9662a0a6fc167c2d94876981813b12da5e4f0ce03e85e1ba503ecc",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "21215D6D-8B97-50EB-B293-ED909066EB9A",
+      "category": "affirmations",
+      "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+      "language": "ro",
+      "verification": "curated",
+      "theme": "development",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 191,
+        "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Distinct original expression; shared themes do not justify removing it.",
+        "reviewedOn": "2026-09-14",
+        "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+        "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+      },
+      "pairId": "affirmations-1143",
+      "translationOf": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+        "sourceRecordHash": "83092cccfe145f6b0cfa36bbf43e7b221ba35221f29eee16e6dcee1c4a7b7dd9",
+        "candidateHash": "1dec60507ed33573e454a841a30061482893788ca14cfbab0c8649ad4d347f90",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "49356AED-DB44-571A-BD1F-53E6C24508F3",
+      "category": "affirmations",
+      "text": "Senkinek sem szabad megmondania nekem, mit érzek magammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet akarok.",
+      "language": "hu",
+      "verification": "curated",
+      "theme": "development",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 191,
+        "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Distinct original expression; shared themes do not justify removing it.",
+        "reviewedOn": "2026-09-14",
+        "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+        "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+      },
+      "pairId": "affirmations-1143",
+      "translationOf": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+        "sourceRecordHash": "83092cccfe145f6b0cfa36bbf43e7b221ba35221f29eee16e6dcee1c4a7b7dd9",
+        "candidateHash": "cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "6E5E0D26-5C59-51CD-9B5C-28BF0C6A72F9",
+      "category": "motivation",
+      "text": "Meriți respect în timp ce te dezvolți, {userName}.",
+      "language": "ro",
+      "verification": "curated",
+      "theme": "growth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 99,
+        "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+        "reviewedOn": "2026-09-14"
+      },
+      "pairId": "affirmations-1444",
+      "translationOf": "D10E5789-698E-58D3-A971-4456149F559D",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "D10E5789-698E-58D3-A971-4456149F559D",
+        "sourceRecordHash": "492099372c6f8d81037f2ff8d6ef7621f4c130a1ccc272ad3366d321d444349a",
+        "candidateHash": "ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65",
+        "status": "ai_reviewed"
+      }
+    },
+    {
+      "id": "5CBFD7A2-6F4D-517D-A6C6-D859C64AF106",
+      "category": "motivation",
+      "text": "Fejlődés közben is megérdemled a tiszteletet, {userName}.",
+      "language": "hu",
+      "verification": "curated",
+      "theme": "growth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 99,
+        "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+        "reviewedOn": "2026-09-14"
+      },
+      "pairId": "affirmations-1444",
+      "translationOf": "D10E5789-698E-58D3-A971-4456149F559D",
+      "translatedFrom": "en",
+      "reviewState": "pending_owner_review",
+      "translationEvidence": {
+        "sourceRecordId": "D10E5789-698E-58D3-A971-4456149F559D",
+        "sourceRecordHash": "492099372c6f8d81037f2ff8d6ef7621f4c130a1ccc272ad3366d321d444349a",
+        "candidateHash": "4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4",
+        "status": "ai_reviewed"
+      }
+    }
+  ]
+}

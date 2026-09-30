@@ -1,0 +1,64 @@
+{
+  "packets": [
+    {
+      "role": "editor",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "547b16c3ec8e470087d04e44885e6183",
+      "packet_hash": "7def347b2e1ceaf4e682c1b917babb476058c44a1f5c48d2cf17f99d0dca83c9",
+      "output_contract": {
+        "packet_hash": "7def347b2e1ceaf4e682c1b917babb476058c44a1f5c48d2cf17f99d0dca83c9",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "A vagyon számomra teret ad ahhoz, hogy hasznos legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "dbe05e8242f647519dfdcbc27866e364",
+      "packet_hash": "1814fc65fefa437bb9472209328730b383ccd067bc405e46e83f681d82b600aa",
+      "output_contract": {
+        "packet_hash": "1814fc65fefa437bb9472209328730b383ccd067bc405e46e83f681d82b600aa",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    }
+  ]
+}

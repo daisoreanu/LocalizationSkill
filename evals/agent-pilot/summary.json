@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-27",
+  "status": "pilot_validated_not_human_benchmarked",
+  "method": "One paired execution per condition; identical model and effort for generic versus specialized instructions; fresh agents. AI reviewers had randomized packet order and no condition labels. No statistical or professional-parity claim.",
+  "routes": {
+    "authored_translation": "gpt-6-sol/high",
+    "literary_translation": "gpt-6-astra/high",
+    "app_translation": "gpt-6-sol/high",
+    "quote_editor": "gpt-6-astra/high",
+    "fidelity": "gpt-6-astra/high",
+    "app_editor": "gpt-6-sol/high",
+    "backtranslation": "gpt-6-sol/medium",
+    "adjudication": "gpt-6-astra/high",
+    "research": "gpt-6-sol/high",
+    "fixture_preparation": "gpt-6-luna/medium for corpus selection; gpt-6-sol/high for controlled challenge inputs"
+  },
+  "editor_challenge": {
+    "generic": {
+      "detected_planted_errors": 4,
+      "planted_errors": 4,
+      "clean_cases": 8,
+      "suggestions_on_clean_cases": 2,
+      "material_false_positives": 0
+    },
+    "specialized": {
+      "detected_planted_errors": 4,
+      "planted_errors": 4,
+      "clean_cases": 8,
+      "suggestions_on_clean_cases": 0,
+      "material_false_positives": 0
+    }
+  },
+  "fidelity_challenge": {
+    "generic": {
+      "detected_planted_errors": 6,
+      "planted_errors": 6,
+      "clean_cases": 6,
+      "suggestions_on_clean_cases": 0,
+      "material_false_positives": 0
+    },
+    "specialized": {
+      "detected_planted_errors": 6,
+      "planted_errors": 6,
+      "clean_cases": 6,
+      "suggestions_on_clean_cases": 0,
+      "material_false_positives": 0
+    }
+  },
+  "translation_review": {
+    "generic": {
+      "quote_translations": 18,
+      "editor_material_findings": 0,
+      "editor_minor_findings": 0,
+      "fidelity_material_findings": 2,
+      "fidelity_not_checked": 2,
+      "app_translations": 8,
+      "app_editor_material_findings": 0
+    },
+    "specialized": {
+      "quote_translations": 18,
+      "editor_material_findings": 0,
+      "editor_minor_findings": 2,
+      "fidelity_material_findings": 0,
+      "fidelity_not_checked": 2,
+      "app_translations": 8,
+      "app_editor_material_findings": 0
+    }
+  },
+  "revisions": {
+    "changed_targets": 2,
+    "fresh_editor_and_fidelity": "pass",
+    "adjudication_linguistic_pass": 12,
+    "human_review": "not_checked",
+    "rendered_fit": "not_checked"
+  },
+  "staged_export": {
+    "fixture_only": true,
+    "originals_preserved": 9,
+    "additions": 12,
+    "status": "pending_owner_review",
+    "live_app_writes": 0
+  },
+  "script_checks": {
+    "tests": 40,
+    "passed": 40,
+    "coverage": [
+      "union preservation",
+      "no semantic merging",
+      "source and context changes",
+      "stale reviews",
+      "retries and reservation",
+      "null metadata",
+      "exact canonical index match",
+      "unknown eligibility",
+      "collision dispositions",
+      "catalog placeholders and plurals"
+    ]
+  },
+  "full_inventory": {
+    "source_records": 17721,
+    "groups": 11259,
+    "eligible_missing_counterparts": 7017,
+    "note": "Working-corpus union, not a publish count. Existing excluded and unresolved records retained."
+  },
+  "limits": [
+    "Small AI-only pilot; no qualified human comparison",
+    "No actual mobile render or market-copy benchmark",
+    "No cross-model quality/cost comparison; token and money costs unknown",
+    "Canonical index contents must be verified separately against an approved edition",
+    "Custom files parse, but this session used explicit prompt dispatch because the spawn tool has no named-role selector",
+    "Reviewer identities are recorded declarations, not authentication"
+  ],
+  "backtranslation": {
+    "cases": 12,
+    "planted_errors_preserved_for_source_comparison": 6,
+    "standalone_fidelity_verdict": false
+  },
+  "research": {
+    "Marcus_Aurelius_I_1": "Named ro/hu editions and translators found",
+    "Cato": "Related hope/fear antecedent found, complete supplied wording not_found; retained unchanged"
+  },
+  "agent_spec_sha256": {
+    "quote_editor.toml": "74157e1a3fd01782cfbcd849ef345b747a85dfcafdc8a9703524ea82f0b86a5b",
+    "app_localizer.toml": "3bc0341c6f354f12d780af60ccf3f76c058bfbceca2778d9b836098fba43380d",
+    "quote_researcher.toml": "5201f2f2e8e21940814fe31d0ba5c3829b844a0e9e31cc475c1115dd0f6ed51c",
+    "quote_adjudicator.toml": "04be2a65233c25ff63d20c599db511ce71c5066975365b7f24d325b1452cdeb9",
+    "literary_translator.toml": "4ccdd748400db06f605bea7a7721127452f9713af7cdcd0fd8a1526472080f83",
+    "quote_translator.toml": "9bc1685ef6dc6b1db9642aaced5140b94f50d97431fc5edb90a8ce2dfd11ba99",
+    "app_copy_editor.toml": "54401b8c9e012ec09efce8eab828afd4bbf85656b106c17d00182434fed19bff",
+    "quote_fidelity.toml": "b6ae040562f0c0d403e0f6ec0fd14a89d27b9a7a44e08db22ac21133192a285e",
+    "quote_backtranslator.toml": "329fb3caa427a82150f949f9dc68f667dc536115951f824d03203167a52a74bd"
+  },
+  "validation": {
+    "agent_toml": "parsed nine configurations",
+    "skill_yaml": "Ruby safe_load parsed SKILL.md and agents/openai.yaml; required metadata checked",
+    "official_quick_validator": "unavailable: Python environments lacked PyYAML",
+    "automatic_role_discovery": "not_checked; exact role instructions were dispatched explicitly"
+  }
+}

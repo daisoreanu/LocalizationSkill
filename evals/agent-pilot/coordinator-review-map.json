@@ -1,0 +1,250 @@
+[
+  {
+    "condition": "generic",
+    "kind": "authored",
+    "locale": "ro",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0003",
+    "packet_hash": "a14893ee1678245dbfba083486b76d9127bab73fc286d7a83e869cad7af4b554",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "authored",
+    "locale": "ro",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0003",
+    "packet_hash": "9d8db7f6be916c1b46a8bc20d81bc935da3c9a4ab0209dfdd7b81963ace8ecda",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "authored",
+    "locale": "hu",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0004",
+    "packet_hash": "45af73116ce756a46dfa2188bd3f26b2674cda959d82674cfa22eff491ee830a",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "authored",
+    "locale": "hu",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0004",
+    "packet_hash": "ee8f632ba504c46848eabd54f2e78ba4ed866746564c53b6244ab5a53701af92",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "literary",
+    "locale": "ro",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0005",
+    "packet_hash": "7e1fe98310700f3c8a81c318cde429a83244594c9df670336d925bed5bac7b19",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "literary",
+    "locale": "ro",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0005",
+    "packet_hash": "073007eac076c4c1acd2e077b15fafc1574d7d045098bd96989ed12e4ae98a08",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "literary",
+    "locale": "hu",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0006",
+    "packet_hash": "cfde2ac278b89c76c9a0a790cecf50a832858996efd54b5705d9d3f9c76f443c",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "generic",
+    "kind": "literary",
+    "locale": "hu",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-generic",
+    "batch": "b0006",
+    "packet_hash": "a9a34147f4ea2cb7229b8b9960e6ebca477f02f49a7a5bb8cf73aacafa756f0b",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "authored",
+    "locale": "ro",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0003",
+    "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "authored",
+    "locale": "ro",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0003",
+    "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "authored",
+    "locale": "hu",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0004",
+    "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "authored",
+    "locale": "hu",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0004",
+    "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb",
+    "ids": {
+      "s001": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "s002": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "s003": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "s004": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "s005": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "s006": "D10E5789-698E-58D3-A971-4456149F559D"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "literary",
+    "locale": "ro",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0005",
+    "packet_hash": "590dbf37b0ce383cbf93a80d4d3fe72765623a1caf248356c47d3d68167e219d",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "literary",
+    "locale": "ro",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0005",
+    "packet_hash": "f28db1db51a680aa28fc5925aa0ac17a4d33590ed370e5965471087f69fd0a25",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "literary",
+    "locale": "hu",
+    "role": "editor",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0006",
+    "packet_hash": "3188ac756c4e5750298053419a2eb12b6b98b5c9a4307a449f0c95f43cf99fb5",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  },
+  {
+    "condition": "specialized",
+    "kind": "literary",
+    "locale": "hu",
+    "role": "fidelity",
+    "run_dir": "/private/tmp/localization-agent-eval/run-specialized",
+    "batch": "b0006",
+    "packet_hash": "85ebee7fbfe40f21eb72dbba8e7b10926bb42ed106002ad3907f2d3a24bd43c9",
+    "ids": {
+      "s001": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+      "s002": "B508A471-CA49-496B-BC71-AC09046FBF59",
+      "s003": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2"
+    }
+  }
+]

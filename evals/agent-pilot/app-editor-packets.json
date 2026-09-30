@@ -1,0 +1,124 @@
+{
+  "packets": [
+    {
+      "packet_hash": "aaa89f6effc24fc99b7cdd7cc6052f20",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "u01",
+          "text": "Continuă gratuit",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u02",
+          "text": "Valoarea estimată a timpului economisit: %@.",
+          "display_role": "summary label",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u03",
+          "text": "Șterge",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u04",
+          "text": "Continuă",
+          "display_role": "button",
+          "fit": "not_checked"
+        }
+      ]
+    },
+    {
+      "packet_hash": "f91c7f05e5e1419e9546bebac368d78e",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "u01",
+          "text": "Használd ingyen",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u02",
+          "text": "A visszanyert idő értéke: %@.",
+          "display_role": "summary label",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u03",
+          "text": "Törlés",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u04",
+          "text": "Tovább",
+          "display_role": "button",
+          "fit": "not_checked"
+        }
+      ]
+    },
+    {
+      "packet_hash": "766c4058140b4d3e9e82dd9945fb2ace",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "u01",
+          "text": "Folosește gratuit",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u02",
+          "text": "Timpul recuperat valorează %@.",
+          "display_role": "summary label",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u03",
+          "text": "Șterge",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u04",
+          "text": "Continuă",
+          "display_role": "button",
+          "fit": "not_checked"
+        }
+      ]
+    },
+    {
+      "packet_hash": "9762be1026af4799a955cee25e346bd1",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "u01",
+          "text": "Tovább ingyenesen",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u02",
+          "text": "A megtakarított idő becsült értéke: %@.",
+          "display_role": "summary label",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u03",
+          "text": "Törlés",
+          "display_role": "button",
+          "fit": "not_checked"
+        },
+        {
+          "id": "u04",
+          "text": "Tovább",
+          "display_role": "button",
+          "fit": "not_checked"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1184 @@
+{
+  "packets": [
+    {
+      "role": "fidelity",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Mă opresc înainte să cumpăr ceva ce nu va mai conta luna viitoare.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Nu mă grăbesc să cheltuiesc când decizia poate aștepta.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7",
+          "canonical": null
+        },
+        {
+          "id": "s004",
+          "text": "Văd bogăția ca pe un spațiu în care pot fi de folos.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83",
+          "canonical": null
+        },
+        {
+          "id": "s005",
+          "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt despre mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "158344baa98022b91bc0275181bb09a38d2266db74dededec031774c9a4c20d8",
+          "canonical": null
+        },
+        {
+          "id": "s006",
+          "text": "Meriți respect în timp ce te dezvolți, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65",
+          "canonical": null
+        }
+      ],
+      "revision_token": "284c9d57be874452a7e05d22e13c5bb6",
+      "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5",
+      "output_contract": {
+        "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Ne kösd reményedet vagy félelmedet egyetlen hatalmas emberhez; őrizd meg ítéleted önállóságát.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+            "category": "stoic",
+            "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+            "language": "en",
+            "verification": "supplied_unverified",
+            "theme": "wealth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set4-stoic/test1.json",
+              "row": 2,
+              "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+              "author": "CATO THE YOUNGER"
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+              "reviewedOn": "2026-09-14",
+              "previousAction": "hold",
+              "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+              "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+            },
+            "attribution": {
+              "name": "Cato the Younger"
+            }
+          },
+          "candidate_hash": "eacd5977e3896b5e80fa9bdf50a88d5f0056e4bc2cda30314966df3417674343",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "A legtöbb dolgot, amit az életben megtanulsz, zűrzavaros, nem hatékony próbálkozások és tévedések útján tanulod majd meg.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+            "category": "influential_people",
+            "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+            "attribution": {
+              "name": "Angela Duckworth",
+              "personId": "angela-duckworth",
+              "country": "US",
+              "fields": [
+                "Philosophers, psychologists and public intellectuals"
+              ]
+            },
+            "language": "en",
+            "context": "Duckworth's Learning Day session at Wharton",
+            "source": {
+              "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+              "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+              "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+              "published": null,
+              "retrieved": "2026-08-18",
+              "tier": "primary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "d20772ca567b1b11eef5b8cdc5cf8d0cc8f58105cef83d003e40cd76524bb72a",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Ne feledd, hogy a kudarc nem szükséges rossz — valójában egyáltalán nem rossz. Szükségszerű következménye annak, hogy valami újat csinálsz.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+            "category": "influential_people",
+            "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+            "attribution": {
+              "name": "Ed Catmull",
+              "personId": "ed-catmull",
+              "country": "US",
+              "fields": [
+                "Animators and animation studio founders"
+              ]
+            },
+            "language": "en",
+            "context": "Catmull's answer when asked for his best career advice",
+            "source": {
+              "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+              "publisher": "Forbes",
+              "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+              "published": "2014-04-08",
+              "retrieved": "2026-08-18",
+              "tier": "reputable_secondary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "c24b930e1fe4158323331e0c3951290d9aa59e73bb4392f6d7b93c81c6ddd9e4",
+          "canonical": null
+        }
+      ],
+      "revision_token": "381268b7835e4e9ba762e8c6326708f6",
+      "packet_hash": "85ebee7fbfe40f21eb72dbba8e7b10926bb42ed106002ad3907f2d3a24bd43c9",
+      "output_contract": {
+        "packet_hash": "85ebee7fbfe40f21eb72dbba8e7b10926bb42ed106002ad3907f2d3a24bd43c9",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; judecă cu mintea ta.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+            "category": "stoic",
+            "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+            "language": "en",
+            "verification": "supplied_unverified",
+            "theme": "wealth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set4-stoic/test1.json",
+              "row": 2,
+              "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+              "author": "CATO THE YOUNGER"
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+              "reviewedOn": "2026-09-14",
+              "previousAction": "hold",
+              "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+              "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+            },
+            "attribution": {
+              "name": "Cato the Younger"
+            }
+          },
+          "candidate_hash": "069f2eda5ab922403c7656e8950851d9a860d81b39de224bc724336cda6448fd",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Cele mai multe lucruri pe care le vei învăța în viață le vei învăța prin încercări și greșeli, într-un proces dezordonat și ineficient.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+            "category": "influential_people",
+            "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+            "attribution": {
+              "name": "Angela Duckworth",
+              "personId": "angela-duckworth",
+              "country": "US",
+              "fields": [
+                "Philosophers, psychologists and public intellectuals"
+              ]
+            },
+            "language": "en",
+            "context": "Duckworth's Learning Day session at Wharton",
+            "source": {
+              "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+              "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+              "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+              "published": null,
+              "retrieved": "2026-08-18",
+              "tier": "primary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "5e30f2db225bdd07af018def3692f8c1eb40b214700a27c776427384f18d33e0",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință necesară a faptului că faci ceva nou.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+            "category": "influential_people",
+            "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+            "attribution": {
+              "name": "Ed Catmull",
+              "personId": "ed-catmull",
+              "country": "US",
+              "fields": [
+                "Animators and animation studio founders"
+              ]
+            },
+            "language": "en",
+            "context": "Catmull's answer when asked for his best career advice",
+            "source": {
+              "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+              "publisher": "Forbes",
+              "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+              "published": "2014-04-08",
+              "retrieved": "2026-08-18",
+              "tier": "reputable_secondary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "e9f3f605b951471c329f03cc74fd3bf9fe09de2ad13dd527ebf66fd54c40c744",
+          "canonical": null
+        }
+      ],
+      "revision_token": "c5cab0a4aef142e1805bf96252cb1562",
+      "packet_hash": "f28db1db51a680aa28fc5925aa0ac17a4d33590ed370e5965471087f69fd0a25",
+      "output_contract": {
+        "packet_hash": "f28db1db51a680aa28fc5925aa0ac17a4d33590ed370e5965471087f69fd0a25",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Ne kösd reményeidet vagy félelmeidet egyetlen nagy hatalmú emberhez; őrizd meg önálló ítélőképességedet.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+            "category": "stoic",
+            "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+            "language": "en",
+            "verification": "supplied_unverified",
+            "theme": "wealth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set4-stoic/test1.json",
+              "row": 2,
+              "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+              "author": "CATO THE YOUNGER"
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+              "reviewedOn": "2026-09-14",
+              "previousAction": "hold",
+              "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+              "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+            },
+            "attribution": {
+              "name": "Cato the Younger"
+            }
+          },
+          "candidate_hash": "2b2be94a28dcaeacb235fc035386fe86f8ed232addc77a69464623f4e26d0aff",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Az életben a legtöbb dolgot kusza, kevéssé hatékony próbálkozások és hibák során fogod megtanulni.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+            "category": "influential_people",
+            "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+            "attribution": {
+              "name": "Angela Duckworth",
+              "personId": "angela-duckworth",
+              "country": "US",
+              "fields": [
+                "Philosophers, psychologists and public intellectuals"
+              ]
+            },
+            "language": "en",
+            "context": "Duckworth's Learning Day session at Wharton",
+            "source": {
+              "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+              "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+              "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+              "published": null,
+              "retrieved": "2026-08-18",
+              "tier": "primary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "bf31da2711f4db512ad46aca45ca57bc892bd76a81355e880957bf37b70ee857",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Ne feledd: a kudarc nem szükséges rossz – valójában egyáltalán nem rossz. Szükségszerű velejárója annak, hogy valami újat csinálsz.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+            "category": "influential_people",
+            "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+            "attribution": {
+              "name": "Ed Catmull",
+              "personId": "ed-catmull",
+              "country": "US",
+              "fields": [
+                "Animators and animation studio founders"
+              ]
+            },
+            "language": "en",
+            "context": "Catmull's answer when asked for his best career advice",
+            "source": {
+              "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+              "publisher": "Forbes",
+              "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+              "published": "2014-04-08",
+              "retrieved": "2026-08-18",
+              "tier": "reputable_secondary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "7781cd3dbcc4b71c9afd7833ce95652f3bb14b066fa78887dafdb58712896d4a",
+          "canonical": null
+        }
+      ],
+      "revision_token": "ee9973b5714346299ae33c5d7b2896cc",
+      "packet_hash": "a9a34147f4ea2cb7229b8b9960e6ebca477f02f49a7a5bb8cf73aacafa756f0b",
+      "output_contract": {
+        "packet_hash": "a9a34147f4ea2cb7229b8b9960e6ebca477f02f49a7a5bb8cf73aacafa756f0b",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; păstrează-ți libertatea de judecată.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+            "category": "stoic",
+            "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+            "language": "en",
+            "verification": "supplied_unverified",
+            "theme": "wealth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set4-stoic/test1.json",
+              "row": 2,
+              "text": "Do not put your hope or fear in one powerful person; keep your judgment your own.",
+              "author": "CATO THE YOUNGER"
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Retained on broader thematic review within the 20% removal limit; discipline, mortality and adversity fit personal development.",
+              "reviewedOn": "2026-09-14",
+              "previousAction": "hold",
+              "previousReason": "Attribution or exact wording not established by the source editions reviewed; preserve for further research rather than publish as authored copy.",
+              "attributionNote": "Supplied wording and attribution are not independently established; display the author as Attributed to <name>."
+            },
+            "attribution": {
+              "name": "Cato the Younger"
+            }
+          },
+          "candidate_hash": "e55ba919391c35041b7c59f2d81184a563fb9fee29a3eaa8f34117870e9546d2",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "În viață, vei învăța cele mai multe lucruri printr-un proces dezordonat și ineficient de încercări și greșeli.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+            "category": "influential_people",
+            "text": "You're going to learn most of the things that you learn in life through messy, inefficient trial and error",
+            "attribution": {
+              "name": "Angela Duckworth",
+              "personId": "angela-duckworth",
+              "country": "US",
+              "fields": [
+                "Philosophers, psychologists and public intellectuals"
+              ]
+            },
+            "language": "en",
+            "context": "Duckworth's Learning Day session at Wharton",
+            "source": {
+              "url": "https://globalyouth.wharton.upenn.edu/articles/business/whartons-grit-expert-discusses-making-decisions-and-embracing-exploration/",
+              "publisher": "Wharton Global Youth Program (University of Pennsylvania)",
+              "title": "Wharton's Grit Expert Discusses Making Decisions and Embracing Exploration",
+              "published": null,
+              "retrieved": "2026-08-18",
+              "tier": "primary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "7bd7b5feed65020b9752cb17dcdf64cdd024b82fa499812562efbfbb9dcf1eee",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință inevitabilă a faptului că faci ceva nou.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+            "category": "influential_people",
+            "text": "Remember that failure isn't a necessary evil – in fact, it isn't evil at all. It is a necessary consequence of doing something new.",
+            "attribution": {
+              "name": "Ed Catmull",
+              "personId": "ed-catmull",
+              "country": "US",
+              "fields": [
+                "Animators and animation studio founders"
+              ]
+            },
+            "language": "en",
+            "context": "Catmull's answer when asked for his best career advice",
+            "source": {
+              "url": "https://www.forbes.com/sites/danschawbel/2014/04/08/ed-catmull-what-you-can-learn-about-creativity-from-pixar/",
+              "publisher": "Forbes",
+              "title": "Ed Catmull: What You Can Learn About Creativity From Pixar",
+              "published": "2014-04-08",
+              "retrieved": "2026-08-18",
+              "tier": "reputable_secondary",
+              "verifiedBy": "refetch"
+            },
+            "verification": "sourced"
+          },
+          "candidate_hash": "e5fe36f6c9dc92feaf9e26d63446bc1b39ac3bf92c4554db40ee88a8ec800140",
+          "canonical": null
+        }
+      ],
+      "revision_token": "f58b639536a0415592bb6bdde9a033ae",
+      "packet_hash": "073007eac076c4c1acd2e077b15fafc1574d7d045098bd96989ed12e4ae98a08",
+      "output_contract": {
+        "packet_hash": "073007eac076c4c1acd2e077b15fafc1574d7d045098bd96989ed12e4ae98a08",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Megállok egy pillanatra, mielőtt olyasmit vennék, ami jövő hónapban már nem számít.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Nem sietek a költéssel, ha a döntés várhat.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "A költségvetésemet térképként használom, nem büntetésként.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a",
+          "canonical": null
+        },
+        {
+          "id": "s004",
+          "text": "A vagyon számomra teret jelent ahhoz, hogy hasznos legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "db2c8c0e991d3557c3fc112001fe7d748fcdd700a0b3e7fcb95c5cfab9f8002e",
+          "canonical": null
+        },
+        {
+          "id": "s005",
+          "text": "Senkinek sem szabad megmondania nekem, mit érzek magammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet akarok.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60",
+          "canonical": null
+        },
+        {
+          "id": "s006",
+          "text": "Fejlődés közben is megérdemled a tiszteletet, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4",
+          "canonical": null
+        }
+      ],
+      "revision_token": "9d4c88814dfe4f04bbf7f9b2354a144d",
+      "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb",
+      "output_contract": {
+        "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Fac o pauză înainte să cumpăr ceva ce luna viitoare nu va mai conta.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "c502ce64bd59d06f6fb29612587c7fce43953b05ed720c6165ee2c9a82864ddf",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Nu mă grăbesc să cheltuiesc când pot amâna decizia.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "54f6849177962c44cfc473853eb740bfbd67e1b29d1681c8dbdd481715c3b3d8",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "023a55e692a10fcfac68b4da12c9ac95c619675a53dd0568c7f8c435f9b4e2cb",
+          "canonical": null
+        },
+        {
+          "id": "s004",
+          "text": "Văd în prosperitate mai multă libertate de a fi de folos.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "bb795fa95183e6b1c0488d52e87f82d857eca7efdcc1d99d9c9fb229ba30c71d",
+          "canonical": null
+        },
+        {
+          "id": "s005",
+          "text": "Nimeni nu ar trebui să-mi spună ce să simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "9a4f0a97d9bbc9a0fc4c03cdc2bbd9b10fd0270c8a879c882b6aa1fb94e7e75d",
+          "canonical": null
+        },
+        {
+          "id": "s006",
+          "text": "Meriți respect pe măsură ce evoluezi, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "865ae89f26c0cfcecb4792391c3aa0b88df0cd6182db5b2a6c11b41790c24013",
+          "canonical": null
+        }
+      ],
+      "revision_token": "c7d48952347b450fbdbf9dd574d856da",
+      "packet_hash": "9d8db7f6be916c1b46a8bc20d81bc935da3c9a4ab0209dfdd7b81963ace8ecda",
+      "output_contract": {
+        "packet_hash": "9d8db7f6be916c1b46a8bc20d81bc935da3c9a4ab0209dfdd7b81963ace8ecda",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "fidelity",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Mielőtt olyasmit vennék, ami jövő hónapban már nem számít, megállok egy pillanatra.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "b5f84ace900003ebb33f9e2329dc48090ad293538b17ef7f0c6ac43f3e2181f2",
+          "canonical": null
+        },
+        {
+          "id": "s002",
+          "text": "Ha egy döntés várhat, nem sietek a költekezéssel.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "262be5a0f7a018b66b82f88a335b813c044157b82407a1c8acc4722801826f0a",
+          "canonical": null
+        },
+        {
+          "id": "s003",
+          "text": "A költségvetésemet térképnek használom, nem büntetésnek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "af4e2561afac9b069d0fcb08c38ac8fda0aa0ef58b600ab620fbea1e29f16324",
+          "canonical": null
+        },
+        {
+          "id": "s004",
+          "text": "A jólét számomra teret ad arra, hogy mások hasznára legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "fcf9e5f92154cb5c593949e4762e227b102c29f61aca12fcb8943b164ada2fd7",
+          "canonical": null
+        },
+        {
+          "id": "s005",
+          "text": "Senki ne mondja meg, hogyan érezzek önmagammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet szeretnék.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "c56a2b524bddadedff67015aea9f8d13352fcb1cd70494d5d45314949a2b52fb",
+          "canonical": null
+        },
+        {
+          "id": "s006",
+          "text": "Megérdemled a tiszteletet, miközben fejlődsz, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "36bc9d852f6e054f079ac258bc9477de354f5ceb1275aea9861f49d27592b835",
+          "canonical": null
+        }
+      ],
+      "revision_token": "4445746875da4c13ad565c8bff825e02",
+      "packet_hash": "ee8f632ba504c46848eabd54f2e78ba4ed866746564c53b6244ab5a53701af92",
+      "output_contract": {
+        "packet_hash": "ee8f632ba504c46848eabd54f2e78ba4ed866746564c53b6244ab5a53701af92",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    }
+  ]
+}

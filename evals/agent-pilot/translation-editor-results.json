@@ -1,0 +1,284 @@
+{
+  "packets": [
+    {
+      "packet_hash": "45af73116ce756a46dfa2188bd3f26b2674cda959d82674cfa22eff491ee830a",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s004",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s005",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s006",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "3188ac756c4e5750298053419a2eb12b6b98b5c9a4307a449f0c95f43cf99fb5",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s004",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s005",
+          "verdict": "finding",
+          "findings": [
+            {
+              "severity": "minor",
+              "category": "collocation",
+              "target_span": "ce simt despre mine",
+              "reader_impact": "In Romanian, «a simți despre» is an awkward combination: «despre» naturally introduces an opinion or thought, while a feeling toward someone takes «față de». This makes the self-directed feeling sound translated.",
+              "suggestion": "Use «ce simt față de mine». Keep the indicative «simt» unless a source check establishes a different intended meaning."
+            }
+          ],
+          "uncertainties": []
+        },
+        {
+          "id": "s006",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "7e1fe98310700f3c8a81c318cde429a83244594c9df670336d925bed5bac7b19",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "590dbf37b0ce383cbf93a80d4d3fe72765623a1caf248356c47d3d68167e219d",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "a14893ee1678245dbfba083486b76d9127bab73fc286d7a83e869cad7af4b554",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s004",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s005",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s006",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "cfde2ac278b89c76c9a0a790cecf50a832858996efd54b5705d9d3f9c76f443c",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "s001",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s002",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s003",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s004",
+          "verdict": "finding",
+          "findings": [
+            {
+              "severity": "minor",
+              "category": "collocation",
+              "target_span": "teret jelent ahhoz",
+              "reader_impact": "The combination of «teret jelent» with «ahhoz, hogy» makes the opportunity metaphor cumbersome. Hungarian naturally uses «teret ad» when something creates room for an action.",
+              "suggestion": "Use «A vagyon számomra teret ad ahhoz, hogy hasznos legyek.»"
+            }
+          ],
+          "uncertainties": []
+        },
+        {
+          "id": "s005",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        },
+        {
+          "id": "s006",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": []
+        }
+      ]
+    }
+  ]
+}

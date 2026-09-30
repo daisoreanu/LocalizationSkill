@@ -83,6 +83,17 @@
   },
   "open": [
     {
+      "id": "notification_permission_wording",
+      "options": ["notificări", "mementouri"],
+      "recommended": "notificări",
+      "recommended_reason": "Names the alerts being enabled on this permission screen; the owner finds mementouri unnatural here.",
+      "decided_by": "user",
+      "status": "decided",
+      "decision_date": "2026-09-27",
+      "shipped": "The permission screen and four connected settings labels are applied needs_review in i18n/localization-readiness, not merged. The owner delegated routine wording decisions on 2026-09-27; independent AI review is not human acceptance.",
+      "note": "Permission copy uses notificări; retain literal iOS labels and proper app names. Notifications support the user's routine and streak, never preserve a missed day automatically. Profile uses Notificări cu citate: Oprite disables that interval only, while separate evening and free-plan alerts remain. Its editor title, save failure and the separate onboarding sound-picker title follow that scope (batch b30). Choose the label from the actual alert type and switch effect, not a catalog-wide reminder replacement."
+    },
+    {
       "id": "focus_session",
       "options": ["sesiune de focus", "sesiune de concentrare"],
       "recommended": "sesiune de concentrare",
@@ -172,14 +183,23 @@
     },
     {
       "id": "award_or_badge",
-      "options": ["Insignă", "Premiu"],
+      "options": [
+        "Insignă",
+        "Premiu"
+      ],
       "recommended": "Insignă",
-      "recommended_reason": "Owner-accepted, already shipped in 5 keys, and plain Romanian a reader without English understands; Apple's own analog uses a different word for the same object, but a different metaphor from Apple's is not itself a defect.",
-      "decided_by": "user",
-      "status": "decided",
-      "decision_date": "2026-09-16",
+      "recommended_reason": "The independently reviewed 2026-09-27 pilot uses Realizări for the collection and insignă for the collectible visual object; this preserves clear locked/earned agreement without implying a payout.",
+      "decided_by": "ai-reviewed-pilot-2026-09-27",
+      "status": "pending_owner_acceptance",
+      "decision_date": "2026-09-27",
       "shipped": "Insignă, kept as shipped (owner's delegation, 2026-09-16); no catalog change to the 5 keys. Recorded here so the divergence from Apple's own 'Premiu' (Fitness achievement icon) is not reopened blindly: Apple reserves 'Insignă' for the OS icon-decoration badge, a different UI object, and never uses it for an earned achievement icon. The counter-evidence stands as a documented, considered trade-off, not an oversight.",
-      "note": "Disagreement from the Apple-Romanian vocabulary cross-reference (iOS 26.1 (23B86) runtime, fetched 2026-09-16: System/Library/PrivateFrameworks/ActivitySharingUI.framework | Localizable.strings | GENERIC_ACHIEVEMENT_NAME 'Premiu'; System/Library/CoreServices/MobileCoreTypes.bundle | InfoPlist.strings | Icon Decoration Badge 'Insignă'). Apple's own achievement system (Fitness) never uses 'insignă' for an earned achievement icon -- it says 'premiu' -- and reserves 'insignă' for a different UI object, the small icon-decoration badge (notification dot, lock, sync icon on an app icon). Keys: achievements.action.seeAllBadges, achievements.badgeUnlock.title, achievements.card.allEarned, achievements.gallery.earnedOfTotal, achievements.gallery.subtitle (5 keys, 'Insignă'/'Insigne' for the achievement concept); onboarding.notificationPermission.alertMessage also says 'insigne' but correctly in Apple's icon-decoration sense and is not part of this decision. Rule: a concept-vocabulary divergence from Apple's own nearest analog is an owner call, not a translation error, since 'insignă' is plain, understandable Romanian either way. Meanwhile the five keys stay locked and findings on them go to an audit scope the owner names; no App Store competitor evidence exists either way for this concept."
+      "note": "The owner explicitly reopened the 2026-09-16 choice for this achievement audit. The pilot retained insignă for badge objects and Realizări for the collection; freezes, milestones and iOS notification badges remain separate concepts. Evidence: 2026-09-27-a/b01/coordinator/draft.rev2.json and adjudication.rev3.json in the app localization run. This records the rule already reviewed in that pilot, not a new terminology change or human acceptance. Apple Fitness documentation uses Premii; the inspected comparable app screenshots were English and do not establish Romanian usage.",
+      "role_forms": {
+        "collection": "Realizări",
+        "collectible_badge": "insignă",
+        "functional_reward": "îngheț de serie",
+        "notification_badge": "insignă, only in the system-label context"
+      }
     }
   ]
 }

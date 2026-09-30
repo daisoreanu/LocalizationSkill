@@ -1,0 +1,76 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {
+          "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+          "text": "În viață, vei învăța cele mai multe lucruri printr-un proces dezordonat și ineficient de încercări și greșeli.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified."
+          ],
+          "provenance_note": "New Romanian translation of the supplied English quotation attributed to Angela Duckworth. The input identifies a primary Wharton source and marks the quotation as sourced. No published Romanian translation or independent source verification is claimed."
+        },
+        {
+          "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință inevitabilă a faptului că faci ceva nou.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified."
+          ],
+          "provenance_note": "New Romanian translation of the supplied English quotation attributed to Ed Catmull. The input identifies a Forbes interview and marks the quotation as sourced. No published Romanian translation or independent source verification is claimed."
+        },
+        {
+          "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; păstrează-ți libertatea de judecată.",
+          "uncertainty": [
+            "The input states that the wording and attribution are not independently established."
+          ],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified.",
+            "Display the qualified attribution: Atribuit lui Cato cel Tânăr."
+          ],
+          "provenance_note": "New Romanian translation of supplied, unverified English wording, not a translation from a verified ancient source. Preserve the input’s requirement to qualify the author attribution; do not present it as an established quotation by Cato the Younger."
+        }
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {
+          "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+          "text": "Az életben a legtöbb dolgot kusza, kevéssé hatékony próbálkozások és hibák során fogod megtanulni.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified."
+          ],
+          "provenance_note": "New Hungarian translation of the supplied English quotation attributed to Angela Duckworth. The input identifies a primary Wharton source and marks the quotation as sourced. No published Hungarian translation or independent source verification is claimed."
+        },
+        {
+          "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+          "text": "Ne feledd: a kudarc nem szükséges rossz – valójában egyáltalán nem rossz. Szükségszerű velejárója annak, hogy valami újat csinálsz.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified."
+          ],
+          "provenance_note": "New Hungarian translation of the supplied English quotation attributed to Ed Catmull. The input identifies a Forbes interview and marks the quotation as sourced. No published Hungarian translation or independent source verification is claimed."
+        },
+        {
+          "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+          "text": "Ne kösd reményeidet vagy félelmeidet egyetlen nagy hatalmú emberhez; őrizd meg önálló ítélőképességedet.",
+          "uncertainty": [
+            "The input states that the wording and attribution are not independently established."
+          ],
+          "display_concerns": [
+            "Mobile length and layout limits were not supplied; fit remains unverified.",
+            "Display the qualified attribution: Az ifjabb Catónak tulajdonítva."
+          ],
+          "provenance_note": "New Hungarian translation of supplied, unverified English wording, not a translation from a verified ancient source. Preserve the input’s requirement to qualify the author attribution; do not present it as an established quotation by Cato the Younger."
+        }
+      ],
+      "holds": []
+    }
+  ]
+}

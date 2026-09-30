@@ -1,0 +1,440 @@
+{
+  "packets": [
+    {
+      "role": "editor",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Mielőtt olyasmit vennék, ami jövő hónapban már nem számít, megállok egy pillanatra.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Ha egy döntés várhat, nem sietek a költekezéssel.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "A költségvetésemet térképnek használom, nem büntetésnek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s004",
+          "text": "A jólét számomra teret ad arra, hogy mások hasznára legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s005",
+          "text": "Senki ne mondja meg, hogyan érezzek önmagammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet szeretnék.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s006",
+          "text": "Megérdemled a tiszteletet, miközben fejlődsz, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "5ff8115a042848e6a1f6eaa52a53a2aa",
+      "packet_hash": "45af73116ce756a46dfa2188bd3f26b2674cda959d82674cfa22eff491ee830a",
+      "output_contract": {
+        "packet_hash": "45af73116ce756a46dfa2188bd3f26b2674cda959d82674cfa22eff491ee830a",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Ne kösd reményedet vagy félelmedet egyetlen hatalmas emberhez; őrizd meg ítéleted önállóságát.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "A legtöbb dolgot, amit az életben megtanulsz, zűrzavaros, nem hatékony próbálkozások és tévedések útján tanulod majd meg.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Ne feledd, hogy a kudarc nem szükséges rossz — valójában egyáltalán nem rossz. Szükségszerű következménye annak, hogy valami újat csinálsz.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "99477cf65a5a46358cece54a8f1d27b6",
+      "packet_hash": "3188ac756c4e5750298053419a2eb12b6b98b5c9a4307a449f0c95f43cf99fb5",
+      "output_contract": {
+        "packet_hash": "3188ac756c4e5750298053419a2eb12b6b98b5c9a4307a449f0c95f43cf99fb5",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Mă opresc înainte să cumpăr ceva ce nu va mai conta luna viitoare.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Nu mă grăbesc să cheltuiesc când decizia poate aștepta.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s004",
+          "text": "Văd bogăția ca pe un spațiu în care pot fi de folos.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s005",
+          "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt despre mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s006",
+          "text": "Meriți respect în timp ce te dezvolți, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "4cea2e3888514375aeaf29a3c3fbcba7",
+      "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21",
+      "output_contract": {
+        "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; păstrează-ți libertatea de judecată.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "În viață, vei învăța cele mai multe lucruri printr-un proces dezordonat și ineficient de încercări și greșeli.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință inevitabilă a faptului că faci ceva nou.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "362e8a46b0bd4b94b1a1a867be96dc30",
+      "packet_hash": "7e1fe98310700f3c8a81c318cde429a83244594c9df670336d925bed5bac7b19",
+      "output_contract": {
+        "packet_hash": "7e1fe98310700f3c8a81c318cde429a83244594c9df670336d925bed5bac7b19",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; judecă cu mintea ta.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Cele mai multe lucruri pe care le vei învăța în viață le vei învăța prin încercări și greșeli, într-un proces dezordonat și ineficient.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință necesară a faptului că faci ceva nou.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "49190f27d4804318bc658d10d31f37a8",
+      "packet_hash": "590dbf37b0ce383cbf93a80d4d3fe72765623a1caf248356c47d3d68167e219d",
+      "output_contract": {
+        "packet_hash": "590dbf37b0ce383cbf93a80d4d3fe72765623a1caf248356c47d3d68167e219d",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Fac o pauză înainte să cumpăr ceva ce luna viitoare nu va mai conta.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Nu mă grăbesc să cheltuiesc când pot amâna decizia.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s004",
+          "text": "Văd în prosperitate mai multă libertate de a fi de folos.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s005",
+          "text": "Nimeni nu ar trebui să-mi spună ce să simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s006",
+          "text": "Meriți respect pe măsură ce evoluezi, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "0a34f999301945cfa71300a568b22c16",
+      "packet_hash": "a14893ee1678245dbfba083486b76d9127bab73fc286d7a83e869cad7af4b554",
+      "output_contract": {
+        "packet_hash": "a14893ee1678245dbfba083486b76d9127bab73fc286d7a83e869cad7af4b554",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Ne kösd reményeidet vagy félelmeidet egyetlen nagy hatalmú emberhez; őrizd meg önálló ítélőképességedet.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Az életben a legtöbb dolgot kusza, kevéssé hatékony próbálkozások és hibák során fogod megtanulni.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "Ne feledd: a kudarc nem szükséges rossz – valójában egyáltalán nem rossz. Szükségszerű velejárója annak, hogy valami újat csinálsz.",
+          "kind": "attributed",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "73c4ec35fa4b4397b5995bc6367a33c0",
+      "packet_hash": "cfde2ac278b89c76c9a0a790cecf50a832858996efd54b5705d9d3f9c76f443c",
+      "output_contract": {
+        "packet_hash": "cfde2ac278b89c76c9a0a790cecf50a832858996efd54b5705d9d3f9c76f443c",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "editor",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Megállok egy pillanatra, mielőtt olyasmit vennék, ami jövő hónapban már nem számít.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s002",
+          "text": "Nem sietek a költéssel, ha a döntés várhat.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s003",
+          "text": "A költségvetésemet térképként használom, nem büntetésként.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s004",
+          "text": "A vagyon számomra teret jelent ahhoz, hogy hasznos legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s005",
+          "text": "Senkinek sem szabad megmondania nekem, mit érzek magammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet akarok.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        },
+        {
+          "id": "s006",
+          "text": "Fejlődés közben is megérdemled a tiszteletet, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked"
+        }
+      ],
+      "revision_token": "c716b64654f44e428a7be1f6b93d00ff",
+      "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d",
+      "output_contract": {
+        "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    }
+  ]
+}

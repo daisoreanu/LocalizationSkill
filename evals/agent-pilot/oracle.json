@@ -1,0 +1,115 @@
+{
+  "scope": "Synthetic evaluation expectations; not native-certified language quality ground truth. Do not provide this file to evaluated agents.",
+  "editor": {
+    "s01": {
+      "expected": "preserve",
+      "rationale": "Natural Romanian sentence with no objective language defect."
+    },
+    "s03": {
+      "expected": "finding",
+      "rationale": "Romanian first-person subject Eu conflicts with third-person reflexive își; expected îmi."
+    },
+    "s05": {
+      "expected": "preserve",
+      "rationale": "The repeated Pas cu pas is grammatical and can carry deliberate rhythm."
+    },
+    "s07": {
+      "expected": "preserve",
+      "rationale": "The light image is grammatical and coherent; an image alone is not a defect."
+    },
+    "s09": {
+      "expected": "finding",
+      "rationale": "Romanian orthography requires diacritics in Îmi, următor, grijă."
+    },
+    "s11": {
+      "expected": "preserve",
+      "rationale": "The budget-as-map image and syntax are grammatical Romanian."
+    },
+    "s02": {
+      "expected": "finding",
+      "rationale": "Hungarian subject Én requires first-person adok, not third-person ad."
+    },
+    "s04": {
+      "expected": "preserve",
+      "rationale": "Grammatical, natural Hungarian wording."
+    },
+    "s06": {
+      "expected": "preserve",
+      "rationale": "The repetition is grammatical and can be intentional emphasis."
+    },
+    "s08": {
+      "expected": "finding",
+      "rationale": "Hungarian spelling requires accents: Lépésről lépésre."
+    },
+    "s10": {
+      "expected": "preserve",
+      "rationale": "The light image is grammatical; unusual imagery alone does not warrant editing."
+    },
+    "s12": {
+      "expected": "preserve",
+      "rationale": "Grammatical Hungarian metaphor with a clear contrast."
+    }
+  },
+  "fidelity": {
+    "f01": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Romanian preserves permission to pause before answering."
+    },
+    "f03": {
+      "expected": "finding",
+      "error_type": "negation",
+      "rationale": "Romanian says the speaker must finish everything; source says no need to do so."
+    },
+    "f05": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Romanian preserves the speaker choosing how to spend time."
+    },
+    "f07": {
+      "expected": "finding",
+      "error_type": "agency",
+      "rationale": "Romanian makes the day set the pace; source makes the speaker set it."
+    },
+    "f09": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Romanian preserves that even a small step counts today."
+    },
+    "f11": {
+      "expected": "finding",
+      "error_type": "modality",
+      "rationale": "Romanian turns may change into must change."
+    },
+    "f02": {
+      "expected": "finding",
+      "error_type": "modality",
+      "rationale": "Hungarian turns may change into must change."
+    },
+    "f04": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Hungarian preserves that even a small step counts today."
+    },
+    "f06": {
+      "expected": "finding",
+      "error_type": "omission",
+      "rationale": "Hungarian omits the condition even when plans change."
+    },
+    "f08": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Hungarian preserves permission to pause before answering."
+    },
+    "f10": {
+      "expected": "finding",
+      "error_type": "negation",
+      "rationale": "Hungarian says everything must be finished tonight; source says no need."
+    },
+    "f12": {
+      "expected": "preserve",
+      "error_type": null,
+      "rationale": "Hungarian preserves speaker control over time use."
+    }
+  }
+}

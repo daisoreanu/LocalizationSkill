@@ -1,0 +1,78 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {
+          "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+          "text": "Cele mai multe lucruri pe care le vei învăța în viață le vei învăța prin încercări și greșeli, într-un proces dezordonat și ineficient.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Full passage retained; mobile fit requires measurement because layout limits were not supplied."
+          ],
+          "provenance_note": "New translation of the supplied English quotation attributed to Angela Duckworth. The packet reports a sourced quotation from Wharton Global Youth Program and verification by refetch; no independent source inspection was performed."
+        },
+        {
+          "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+          "text": "Ține minte că eșecul nu este un rău necesar — de fapt, nu este deloc un rău. Este o consecință necesară a faptului că faci ceva nou.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Full passage retained; mobile fit requires measurement because layout limits were not supplied."
+          ],
+          "provenance_note": "New translation of the supplied English quotation attributed to Ed Catmull. The packet reports a sourced Forbes interview quotation and verification by refetch; no independent source inspection was performed."
+        },
+        {
+          "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+          "text": "Nu-ți lega speranța sau teama de un singur om puternic; judecă cu mintea ta.",
+          "uncertainty": [
+            "The supplied English wording and attribution to Cato the Younger are unverified.",
+            "No historical original-language passage is supplied; original-language fidelity is uncertain.",
+            "Preserve qualified attribution in display: «Atribuit lui Cato cel Tânăr»."
+          ],
+          "display_concerns": [
+            "Mobile fit requires measurement because layout limits were not supplied; allow space for the qualified attribution."
+          ],
+          "provenance_note": "New translation of the supplied, unverified English wording only. The packet's curation retains this item with mandatory qualified attribution; neither an authenticated original nor a published Romanian translation was supplied."
+        }
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {
+          "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+          "text": "A legtöbb dolgot, amit az életben megtanulsz, zűrzavaros, nem hatékony próbálkozások és tévedések útján tanulod majd meg.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Full passage retained; mobile fit requires measurement because layout limits were not supplied."
+          ],
+          "provenance_note": "New translation of the supplied English quotation attributed to Angela Duckworth. The packet reports a sourced quotation from Wharton Global Youth Program and verification by refetch; no independent source inspection was performed."
+        },
+        {
+          "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+          "text": "Ne feledd, hogy a kudarc nem szükséges rossz — valójában egyáltalán nem rossz. Szükségszerű következménye annak, hogy valami újat csinálsz.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Full passage retained; mobile fit requires measurement because layout limits were not supplied."
+          ],
+          "provenance_note": "New translation of the supplied English quotation attributed to Ed Catmull. The packet reports a sourced Forbes interview quotation and verification by refetch; no independent source inspection was performed."
+        },
+        {
+          "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+          "text": "Ne kösd reményedet vagy félelmedet egyetlen hatalmas emberhez; őrizd meg ítéleted önállóságát.",
+          "uncertainty": [
+            "The supplied English wording and attribution to Cato the Younger are unverified.",
+            "No historical original-language passage is supplied; original-language fidelity is uncertain.",
+            "Preserve qualified attribution in display: „Az ifjabb Catónak tulajdonított idézet”."
+          ],
+          "display_concerns": [
+            "Mobile fit requires measurement because layout limits were not supplied; allow space for the qualified attribution."
+          ],
+          "provenance_note": "New translation of the supplied, unverified English wording only. The packet's curation retains this item with mandatory qualified attribution; neither an authenticated original nor a published Hungarian translation was supplied."
+        }
+      ],
+      "holds": []
+    }
+  ]
+}

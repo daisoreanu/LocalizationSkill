@@ -1,0 +1,174 @@
+{
+  "packets": [
+    {
+      "packet_hash": "be93d6b2a197045a11ad29ade201e34454bf8badfe4a6d2b278de74b532d6b06",
+      "locale": "ro",
+      "revision": "b3857bd6c3054a7797de2208bcf5f922",
+      "reviews": [
+        {
+          "id": "s001",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s002",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s003",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s004",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s005",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "not_checked",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims. Original authorship/provenance remains not_checked: the supplied import and curation metadata establish a retained curated record, not independently verified authorship. Preserve its existing curated status and distinct source ID. Earlier review notes use s001 while this packet uses s005; the enclosing review records and embedded fidelity hash both match this exact candidate hash. Retain that hash binding when carrying the evidence forward."
+        },
+        {
+          "id": "s006",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "not_checked",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims. Original authorship/provenance remains not_checked: the supplied import and curation metadata establish a retained curated record, not independently verified authorship. Preserve its existing curated status and distinct source ID."
+        }
+      ]
+    },
+    {
+      "packet_hash": "c74e0290888c96ec0fb0b7470fa60bc8e4e35bcc5af5d2ba3a38b43fb30e926b",
+      "locale": "hu",
+      "revision": "a7299d3fd486489cba2c313bee6b5ba1",
+      "reviews": [
+        {
+          "id": "s001",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s002",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s003",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims."
+        },
+        {
+          "id": "s004",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "pass",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims. Earlier review notes use s001 while this packet uses s004; the enclosing review records and embedded fidelity hash both match this exact candidate hash. Retain that hash binding when carrying the evidence forward."
+        },
+        {
+          "id": "s005",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "not_checked",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims. Original authorship/provenance remains not_checked: the supplied import and curation metadata establish a retained curated record, not independently verified authorship. Preserve its existing curated status and distinct source ID."
+        },
+        {
+          "id": "s006",
+          "dimensions": {
+            "meaning": "pass",
+            "editorial": "pass",
+            "provenance": "not_checked",
+            "structure": "pass",
+            "visual": "not_checked"
+          },
+          "verdict": "pass",
+          "blocking_findings": [],
+          "required_next_step": "Eligible for AI linguistic staging at this exact supplied candidate hash. Rendered fit, visual accessibility, release readiness, and human benchmark remain not_checked; obtain those inspections before making corresponding readiness claims. Original authorship/provenance remains not_checked: the supplied import and curation metadata establish a retained curated record, not independently verified authorship. Preserve its existing curated status and distinct source ID."
+        }
+      ]
+    }
+  ]
+}

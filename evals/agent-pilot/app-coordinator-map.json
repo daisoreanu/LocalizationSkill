@@ -1,0 +1,22 @@
+[
+  {
+    "packet_hash": "766c4058140b4d3e9e82dd9945fb2ace",
+    "condition": "generic",
+    "locale": "ro"
+  },
+  {
+    "packet_hash": "f91c7f05e5e1419e9546bebac368d78e",
+    "condition": "generic",
+    "locale": "hu"
+  },
+  {
+    "packet_hash": "aaa89f6effc24fc99b7cdd7cc6052f20",
+    "condition": "specialized",
+    "locale": "ro"
+  },
+  {
+    "packet_hash": "9762be1026af4799a955cee25e346bd1",
+    "condition": "specialized",
+    "locale": "hu"
+  }
+]

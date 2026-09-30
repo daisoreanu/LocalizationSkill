@@ -1,0 +1,62 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s01",
+          "text": "Îmi dau timp să aleg."
+        },
+        {
+          "id": "s03",
+          "text": "Eu își acord timp înainte să decid."
+        },
+        {
+          "id": "s05",
+          "text": "Pas cu pas, pas cu pas, îmi găsesc ritmul."
+        },
+        {
+          "id": "s07",
+          "text": "Păstrez o rază de lumină pentru zilele grele."
+        },
+        {
+          "id": "s09",
+          "text": "Imi aleg pasul urmator cu grija."
+        },
+        {
+          "id": "s11",
+          "text": "Bugetul îmi arată drumul, nu îmi dă ordine."
+        }
+      ]
+    },
+    {
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s02",
+          "text": "Én időt ad magamnak a döntésre."
+        },
+        {
+          "id": "s04",
+          "text": "Adok magamnak időt a döntésre."
+        },
+        {
+          "id": "s06",
+          "text": "Lépésről lépésre, lépésről lépésre haladok."
+        },
+        {
+          "id": "s08",
+          "text": "Lepesrol lepesre haladok."
+        },
+        {
+          "id": "s10",
+          "text": "Egy kis fényt őrzök a nehéz napokra."
+        },
+        {
+          "id": "s12",
+          "text": "A költségvetésem térkép, nem parancs."
+        }
+      ]
+    }
+  ]
+}

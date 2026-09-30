@@ -1,0 +1,63 @@
+{
+  "format": {
+    "source": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+    "rules": [
+      "Standalone TOML per custom agent with name, description, developer_instructions; optional model, model_reasoning_effort, sandbox_mode.",
+      "Descriptions route narrow specialists; read-only sandbox prevents shared file edits."
+    ]
+  },
+  "inspirations": [
+    {
+      "source": "https://github.com/sukamenev/booktrans/blob/main/src/booktrans/prompts/edit.md",
+      "observed": "The editor sees target text only, preserves deliberate strangeness and repetition, notes uncertain semantics, and leaves sound text alone.",
+      "adapted_rules": [
+        "quote_editor has a strict target-only packet boundary and a pass/no-change review for each ID.",
+        "Unknown meaning becomes an uncertainty sent to the coordinator, not a guessed correction."
+      ]
+    },
+    {
+      "source": "https://github.com/sukamenev/booktrans/blob/main/src/booktrans/prompts/verify.md",
+      "observed": "Source-aware verification separates original peculiarity from translation error and permits unresolved verdicts.",
+      "adapted_rules": [
+        "quote_fidelity distinguishes source peculiarity, acceptable adaptation, mistranslation, and unresolved evidence.",
+        "Fidelity gives not_checked when the original language or exact edition is unavailable."
+      ]
+    },
+    {
+      "source": "https://github.com/andrewyng/translation-agent/blob/main/src/translation_agent/utils.py",
+      "observed": "Reflection checks accuracy, fluency, style, and terminology and uses a bounded source neighborhood. Its critic can see the source and does not require a no-change verdict.",
+      "adapted_rules": [
+        "Accuracy and claims go to quote_fidelity; fluency and reader effect go to blind quote_editor.",
+        "All reviewers return a row for every ID, including clean items, and changes require concrete impact.",
+        "The coordinator supplies only relevant source context to source-aware roles."
+      ]
+    }
+  ],
+  "project_rules": {
+    "source": "references/agent-protocol.md#quote-corpus",
+    "adapted_rules": [
+      "Preserve the union of locale records, stable IDs, and distinct phrases; similarity never merges records.",
+      "Research uses the supplied source first and at most three targeted searches per uncached work or reference.",
+      "Shipped material survives failed lookup; scripture requires approved exact-edition evidence.",
+      "Candidate hashes and review coverage bind adjudication to an exact revision."
+    ]
+  },
+  "evaluation_handoff": [
+    "A/B test frozen translator cases for distinct near-synonyms, claim preservation, and literary voice.",
+    "A/B test blind editor on sound unusual prose and a genuine target-language calque.",
+    "Test fidelity on source peculiarity versus mistranslation and an intermediate-language-only hold.",
+    "Check exact JSON coverage and rejection of extra or missing IDs before adoption."
+  ],
+  "limits": [
+    "These files are draft agent configurations; no agent execution or A/B result is claimed here.",
+    "The coordinator must give blind agents fresh context and only the allowed packet; the TOML alone cannot enforce context isolation."
+  ],
+  "app_role_basis": {
+    "files": [
+      "references/agent-protocol.md",
+      "references/voice-card.md",
+      "references/surface-budgets.md"
+    ],
+    "adaptation": "Existing screen-context, target-only review, claim-preservation and evidence-based mobile-fit rules were scoped into app_localizer and app_copy_editor; no competitor-popularity or fit claim without inspected evidence."
+  }
+}

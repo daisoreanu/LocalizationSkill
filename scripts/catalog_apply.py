@@ -5,7 +5,8 @@ The catalog is re-serialized exactly as Xcode writes it (indent 2, " : " separat
 raw UTF-8, insertion order kept, empty objects as '{' blank line '}'), so the diff
 shows only the keys in the candidates file. Before writing, the script proves the
 untouched catalog round-trips byte for byte and that every changed line belongs to a
-listed key; otherwise it aborts and writes nothing. Every unit is written with the
+listed key, and checks changed placeholders and plural forms; otherwise it writes nothing.
+Existing substitutions and non-plural variations cannot be replaced. Every unit gets
 --state (default needs_review) because 'translated' means owner-accepted: a unit that
 is already 'translated' is refused unless --overwrite-translated names that scope.
 
@@ -26,6 +27,8 @@ import subprocess
 import sys
 import tempfile
 
+from catalog_check import run_checks
+
 # Read-only git calls must not refresh the checkout's index.
 os.environ.setdefault("GIT_OPTIONAL_LOCKS", "0")
 
@@ -45,7 +48,7 @@ def parse_args():
     return p.parse_args()
 
 
-def dump_xcstrings(data):
+def dump_xcstrings(data, *, trailing_newline=True):
     """Xcode's serialization: indent 2, ' : ' separator, raw UTF-8, empty objects as '{' blank line '}'."""
     text = json.dumps(data, indent=2, ensure_ascii=False, separators=(",", " : "))
     lines = []
@@ -55,13 +58,13 @@ def dump_xcstrings(data):
             lines.extend([m.group(1) + m.group(2) + "{", "", m.group(1) + "}" + m.group(3)])
         else:
             lines.append(line)
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines) + ("\n" if trailing_newline else "")
 
 
 def load_catalog(path):
-    raw = open(path, encoding="utf-8").read()
+    raw = open(path, encoding="utf-8", newline="").read()
     data = json.loads(raw)
-    if dump_xcstrings(data) != raw:
+    if dump_xcstrings(data, trailing_newline=raw.endswith("\n")) != raw:
         sys.exit("catalog is not in Xcode's serialization, so any write would touch every key; "
                  "open and save it in Xcode, then rerun")
     return raw, data
@@ -122,7 +125,7 @@ def set_localization(entry, locale, loc):
 
 
 def plan_changes(strings, entries, locale, state, overwrite):
-    changes, locked, unknown, unchanged = [], [], [], []
+    changes, locked, unknown, unchanged, invalid = [], [], [], [], []
     for entry in entries:
         key = entry["key"]
         if key not in strings:
@@ -132,15 +135,29 @@ def plan_changes(strings, entries, locale, state, overwrite):
         new = new_localization(entry, state)
         if old == new:
             unchanged.append(key)
-        elif "translated" in current_states(old) and not overwrite:
+            continue
+        if "translated" in current_states(old) and not overwrite:
             locked.append(key)
-        else:
-            changes.append((key, old, new))
+            continue
+        if old and (set(old) not in ({"stringUnit"}, {"variations"}) or
+                    set(old.get("variations", {})) - {"plural"}):
+            invalid.append(f"{key}: existing localization has substitutions or unsupported variations")
+            continue
+        trial = {**strings[key], "localizations": {**strings[key].get("localizations", {}), locale: new}}
+        blockers = [f for f in run_checks(key, trial, locale, {}, float("inf"), [])
+                    if (f["check"] == "C1" and f["severity"] == "critical") or
+                    (f["check"] == "C2" and f["severity"] == "major")]
+        invalid.extend(f"{key}: {f['message']}" for f in blockers)
+        if blockers:
+            continue
+        changes.append((key, old, new))
     if unknown:
         sys.exit("keys not in the catalog (add them from source first): " + ", ".join(unknown))
     if locked:
         sys.exit("refusing to rewrite owner-accepted 'translated' units; drop them or pass --overwrite-translated: "
                  + ", ".join(locked))
+    if invalid:
+        sys.exit("refusing invalid candidate units; nothing written:\n" + "\n".join(invalid))
     return changes, unchanged
 
 
@@ -206,7 +223,7 @@ def main():
     for key, old, new in changes:
         set_localization(catalog["strings"][key], args.locale, new)
         print(f"{'would write' if args.dry_run else 'write'} {key} ({describe(old, new)}, state {args.state})")
-    new_text = dump_xcstrings(catalog)
+    new_text = dump_xcstrings(catalog, trailing_newline=raw.endswith("\n"))
     if not changes:
         print(f"nothing to write: {len(unchanged)} unchanged; catalog round-trips byte-identical")
         return

@@ -5,10 +5,10 @@ The coordinator packet (coordinator/source.json) carries everything the forward 
 coordinator need: English, comment, screen and state, control, tier, invariants, neighbours, same-source
 siblings and layout constraints. The blind packet (blind/target.rev<N>.json) carries only what a
 target-language editor or back-translator may see: opaque ids, target text, neutral roles, token samples,
-target-only neighbours and siblings, the target-side term list, markers and the rating scale. Keys and
-English never enter it; the leak check proves that per run and exits 1 when it fails, which blocks
-dispatch of roles B and C. Order follows the selection: worklist batch order, else --keys order, else
-catalog order; the flow is the unit of review, not the line. Shield pairs from ShieldMessageCatalog.swift
+target-only neighbours and siblings, the target-side term list, markers and the rating scale. Known
+source strings and keys are checked for overlap; a failure exits 1 and blocks roles B and C. This
+scan does not verify semantic leaks, images or host context. Order follows worklist batch order, else
+--keys order, else catalog order; the flow is the unit of review, not the line. Shield pairs from ShieldMessageCatalog.swift
 join as shield.<id>.title and shield.<id>.body, the names worklist.py, catalog_check.py and
 scan_layout_constraints.py use, so a shield batch and the pilot batch build like any other. Tiers,
 shield parsing and the keys-file format come from catalog_check.py so one rule set serves both scripts.
@@ -22,7 +22,9 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_check import RISK_PATTERN, read_keys_file, shield_entries, tier_for as check_tier, units as check_units  # noqa: E402
+from catalog_check import (RISK_PATTERN, check_placeholders, check_plurals, read_keys_file, shield_entries,
+                           tier_for as check_tier, units as check_units)  # noqa: E402
+from casing import text_units  # noqa: E402
 
 # Read-only git calls must not refresh the checkout's index.
 os.environ.setdefault("GIT_OPTIONAL_LOCKS", "0")
@@ -44,10 +46,20 @@ BRANDS = ("Moneyfesting", "Apple", "iOS", "iPhone", "Screen Time", "Face ID", "T
 PACKET_VOCABULARY = ("hero headline", "button", "title", "subtitle", "caption", "badge", "body", "label", "footer", "description",
                      "placeholder", "toggle", "tab", "alert title", "alert body", "menu item", "widget name",
                      "widget description", "voiceover label", "text", "hint", "value", "pass", "revise", "block",
-                     "identical by design", "fixed name", "uppercase by design", "attributed", "user content", "plural",
+                     "identical by design", "fixed name", "attributed", "user content", "plural",
                      "no target yet", "unverified", "constraints", "rendered")
-TEXT_FIELD_RE = re.compile(r"\.text$|\.plural\.|sibling_text$|term_list[.\[]")
+TEXT_FIELD_RE = re.compile(r"\.text$|\.plural\.|sibling_text$|term_list[.\[]|\.context[.\[]|"
+                           r"\.sample$|\.(protected_terms|exceptions)[.\[]")
 AVOID_FIELD_RE = re.compile(r"term_list\.avoid\b")
+CASING_VALUES = {
+    "status": {"confirmed", "needs_review", "not_applicable"},
+    "role": {"screen_title", "button", "tab", "section_heading", "compact_heading", "caption", "body",
+             "placeholder", "value_label", "continuation", "unit", "system_label", "brand", "format", "unknown"},
+    "position": {"standalone", "continuation", "template", "not_applicable", "unknown"},
+    "style": {"sentence", "uppercase", "lowercase", "title", "preserve", "uncased", "unknown"},
+    "owner": {"catalog", "view", "formatter", "system", "unknown"},
+}
+CASING_OPERATIONS = {"uppercase", "lowercase", "capitalize", "none"}
 SCREEN_ROLES = [
     ("widgets.", "home widget, small and medium sizes"), ("paywall.", "subscription offer"),
     ("onboarding.", "first-run setup flow"), ("screenTimeReport.", "usage report"), ("screenTime.", "app limits"),
@@ -174,7 +186,9 @@ def en_text(key, entry):
     text, plural, _ = unit(entry, "en")
     if plural:
         return plural.get("other") or next(iter(plural.values()))
-    return text if text is not None else key
+    if text is not None:
+        return text
+    return next((value for _, value in text_units(entry.get("localizations", {}).get("en", {}))), key)
 
 
 def count_kind(en, token, comment):
@@ -292,6 +306,154 @@ def kind_for(key, en, comment, control):
     if control in ("button", "toggle", "tab", "badge", "placeholder", "widget name") or len(en.split()) <= 4:
         return "functional"
     return "explanatory"
+
+
+def initial_casing(kind, control, ph):
+    casing = {"status": "needs_review", "role": "unknown", "position": "unknown", "style": "unknown",
+              "owner": "unknown", "protected_terms": [], "exceptions": []}
+    if kind in ("attributed", "user"):
+        casing.update(status="not_applicable", position="not_applicable", style="preserve",
+                      evidence="UI capitalization does not apply to %s content." % kind)
+        return casing
+    roles = {"button": "button", "tab": "tab", "caption": "caption", "body": "body",
+             "alert body": "body", "widget description": "body", "placeholder": "placeholder"}
+    casing["role"] = "system_label" if kind == "system-label" else roles.get(control, "unknown")
+    if ph:
+        casing["position"] = "template"
+    casing["evidence"] = "Provisional role from control metadata; confirm position, locale rule and display owner."
+    return casing
+
+
+def blind_casing(casing, groups, unit_ids=None, occurrence_ids=None):
+    if not isinstance(casing, dict):
+        die("casing must be an object")
+    result = {}
+    for field, allowed in CASING_VALUES.items():
+        value = casing.get(field)
+        if not isinstance(value, str) or value not in allowed:
+            die("invalid casing %s: %r" % (field, value))
+        result[field] = value
+    terms = casing.get("protected_terms", [])
+    exceptions = casing.get("exceptions", [])
+    if not isinstance(terms, list) or any(not isinstance(term, str) for term in terms):
+        die("casing protected_terms must be target strings")
+    if not isinstance(exceptions, list) or any(not isinstance(item, dict)
+                                               or not isinstance(item.get("text"), str)
+                                               or not isinstance(item.get("reason"), str) for item in exceptions):
+        die("casing exceptions must contain text and reason")
+    result["protected_terms"] = terms
+    result["exceptions"] = [item["text"] for item in exceptions]
+    if casing.get("equivalent_group"):
+        group = casing["equivalent_group"]
+        if not isinstance(group, str):
+            die("casing equivalent_group must be a string")
+        result["equivalent_group"] = groups.setdefault(group, "g%02d" % (len(groups) + 1))
+    if "transform" in casing:
+        transform = casing["transform"]
+        operation = transform.get("operation") if isinstance(transform, dict) else None
+        if not isinstance(operation, str) or operation not in CASING_OPERATIONS:
+            die("casing transform must name an allowed operation")
+        result["transform"] = {"operation": operation}
+    inherited = {field: value for field, value in casing.items() if field not in ("units", "occurrences")}
+    if "units" in casing:
+        units = casing["units"]
+        if not isinstance(units, dict):
+            die("casing units must map unit paths to casing overrides")
+        result["units"] = {}
+        for index, (path, override) in enumerate(units.items(), 1):
+            if not isinstance(override, dict):
+                die("casing unit overrides must be objects")
+            uid = "u%02d" % index
+            if unit_ids is not None:
+                unit_ids[path] = uid
+            unit_casing = {**inherited, **override}
+            if "occurrences" in casing and "occurrences" not in override:
+                unit_casing["occurrences"] = casing["occurrences"]
+            result["units"][uid] = blind_casing(unit_casing, groups)
+    if "occurrences" in casing:
+        occurrences = casing["occurrences"]
+        if not isinstance(occurrences, list):
+            die("casing occurrences must be a list of context overrides")
+        result["occurrences"] = []
+        for index, override in enumerate(occurrences, 1):
+            if not isinstance(override, dict):
+                die("casing occurrence overrides must be objects")
+            oid = "o%02d" % index
+            source_id = override.get("id", oid)
+            if not isinstance(source_id, str):
+                die("casing occurrence id must be a string")
+            if occurrence_ids is not None:
+                if source_id in occurrence_ids:
+                    die("casing occurrence ids must be unique")
+                occurrence_ids[source_id] = oid
+            result["occurrences"].append({"id": oid, **blind_casing({**inherited, **override}, groups)})
+    return result
+
+
+def sync_blind_casing(source_doc, blind_doc):
+    groups = {}
+    by_id = {entry["id"]: entry for entry in blind_doc["strings"]}
+    kind_markers = {"attributed": "attributed", "user": "user content"}
+    blind_doc["markers"] = [row for row in blind_doc["markers"] if row["marker"] not in kind_markers.values()]
+    for entry in source_doc["entries"]:
+        if entry["id"] in by_id and entry["kind"] in kind_markers:
+            blind_doc["markers"].append({"id": entry["id"], "marker": kind_markers[entry["kind"]]})
+        values = entry.get("target_units", {})
+        for path in values:
+            if "substitution:" in path:
+                entry["casing"].setdefault("units", {}).setdefault(
+                    path, {"status": "needs_review", "role": "unknown", "position": "unknown",
+                           "style": "unknown", "evidence": "Confirm casing in the composed substitution position."})
+            elif path and not path.startswith("plural:"):
+                entry["casing"].setdefault("units", {}).setdefault(path, {})
+        unit_ids, occurrence_ids = {}, {}
+        casing = blind_casing(entry["casing"], groups, unit_ids, occurrence_ids)
+        if unit_ids:
+            entry["casing_unit_ids"] = unit_ids
+        else:
+            entry.pop("casing_unit_ids", None)
+        if occurrence_ids:
+            entry["casing_occurrence_ids"] = occurrence_ids
+        else:
+            entry.pop("casing_occurrence_ids", None)
+        if entry["id"] in by_id:
+            target = by_id[entry["id"]]
+            target["casing"] = casing
+            target.pop("units", None)
+            if unit_ids:
+                missing = unit_ids.keys() - values.keys()
+                if missing:
+                    die("casing unit context has no target text: " + ", ".join(sorted(missing)))
+                target["units"] = [{"id": uid, "text": values[path]} for path, uid in unit_ids.items()]
+    contexts = {entry["id"]: entry for entry in source_doc.get("context_entries", [])}
+    for neighbour in blind_doc["neighbours"]:
+        context = contexts[neighbour["id"]]
+        neighbour["role"] = context["control"]
+        neighbour["casing"] = blind_casing(context["casing"], groups)
+    selected = {entry["key"]: entry for entry in source_doc["entries"]}
+    external = {entry["key"]: entry for entry in contexts.values()}
+    consistency = []
+    for entry in source_doc["entries"]:
+        for sibling in entry["same_source"]:
+            related = selected.get(sibling["key"]) or external.get(sibling["key"])
+            sibling["control"] = related["control"]
+            if sibling["target"] is None:
+                continue
+            consistency.append({"id": entry["id"], "sibling_id": related["id"],
+                                "sibling_text": sibling["target"], "role": sibling["control"],
+                                "casing": blind_casing(related["casing"], groups)})
+    blind_doc["consistency"] = consistency
+
+
+def target_unit_values(localization, text, plural):
+    values = dict(text_units(localization))
+    if text is not None:
+        values = {path: value for path, value in values.items() if not path.startswith("plural:")}
+        values[""] = text
+    if plural is not None:
+        values = {path: value for path, value in values.items() if path and not path.startswith("plural:")}
+        values.update({"plural:" + category: value for category, value in plural.items()})
+    return values
 
 
 def hero_for(key, comment):
@@ -422,7 +584,7 @@ class Packet:
 
     @classmethod
     def from_run(cls, args):
-        """Reload an existing run for --update; nothing is rebuilt, so ids and neighbours stay stable."""
+        """Reload a run from its recorded catalog, retaining ids and verified context."""
         coord = os.path.join(args.out_dir, "coordinator")
         self = cls.__new__(cls)
         self.args = args
@@ -431,6 +593,9 @@ class Packet:
             die("run locale %s does not match --locale %s" % (self.source_doc["locale"], args.locale))
         self.locale, self.batch = args.locale, self.source_doc.get("batch")
         self.rev = args.rev or self.source_doc.get("rev", 1)
+        if self.rev != self.source_doc.get("rev", 1):
+            die("--update revision differs from the coordinator packet; rebuild this revision with --catalog")
+        self.candidates, _ = self.load_candidates(expected_rev=self.rev)
         self.args.catalog = self.source_doc["catalog"]
         self.shield = self.source_doc.get("shield")
         self.strings = self.with_shields(load_json(self.args.catalog)["strings"])
@@ -439,6 +604,89 @@ class Packet:
         self.blind_doc = load_json(os.path.join(args.out_dir, "blind", "target.rev%d.json" % self.rev))
         self.id_map = load_json(os.path.join(coord, "id_map.json"))
         entries = self.source_doc["entries"]
+        if "context_entries" not in self.source_doc:
+            die("context metadata is missing; rebuild the packet before --update")
+        targets = {row["id"]: row for row in self.blind_doc["strings"]}
+        for entry in entries:
+            current = self.strings.get(entry["key"], {})
+            source_units = dict(text_units(current.get("localizations", {}).get("en", {})))
+            if (entry["en"], entry["comment"]) != (en_text(entry["key"], current), current.get("comment") or ""):
+                die("source changed for %s; rebuild the packet before --update" % entry["key"])
+            if "source_units" in entry and entry["source_units"] != source_units:
+                die("source units changed for %s; rebuild the packet before --update" % entry["key"])
+            siblings = {key for key, value in self.strings.items()
+                        if key != entry["key"] and en_text(key, value) == entry["en"]}
+            if siblings != {s["key"] for s in entry["same_source"]}:
+                die("same-source membership changed for %s; rebuild the packet before --update" % entry["key"])
+            entry["source_units"] = source_units
+            entry.setdefault("casing", initial_casing(entry["kind"], entry["control"], entry["placeholders"]))
+            target = targets.get(entry["id"], {})
+            catalog_text, catalog_plural, state = unit(current, self.locale)
+            entry["existing_target"] = catalog_text if catalog_text is not None else catalog_plural
+            entry["state"] = state
+            if entry["key"] in self.candidates:
+                text, plural = self.candidates[entry["key"]]
+                localization = current.get("localizations", {}).get(self.locale, {})
+                if any("substitution:" in path for path, _ in text_units(localization)):
+                    die("nested candidate units are unsupported; cannot bind their target text to this revision")
+                source_check_units = check_units(current, "en")
+                candidate_units = ({"": {"value": text}} if text is not None else
+                                   {"plural:" + cat: {"value": value} for cat, value in plural.items()})
+                blockers = [finding for finding in (*check_placeholders(entry["key"], source_check_units, candidate_units),
+                                                   *check_plurals(entry["key"], self.locale, source_check_units, candidate_units))
+                            if finding["severity"] in ("critical", "major")]
+                if blockers:
+                    die("invalid candidate for %s: %s" % (entry["key"], blockers[0]["message"]))
+                entry["candidate"] = text if text is not None else plural
+                entry["variations"] = {"plural": sorted(plural)} if plural else {}
+                if not target:
+                    target = {"id": entry["id"], "control_role": entry["control"],
+                              "tokens": blind_tokens(entry["placeholders"]),
+                              "fit": fit_from_sites(entry.get("layout", {}).get("sites", []))}
+                    targets[entry["id"]] = target
+                target["text"], target["plural"] = text, plural
+                self.blind_doc["markers"] = [marker for marker in self.blind_doc["markers"]
+                                             if marker["id"] != entry["id"] or marker["marker"] not in
+                                             ("no target yet", "plural", "identical by design")]
+                if plural:
+                    self.blind_doc["markers"].append({"id": entry["id"], "marker": "plural"})
+            elif entry.get("candidate") is None:
+                catalog_values = target_unit_values(current.get("localizations", {}).get(self.locale, {}),
+                                                    catalog_text, catalog_plural)
+                if (entry["id"] in targets) != bool(catalog_values):
+                    die("target presence changed for %s; rebuild the packet before --update" % entry["key"])
+                target["text"], target["plural"] = catalog_text, catalog_plural
+            text, plural = target.get("text"), target.get("plural")
+            values = target_unit_values(current.get("localizations", {}).get(self.locale, {}), text, plural)
+            for path, value in entry.get("target_units", {}).items():
+                if "substitution:" in path and values.get(path) != value:
+                    die("target substitution changed for %s; rebuild the packet before --update" % entry["key"])
+            entry["target_units"] = values
+        self.blind_doc["strings"] = [targets[entry["id"]] for entry in entries if entry["id"] in targets]
+        self.blind_doc["order"] = [row["id"] for row in self.blind_doc["strings"]]
+        selected = {entry["key"]: entry for entry in entries}
+        for entry in self.source_doc["context_entries"]:
+            current = self.strings.get(entry["key"], {})
+            source_units = dict(text_units(current.get("localizations", {}).get("en", {})))
+            if (entry["en"], entry["comment"], entry["source_units"]) != (
+                    en_text(entry["key"], current), current.get("comment") or "", source_units):
+                die("source changed for context %s; rebuild the packet before --update" % entry["key"])
+            text, plural, _ = unit(current, self.locale)
+            entry["target"] = text if text is not None else plural
+        contexts = {entry["key"]: entry for entry in self.source_doc["context_entries"]}
+        context_ids = {entry["id"]: entry for entry in self.source_doc["context_entries"]}
+        for neighbour in self.blind_doc["neighbours"]:
+            entry = context_ids[neighbour["id"]]
+            neighbour["text"], neighbour["plural"], _ = unit(self.strings[entry["key"]], self.locale)
+        target_by_key = {entry["key"]: (entry["candidate"] if entry.get("candidate") is not None
+                                         else entry["existing_target"]) for entry in entries}
+        target_by_key.update({entry["key"]: entry["target"] for entry in contexts.values()})
+        for entry in entries:
+            for sibling in entry["same_source"]:
+                related = selected.get(sibling["key"]) or contexts[sibling["key"]]
+                sibling["target"] = target_by_key[sibling["key"]]
+                sibling["control"] = related["control"]
+        sync_blind_casing(self.source_doc, self.blind_doc)
         self.involved = [s["key"] for s in entries] + list(self.source_doc.get("context_keys", {}).values()) \
             + [x["key"] for s in entries for x in s["same_source"]]
         return self
@@ -457,12 +705,16 @@ class Packet:
             out += pair if k not in self.strings and pair[0] in self.strings else [k]
         return out
 
-    def load_candidates(self):
+    def load_candidates(self, expected_rev=None):
         if not self.args.candidates:
             return {}, self.args.rev or 1
         c = load_json(self.args.candidates)
         if c.get("locale") not in (None, self.locale):
             die("candidates locale %s does not match --locale %s" % (c.get("locale"), self.locale))
+        if expected_rev is not None and c.get("rev") not in (None, expected_rev):
+            die("candidates revision differs from the coordinator packet; rebuild this revision with --catalog")
+        if any(set(entry) & {"units", "substitutions", "variations"} for entry in c.get("entries", [])):
+            die("nested candidate units are unsupported; cannot bind their target text to this revision")
         cands = {e["key"]: (e.get("value"), e.get("plural")) for e in c.get("entries", [])}
         return cands, self.args.rev or c.get("rev") or 1
 
@@ -542,13 +794,16 @@ class Packet:
     def build(self):
         excluded = self.findings.get("exclusions", {})
         tiers = self.findings.get("tiers", {})
-        skipped = {k: (excluded[k] if k in excluded else
-                       "not in catalog" + ("; pass --shield ShieldMessageCatalog.swift" if k.startswith("shield.") else ""))
-                   for k in self.keys if k not in self.strings or k in excluded}
+        unknown = [k for k in self.keys if k not in self.strings]
+        if unknown:
+            hint = "; pass --shield ShieldMessageCatalog.swift" if any(k.startswith("shield.") for k in unknown) else ""
+            die("keys not in catalog: " + ", ".join(unknown) + hint)
+        skipped = {k: excluded[k] for k in self.keys if k in excluded}
         keys = [k for k in self.keys if k not in skipped]
         context = self.context_keys(excluded)
         n_ids = {k: "n%02d" % (i + 1) for i, k in enumerate(context)}
-        source, blind, id_map, hero_ids, consistency, markers = [], [], {}, [], [], []
+        selected_keys = set(keys)
+        source, blind, id_map, hero_ids, markers = [], [], {}, [], []
         for i, key in enumerate(keys):
             sid = "s%02d" % (i + 1)
             id_map[sid] = key
@@ -574,14 +829,18 @@ class Packet:
             if hero:
                 hero_ids.append(sid)
             value = text if text is not None else plural
+            target_values = target_unit_values(entry.get("localizations", {}).get(self.locale, {}), text, plural)
             source.append({
                 "id": sid, "key": key, "en": en, "comment": comment,
+                "source_units": dict(text_units(entry.get("localizations", {}).get("en", {}))),
                 "existing_target": cat_text if cat_text is not None else cat_plural,
+                "target_units": target_values,
                 "state": cat_state, "candidate": value if from_cand else None,
                 "variations": {"plural": sorted(plural)} if plural else {},
                 "extractionState": entry.get("extractionState"), "kind": kind,
                 "tier": tiers.get(key) or check_tier(key, entry, check_units(entry, "en")), "hero": hero,
                 "invariants": invariants(en, control), "placeholders": ph, "control": control,
+                "casing": initial_casing(kind, control, ph),
                 "screen": screen, "screen_state": state_desc, "order": i + 1, "neighbours": neighbours,
                 "slot": ".".join(key.split(".")[2:]) or key.split(".")[-1],
                 "agreement_target": self.agreement_target(en, text or (plural or {}).get("other")),
@@ -589,41 +848,55 @@ class Packet:
                 "layout": {"sites": sites, "unresolved": key in self.constraints.get("unresolved", [])} if self.constraints else {},
                 "evidence": {},
             })
-            if value is None:
+            for s in siblings:
+                if s["key"] in self.candidates:
+                    candidate_text, candidate_plural, _ = self.target(s["key"])
+                    s["target"] = candidate_text if candidate_text is not None else candidate_plural
+            if value is None and not target_values:
                 markers.append({"id": sid, "marker": "no target yet"})
                 continue
             blind.append({"id": sid, "text": text, "plural": plural, "control_role": control,
                           "tokens": blind_tokens(ph), "fit": fit_from_sites(sites)})
-            for s in siblings:
-                row = {"id": sid, "sibling_text": s["target"], "role": s["control"]}
-                if s["target"] is not None and row not in consistency:
-                    consistency.append(row)
             if plural:
                 markers.append({"id": sid, "marker": "plural"})
             if text is not None and text == en and cat_state == "translated" and not from_cand:
                 markers.append({"id": sid, "marker": "identical by design"})
             if en in BRANDS:
                 markers.append({"id": sid, "marker": "fixed name"})
-            if text and text.isupper() and en.isupper():
-                markers.append({"id": sid, "marker": "uppercase by design"})
-            if kind in ("attributed", "user"):
-                markers.append({"id": sid, "marker": "attributed" if kind == "attributed" else "user content"})
         blind_neighbours = []
         for k in context:
             t, p, _ = unit(self.strings[k], self.locale)
             blind_neighbours.append({"id": n_ids[k], "text": t, "plural": p,
                                      "role": control_for(k, self.strings[k].get("comment"))})
+        sibling_keys = dict.fromkeys(s["key"] for entry in source for s in entry["same_source"]
+                                     if s["key"] not in selected_keys and s["key"] not in n_ids)
+        external_ids = {k: "c%02d" % (i + 1) for i, k in enumerate(sibling_keys)}
+        context_entries = []
+        for key, cid in {**n_ids, **external_ids}.items():
+            entry = self.strings[key]
+            en = en_text(key, entry)
+            comment = entry.get("comment") or ""
+            control = control_for(key, comment)
+            target_text, target_plural, _ = unit(entry, self.locale)
+            kind = kind_for(key, en, comment, control)
+            context_entries.append({"id": cid, "key": key, "en": en, "comment": comment,
+                                    "source_units": dict(text_units(entry.get("localizations", {}).get("en", {}))),
+                                    "target": target_text if target_text is not None else target_plural,
+                                    "control": control,
+                                    "casing": initial_casing(kind, control,
+                                                             placeholders(en, comment, self.locale, self.glossary))})
         role = screen_role(keys)
         self.source_doc = {
             "locale": self.locale, "rev": self.rev, "batch": self.batch, "screen_role": role,
             "catalog": os.path.abspath(self.args.catalog), "catalog_commit": self.catalog_commit(),
             "constraints": os.path.abspath(self.args.constraints) if self.args.constraints else None,
             "glossary": os.path.abspath(self.args.glossary) if self.args.glossary else None, "shield": self.shield,
-            "context_keys": {n_ids[k]: k for k in context}, "entries": source,
+            "context_keys": {n_ids[k]: k for k in context}, "context_entries": context_entries,
+            "entries": source,
         }
         self.blind_doc = {
             "locale": self.locale, "screen_role": role, "rev": self.rev, "order": [s["id"] for s in blind],
-            "strings": blind, "neighbours": blind_neighbours, "consistency": consistency,
+            "strings": blind, "neighbours": blind_neighbours, "consistency": [],
             "term_list": self.term_list(), "hero": [h for h in hero_ids if any(s["id"] == h for s in blind)],
             "markers": markers, "scale": SCALE, "render": [],
         }
@@ -632,6 +905,7 @@ class Packet:
                        "siblings": {s["id"]: [x["key"] for x in s["same_source"]] for s in source if s["same_source"]},
                        "skipped": skipped}
         self.involved = keys + context + [x["key"] for s in source for x in s["same_source"]]
+        sync_blind_casing(self.source_doc, self.blind_doc)
 
     def catalog_commit(self):
         cwd = os.path.dirname(os.path.abspath(self.args.catalog))
@@ -644,8 +918,8 @@ class Packet:
         items = []
         for key in dict.fromkeys(self.involved):
             entry = self.strings.get(key, {})
-            text, plural, _ = unit(entry, "en")
-            for v in [text] + list((plural or {}).values()) + ([key] if text is None and not plural else []):
+            values = [value for _, value in text_units(entry.get("localizations", {}).get("en", {}))]
+            for v in values or [key]:
                 if v:
                     items.append(("en value", v, key))
             items.append(("key", key, key))
@@ -674,6 +948,7 @@ class Packet:
                 anywhere.add(norm(s["en"]))
         avoid = {norm(f) for t in self.glossary.get("terms", {}).values() for f in t.get("forbidden", [])}
         vocabulary = {norm(v) for v in PACKET_VOCABULARY} | {norm(r) for _, r in SCREEN_ROLES} | {norm("app screen")}
+        vocabulary |= {norm(v) for values in CASING_VALUES.values() for v in values} | CASING_OPERATIONS
         return {a for a in anywhere if a}, vocabulary, {a for a in avoid if a}
 
     def leak_check(self, blind_path):
@@ -692,7 +967,7 @@ class Packet:
                     allowed.append(line)
                 # a structural field holds the script's own vocabulary; an English word inside one of
                 # its phrases ("profile" in "settings and profile") is not a leaked source string
-                elif not TEXT_FIELD_RE.search(path) and any(contains_whole(v, needle) for v in fixed_fields):
+                elif not TEXT_FIELD_RE.search(path) and n in fixed_fields:
                     vocabulary += 1
                 else:
                     fails.append(line)
@@ -709,17 +984,27 @@ class Packet:
 
 
 def merge_update(update_path, source_doc, blind_doc):
-    """Merge fit and evidence from a coordinator-written file back into both packets by id or key."""
+    """Merge verified context and fit without exposing source-side explanations to blind reviewers."""
     upd = load_json(update_path)
     by_key = {s["key"]: s for s in source_doc["entries"]}
     by_id = {s["id"]: s for s in source_doc["entries"]}
     blind_by_id = {s["id"]: s for s in blind_doc["strings"]}
+    context_by_id = {s["id"]: s for s in source_doc["context_entries"]}
+    context_by_key = {s["key"]: s for s in source_doc["context_entries"]}
     for e in upd.get("entries", []):
         src = by_id.get(e.get("id")) or by_key.get(e.get("key"))
         if not src:
             die("update entry matches no packet string: %r" % e)
+        for field in ("screen_state", "invariants", "slot", "agreement_target", "control", "kind", "placeholders", "target_context", "casing"):
+            if field in e:
+                src[field] = e[field]
         src["evidence"].update(e.get("evidence", {}))
         target = blind_by_id.get(src["id"])
+        if target:
+            target["control_role"] = src["control"]
+            target["tokens"] = blind_tokens(src["placeholders"])
+            if src.get("target_context"):
+                target["context"] = src["target_context"]
         if e.get("fit"):
             src.setdefault("layout", {})["fit"] = e["fit"]
             if target:
@@ -727,35 +1012,61 @@ def merge_update(update_path, source_doc, blind_doc):
         if e.get("render") and target:
             blind_doc["render"].append({"id": src["id"], "path": e["render"]})
             target["fit"]["status"] = "rendered"
+    for e in upd.get("context_entries", []):
+        context = context_by_id.get(e.get("id")) or context_by_key.get(e.get("key"))
+        if not context:
+            die("update context entry matches no packet context: %r" % e)
+        for field in ("control", "casing"):
+            if field in e:
+                context[field] = e[field]
+    sync_blind_casing(source_doc, blind_doc)
 
 
 def carry_hand_fields(source_path, source_doc, blind_doc):
     """A rebuild keeps what the coordinator completed by hand for keys whose English and comment did not change."""
     if not os.path.exists(source_path):
         return
-    old = {e["key"]: e for e in load_json(source_path).get("entries", [])}
+    previous = load_json(source_path)
+    old = {e["key"]: e for e in previous.get("entries", [])}
+    old_context = {e["key"]: e for e in previous.get("context_entries", [])}
     blind_by_id = {s["id"]: s for s in blind_doc["strings"]}
     for entry in source_doc["entries"]:
         prev = old.get(entry["key"])
         if not prev or (prev.get("en"), prev.get("comment")) != (entry["en"], entry["comment"]):
             continue
-        for field in ("screen_state", "invariants"):
+        if "source_units" in prev and prev["source_units"] != entry["source_units"]:
+            continue
+        for field in ("screen_state", "invariants", "slot", "agreement_target", "control", "kind", "placeholders", "target_context", "casing"):
             if prev.get(field):
                 entry[field] = prev[field]
+        target = blind_by_id.get(entry["id"])
+        if target:
+            target["control_role"] = entry["control"]
+            target["tokens"] = blind_tokens(entry["placeholders"])
+            if entry.get("target_context"):
+                target["context"] = entry["target_context"]
         entry["evidence"].update(prev.get("evidence", {}))
         fit = (prev.get("layout") or {}).get("fit")
         if fit:
             entry["layout"]["fit"] = fit
             if entry["id"] in blind_by_id:
                 blind_by_id[entry["id"]]["fit"].update(fit)
+    for entry in source_doc["context_entries"]:
+        prev = old_context.get(entry["key"])
+        if prev and (prev.get("en"), prev.get("comment"), prev.get("source_units")) == (
+                entry["en"], entry["comment"], entry["source_units"]):
+            entry["control"] = prev["control"]
+            entry["casing"] = prev["casing"]
+    sync_blind_casing(source_doc, blind_doc)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter,
                                  epilog="Writes <out-dir>/coordinator/{source.json,id_map.json,leak_check.txt} and "
                                         "<out-dir>/blind/target.rev<N>.json; exit 1 when the leak check fails. "
-                                        "--update <file> without --catalog merges {entries: [{id|key, fit, evidence, "
-                                        "render}]} into the existing packets and re-runs the leak check. Tiers come "
+                                        "--update <file> accepts entries and context_entries (id|key, control, casing); "
+                                        "without --catalog it refreshes targets from the run's recorded catalog "
+                                        "and re-runs the leak check. Tiers come "
                                         "from --findings, else from catalog_check.tier_for on the English. Sample "
                                         "values for %@ and counts are per locale in SAMPLES; a locale without an "
                                         "entry gets the generic table, so add one before a new locale's pilot batch.")
@@ -774,17 +1085,22 @@ def main():
     ap.add_argument("--findings", help="findings.json from catalog_check.py; supplies tiers and exclusions")
     ap.add_argument("--candidates", help="candidates.rev<N>.json; its values replace the catalog target in the blind packet")
     ap.add_argument("--rev", type=int, help="revision number for blind/target.rev<N>.json (default: candidates rev or 1)")
-    ap.add_argument("--update", help="fit and evidence file to merge into the packets")
+    ap.add_argument("--update", help="verified string and context casing, fit, and evidence to merge")
     ap.add_argument("--allow", action="append", default=[], help="extra allowlisted value for the leak check; repeatable")
     ap.add_argument("--out-dir", required=True, help="<run-dir>/<batch>")
     args = ap.parse_args()
 
     guard_out_dir(args.out_dir, args.catalog)
     coord = os.path.join(args.out_dir, "coordinator")
+    source_path = os.path.join(coord, "source.json")
+    if args.update and args.catalog and os.path.exists(source_path):
+        recorded_catalog = load_json(source_path)["catalog"]
+        if os.path.abspath(args.catalog) != recorded_catalog:
+            die("--catalog differs from this run's recorded catalog; use a new out-dir")
     if args.catalog:
         packet = Packet(args)
         packet.build()
-        carry_hand_fields(os.path.join(coord, "source.json"), packet.source_doc, packet.blind_doc)
+        carry_hand_fields(source_path, packet.source_doc, packet.blind_doc)
     elif args.update:
         packet = Packet.from_run(args)
     else:

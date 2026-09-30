@@ -1,0 +1,642 @@
+{
+  "packets": [
+    {
+      "role": "adjudicator",
+      "locale": "ro",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Mă opresc înainte să cumpăr ceva ce nu va mai conta luna viitoare.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069",
+              "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"candidate_hash\": \"c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "c1016339924b830348823ca63e43de6bb1980d4578ad2411167350201334c069",
+              "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5"
+            }
+          }
+        },
+        {
+          "id": "s002",
+          "text": "Nu mă grăbesc să cheltuiesc când decizia poate aștepta.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s002\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3",
+              "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s002\", \"candidate_hash\": \"10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "10d5f7b2a62364ee9e0d938e2e0738fbbb9ad9710447c33b577dda75fe0579e3",
+              "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5"
+            }
+          }
+        },
+        {
+          "id": "s003",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s003\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7",
+              "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s003\", \"candidate_hash\": \"b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "b455201f50058b407d9237c17a5ad8ccf233148c4e0708d9109b31755f733dd7",
+              "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5"
+            }
+          }
+        },
+        {
+          "id": "s004",
+          "text": "Văd bogăția ca pe un spațiu în care pot fi de folos.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s004\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83",
+              "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s004\", \"candidate_hash\": \"1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "1e1eea6dd4363e586c43d689ff81edbb9f7a39b30dfda6e3f421fad73bbb5d83",
+              "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5"
+            }
+          }
+        },
+        {
+          "id": "s005",
+          "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt față de mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "1dec60507ed33573e454a841a30061482893788ca14cfbab0c8649ad4d347f90",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/revision_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "1dec60507ed33573e454a841a30061482893788ca14cfbab0c8649ad4d347f90",
+              "packet_hash": "7def347b2e1ceaf4e682c1b917babb476058c44a1f5c48d2cf17f99d0dca83c9"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"candidate_hash\": \"1dec60507ed33573e454a841a30061482893788ca14cfbab0c8649ad4d347f90\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/revision_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "1dec60507ed33573e454a841a30061482893788ca14cfbab0c8649ad4d347f90",
+              "packet_hash": "741d66b81575275ec4a2afcb51e1d987f183357c6f2c2b5df31b47f81537d55b"
+            }
+          }
+        },
+        {
+          "id": "s006",
+          "text": "Meriți respect în timp ce te dezvolți, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s006\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65",
+              "packet_hash": "a7bd103e303a6b6a22c60d30c0730d8a0ba9d92d02a07430755ef7796ec9bb21"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s006\", \"candidate_hash\": \"ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "ec35ac2d54dc6ebb1cfa9a18c24bf11815e3502d1981586c04d9e399c4527c65",
+              "packet_hash": "052a12e8a170cab75890393790bf05df4bb6a56a31fed1a1c807bea09f5e4aa5"
+            }
+          }
+        }
+      ],
+      "revision_token": "b3857bd6c3054a7797de2208bcf5f922",
+      "scope": {
+        "decision": "AI linguistic staging",
+        "release_readiness": "not_checked",
+        "rendered_fit": "not_checked",
+        "human_benchmark": "not_checked"
+      },
+      "packet_hash": "be93d6b2a197045a11ad29ade201e34454bf8badfe4a6d2b278de74b532d6b06",
+      "output_contract": {
+        "packet_hash": "be93d6b2a197045a11ad29ade201e34454bf8badfe4a6d2b278de74b532d6b06",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    },
+    {
+      "role": "adjudicator",
+      "locale": "hu",
+      "entries": [
+        {
+          "id": "s001",
+          "text": "Megállok egy pillanatra, mielőtt olyasmit vennék, ami jövő hónapban már nem számít.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+            "category": "affirmations",
+            "text": "I pause before buying what will not matter next month.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0003",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5",
+              "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"candidate_hash\": \"85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "85c2592a3be23cdd52b13ee34e5019b8b8813bdf9e0ab6e0870d377b15de3ac5",
+              "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb"
+            }
+          }
+        },
+        {
+          "id": "s002",
+          "text": "Nem sietek a költéssel, ha a döntés várhat.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+            "category": "affirmations",
+            "text": "I spend slowly when a decision can wait.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0012",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s002\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783",
+              "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s002\", \"candidate_hash\": \"081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "081d456f003d6a9eedc027ddfe2545646bab04df95f71f2b5acc5bdbd4784783",
+              "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb"
+            }
+          }
+        },
+        {
+          "id": "s003",
+          "text": "A költségvetésemet térképként használom, nem büntetésként.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+            "category": "affirmations",
+            "text": "I use my budget as a map, not a punishment.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "financial",
+            "pairId": "affirmations-0053",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s003\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a",
+              "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s003\", \"candidate_hash\": \"6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "6a7fcf14f58d933d468e8f508ca038536a7ef76124b332771dd4659f49d61e8a",
+              "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb"
+            }
+          }
+        },
+        {
+          "id": "s004",
+          "text": "A vagyon számomra teret ad ahhoz, hogy hasznos legyek.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+            "category": "affirmations",
+            "text": "I see wealth as room to be useful.",
+            "attribution": null,
+            "language": "en",
+            "context": null,
+            "theme": "wealth_mindset",
+            "pairId": "affirmations-0075",
+            "source": null,
+            "verification": "authored"
+          },
+          "candidate_hash": "44f42b316f9662a0a6fc167c2d94876981813b12da5e4f0ce03e85e1ba503ecc",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/revision_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "44f42b316f9662a0a6fc167c2d94876981813b12da5e4f0ce03e85e1ba503ecc",
+              "packet_hash": "1814fc65fefa437bb9472209328730b383ccd067bc405e46e83f681d82b600aa"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s001\", \"candidate_hash\": \"44f42b316f9662a0a6fc167c2d94876981813b12da5e4f0ce03e85e1ba503ecc\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/revision_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "44f42b316f9662a0a6fc167c2d94876981813b12da5e4f0ce03e85e1ba503ecc",
+              "packet_hash": "9d9551d7f0639a024fc83566cd28128fc617571795cade89a2da749357c2ebd1"
+            }
+          }
+        },
+        {
+          "id": "s005",
+          "text": "Senkinek sem szabad megmondania nekem, mit érzek magammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet akarok.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+            "category": "affirmations",
+            "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "development",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 191,
+              "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Distinct original expression; shared themes do not justify removing it.",
+              "reviewedOn": "2026-09-14",
+              "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+              "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+            },
+            "pairId": "affirmations-1143"
+          },
+          "candidate_hash": "cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s005\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60",
+              "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s005\", \"candidate_hash\": \"cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "cafa1620cd8a9b15bc67a596cbeb937bba9239ee2b2bbb4446c0e730793a4c60",
+              "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb"
+            }
+          }
+        },
+        {
+          "id": "s006",
+          "text": "Fejlődés közben is megérdemled a tiszteletet, {userName}.",
+          "kind": "authored",
+          "display_role": "quote card",
+          "fit": "not_checked",
+          "source": {
+            "id": "D10E5789-698E-58D3-A971-4456149F559D",
+            "category": "motivation",
+            "text": "You deserve respect while you grow, {userName}.",
+            "language": "en",
+            "verification": "curated",
+            "theme": "growth",
+            "import": {
+              "batch": "2026-09-14",
+              "file": "Set1-affirmation/test1.json",
+              "row": 99,
+              "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+              "author": null
+            },
+            "curation": {
+              "action": "keep",
+              "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+              "reviewedOn": "2026-09-14"
+            },
+            "pairId": "affirmations-1444"
+          },
+          "candidate_hash": "4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4",
+          "canonical": null,
+          "earlier_reviews": {
+            "editor": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s006\", \"verdict\": \"pass\", \"findings\": [], \"uncertainties\": []}",
+              "reviewer": {
+                "id": "/root/translation_editor",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4",
+              "packet_hash": "3be3d3eeabb92351bdba4aaaf56d9679a64ca92631ef0697ec30b08d5b16d71d"
+            },
+            "fidelity": {
+              "verdict": "pass",
+              "notes": "{\"id\": \"s006\", \"candidate_hash\": \"4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4\", \"verdict\": \"pass\", \"findings\": [], \"uncertainty\": []}",
+              "reviewer": {
+                "id": "/root/translation_fidelity",
+                "model": "gpt-6-astra",
+                "effort": "high"
+              },
+              "candidate_hash": "4dcd022b2487cd1878baf5e526472e0015def7be5bd9dbc80804f7764e725ef4",
+              "packet_hash": "5a685f257735fde17b0f11b1a0895ee55024b35e325939453ab8ccfd59df9ccb"
+            }
+          }
+        }
+      ],
+      "revision_token": "a7299d3fd486489cba2c313bee6b5ba1",
+      "scope": {
+        "decision": "AI linguistic staging",
+        "release_readiness": "not_checked",
+        "rendered_fit": "not_checked",
+        "human_benchmark": "not_checked"
+      },
+      "packet_hash": "c74e0290888c96ec0fb0b7470fa60bc8e4e35bcc5af5d2ba3a38b43fb30e926b",
+      "output_contract": {
+        "packet_hash": "c74e0290888c96ec0fb0b7470fa60bc8e4e35bcc5af5d2ba3a38b43fb30e926b",
+        "reviewer": {
+          "id": "actual-agent-id",
+          "model": "actual-model",
+          "effort": "actual-effort"
+        },
+        "entries": [
+          {
+            "id": "s001",
+            "verdict": "pass|fail|not_checked",
+            "notes": "findings or diagnostic back-translation"
+          }
+        ]
+      }
+    }
+  ]
+}

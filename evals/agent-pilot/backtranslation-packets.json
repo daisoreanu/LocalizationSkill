@@ -1,0 +1,88 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "diagnostic_language": "en",
+      "entries": [
+        {
+          "id": "f01",
+          "text": "Pot face o pauză înainte să răspund.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f03",
+          "text": "Trebuie să termin totul în seara asta.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f05",
+          "text": "Eu aleg cum îmi folosesc timpul.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f07",
+          "text": "Ziua îmi stabilește ritmul, chiar și când planurile se schimbă.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f09",
+          "text": "Și un pas mic contează astăzi.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f11",
+          "text": "Mâine trebuie să mă răzgândesc.",
+          "kind": "authored",
+          "display_role": "quote card"
+        }
+      ]
+    },
+    {
+      "locale": "hu",
+      "diagnostic_language": "en",
+      "entries": [
+        {
+          "id": "f02",
+          "text": "Holnap meg kell változtatnom a véleményemet.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f04",
+          "text": "Ma egy apró lépés is számít.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f06",
+          "text": "Én szabom meg a napom ritmusát.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f08",
+          "text": "Megállhatok egy pillanatra, mielőtt válaszolok.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f10",
+          "text": "Ma este mindent be kell fejeznem.",
+          "kind": "authored",
+          "display_role": "quote card"
+        },
+        {
+          "id": "f12",
+          "text": "Én döntöm el, mire fordítom az időmet.",
+          "kind": "authored",
+          "display_role": "quote card"
+        }
+      ]
+    }
+  ]
+}

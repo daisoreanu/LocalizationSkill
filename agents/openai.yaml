@@ -1,4 +1,4 @@
 interface:
   display_name: "Moneyfesting Localization"
-  short_description: "Natural Moneyfesting copy for ro and new languages: catalog, widget and shield strings with blind review"
-  default_prompt: "Use $moneyfesting-localization for Moneyfesting/Manifesting strings (Localizable.xcstrings, ro or a new language, needs_review keys, widget and shield copy) with full screen context, blind back-translation of claim-bearing strings and a final language review."
+  short_description: "App copy and quote translation with context and review"
+  default_prompt: "Use $moneyfesting-localization for Moneyfesting/Manifesting app copy or quote batches. Choose the UI or corpus route, preserve context and meaning, run independent reviews, verify mobile fit, and report unverified quality honestly."

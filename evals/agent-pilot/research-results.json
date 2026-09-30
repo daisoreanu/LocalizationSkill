@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "id": "r01",
+      "status": "matched",
+      "original_language": "Ancient Greek",
+      "edition": "Romanian: Marcus Aurelius, Gânduri către sine însuşi, translated by Cristian Bejan, Humanitas 2020 (ISBN 978-973-50-6872-1), preview PDF. Hungarian: Marcus Aurelius, Elmélkedések, translated by Huszti József, Hungarian Electronic Library HTML; translation based on I. H. Leopold, M. Antoninus imperator ad se ipsum (Oxford, 1908).",
+      "passage_span": "Meditations, Book I, section 1 in both supplied editions",
+      "queries": [
+        "site:mek.oszk.hu/00600/00606 Marcus Aurelius Elmélkedések I 1 fordította"
+      ],
+      "inspected_sources": [
+        {
+          "url_or_path": "https://humanitas.ro/assets/media/ganduri-catre-sine-insusi-2020.pdf",
+          "retrieved_on": "2026-09-27",
+          "finding": "Publisher preview identifies Cristian Bejan as translator from Ancient Greek, Humanitas 2020, and shows Cartea I, section 1 on PDF page 9: 'De la bunicul Verus ... amabilitatea şi calmul.' This establishes discoverability of the named section and translator in the supplied Romanian edition."
+        },
+        {
+          "url_or_path": "https://mek.oszk.hu/00600/00606/00606.htm",
+          "retrieved_on": "2026-09-27",
+          "finding": "Archive HTML opened directly in browser. The heading states 'FORDÍTOTTA HUSZTI JÓZSEF' and gives the Leopold 1908 basis; ELSŐ KÖNYV begins with section 1, 'Verus nagyatyám a nemes jellem és higgadtság példája volt.' This establishes discoverability of the named section and translator in the supplied Hungarian edition."
+        }
+      ],
+      "remaining_question": "Only discoverability was checked; translation reuse permission and language quality were outside scope."
+    },
+    {
+      "id": "r02",
+      "status": "not_found",
+      "original_language": "Ancient Greek for Plutarch's surviving account; Cato's original spoken wording is not preserved by the inspected sources",
+      "edition": "Plutarch, Parallel Lives, Life of Cato the Younger 52.2; Bernadotte Perrin's 1919 Loeb English translation and Greek text transcription",
+      "passage_span": "Life of Cato the Younger 52.2-52.3",
+      "queries": [
+        "\"Do not put your hope or fear in one powerful person\" \"Cato\"",
+        "Cato the Younger \"hope\" \"fear\" \"Caesar\" quotation judgment",
+        "site:penelope.uchicago.edu Plutarch Cato hope fear Caesar independence"
+      ],
+      "inspected_sources": [
+        {
+          "url_or_path": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Cato_Minor*.html",
+          "retrieved_on": "2026-09-27",
+          "finding": "The 1919 Loeb English translation of Plutarch 52.2 attributes to Cato the related words 'neither be fearing a single man nor putting your hopes in a single man.' The immediate context is Caesar's march on Rome and Pompey. The supplied sentence is not the wording of this passage; its 'keep your judgment your own' clause is absent."
+        },
+        {
+          "url_or_path": "https://el.wikisource.org/wiki/Βίοι_Παράλληλοι/Κάτων",
+          "retrieved_on": "2026-09-27",
+          "finding": "Greek text at 52.2-52.3 records Cato saying 'οὔτ’ ἂν ἕν’ ἐφοβεῖσθε νῦν, οὔτ’ ἐν ἑνὶ τὰς ἐλπίδας εἴχετε.' This supports the first clause's idea about fearing and hoping in one person, but contains no separate instruction about keeping one's judgment."
+        }
+      ],
+      "remaining_question": "The complete supplied English wording and its added judgment clause remain unlocated in a primary source. This is a partial thematic antecedent, not verification of an exact Cato quotation; keep the existing supplied_unverified record unchanged."
+    }
+  ]
+}

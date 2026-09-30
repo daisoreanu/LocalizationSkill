@@ -1,0 +1,92 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {
+          "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+          "text": "Mă opresc înainte să cumpăr ceva ce nu va mai conta luna viitoare.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+          "text": "Nu mă grăbesc să cheltuiesc când decizia poate aștepta.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+          "text": "Îmi folosesc bugetul ca pe o hartă, nu ca pe o pedeapsă.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+          "text": "Văd bogăția ca pe un spațiu în care pot fi de folos.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "D10E5789-698E-58D3-A971-4456149F559D",
+          "text": "Meriți respect în timp ce te dezvolți, {userName}.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+          "text": "Nimeni nu ar trebui să-mi spună vreodată ce simt despre mine; doar eu decid cine sunt și ce fel de viață îmi doresc.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Long for a mobile quote surface; layout limits were not supplied."
+          ]
+        }
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {
+          "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+          "text": "Megállok egy pillanatra, mielőtt olyasmit vennék, ami jövő hónapban már nem számít.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+          "text": "Nem sietek a költéssel, ha a döntés várhat.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+          "text": "A költségvetésemet térképként használom, nem büntetésként.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+          "text": "A vagyon számomra teret jelent ahhoz, hogy hasznos legyek.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "D10E5789-698E-58D3-A971-4456149F559D",
+          "text": "Fejlődés közben is megérdemled a tiszteletet, {userName}.",
+          "uncertainty": [],
+          "display_concerns": []
+        },
+        {
+          "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+          "text": "Senkinek sem szabad megmondania nekem, mit érzek magammal kapcsolatban; csak én dönthetem el, ki vagyok, és milyen életet akarok.",
+          "uncertainty": [],
+          "display_concerns": [
+            "Long for a mobile quote surface; layout limits were not supplied."
+          ]
+        }
+      ],
+      "holds": []
+    }
+  ]
+}

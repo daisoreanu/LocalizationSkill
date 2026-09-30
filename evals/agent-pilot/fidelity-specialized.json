@@ -1,0 +1,142 @@
+{
+  "reviews": [
+    {
+      "id": "f01",
+      "candidate_hash": "e1f667626add766815f3fd9b4721fbf99f7dbf337265e062fdddc53b7e1aa518",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    },
+    {
+      "id": "f02",
+      "candidate_hash": "207521023cc1d0268b530570f5cb80054b22b8c3cb9e1554c1eb83cb0813f009",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "modality",
+          "source_span": "I may change my mind tomorrow",
+          "target_span": "Holnap meg kell változtatnom a véleményemet",
+          "impact": "Turns a possible or permitted change of mind into an obligation to change it.",
+          "suggested_action": "Replace “meg kell változtatnom a véleményemet” with “meggondolhatom magam”."
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f03",
+      "candidate_hash": "daeb43de1950a063028ddad1b50bb95ce78253443402daa30005876e6fcd2e0f",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "negation",
+          "source_span": "do not need to finish",
+          "target_span": "Trebuie să termin",
+          "impact": "Reverses freedom from obligation into a requirement to finish everything tonight.",
+          "suggested_action": "Replace “Trebuie să termin” with “Nu trebuie să termin”."
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f04",
+      "candidate_hash": "d4b754dac832b00ea39811d42ed751237ff0802cbb860f22431d2622888912cd",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    },
+    {
+      "id": "f05",
+      "candidate_hash": "2a079114f988ef9366db3bc8f823ea4c093e20a7da169758b9ae582a57e983a8",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    },
+    {
+      "id": "f06",
+      "candidate_hash": "86e2850864f8f345e9a45881e11f95ede58fea32e783db7dda4edc901ec5222b",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "omission",
+          "source_span": "even when plans change",
+          "target_span": "",
+          "impact": "Omits the concessive condition that the speaker retains control of the pace despite changes in plans.",
+          "suggested_action": "Append “, akkor is, ha változnak a tervek” before the final period."
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f07",
+      "candidate_hash": "8c0018606e06afc5f7d836160676f7f799634012493cef262ef531858a8868c1",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "agency",
+          "source_span": "I set the pace for my day",
+          "target_span": "Ziua îmi stabilește ritmul",
+          "impact": "Reverses who controls the pace: the day controls the speaker instead of the speaker setting the day’s pace.",
+          "suggested_action": "Replace the opening clause with “Eu stabilesc ritmul zilei mele”; retain the condition about changing plans."
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f08",
+      "candidate_hash": "c9ec934393686da133a9a6fc7d63eb887bcbffe05d7ed743756433e0c54fc608",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    },
+    {
+      "id": "f09",
+      "candidate_hash": "b719af084caa2e4d695d1607b795c7d3ae4982ecbe94e0bfc1ae61268720246f",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    },
+    {
+      "id": "f10",
+      "candidate_hash": "63ccaa79f670132fc5a278274eacd6d4c0717abb31885d24e7bd376fab688a42",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "negation",
+          "source_span": "do not need to finish",
+          "target_span": "be kell fejeznem",
+          "impact": "Reverses freedom from obligation into a requirement to finish everything tonight.",
+          "suggested_action": "Restore the negated obligation with “Ma este nem kell mindent befejeznem.”"
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f11",
+      "candidate_hash": "296e522b6fef7ad7ab298a2adc35c6c88923dd3cd523b88e941fede3b2dfc948",
+      "verdict": "fail",
+      "findings": [
+        {
+          "severity": "major",
+          "category": "modality",
+          "source_span": "I may change my mind tomorrow",
+          "target_span": "Mâine trebuie să mă răzgândesc",
+          "impact": "Turns a possible or permitted change of mind into an obligation to change it.",
+          "suggested_action": "Replace “trebuie să mă răzgândesc” with “mă pot răzgândi”."
+        }
+      ],
+      "uncertainty": []
+    },
+    {
+      "id": "f12",
+      "candidate_hash": "7a33b9a40abaa8151d7da8a5d65361f12b2caa76342ae7a700be8a0ee217ef49",
+      "verdict": "pass",
+      "findings": [],
+      "uncertainty": []
+    }
+  ]
+}

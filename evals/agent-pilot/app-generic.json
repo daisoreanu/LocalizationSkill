@@ -1,0 +1,24 @@
+{
+  "packets": [
+    {
+      "locale": "ro",
+      "candidates": [
+        {"id": "u01", "text": "Folosește gratuit", "uncertainty": [], "display_concerns": []},
+        {"id": "u02", "text": "Timpul recuperat valorează %@.", "uncertainty": [], "display_concerns": ["Longer than source; check fit in summary label."]},
+        {"id": "u03", "text": "Șterge", "uncertainty": [], "display_concerns": []},
+        {"id": "u04", "text": "Continuă", "uncertainty": [], "display_concerns": []}
+      ],
+      "holds": []
+    },
+    {
+      "locale": "hu",
+      "candidates": [
+        {"id": "u01", "text": "Használd ingyen", "uncertainty": [], "display_concerns": []},
+        {"id": "u02", "text": "A visszanyert idő értéke: %@.", "uncertainty": [], "display_concerns": ["Longer than source; check fit in summary label."]},
+        {"id": "u03", "text": "Törlés", "uncertainty": [], "display_concerns": []},
+        {"id": "u04", "text": "Tovább", "uncertainty": [], "display_concerns": []}
+      ],
+      "holds": []
+    }
+  ]
+}

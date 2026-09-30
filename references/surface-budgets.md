@@ -80,6 +80,14 @@ Marketing and authored copy, in this order:
 
 In both orders keep deliberate source line breaks (the paywall hero is three lines by design) and the claim's condition: "Not money earned." survives every cut. Shortening may cut words, never facts. A fact that must go moves to a neighbouring element, and the key's comment says where it went ("placeholder moved to `<key>`", which `scripts/catalog_check.py` C1 reads), so the next translator does not put it back.
 
+## Quote content and display eligibility
+
+Keep canonical full text separate from where it can be displayed. Inspect the live quote reader, quote widget families, collapsed and expanded notifications, and share cards for available width, line limits, font, scaling floor, author line and any separately owner-approved notice. Record each record's eligible surfaces; an inaccessible or unmeasured surface stays `not_checked`. The UI catalog scanners do not measure quote JSON.
+
+Measure the complete target corpus with the actual fonts/layout where tooling exists, then render boundary cases: the longest and shortest records, long author names, each script/direction, mixed numerals/Latin names, and every observed overflow. Include author attribution and any separately owner-approved notice in the frame; do not add a translation notice for measurement. Character or English-length ratios only select candidates to inspect; they establish neither fit nor an ideal target length. Unusually short copy prompts an omission/rhythm check, not padding; long copy prompts a redundancy/fit check, not automatic cutting.
+
+For an attributed quotation, retain the full translation and report a layout or display-eligibility issue. An excerpt requires a separate, explicitly authorized and visibly identified representation; never overwrite the full quotation or remove its condition, ending or attribution. Translation notices follow the owner's display decision in SKILL.md. App-authored affirmations may have separately reviewed compact variants if the live schema and product policy support them. A proposed eligibility rule or compact variant is an engineering proposal until the runtime implements it; do not silently remove records from a category to claim completeness.
+
 ## What a budget cannot decide
 
 A row says whether text fits, not whether it is right. A `fits` verdict on a truncated meaning, a dropped negation or an abbreviation a local reader would not use is still a fail on meaning or naturalness, and those verdicts stay independent (agent-protocol.md `## Acceptance and evidence`). When the only way to fit is to change what the string claims, the answer is a layout finding or a neighbour move, not a shorter claim.

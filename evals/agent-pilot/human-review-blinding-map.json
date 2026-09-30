@@ -1,0 +1,366 @@
+[
+  {
+    "case": 1,
+    "locale": "ro",
+    "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 1,
+    "locale": "ro",
+    "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 2,
+    "locale": "ro",
+    "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 2,
+    "locale": "ro",
+    "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 3,
+    "locale": "ro",
+    "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 3,
+    "locale": "ro",
+    "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 4,
+    "locale": "ro",
+    "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 4,
+    "locale": "ro",
+    "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 5,
+    "locale": "ro",
+    "id": "D10E5789-698E-58D3-A971-4456149F559D",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 5,
+    "locale": "ro",
+    "id": "D10E5789-698E-58D3-A971-4456149F559D",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 6,
+    "locale": "ro",
+    "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 6,
+    "locale": "ro",
+    "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 7,
+    "locale": "hu",
+    "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 7,
+    "locale": "hu",
+    "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 8,
+    "locale": "hu",
+    "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 8,
+    "locale": "hu",
+    "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 9,
+    "locale": "hu",
+    "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 9,
+    "locale": "hu",
+    "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 10,
+    "locale": "hu",
+    "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 10,
+    "locale": "hu",
+    "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 11,
+    "locale": "hu",
+    "id": "D10E5789-698E-58D3-A971-4456149F559D",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 11,
+    "locale": "hu",
+    "id": "D10E5789-698E-58D3-A971-4456149F559D",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 12,
+    "locale": "hu",
+    "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 12,
+    "locale": "hu",
+    "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 13,
+    "locale": "ro",
+    "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 13,
+    "locale": "ro",
+    "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 14,
+    "locale": "ro",
+    "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 14,
+    "locale": "ro",
+    "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 15,
+    "locale": "ro",
+    "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 15,
+    "locale": "ro",
+    "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 16,
+    "locale": "hu",
+    "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 16,
+    "locale": "hu",
+    "id": "B508A471-CA49-496B-BC71-AC09046FBF59",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 17,
+    "locale": "hu",
+    "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 17,
+    "locale": "hu",
+    "id": "BFCC82A8-701D-4F90-95F9-A31FBB8857B2",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 18,
+    "locale": "hu",
+    "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 18,
+    "locale": "hu",
+    "id": "5BAC1CF4-9525-5D91-B604-0ACBD4CB0FE9",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 19,
+    "locale": "ro",
+    "id": "u01",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 19,
+    "locale": "ro",
+    "id": "u01",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 20,
+    "locale": "ro",
+    "id": "u02",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 20,
+    "locale": "ro",
+    "id": "u02",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 21,
+    "locale": "ro",
+    "id": "u03",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 21,
+    "locale": "ro",
+    "id": "u03",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 22,
+    "locale": "ro",
+    "id": "u04",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 22,
+    "locale": "ro",
+    "id": "u04",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 23,
+    "locale": "hu",
+    "id": "u01",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 23,
+    "locale": "hu",
+    "id": "u01",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 24,
+    "locale": "hu",
+    "id": "u02",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 24,
+    "locale": "hu",
+    "id": "u02",
+    "label": "B",
+    "condition": "generic"
+  },
+  {
+    "case": 25,
+    "locale": "hu",
+    "id": "u03",
+    "label": "A",
+    "condition": "generic"
+  },
+  {
+    "case": 25,
+    "locale": "hu",
+    "id": "u03",
+    "label": "B",
+    "condition": "specialized"
+  },
+  {
+    "case": 26,
+    "locale": "hu",
+    "id": "u04",
+    "label": "A",
+    "condition": "specialized"
+  },
+  {
+    "case": 26,
+    "locale": "hu",
+    "id": "u04",
+    "label": "B",
+    "condition": "generic"
+  }
+]

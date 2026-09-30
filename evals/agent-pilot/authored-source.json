@@ -1,0 +1,106 @@
+{
+  "packet_type": "source_translation",
+  "brief": {
+    "product": "Moneyfesting",
+    "voice": "Calm, credible self-agency. No promise that using the app earns money.",
+    "target_locales": [
+      "ro",
+      "hu"
+    ],
+    "display": "Mobile quote surface; measured length and layout limits are unavailable."
+  },
+  "records": [
+    {
+      "id": "493E8AA1-BA54-52A3-94AE-DAD1DF2731D1",
+      "category": "affirmations",
+      "text": "I pause before buying what will not matter next month.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0003",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "8B6A7736-3584-5415-84AE-47FB022AD2F0",
+      "category": "affirmations",
+      "text": "I spend slowly when a decision can wait.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0012",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "2B6BB4B5-9C4A-58DB-8536-3D0481193BA8",
+      "category": "affirmations",
+      "text": "I use my budget as a map, not a punishment.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "financial",
+      "pairId": "affirmations-0053",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "A4B08362-CB12-5387-926A-3EC5205F0851",
+      "category": "affirmations",
+      "text": "I see wealth as room to be useful.",
+      "attribution": null,
+      "language": "en",
+      "context": null,
+      "theme": "wealth_mindset",
+      "pairId": "affirmations-0075",
+      "source": null,
+      "verification": "authored"
+    },
+    {
+      "id": "D10E5789-698E-58D3-A971-4456149F559D",
+      "category": "motivation",
+      "text": "You deserve respect while you grow, {userName}.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "growth",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 99,
+        "text": "I am worthy of respect as the Gg I currently am, even if I am working to become a better Gg.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Preserves a distinct useful reflection in direct second-person address using the canonical name token.",
+        "reviewedOn": "2026-09-14"
+      },
+      "pairId": "affirmations-1444"
+    },
+    {
+      "id": "D24FAFF0-1061-58C1-9260-CFA2F7477FE3",
+      "category": "affirmations",
+      "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+      "language": "en",
+      "verification": "curated",
+      "theme": "development",
+      "import": {
+        "batch": "2026-09-14",
+        "file": "Set1-affirmation/test1.json",
+        "row": 191,
+        "text": "No one should ever tell me how I feel about myself; only I get to decide who I am and what kind of life I want.",
+        "author": null
+      },
+      "curation": {
+        "action": "keep",
+        "reason": "Distinct original expression; shared themes do not justify removing it.",
+        "reviewedOn": "2026-09-14",
+        "duplicateReview": "Distinct wording retained; shared themes do not establish duplication.",
+        "previousDuplicateOf": "35FD8A74-5FFC-5CCE-8C3D-7D4F9E206DB1"
+      },
+      "pairId": "affirmations-1143"
+    }
+  ]
+}

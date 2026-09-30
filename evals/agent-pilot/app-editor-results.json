@@ -1,0 +1,173 @@
+{
+  "packets": [
+    {
+      "packet_hash": "aaa89f6effc24fc99b7cdd7cc6052f20",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "u01",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u02",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "The value and format substituted for %@ were not supplied, so the label’s completed meaning and punctuation are unverified."
+          ]
+        },
+        {
+          "id": "u03",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u04",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        }
+      ]
+    },
+    {
+      "packet_hash": "f91c7f05e5e1419e9546bebac368d78e",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "u01",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u02",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "The value and format substituted for %@ were not supplied, so the label’s completed meaning and punctuation are unverified."
+          ]
+        },
+        {
+          "id": "u03",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u04",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        }
+      ]
+    },
+    {
+      "packet_hash": "766c4058140b4d3e9e82dd9945fb2ace",
+      "locale": "ro",
+      "reviews": [
+        {
+          "id": "u01",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified.",
+            "The object of “Folosește” is implicit; surrounding UI may supply it, but that cannot be checked here."
+          ]
+        },
+        {
+          "id": "u02",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "The value and format substituted for %@ were not supplied, so the label’s completed meaning and punctuation are unverified."
+          ]
+        },
+        {
+          "id": "u03",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u04",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        }
+      ]
+    },
+    {
+      "packet_hash": "9762be1026af4799a955cee25e346bd1",
+      "locale": "hu",
+      "reviews": [
+        {
+          "id": "u01",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u02",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "The value and format substituted for %@ were not supplied, so the label’s completed meaning and punctuation are unverified."
+          ]
+        },
+        {
+          "id": "u03",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        },
+        {
+          "id": "u04",
+          "verdict": "pass",
+          "findings": [],
+          "uncertainties": [
+            "No rendered screen or dimensions were supplied, so mobile and accessibility fit are unverified.",
+            "No surrounding screen or state was supplied, so the control’s intended action and flow clarity are unverified."
+          ]
+        }
+      ]
+    }
+  ]
+}

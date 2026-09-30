@@ -1,6 +1,6 @@
 {
   "skill_name": "moneyfesting-localization",
-  "evaluation_scope": "Preparation and review decisions plus fixture-only translation. Fixtures under evals/files may be translated and rewritten; the app checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only for every case: never edited, built or tested, and run dirs go to scratch space outside it. No case may claim native-human validation, owner acceptance (state translated) or release readiness. Grade expectations from observable outputs so a run without the skill's scripts still grades. Grade through skill-creator's executor and grader agents (agents/grader.md). Trigger checks with its scripts/run_eval.py need a separate [{\"query\", \"should_trigger\"}] set, not this file. Regenerate fixtures with scripts/catalog_slice.py --emit-xcstrings and update fixtures.catalog_commit below.",
+  "evaluation_scope": "Preparation and review decisions plus fixture-only translation. Fixtures under evals/files may be translated and rewritten; the app checkout at /Users/daisoreanulaurentiu/Documents/github/Moneyfesting is read-only for every case: never edited, built or tested, and run dirs go to scratch space outside it. No case may claim native-human validation, owner acceptance (state translated) or release readiness. Grade expectations from observable outputs so a run without the skill's scripts still grades. Grade through skill-creator's executor and grader agents (agents/grader.md). Trigger checks with its scripts/run_eval.py need a separate [{\"query\", \"should_trigger\"}] set, not this file. Regenerate fixtures with scripts/catalog_slice.py --emit-xcstrings and update fixtures.catalog_commit below. Cases 10-12 are self-contained maintenance smoke tests: no app checkout or external tools are needed; they test decisions, not professional translation quality.",
   "fixtures": {
     "catalog_commit": "c8a49dd",
     "sliced": "2026-09-15",
@@ -34,7 +34,7 @@
       "expectations": [
         "Flags 'earned' as a misleading source claim because the amount is the estimated value of focused time, not income, and asks for a claim ledger row or a source fix before translation.",
         "Preserves placeholder meaning and distinguishes the actual CTA destination (a new session setup, not resuming), freeze coverage (one earned freeze covers one missed day), and billing, trial and renewal conditions as claim-bearing content with one approved form.",
-        "Identifies source and provenance per quote kind and applies the porting policy: an app-authored affirmation is transcreated, an attributed quotation may be ported only as a labelled translation and stays in its published language until that field and marker exist, scripture takes the language's canonical published translation, and a category ports completely because a partial pool replaces English rather than supplementing it.",
+        "Identifies source and provenance per quote kind: app-authored affirmations may be transcreated; attributed quotations preserve attribution, meaning and internal translation provenance; scripture uses the approved published edition. Missing visible translation notices are not a blocker under the owner's no-notice policy. Verify the live complete-category fallback rule before integration.",
         "Specifies a fresh source-blind back-translation of the claim-bearing strings with no English or rationale in the packet, a separate target-only editorial review that reads the screen in flow order before it, and an independent final adjudication; notes that the editor wins on style and the back-translation on claims.",
         "Uses locale-specific Arabic and Hebrew register, gender-of-address and RTL decisions, keeps 'Moneyfesting' in Latin script, and produces no target-language translations or claims of native-human validation."
       ]
@@ -42,14 +42,14 @@
     {
       "id": 3,
       "name": "stale-review-rejection",
-      "prompt": "Audit this review packet and tell me if I can call the Arabic/Hebrew release ready. Don't translate, don't edit or build the app. What happened: translator A also did the back-translation, in the same conversation, with the English visible; the reverse wording matched English 100%. Editor B saw the bilingual glossary and A's rationale and wrote 'native certified'. After that, A shortened the CTA and dropped a billing condition to fit one line. Both reviews refer to the older candidate. JSON parses, placeholders look similar, screenshots are English-only; no target-language run, no extension check, no Dynamic Type, RTL or VoiceOver pass. The team wants to ship because the combined quality score is 96%. Give me verdicts, what has to be rechecked, and how the final review should be set up, in JSON, without inventing evidence.",
+      "prompt": "Audit this review packet and tell me if I can call the Arabic/Hebrew release ready. Don't translate, don't edit or build the app. What happened: translator A also did the back-translation, in the same conversation, with the English visible; the reverse wording matched English 100%. Editor B saw the bilingual glossary and A's rationale and wrote 'native certified'. After that, A shortened the CTA and dropped a billing condition to fit one line. Both reviews refer to the older candidate. JSON parses, placeholders look similar, screenshots are English-only; no target-language run, no extension check, no RTL or VoiceOver pass; the main app is fixed at .large and Dynamic Type is excluded. The team wants to ship because the combined quality score is 96%. Give me verdicts, what has to be rechecked, and how the final review should be set up, in JSON, without inventing evidence.",
       "expected_output": "Rejects the readiness claim, identifies source contamination and stale evidence, rejects score averaging and native certification, requires scoped fresh review and actual UI and runtime evidence, and recommends rather than reports a human read.",
       "files": [],
       "expectations": [
         "Rejects release readiness despite round-trip agreement and the aggregate score; no billing condition may be dropped for fit, and the dropped condition is routed to a design decision.",
         "Identifies both same-agent, source-visible back-translation and source-exposed editorial review as invalid evidence for independent target-only review.",
         "Invalidates the reviews after the CTA and billing copy changed, requiring a fresh editor on the changed ids plus neighbours, a fresh blind back-translation of the claim-bearing strings, and final adjudication of the actual final version.",
-        "Distinguishes JSON parsing from structural and runtime correctness and requires the missing target-language screen, extension, Dynamic Type, RTL and VoiceOver evidence within scope.",
+        "Distinguishes JSON parsing from structural and runtime correctness and requires missing target-language screen, extension, RTL and VoiceOver evidence within scope. Uses the supported fixed .large text policy and does not add Dynamic Type testing.",
         "Specifies a fresh final adjudicator that has seen none of the earlier packets, records the model alias used or 'unknown' rather than promising a strongest-model setting, and rejects the 'native certified' claim.",
         "Recommends a human read of the hero and CTA copy in the report's human-review line and does not report one as done.",
         "Does not infer whether reviewers A and B are AI or human or infer actual review settings from labels alone; rejects unsupported certification while preserving unknown provenance."
@@ -111,7 +111,7 @@
         "For f06 uses the plural other category with 'de' (sample 25) as the fit sample and says the one and few forms are shorter, so the longest form decides.",
         "Passes f05 and f07 with no copy change and says why (within width at full scale).",
         "For f08 treats the uppercase caption as a caption (short noun phrase, diacritics kept in uppercase) and offers a shorter caption rather than a sentence.",
-        "Marks every verdict approximate: widthPt and fontPt are estimates, no fit is claimed from character counts, and a render in Romanian at the smallest widget size and the largest relevant accessibility size is required before sign-off, with the render paths to be recorded in the report.",
+        "Marks every verdict approximate: widthPt and fontPt are estimates, no fit is claimed from character counts, and a render in Romanian at the smallest widget size with the supported text-size policy for the surface is required before sign-off, with the render paths to be recorded in the report.",
         "States that any changed string needs a fresh editor pass on the changed ids plus neighbours and, for tier A ids (paywall billing), a fresh blind back-translation, and that a fit-only shortening that changes no invariant does not count as a material round."
       ]
     },
@@ -164,6 +164,94 @@
         "Treats App Store Connect coverage as a separate question from in-app localization rather than assuming a language the app supports can also carry store metadata.",
         "Marks every proposed uk term as a seed the owner may flip (decided_by skill-seed-<date>), states that no native speaker, translator or owner has approved anything, and recommends a native read before the first ship.",
         "Leaves the app checkout untouched: no edits, no build, no tests, no simulator, and no translated strings produced."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "literary-fidelity-and-provenance",
+      "prompt": "Isolated audit exercise; use only this prompt and the supplied skill package. No app checkout, web research, builds, edits to real content or additional agents. Return decisions and provisional Romanian wording only where allowed; do not claim independent review. These invented examples test the workflow, not a real author's words. A commissioned app-owned literary fragment is: “The room kept the silence I had left behind.” Its brief asks to preserve the room's personification, retrospective tense and unresolved emotional meaning. A proposed Romanian revision is “Eram trist când am plecat.” A separate app-authored affirmation is: “I welcome money without measuring my worth by it.” Proposed target: “Banii îmi stabilesc valoarea.” A third record is an attributed quotation with supplied_unverified provenance, no source-language verification, and no internal translation-provenance evidence supplied. A fourth is scripture with a canonical reference but no specified target edition. Explain which proposals can pass, which records need drafting versus a hold, and the next review evidence. A 50-character quote widget slot is claimed but no font or render is provided. Do not force either full text into that limit.",
+      "expected_output": "Preserves literary form and ambiguity, diagnoses changed affirmation meaning, holds unknown quotation/scripture provenance, and separates canonical text from unverified display fit.",
+      "files": [],
+      "expectations": [
+        "Rejects the literary proposal because it invents sadness and removes personification/ambiguity; any new wording retains those source effects rather than imposing consumer-UI plainness.",
+        "Rejects the affirmation proposal because it reverses the relation between money and self-worth; does not ban money words merely because the content is an affirmation.",
+        "Holds proposed provenance upgrades or new publication of the attributed record until source evidence is resolved, preserving existing content and status; holds scripture drafting for a specified verified published edition. Requires internal translation provenance, not a visible label, and invents neither author/source nor canonical wording.",
+        "Requires source-aware bilingual fidelity review for literary content in addition to target-only editorial review; does not treat fluent back-translation alone as proof.",
+        "Keeps canonical full text, makes no exact fit claim from 50 characters, and leaves independent reviews not_run and human validation absent."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "corpus-resume-and-release",
+      "prompt": "Prepare a concrete resumable run plan only, using this prompt and the skill package; do not open an app checkout, research, spawn agents or execute translation. We have 2,400 app-authored affirmations and 900 attributed quotations for ro and he. A fictional runtime replaces an entire English category whenever ANY target-language row is present. Our current batch export has 39 returned IDs out of 40, one duplicate, and one ID from another batch. Last week 80 rows passed AI review: this week three English sources changed, a term changed in six additional rows, and one category's style brief changed. How should batches, durable records, review invalidation, merges and release work? Choose initial models/effort and a bounded pilot without asserting any model is best at these languages. The old run has no token/cost measurements and no qualified human comparison. Explain what “ready” can honestly mean and when to stop spending on reviews.",
+      "expected_output": "Defines durable unit/revision manifest, exact coverage checks, targeted invalidation, atomic category staging and pilot-calibrated roles/cost with honest readiness.",
+      "files": [],
+      "expectations": [
+        "Rejects the malformed batch export before merge by comparing exact expected and returned ID sets and duplicates; does not silently count 39 as a complete batch.",
+        "Records stable source ID plus locale, source/target revision or hash, content kind/provenance, context/brief/glossary versions, review coverage/status and batch membership.",
+        "Invalidates changed sources and affected terminology/context while reusing only demonstrably unchanged passing units; the changed category brief reopens its dependent rows.",
+        "Stages complete categories without partial target publication; preserves unrelated existing records and source-to-target identity.",
+        "Uses a bounded representative pilot, explicit available model/effort hypotheses, observed rather than invented cost estimates, and finite material/fit revision budgets.",
+        "Distinguishes AI workflow completion from professional-human parity; requests a blinded per-language human comparison to support the latter rather than declaring final quality."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "market-evidence-and-contextual-length",
+      "prompt": "Audit these supplied facts only, with the skill package; no browsing, app checkout, subagents or actual renders. A new ja locale brief cites a popular app's English store listing as proof that Japanese users prefer terse imperative buttons. Its 8 million ratings are worldwide; no Japanese storefront rank is supplied. A second source is an actual Japanese Settings button, proposed as the voice model for the whole consumer app. The skill owner wants “no more than English length” for every line. A quote candidate is shorter because it dropped the final qualification “even when progress is slow”; a paywall candidate is longer because it still states the annual billing period. The screen widths and fonts are unknown. Give dispositions, the minimum market/context evidence to gather, and whether to rewrite, keep or hold each length case. Existing copy appears on a screen and a separate notification; a proposed fix moves the billing period to a neighbouring label that the notification does not include.",
+      "expected_output": "Rejects unsupported local popularity/register inference, requires same-surface evidence, preserves qualification and billing, and avoids ratio-based fit or unsafe neighbour moves.",
+      "files": [],
+      "expectations": [
+        "Does not infer Japanese UI usage or country-specific popularity from an English listing/global ratings; asks for dated locale-specific evidence and marks gaps unresearched.",
+        "Distinguishes verified OS-label mirrors from app-owned voice; seeks actual comparable target-language screens/actions with source URL/date/context.",
+        "Rejects matching English length as an acceptance criterion and treats both shortness and expansion as diagnostic signals, with no automatic padding or cutting.",
+        "Flags the dropped quote qualification as meaning loss, keeps the billing period, and refuses moving it to a neighbour absent from the notification.",
+        "Marks rendered fit not_checked pending actual fonts/widths/states and checks meaning/editorial quality separately."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "union-and-no-destructive-deduplication",
+      "prompt": "Isolated preparation exercise, no real checkout or edits. Use the supplied skill. Existing authored records are: E1/en/pairId=a “I choose where my money goes.”; E2/en/pairId=b “I decide how I use my money.”; R1/ro/pairId=a, explicitly translated from E1; R2/ro/pairId=c, an original Romanian affirmation; H1/hu/pairId=d, an original Hungarian affirmation; H2/hu/pairId=a, explicitly translated from E1. Also S1/en is an already-shipped supplied_unverified Stoic quotation whose author lookup returned no match, and B1/ro is an already-shipped Bible quotation whose wording differs from the newly searched edition; its original edition has not yet been checked. Reconcile the three language sets without translating them. Return JSON with preserve_existing_ids, authored_groups (pairId, existing_ids, missing_locales), verification_cases (id, action), removals, merge_decisions, owner_decision_example, and review_status. The owner has not authorized removal. Do not infer that similar English meanings make a or b duplicates, and do not turn verification uncertainty into deletion. Explain a concise concrete removal proposal with example and consequences, if one were warranted later.",
+      "expected_output": "Preserves all eight existing records, computes four authored lineage groups and six missing locale counterparts, keeps two verification cases without unpublishing, and requests scoped approval before future removals.",
+      "files": [],
+      "expectations": [
+        "preserve_existing_ids contains exactly E1,E2,R1,R2,H1,H2,S1,B1 and removals is empty.",
+        "Authored groups remain a,b,c,d; a has E1/R1/H2 with no missing locale, b needs ro/hu, c needs en/hu, d needs en/ro (six additions total).",
+        "Keeps a and b separate despite similar meaning, with no destructive merge or ID regeneration.",
+        "S1 remains retained with failed verification recorded, and B1 remains retained pending its original-edition/reference check; neither is deleted, marked rejected or unpublished solely for a failed match.",
+        "Any later removal proposal asks a scoped owner decision with examples, affected count and reader/pool consequences before acting; no blanket new permission needed for ordinary translation.",
+        "Does not claim translations, rendered fit, independent review or professional human quality from this preparation exercise."
+      ]
+    },
+    {
+      "id": 14,
+      "name": "syntax-and-register-by-ui-role",
+      "prompt": "Isolated workflow evaluation, Romanian app UI. Use the Moneyfesting localization skill but no app checkout, web, builds, edits or additional agents. These are synthetic target-language examples, not shipped strings. Review each in its supplied role and give casing, syntax and register verdicts, a concrete issue span if needed, and any evidence limits. Do not claim source fidelity or human review. All are catalog-owned sentence-case standalone strings. r1: 'Prima sesiune, ai încheiat-o!' — brief warm celebration; fronted topic intentionally emphasizes completion, informal tu. r2: 'Ai încheiat ta prima sesiune.' — the same celebration role. r3: 'Încheie o sesiune de cel puțin 5 minute.' — a neutral unlock criterion. r4: 'Yuhuuu, abonamentul tău se reînnoiește automat!!!' — a factual renewal explanation requiring precise, restrained register. No dimensions or renders are supplied. Do not invent a subscription period or price. Finally explain whether one term used across a celebration and a criterion requires identical tone.",
+      "expected_output": "Separates natural target-language emphasis from malformed syntax and judges register by the UI role; leaves suitable copy alone and fit unverified.",
+      "files": [],
+      "expectations": [
+        "Accepts the topicalized structure in r1 as valid target-language emphasis rather than forcing subject-verb-object order; any preference is nonblocking.",
+        "Flags the malformed possessive order in r2 with the exact span and a natural correction.",
+        "Keeps r3 precise and neutral, preserving the at-least condition and five-minute amount.",
+        "Flags the celebratory interjection/excess punctuation in r4 as unsuitable register while preserving automatic renewal; invents no price or period.",
+        "Provides casing, syntax and register verdicts for every ID; terminology consistency does not impose uniform tone.",
+        "Marks rendered fit and source fidelity unverified and makes no native-human or release-ready claim."
+      ]
+    },
+    {
+      "id": 15,
+      "name": "host-context-and-reference-conflicts",
+      "prompt": "Audit this planned translation run using the Moneyfesting localization skill; no tools beyond reading that skill, no other agents, app edits or builds. The reviewer is a newly spawned Claude Code custom subagent. Its startup record says CLAUDE.md included the English originals and an earlier editor verdict; its preloaded skills include the full bilingual localization skill. The coordinator sent only blind/target.rev2.json, whose exact-string leak scan passed. A Codex reviewer with fork_turns=none has no startup-context record. The translation draft was later shortened but the file still says rev2. An observed competitor uses a term conflicting with the owner's approved glossary. Someone proposes Romanian-to-Hebrew as the default route because the Romanian copy reads well. Determine what evidence can be accepted, what must be checked again, and what existing good copy can remain. Do not infer installed host versions or language quality from model names.",
+      "expected_output": "Rejects contaminated and stale review claims, distinguishes unknown isolation, scopes rechecks and keeps behavior/approved decisions above examples without forcing a pivot.",
+      "files": [],
+      "expectations": [
+        "Treats the Claude review as source-contaminated despite a clean packet and fresh spawn; requires a fresh source-free context with host startup inputs checked.",
+        "Does not certify Codex blindness from fork_turns=none alone; records the unverified startup context separately.",
+        "Rejects the old verdict for edited text even with unchanged rev2; binds the next evidence to exact packet/candidate content.",
+        "Keeps approved terms unless a scoped decision changes them; competitor text is role-dependent evidence, not authority.",
+        "Does not adopt a default Romanian-to-Hebrew pivot or claim English superiority from assumed training data; compares target copy to verified source meaning and behavior.",
+        "Scopes rechecks to contaminated or changed evidence and preserves unaffected good copy; no extra permissions or builds are introduced."
       ]
     }
   ]

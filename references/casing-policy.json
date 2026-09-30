@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "scope": "App-authored UI only. Role assignments require call-site evidence; source capitalization never selects a role. Exceptions are per exact target string with a reason. Existing copy in other locales is not authorized for edits by this policy.",
+  "protected_terms": [
+    "Moneyfesting",
+    "Apple",
+    "iPhone",
+    "iPad",
+    "App Store",
+    "Face ID",
+    "USD",
+    "RON",
+    "OK"
+  ],
+  "profiles": {
+    "sentence": {
+      "roles": {
+        "screen_title": "sentence",
+        "button": "sentence",
+        "tab": "sentence",
+        "section_heading": "sentence",
+        "caption": "sentence",
+        "body": "sentence",
+        "placeholder": "sentence",
+        "value_label": "sentence",
+        "compact_heading": "uppercase",
+        "continuation": "lowercase",
+        "unit": "preserve",
+        "system_label": "preserve",
+        "brand": "preserve",
+        "format": "preserve"
+      },
+      "interior_capitals": "review"
+    },
+    "german": {
+      "roles": {
+        "screen_title": "sentence",
+        "button": "sentence",
+        "tab": "sentence",
+        "section_heading": "sentence",
+        "caption": "sentence",
+        "body": "sentence",
+        "placeholder": "sentence",
+        "value_label": "sentence",
+        "compact_heading": "uppercase",
+        "continuation": "lowercase",
+        "unit": "preserve",
+        "system_label": "preserve",
+        "brand": "preserve",
+        "format": "preserve"
+      },
+      "interior_capitals": "lexical_review"
+    },
+    "uncased": {
+      "roles": {
+        "screen_title": "uncased",
+        "button": "uncased",
+        "tab": "uncased",
+        "section_heading": "uncased",
+        "caption": "uncased",
+        "body": "uncased",
+        "placeholder": "uncased",
+        "value_label": "uncased",
+        "compact_heading": "uncased",
+        "continuation": "uncased",
+        "unit": "preserve",
+        "system_label": "preserve",
+        "brand": "preserve",
+        "format": "preserve"
+      },
+      "interior_capitals": "not_applicable"
+    }
+  },
+  "locales": {
+    "bg": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/bg.md#header-and-label-forms"
+    },
+    "cs": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/cs.md#header-and-label-forms"
+    },
+    "da": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/da.md#header-and-label-forms"
+    },
+    "de": {
+      "profile": "german",
+      "evidence": "references/locale-briefs/de.md#header-and-label-forms"
+    },
+    "el": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/el.md#header-and-label-forms"
+    },
+    "es-ES": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/es-ES.md#header-and-label-forms"
+    },
+    "es-MX": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/es-MX.md#header-and-label-forms"
+    },
+    "fi": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/fi.md#header-and-label-forms"
+    },
+    "fr": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/fr.md#header-and-label-forms"
+    },
+    "he": {
+      "profile": "uncased",
+      "evidence": "references/locale-briefs/he.md#header-and-label-forms"
+    },
+    "hu": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/hu.md#header-and-label-forms"
+    },
+    "is": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/is.md#header-and-label-forms"
+    },
+    "it": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/it.md#header-and-label-forms"
+    },
+    "ja": {
+      "profile": "uncased",
+      "evidence": "references/locale-briefs/ja.md#header-and-label-forms"
+    },
+    "ko": {
+      "profile": "uncased",
+      "evidence": "references/locale-briefs/ko.md#header-and-label-forms"
+    },
+    "nb": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/nb.md#header-and-label-forms"
+    },
+    "nl": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/nl.md#header-and-label-forms"
+    },
+    "pl": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/pl.md#header-and-label-forms"
+    },
+    "pt-PT": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/pt-PT.md#header-and-label-forms"
+    },
+    "ro": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/ro.md#header-and-label-forms"
+    },
+    "sk": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/sk.md#header-and-label-forms"
+    },
+    "sv": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/sv.md#header-and-label-forms"
+    },
+    "tr": {
+      "profile": "sentence",
+      "evidence": "references/locale-briefs/tr.md#header-and-label-forms"
+    },
+    "en": {
+      "profile": "sentence",
+      "evidence": "references/voice-card.md; sentence-case default for the authorized achievement source review. Existing title-case names outside that scope require an explicit exception or source proposal, never a silent rewrite.",
+      "protected_terms": [
+        "Moneyfesting",
+        "Apple",
+        "iPhone",
+        "iPad",
+        "App Store",
+        "Face ID",
+        "USD",
+        "RON",
+        "OK",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/writing",
+      "lesson": "Choose a capitalization style by UI element type and apply it consistently. This does not establish each target locale's orthography.",
+      "checked": "2026-09-27"
+    },
+    {
+      "url": "https://unicode.org/faq/casemap_charprop.html",
+      "lesson": "Case folding is for matching, not displayed text; case mappings can be context- and language-dependent.",
+      "checked": "2026-09-27"
+    }
+  ]
+}

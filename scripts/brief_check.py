@@ -8,6 +8,7 @@ Checks (B* brief, G* glossary, E* evidence, H* honesty):
   B1  the "## " headings and their order equal TEMPLATE.md
   B2  the Contents line lists those headings in order
   B3  no section is empty and no TEMPLATE instruction line survives verbatim
+  B4  the locale has an evidenced casing policy covering every UI role
   G1  glossary parses, carries locale/snapshot/catalog_commit/terms/controls/open,
       and its locale equals the tag
   G2  every control in ro.json's control set has a preferred form and a roles object
@@ -32,6 +33,7 @@ import json
 import os
 import re
 import sys
+from casing import load_policy, policy_errors
 
 CONTROL_SET = ["Cancel", "Done", "Continue", "Save", "Edit", "Delete", "Skip", "Allow",
                "Don't allow", "Got it", "Retry", "Settings"]
@@ -225,6 +227,11 @@ def main():
         except json.JSONDecodeError as error:
             findings.append(("G1", "major", f"glossary is not valid JSON: {error}"))
     if brief:
+        policy_path = os.path.join(args.root, "references", "casing-policy.json")
+        if os.path.isfile(policy_path):
+            findings.extend(("B4", "major", message) for message in policy_errors(load_policy(policy_path), args.locale))
+        else:
+            findings.append(("B4", "major", "missing machine-readable locale/role casing policy"))
         check_brief(brief, open(os.path.join(args.root, "references", "locale-briefs", "TEMPLATE.md"), encoding="utf-8").read(), findings)
         check_honesty(brief, glossary, args.locale, findings)
         if glossary:

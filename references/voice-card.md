@@ -4,7 +4,7 @@ Snapshot 2026-09-15, catalog commit `c8a49dd`. Tags: [test] a pinned test (execu
 
 ## Voice
 
-- Second person, present tense, one idea per line, dry warmth. Everyday words a local user understands on first read, since the copy sits next to money and a timer, not in an ad. [inferred]
+- Everyday words a local user understands on first read. Match the surface: warm, informal celebration after effort; neutral or semi-formal settings, permissions, controls and functional criteria; formal wording where legal or system context requires it. Informal never licenses hype or slang. Keep the locale's form of address unless mirroring system wording; precise legal copy does not automatically change it. Terminology stays consistent across surfaces while tone can vary. [inferred]
 - No superlatives, no unsourced statistics, no ratings, reviews or user counts: `PaywallSocialProof.ratingSummary` is `nil` and `testimonials` is `[]` by design. [test: `ManifestingTests/Paywall/PaywallCopyTests.swift:9-10`]
 - The notification screen quotes no statistic ("more likely", "șanse mai mari") and promises no Live Activity. [test: `ManifestingTests/Onboarding/OnboardingCopyTests.swift:12-30`]
 - The "with Moneyfesting" sentence stays a hedge ("could", ro "pot"), never "You'll improve". [test: `ManifestingTests/Onboarding/OnboardingCopyTests.swift:38-49`]
@@ -43,13 +43,13 @@ Allowed: loss framing about the user's own time, the real price ladder, the one-
 ## Brand and fixed names
 
 - `Moneyfesting` stays exactly as written in every language and script: no transliteration into Arabic, Hebrew, Chinese, Japanese or Korean script, no declension glued on beyond the locale's normal hyphen rule; the brand row of each brief's `## Platform terms` records how the language carries case and where quotes apply (ro: "aplicației Moneyfesting", never "Moneyfesting-ul").
-- Coach names and quote authors stay as authored [archive: `Docs/Archive/I18N_PLAN.md` section 7; no coach name exists in the catalog at snapshot 2026-09-15, so the rule is dormant]. Attributed quotations port only as labelled translations and never as the speaker's own words; authored affirmations carry their English original through `pairId` [`Data/quotes/SCHEMA.md`; rules in `references/project-context.md` `## Content policy`].
+- Coach names and quote authors stay as authored [archive: `Docs/Archive/I18N_PLAN.md` section 7; no coach name exists in the catalog at snapshot 2026-09-15, so the rule is dormant]. Attributed quotations retain their author and internal translation provenance; user-facing translation notices follow the owner's display decision in SKILL.md; authored affirmations carry their English original through `pairId` [`Data/quotes/SCHEMA.md`; rules in `references/project-context.md` `## Content policy`].
 - Apple product names take Apple's own localization, recorded per locale in the brief's `## Platform terms` table; a generic phrase sharing their words ("time on screen") is a different concept and stays generic.
 - The restricted-apps group name ships as the Swift literal "No Restricted Apps" (`Manifesting/Features/Plan/Data/Repositories/ToDoTaskRepository.swift:333`), unlocalized: flag it, never translate it in place.
 
 ## Source lines to flag, not fix
 
-Re-verify against the live catalog, record the flag in findings, then translate faithfully:
+Re-verify against the live catalog and behaviour. A style defect may receive a faithful provisional draft with the flag retained. An unsupported factual, privacy or purchase claim stays blocked for meaning and release until product truth is resolved and the source correction is authorized; fluent translation cannot validate it. Continue unaffected copy. Snapshot examples:
 
 - `onboarding.notificationsSetup.message`: "wisdom of top billionaires ... achieve greatness" (hype nouns).
 - `moneyfesting.details.stopConfirmationMessage`: guilt plea ("leave only if you really need to").

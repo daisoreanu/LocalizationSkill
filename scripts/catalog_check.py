@@ -27,7 +27,11 @@ reviewers decide everything a script cannot. Checks (each finding carries its id
       Reads the Swift sources under --app-root (derived only when --catalog sits inside
       a checkout); a fixture outside one gets a needs_disposition per literal key instead
 
-Exit 1 when a critical finding exists. Never writes into the app checkout.
+  C12 declared locale/role casing, protected names, equivalent controls and display
+      ownership; unresolved context requires review, never automatic text conversion
+
+Exit 1 when a critical finding exists, or --require-casing has unresolved C12 findings.
+Never writes into the app checkout.
 """
 import argparse
 import json
@@ -36,6 +40,7 @@ import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from casing import check_casing, load_policy, POLICY
 
 # Read-only git calls must not refresh the checkout's index.
 os.environ.setdefault("GIT_OPTIONAL_LOCKS", "0")
@@ -120,6 +125,9 @@ def parse_args():
     p.add_argument("--shield", help="ShieldMessageCatalog.swift; pairs join as shield.<id>.title and .body")
     p.add_argument("--app-root", help="checkout root for the C11 source scan; derived only when --catalog sits inside a checkout")
     p.add_argument("--length-trigger", type=float, default=1.35, help="C5 ratio from the locale brief (default 1.35)")
+    p.add_argument("--casing-context", action="append", default=[], help="coordinator source packet; repeat for multiple batches")
+    p.add_argument("--casing-policy", default=str(POLICY), help="locale and UI-role casing policy JSON")
+    p.add_argument("--require-casing", action="store_true", help="fail when C12 has unresolved or invalid scoped casing")
     p.add_argument("--out", required=True, help="findings JSON path")
     return p.parse_args()
 
@@ -628,16 +636,22 @@ def main():
         tiers[key] = tier_for(key, entry, units(entry, "en"))
         findings += run_checks(key, entry, args.locale, glossary, args.length_trigger, render_list)
     findings += list(check_divergence(strings, set(tiers), args.locale, glossary))
+    packets = [json.load(open(path, encoding="utf-8")) for path in args.casing_context]
+    casing_keys = [key for key in selected if key not in exclusions]
+    casing_findings, casing_coverage = check_casing(strings, casing_keys, args.locale, packets, load_policy(args.casing_policy))
+    findings += casing_findings
     findings += [finding("C7", "major", k, "", "key not in the catalog") for k in missing]
-    write_output(args, findings, tiers, exclusions, render_list, selected)
-    return 1 if any(f["severity"] == "critical" for f in findings) else 0
+    write_output(args, findings, tiers, exclusions, render_list, selected, casing_coverage)
+    return int(any(f["severity"] == "critical" for f in findings) or
+               (args.require_casing and (not casing_coverage["complete"] or bool(missing))))
 
 
-def write_output(args, findings, tiers, exclusions, render_list, selected):
+def write_output(args, findings, tiers, exclusions, render_list, selected, casing_coverage):
     order = {"critical": 0, "major": 1, "needs_disposition": 2, "info": 3}
     findings.sort(key=lambda f: (order[f["severity"]], f["check"], f["key"], f["variation"]))
     severities = Counter(f["severity"] for f in findings)
     out = {"catalog": args.catalog, "locale": args.locale, "findings": findings, "tiers": tiers,
+           "casing": casing_coverage,
            "exclusions": exclusions, "render_list": sorted(render_list),
            "prefix_counts": dict(sorted(Counter(prefix_of(k) for k in selected).items())),
            "summary": {"keys": len(selected), "translatable": len(tiers), "excluded": len(exclusions),
