@@ -27,7 +27,7 @@
     },
     {
       "id": "restricted_list",
-      "definition": "the named set of apps and categories blocked during a session; the group name 'No Restricted Apps' ships as an unlocalized Swift literal",
+      "definition": "the named set of apps and categories blocked during a session; English calls the set the 'block list' and its apps and categories 'blocked' ('blocked apps'), never 'restricted' (owner decision 10, 2026-09-30, under delegation, AI-reviewed only); the group name 'No Restricted Apps' ships as an unlocalized Swift literal",
       "not_this": "blacklist, restrictions in general, parental controls",
       "where": ["screenTime.createRestrictedList.*", "screenTime.restrictedAppsPicker.*", "plan.createToDo.removeRestrictedApps", "plan.createToDo.restrictedAppsSection"]
     },

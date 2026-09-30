@@ -196,6 +196,16 @@
         "October",
         "November",
         "December"
+      ],
+      "exceptions": [
+        {"key": "sounds.chime.cashRegister", "text": "Cash Register", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "sounds.chime.lion", "text": "Lion Roar", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "sounds.chime.tibetan", "text": "Tibetan Bowl", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "sounds.chime.positive", "text": "Positive Chime", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "onboarding.notificationSound.cash", "text": "Cash Register", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "onboarding.notificationSound.lionRoar", "text": "Lion Roar", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "onboarding.notificationSound.tibetan", "text": "Tibetan Bowl", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."},
+        {"key": "onboarding.notificationSound.positive", "text": "Positive Chime", "reason": "Owner decision 11, 2026-09-30: sound names in both sound pickers use title case after Apple's tone names."}
       ]
     }
   },

@@ -26,10 +26,10 @@
     },
     "restricted_list": {
       "preferred": "listă de aplicații blocate",
-      "forms": ["listă de aplicații blocate", "lista de aplicații blocate", "liste de aplicații blocate", "listei de aplicații blocate", "listele de aplicații blocate"],
+      "forms": ["listă de aplicații blocate", "lista de aplicații blocate", "liste de aplicații blocate", "listei de aplicații blocate", "listele de aplicații blocate", "listă de blocare", "lista de blocare", "listei de blocare"],
       "forbidden": ["listă de restricții", "lista de restricții", "listă restricționată", "lista restricționată", "listei restricționate", "liste de aplicații restricționate", "lista de aplicații restricționate", "listele de aplicații restricționate"],
-      "decided_by": "skill-seed-2026-09-15",
-      "note": "Four shipped forms: blocate 1 (plan.createToDo.removeRestrictedApps), de restricții 2, restricționată 4, de aplicații restricționate 2. Chosen for plain wording: 'blocate' is what happens and 'Blocare aplicații' is already the welcome eyebrow. Alignment of the other 8 keys is a follow-up batch; the owner may flip this before the first ro batch. Apple's own Screen Time split confirms this reasoning: its app-limiting feature is named 'Limitare aplicații' (App Limits), not 'blocked'/'restricted' apps at all; 'Restricționat(e)' is reserved for Content & Privacy Restrictions and the generic OS-wide 'Blocat(e)' is the sense this term's 'blocate' sits closer to (cross-ref apple-ro-vocabulary.md, fetched 2026-09-16)."
+      "decided_by": "user",
+      "note": "Owner decision 10, 2026-09-30, under delegation, AI-reviewed only: en says 'block list' for the set and 'blocked' for apps and categories; ro uses the short 'listă de blocare' where a label is tight (the Insights label), the full 'listă de aplicații blocate' elsewhere, and 'blocat(e)' for the apps and categories themselves. Four shipped forms: blocate 1 (plan.createToDo.removeRestrictedApps), de restricții 2, restricționată 4, de aplicații restricționate 2. Chosen for plain wording: 'blocate' is what happens and 'Blocare aplicații' is already the welcome eyebrow. Alignment of the other 8 keys is a follow-up batch; the owner may flip this before the first ro batch. Apple's own Screen Time split confirms this reasoning: its app-limiting feature is named 'Limitare aplicații' (App Limits), not 'blocked'/'restricted' apps at all; 'Restricționat(e)' is reserved for Content & Privacy Restrictions and the generic OS-wide 'Blocat(e)' is the sense this term's 'blocate' sits closer to (cross-ref apple-ro-vocabulary.md, fetched 2026-09-16)."
     },
     "time_value_disclaimer": {
       "preferred": "Nu sunt bani câștigați.",

@@ -59,7 +59,7 @@ Counts are catalog keys whose en value is exactly the control word, the same mat
 | Continue | Continuă | resume: Continuă (`moneyfesting.details.resumeButton`) | 4 of 4 |
 | Save | Salvează, persist-data only (`common.save`; "Save Changes" -> "Salvează modificările", 2 keys) | save_money: Economisești, second person because the badge states what the reader gets ("Economisești 56%", `paywall.onboardingSubscription.annualPlanBadge`) | 1 of 1 |
 | Edit | Editează | ios_mirror_pill: Editați (`onboarding.widgets.howTo.editPillLabel`) | 2 of 3 |
-| Delete | Șterge | no glossary role; confirmation questions conjugate ("Ștergi acest citat?", `quotes.user.deleteTitle`) and compounds keep Șterge ("Șterge tot", `plan.dailyPlan.deleteAll`) | 1 of 1 |
+| Delete | Șterge | no glossary role; confirmation questions conjugate ("Ștergi acest citat?", `quotes.user.deleteTitle`) and compounds keep Șterge ("Șterge toate aparițiile", `plan.dailyPlan.deleteAll`, owner-accepted 2026-09-30) | 1 of 1 |
 | Skip | Sari peste | skip_for_now: Sari peste deocamdată (`onboarding.name.skip`, the only Skip key) | 1 |
 | Allow / Don't allow | Permite / Nu permite | ios_mirror_alert: Permiteți / Nu permiteți, Apple's formal plural for the mock permission alerts (`onboarding.notificationPermission.alertAllow`, `.alertDoNotAllow`, `onboarding.screenTimePermission.alertDoNotAllow`); decided 2026-09-16, `mock_permission_alerts` | 0 / 3, all ios_mirror_alert |
 | Got it | Am înțeles | | 2 of 2 |
